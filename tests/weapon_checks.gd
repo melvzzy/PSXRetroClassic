@@ -128,9 +128,14 @@ func _run() -> void:
 	await _place(Vector3(0.0, 0.02, 0.0))
 	# E remains independent from R, aim and the firing actions.
 	player.apply_mouse_look(Vector2(0.0, 0.16 / player.mouse_sensitivity))
-	Input.action_press("interact")
+	var interaction := InputEventKey.new()
+	interaction.physical_keycode = KEY_E
+	interaction.pressed = true
+	Input.parse_input_event(interaction)
 	await _frames(1)
-	Input.action_release("interact")
+	interaction = InputEventKey.new()
+	interaction.physical_keycode = KEY_E
+	Input.parse_input_event(interaction)
 	_expect(world.get_node("Switch").active, "E interaction still works with the firearm equipped")
 	player.apply_mouse_look(Vector2(0.0, -0.16 / player.mouse_sensitivity))
 	await _place(Vector3(0.0, 0.02, 3.0))

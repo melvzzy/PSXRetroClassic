@@ -54,6 +54,8 @@ ADS reduziert Bewegungstempo und übersteuert Sprint. Die Maus bleibt direkt;
 nur ADS-Darstellung und Rückstoßrückstellung verwenden kurze Übergänge.
 Bewegung und Strahlenabfragen laufen im Physiktakt, Mausblick direkt bei Eingabe.
 Details zum Interaktionsvertrag und zu Kollisionslayern: [scripts/README.md](scripts/README.md).
+Maßstab, Modell-Anker, Kollisionshüllen, Material-/Texturimport und Trennung von
+Originaldateien und Gameplay-Szenen: [assets/README.md](assets/README.md).
 Es gibt keine Autoloads oder generischen Manager. Weitere Systeme nur nach Auftrag ergänzen.
 
 ## Prüfen

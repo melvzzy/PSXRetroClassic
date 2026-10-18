@@ -23,6 +23,13 @@ Die Mausaufnahme steuert über ein Signal auch die Eingabefreigabe des Interacto
 Bei Esc oder Fokusverlust sind Bewegungs- und Interaktionseingaben gesperrt;
 Schwerkraft, Kollisionen und Weltphysik laufen weiter.
 
+Sprung, E, Schuss und R werden ausschließlich über unbehandelte Ereignisse bei
+aktiver Mausaufnahme angefordert und im Physiktakt verarbeitet. UI-verbrauchte
+Ereignisse und vor der Wiederaufnahme gedrücktes E/Space lösen keine Aktion aus.
+Die Interaktion aktualisiert ihren Strahl genau einmal manuell pro aktivem
+Physiktakt; beim Freigeben wird auch der Hinweis sofort entfernt. Esc ist keine
+Weltpause. Eine spätere echte Pause muss zuerst die Mausaufnahme freigeben.
+
 Die Testwaffe benötigt die Inspector-Referenzen `actor` (FPSController) und
 `camera` (Camera3D); `player.tscn` setzt diese. Kein Autoload, keine Registrierung.
 Mauseingaben werden als kurze Schussanforderung erfasst; die Physikabfrage erfolgt

@@ -28,6 +28,7 @@ var is_crouching: bool = false
 var has_mouse_capture: bool = false
 var is_aiming: bool = false
 var _pitch: float = 0.0
+var _jump_requested: bool = false
 var _standing_query := PhysicsShapeQueryParameters3D.new()
 
 @onready var body_shape: CollisionShape3D = $BodyShape
@@ -49,6 +50,7 @@ func _ready() -> void:
 
 func set_mouse_capture(captured: bool) -> void:
 	has_mouse_capture = captured
+	_jump_requested = false
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED if captured else Input.MOUSE_MODE_VISIBLE
 	mouse_capture_changed.emit(captured)
 
@@ -58,6 +60,9 @@ func _unhandled_input(event: InputEvent) -> void:
 		get_viewport().set_input_as_handled()
 	elif event.is_action_pressed("capture_mouse") and not has_mouse_capture:
 		set_mouse_capture(true)
+		get_viewport().set_input_as_handled()
+	elif has_mouse_capture and event.is_action_pressed("jump"):
+		_jump_requested = true
 		get_viewport().set_input_as_handled()
 	elif event is InputEventMouseMotion and has_mouse_capture:
 		apply_mouse_look(event.screen_relative)
@@ -79,6 +84,8 @@ func _notification(what: int) -> void:
 
 func _physics_process(delta: float) -> void:
 	var controls_active: bool = has_mouse_capture
+	var jump_requested: bool = _jump_requested
+	_jump_requested = false
 	var wants_crouch: bool = controls_active and Input.is_action_pressed("crouch")
 	if wants_crouch and not is_crouching:
 		_set_crouching(true)
@@ -104,7 +111,7 @@ func _physics_process(delta: float) -> void:
 	velocity.z = horizontal.y
 	if is_on_floor():
 		velocity.y = 0.0
-		if controls_active and Input.is_action_just_pressed("jump") and not is_crouching:
+		if controls_active and jump_requested and not is_crouching:
 			velocity.y = jump_speed
 	else:
 		velocity.y -= gravity * delta

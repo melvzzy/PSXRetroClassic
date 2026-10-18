@@ -9,14 +9,18 @@ signal prompt_changed(text: String)
 var _target: InteractionTarget
 var _last_prompt: String = ""
 var _input_enabled: bool = false
+var _interaction_requested: bool = false
 
 func _ready() -> void:
 	if actor is CollisionObject3D:
 		add_exception(actor as CollisionObject3D)
-	enabled = true
+	# Manual updates below already run after player movement; avoid a second query.
+	enabled = false
 	target_position = Vector3(0.0, 0.0, -interaction_range)
 
 func _physics_process(_delta: float) -> void:
+	var interaction_requested: bool = _interaction_requested
+	_interaction_requested = false
 	_target = null
 	if _input_enabled:
 		target_position.z = -interaction_range
@@ -30,8 +34,19 @@ func _physics_process(_delta: float) -> void:
 	if text != _last_prompt:
 		_last_prompt = text
 		prompt_changed.emit(text)
-	if _target != null and Input.is_action_just_pressed("interact"):
+	if _target != null and interaction_requested:
 		_target.interact(actor)
+
+func _unhandled_input(event: InputEvent) -> void:
+	if _input_enabled and event.is_action_pressed("interact"):
+		_interaction_requested = true
+		get_viewport().set_input_as_handled()
 
 func set_input_enabled(value: bool) -> void:
 	_input_enabled = value
+	_interaction_requested = false
+	if not value:
+		_target = null
+		if not _last_prompt.is_empty():
+			_last_prompt = ""
+			prompt_changed.emit("")

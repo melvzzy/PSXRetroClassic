@@ -14,5 +14,12 @@
   Report engine version, errors and any verification that could not be performed.
 - Keep `.godot/` and export artifacts out of Git. Preserve Godot-generated
   `.uid` and asset `.import` sidecars when present; they are source metadata.
+- Follow `assets/README.md` for scale, axes, materials and collision conventions.
+  Add imported source files only when requested; keep them separate from reusable
+  gameplay scenes. Replace visuals below existing model mounts, not controller nodes.
+- Discrete gameplay actions belong to `_unhandled_input` while capture is active;
+  queue physics work and clear requests on capture/focus transitions. Continuous
+  movement uses Input Map state. Mouse release is not a world pause; if a later
+  task adds tree pausing, release capture before pausing and require explicit recapture.
 - Do not push, merge or create branches unless explicitly requested. Leave
   changes available for review. Summarize completed work and checks in German.

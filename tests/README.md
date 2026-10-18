@@ -32,6 +32,9 @@ Sprung, Schwerkraft, Duckhöhe, Aufstehblockierung, Rampenabstieg, Wandkollision
 Kamerawinkel, FOV, Strahlreichweite, Sichtblockierung, deaktivierte Ziele,
 Schalterfeedback und das Aufsetzen aller drei Physikwürfel. Zusätzliche
 Regressionsprüfungen decken Fokusverlust, HUD-Sichtbarkeit und Modell-Anker ab.
+Der Qualitätsreview ergänzt drei gezielte Fälle: E/Space vor Maus-Wiederaufnahme
+im selben Physiktakt sowie sofortiges Entfernen des Interaktionshinweises bei
+Freigabe ohne weiteren Physiktakt. Sprung und E verwenden dabei echte Key-Events.
 Standardausgabe und Fehlerausgabe werden auf Engine-Diagnosen geprüft.
 Maus-Freigabe und erneute Aufnahme werden als Gameplay-Eingabestatus geprüft;
 der Headless-Treiber bestätigt keine tatsächliche Windows-Cursoraufnahme.
@@ -64,6 +67,8 @@ auf Farb-Umgebungslicht, Forward+ und aktivierte Richtungsschatten geprüft.
    Glättung. Esc gibt Cursor frei und stoppt neue Steuerung; Linksklick fängt ihn.
    Alt-Tab gibt die Maus frei; nach Rückkehr bewusst klicken. Auf den Beenden-
    Button klicken darf die Maus nicht erneut fangen.
+   Bei freier Maus E/Space unmittelbar vor dem Wiederaufnahme-Klick drücken:
+   keine nachträgliche Interaktion und kein Sprung; frische Eingaben funktionieren.
 6. **Interaktion:** Schalter ansehen und auf kurze Distanz herangehen. Hinweis
    erscheint, E wechselt Text und Farbe einmal pro Tastendruck. Aus der Ferne,
    mit freier Maus oder hinter der Wand ist keine Bedienung möglich.
@@ -84,12 +89,12 @@ auf Farb-Umgebungslicht, Forward+ und aktivierte Richtungsschatten geprüft.
     einmal losgelassen werden. Reserve leeren, keine negativen Werte oder Gratis-
     Munition. Der HUD bleibt kompakt und ohne dauerhaftes Hilfe-Overlay.
 
-## Ergebnis dieser Umsetzung (18.10.2026)
+## Ergebnis des Qualitätsreviews (19.10.2026)
 
 Verfügbar war Godot `4.7.2.stable.official.ed1daf0bf`, keine auffindbare 4.6.3.
 Headless-Import und Start über 120 Frames: Exitcode 0, keine Skript-, Ressourcen-
-oder Szenenfehler. FPS-Integrationstests: **37 bestanden, 0 fehlgeschlagen**;
-Waffen-Integrationstests: **42 bestanden, 0 fehlgeschlagen** (insgesamt 79).
+oder Szenenfehler. FPS-Integrationstests: **40 bestanden, 0 fehlgeschlagen**;
+Waffen-Integrationstests: **42 bestanden, 0 fehlgeschlagen** (insgesamt 82).
 Die Umgebung meldet weiterhin `Failed to read the root certificate store`.
 Test-Benutzerdaten werden innerhalb des Repository-Caches angelegt, wodurch
 Schreibfehler für Editor-Einstellungen außerhalb des Repositorys entfallen.
