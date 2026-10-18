@@ -1,0 +1,261 @@
+[gd_scene load_steps=25 format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/player.tscn" id="1"]
+[ext_resource type="Script" path="res://scripts/test_scene.gd" id="2"]
+[ext_resource type="Script" path="res://scripts/test_switch.gd" id="3"]
+[ext_resource type="Script" path="res://scripts/interaction_target.gd" id="4"]
+[ext_resource type="Script" path="res://scripts/test_target.gd" id="5"]
+
+[sub_resource type="Environment" id="Environment"]
+background_mode = 1
+background_color = Color(0.16, 0.18, 0.22, 1)
+ambient_light_source = 2
+ambient_light_color = Color(0.75, 0.8, 0.9, 1)
+ambient_light_energy = 0.6
+reflected_light_source = 1
+
+[sub_resource type="StandardMaterial3D" id="FloorMaterial"]
+albedo_color = Color(0.35, 0.37, 0.4, 1)
+roughness = 0.9
+[sub_resource type="StandardMaterial3D" id="WallMaterial"]
+albedo_color = Color(0.55, 0.56, 0.58, 1)
+roughness = 0.9
+[sub_resource type="StandardMaterial3D" id="PropMaterial"]
+albedo_color = Color(0.42, 0.46, 0.5, 1)
+roughness = 0.8
+[sub_resource type="StandardMaterial3D" id="IndicatorMaterial"]
+albedo_color = Color(0.5, 0.5, 0.5, 1)
+
+[sub_resource type="BoxMesh" id="FloorMesh"]
+size = Vector3(18, 0.5, 18)
+material = SubResource("FloorMaterial")
+[sub_resource type="BoxShape3D" id="FloorShape"]
+size = Vector3(18, 0.5, 18)
+[sub_resource type="BoxMesh" id="WallMesh"]
+size = Vector3(5, 2.5, 0.5)
+material = SubResource("WallMaterial")
+[sub_resource type="BoxShape3D" id="WallShape"]
+size = Vector3(5, 2.5, 0.5)
+[sub_resource type="BoxMesh" id="RampMesh"]
+size = Vector3(2.5, 0.25, 4)
+material = SubResource("WallMaterial")
+[sub_resource type="BoxShape3D" id="RampShape"]
+size = Vector3(2.5, 0.25, 4)
+[sub_resource type="BoxMesh" id="CubeMesh"]
+size = Vector3(0.6, 0.6, 0.6)
+material = SubResource("PropMaterial")
+[sub_resource type="BoxShape3D" id="CubeShape"]
+size = Vector3(0.6, 0.6, 0.6)
+[sub_resource type="BoxMesh" id="SwitchMesh"]
+size = Vector3(0.6, 0.6, 0.6)
+material = SubResource("IndicatorMaterial")
+[sub_resource type="BoxMesh" id="CeilingMesh"]
+size = Vector3(3, 0.25, 3)
+material = SubResource("WallMaterial")
+[sub_resource type="BoxShape3D" id="CeilingShape"]
+size = Vector3(3, 0.25, 3)
+
+[sub_resource type="StandardMaterial3D" id="TargetMaterial"]
+albedo_color = Color(0.3, 0.3, 0.3, 1)
+roughness = 0.9
+[sub_resource type="BoxMesh" id="TargetMesh"]
+size = Vector3(0.9, 1.1, 0.12)
+[sub_resource type="BoxShape3D" id="TargetShape"]
+size = Vector3(0.9, 1.1, 0.12)
+
+[node name="FPSTest" type="Node3D"]
+script = ExtResource("2")
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment")
+[node name="Sun" type="DirectionalLight3D" parent="."]
+rotation_degrees = Vector3(-55, -25, 0)
+light_energy = 1.3
+shadow_enabled = true
+
+[node name="Floor" type="StaticBody3D" parent="."]
+position = Vector3(0, -0.25, 0)
+[node name="Mesh" type="MeshInstance3D" parent="Floor"]
+mesh = SubResource("FloorMesh")
+[node name="Collision" type="CollisionShape3D" parent="Floor"]
+shape = SubResource("FloorShape")
+
+[node name="Wall" type="StaticBody3D" parent="."]
+position = Vector3(0, 1.25, -5)
+[node name="Mesh" type="MeshInstance3D" parent="Wall"]
+mesh = SubResource("WallMesh")
+[node name="Collision" type="CollisionShape3D" parent="Wall"]
+shape = SubResource("WallShape")
+
+[node name="Ramp" type="StaticBody3D" parent="."]
+position = Vector3(4, 0.57, -1)
+rotation_degrees = Vector3(15, 0, 0)
+[node name="Mesh" type="MeshInstance3D" parent="Ramp"]
+mesh = SubResource("RampMesh")
+[node name="Collision" type="CollisionShape3D" parent="Ramp"]
+shape = SubResource("RampShape")
+
+[node name="CrouchClearance" type="StaticBody3D" parent="."]
+position = Vector3(-4, 1.425, -1)
+[node name="Mesh" type="MeshInstance3D" parent="CrouchClearance"]
+mesh = SubResource("CeilingMesh")
+[node name="Collision" type="CollisionShape3D" parent="CrouchClearance"]
+shape = SubResource("CeilingShape")
+[node name="Label" type="Label3D" parent="CrouchClearance"]
+position = Vector3(0, 0.5, 0)
+text = "Ducktest: Ctrl halten"
+font_size = 32
+billboard = 1
+
+[node name="CrateA" type="RigidBody3D" parent="."]
+position = Vector3(1.6, 1.5, 0)
+collision_layer = 2
+collision_mask = 7
+mass = 2.0
+[node name="Mesh" type="MeshInstance3D" parent="CrateA"]
+mesh = SubResource("CubeMesh")
+[node name="Collision" type="CollisionShape3D" parent="CrateA"]
+shape = SubResource("CubeShape")
+[node name="CrateB" type="RigidBody3D" parent="."]
+position = Vector3(2.4, 2, 0)
+collision_layer = 2
+collision_mask = 7
+mass = 2.0
+[node name="Mesh" type="MeshInstance3D" parent="CrateB"]
+mesh = SubResource("CubeMesh")
+[node name="Collision" type="CollisionShape3D" parent="CrateB"]
+shape = SubResource("CubeShape")
+[node name="CrateC" type="RigidBody3D" parent="."]
+position = Vector3(2, 2.8, -0.8)
+collision_layer = 2
+collision_mask = 7
+mass = 2.0
+[node name="Mesh" type="MeshInstance3D" parent="CrateC"]
+mesh = SubResource("CubeMesh")
+[node name="Collision" type="CollisionShape3D" parent="CrateC"]
+shape = SubResource("CubeShape")
+
+[node name="Switch" type="StaticBody3D" parent="."]
+position = Vector3(0, 1.3, -2)
+script = ExtResource("3")
+[node name="Indicator" type="MeshInstance3D" parent="Switch"]
+mesh = SubResource("SwitchMesh")
+material_override = SubResource("IndicatorMaterial")
+[node name="Collision" type="CollisionShape3D" parent="Switch"]
+shape = SubResource("CubeShape")
+[node name="InteractionTarget" type="Node" parent="Switch"]
+script = ExtResource("4")
+prompt = "E — Schalter umlegen"
+[node name="Status" type="Label3D" parent="Switch"]
+position = Vector3(0, 0.6, 0)
+text = "Schalter: AUS"
+font_size = 32
+billboard = 1
+
+[node name="Player" parent="." instance=ExtResource("1")]
+position = Vector3(0, 0.05, 1)
+
+[node name="Target" type="StaticBody3D" parent="."]
+position = Vector3(-1.4, 1.4, -4.65)
+script = ExtResource("5")
+[node name="Face" type="MeshInstance3D" parent="Target"]
+mesh = SubResource("TargetMesh")
+material_override = SubResource("TargetMaterial")
+[node name="Collision" type="CollisionShape3D" parent="Target"]
+shape = SubResource("TargetShape")
+[node name="Label" type="Label3D" parent="Target"]
+position = Vector3(0, 0.75, 0)
+text = "Treffer: 0"
+font_size = 28
+billboard = 1
+
+[node name="HUD" type="CanvasLayer" parent="."]
+[node name="Help" type="Label" parent="HUD"]
+offset_left = 16.0
+offset_top = 12.0
+offset_right = 1100.0
+offset_bottom = 80.0
+mouse_filter = 2
+text = "PSXRetroClassic\nWASD · Shift: Sprint · Space: Sprung · Ctrl: Ducken\nLMB: Schuss · RMB: ADS · R: Nachladen · E: Interaktion\nEsc: Maus frei · Linksklick: Maus fangen · Q: Beenden"
+theme_override_colors/font_color = Color(0.86, 0.86, 0.86, 1)
+theme_override_colors/font_shadow_color = Color(0.04, 0.04, 0.04, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+[node name="Crosshair" type="Label" parent="HUD"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -5.0
+offset_top = -12.0
+offset_right = 5.0
+offset_bottom = 12.0
+mouse_filter = 2
+text = "+"
+theme_override_colors/font_color = Color(0.86, 0.86, 0.86, 1)
+horizontal_alignment = 1
+
+[node name="Ammo" type="Label" parent="HUD"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -160.0
+offset_top = -52.0
+offset_right = -24.0
+offset_bottom = -24.0
+mouse_filter = 2
+horizontal_alignment = 2
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.86, 0.86, 0.86, 1)
+theme_override_colors/font_shadow_color = Color(0.02, 0.02, 0.02, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+
+[node name="WeaponStatus" type="Label" parent="HUD"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -240.0
+offset_top = -80.0
+offset_right = -24.0
+offset_bottom = -52.0
+mouse_filter = 2
+horizontal_alignment = 2
+theme_override_font_sizes/font_size = 14
+theme_override_colors/font_color = Color(0.72, 0.72, 0.72, 1)
+
+[node name="HitMarker" type="Label" parent="HUD"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -12.0
+offset_top = -12.0
+offset_right = 12.0
+offset_bottom = 12.0
+mouse_filter = 2
+text = "×"
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.8, 0.8, 0.8, 1)
+[node name="Prompt" type="Label" parent="HUD"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = 28.0
+offset_right = 200.0
+offset_bottom = 60.0
+mouse_filter = 2
+horizontal_alignment = 1
+[node name="Quit" type="Button" parent="HUD"]
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -128.0
+offset_top = 16.0
+offset_right = -16.0
+offset_bottom = 52.0
+text = "Beenden (Q)"
+focus_mode = 0

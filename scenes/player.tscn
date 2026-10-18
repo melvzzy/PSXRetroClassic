@@ -1,0 +1,45 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://scripts/fps_controller.gd" id="1"]
+[ext_resource type="Script" path="res://scripts/interactor.gd" id="2"]
+[ext_resource type="PackedScene" path="res://scenes/test_firearm.tscn" id="3"]
+
+[sub_resource type="CapsuleShape3D" id="Capsule"]
+radius = 0.3
+height = 1.8
+
+[node name="Player" type="CharacterBody3D"]
+collision_layer = 4
+collision_mask = 3
+floor_snap_length = 0.3
+floor_constant_speed = true
+floor_max_angle = 0.785398
+script = ExtResource("1")
+
+[node name="BodyShape" type="CollisionShape3D" parent="."]
+position = Vector3(0, 0.9, 0)
+shape = SubResource("Capsule")
+
+[node name="Head" type="Node3D" parent="."]
+position = Vector3(0, 1.65, 0)
+
+[node name="CharacterVisuals" type="Node3D" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="Head"]
+current = true
+fov = 80.0
+near = 0.05
+
+[node name="ViewmodelMount" type="Node3D" parent="Head/Camera3D"]
+
+[node name="TestFirearm" parent="Head/Camera3D/ViewmodelMount" node_paths=PackedStringArray("actor", "camera") instance=ExtResource("3")]
+actor = NodePath("../../../..")
+camera = NodePath("../..")
+
+[node name="Interactor" type="RayCast3D" parent="Head/Camera3D" node_paths=PackedStringArray("actor")]
+target_position = Vector3(0, 0, -2.5)
+collision_mask = 3
+script = ExtResource("2")
+actor = NodePath("../../..")
+
+[connection signal="mouse_capture_changed" from="." to="Head/Camera3D/Interactor" method="set_input_enabled"]
