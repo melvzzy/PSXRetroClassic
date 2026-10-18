@@ -18,6 +18,8 @@ godot --headless --path . --editor --import
 godot --headless --path . --quit-after 120
 godot --headless --path . --script res://tests/fps_checks.gd
 godot --headless --path . --script res://tests/weapon_checks.gd
+godot --headless --path . res://scenes/previews/arms_preview.tscn --quit-after 120
+godot --headless --path . --script res://tests/arms_import_checks.gd
 ```
 
 Der Import muss vor dem direkten Testaufruf erfolgt sein, damit Godot die
@@ -99,13 +101,39 @@ Die Umgebung meldet weiterhin `Failed to read the root certificate store`.
 Test-Benutzerdaten werden innerhalb des Repository-Caches angelegt, wodurch
 Schreibfehler für Editor-Einstellungen außerhalb des Repositorys entfallen.
 
-Godot-4.6.3-Kompatibilität, grafische Forward+-Ausgabe, echtes Windows-Maus-
+Godot-4.6.3-Kompatibilität, grafische FPS-Spielszene, echtes Windows-Maus-
 und Tastaturverhalten sowie das subjektive Bewegungs-/Waffengefühl wurden nicht
 verifiziert. Dafür die obige manuelle Checkliste mit der Zielversion ausführen.
 
+## Isolierter Arme-Importtest (19.10.2026)
+
+`run_checks.ps1` führt zusätzlich Preview-Start und `arms_import_checks.gd` aus.
+32 Arms-Prüfungen decken Skelett-/Skin-Verbindung, Gewichte, beide Texturen mit
+Mipmaps, Originalmaßstab/Achskorrektur, sämtliche 18 Clips und Preview-Playback
+ab. Zusammen mit den bestehenden 82 Gameplay-Prüfungen: **114 bestanden**.
+Die Gameplay-Szenen, -Skripte und Input Map werden für den Preview nicht geändert.
+
+Optionaler echter Grafiklauf (im Repository-Verzeichnis, ohne `--headless`):
+
+```text
+godot --path . --script res://tests/arms_import_checks.gd -- --capture
+```
+
+Erzeugt sechs PNGs und prüft GPU-Skinning unter `.godot/checks/arms_captures/`.
+Getestet mit Godot 4.7.2 und Vulkan 1.4.351 / Forward+ auf NVIDIA RTX 5060 Ti:
+44 Prüfungen im Capture-Modus erfolgreich, sechs Renderansichten erzeugt und
+repräsentative Ansichten visuell inspiziert. Die bekannte Zertifikatsspeicher-
+Meldung bleibt; keine weiteren Engine-Fehler im abschließenden Lauf.
+
+Manuell: Preview mit F6 öffnen, Clips auswählen, Pause/Play/Restart/Repeat und
+Timeline testen, beide Texturen und Ansichten vergleichen. Bei ausholenden
+Posen die Übersicht verwenden. Das ist keine Bestätigung einer Integration
+mit Waffen oder einer vollständigen manuellen Prüfung der Windows-Eingaben.
+Importdetails: [Arme-Bericht](../assets/source/drillimpact_first_person_arms/README.md).
+
 ## Bewusst zurückgestellt
 
-Importierte Modelle, Arme, Rigs, Animationen, Sounds, Waffenwechsel, Inventar,
+Weitere Modelle, Waffenanbindung der Arme, neue Rigs/Animationen, Sounds, Waffenwechsel, Inventar,
 Gegner, größere Umgebungen und Retro-Effekte. Die Waffe nutzt austauschbare
 Primitive und einfache Anker. Kein separater Viewmodel-Renderer oder aufwendiges
 Wandnähe-Animationssystem; visuelles Clipping der Platzhalter direkt an einer

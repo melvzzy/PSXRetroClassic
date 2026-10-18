@@ -1,0 +1,18 @@
+{
+  "archive": "psx-first-person-arms-free-game-assets.zip",
+  "archive_sha256": "13689348acce167599db2b7190214aa4dbe914f5547f74e1877ff61361fc8cb8",
+  "files": {
+    "arms_rig.glb": {
+      "bytes": 1099832,
+      "sha256": "407d6be3cfee18d8d47318d307a6e759f94ed3a1c27e2ab30dd860862b94172b"
+    },
+    "arms_01.png": {
+      "bytes": 397897,
+      "sha256": "997e272eafee2293d1095c321b83237a4556491818d62f49c9341260af0bd490"
+    },
+    "arms_gloves_01.png": {
+      "bytes": 2101305,
+      "sha256": "ea03152310ea681f4740d955e4ffddd8278c979ef7ec44f1d415255a36861557"
+    }
+  }
+}

@@ -1,7 +1,8 @@
 # Asset-Konventionen
 
-Aktuell keine externen Assets. Diese Regeln gelten für spätere, ausdrücklich
-beauftragte Importe; Ordner erst mit den ersten tatsächlichen Dateien anlegen.
+Erster isolierter Import: [Drillimpact-Arme](source/drillimpact_first_person_arms/README.md),
+noch ohne Gameplay-Anbindung. Diese Regeln gelten für ausdrücklich beauftragte
+Importe; Ordner erst mit den ersten tatsächlichen Dateien anlegen.
 Ziel sind glaubwürdige, leicht raue PS1/PS2-Umgebungen mit einfacher Geometrie,
 erkennbaren niedrig aufgelösten Texturen und zurückhaltender moderner Beleuchtung.
 

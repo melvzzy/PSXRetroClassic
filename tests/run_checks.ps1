@@ -49,6 +49,8 @@ try {
     Invoke-GodotCheck 'startup' @('--headless', '--path', '.', '--quit-after', '120')
     Invoke-GodotCheck 'fps' @('--headless', '--path', '.', '--script', 'res://tests/fps_checks.gd')
     Invoke-GodotCheck 'weapon' @('--headless', '--path', '.', '--script', 'res://tests/weapon_checks.gd')
+    Invoke-GodotCheck 'arms-startup' @('--headless', '--path', '.', 'res://scenes/previews/arms_preview.tscn', '--quit-after', '120')
+    Invoke-GodotCheck 'arms' @('--headless', '--path', '.', '--script', 'res://tests/arms_import_checks.gd')
     Write-Output 'All checks completed. Review any environment warnings above.'
 }
 finally {
