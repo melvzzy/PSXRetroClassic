@@ -9,7 +9,7 @@ func _initialize() -> void:
 
 func _run() -> void:
 	for index: int in range(4):
-		var game: Node3D = load("res://scenes/startup.tscn").instantiate()
+		var game: Node3D = load("res://scenes/fps_test_fallback.tscn").instantiate()
 		game.test_weapon = index
 		root.add_child(game)
 		await _frames(20)

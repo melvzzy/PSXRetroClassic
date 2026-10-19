@@ -59,6 +59,10 @@ try {
     Invoke-GodotCheck 'weapon-roster' @('--headless', '--path', '.', '--script', 'res://tests/weapon_roster_checks.gd')
     Invoke-GodotCheck 'environment-preview' @('--headless', '--path', '.', 'res://scenes/previews/environment_preview.tscn', '--quit-after', '120')
     Invoke-GodotCheck 'environment-assets' @('--headless', '--path', '.', '--script', 'res://tests/environment_preview_checks.gd')
+    Invoke-GodotCheck 'outdoor' @('--headless', '--path', '.', '--script', 'res://tests/outdoor_checks.gd')
+    Invoke-GodotCheck 'fallback-startup' @('--headless', '--path', '.', 'res://scenes/fps_test_fallback.tscn', '--quit-after', '120')
+    Invoke-GodotCheck 'outpost-expansion' @('--headless', '--path', '.', '--script', 'res://tests/outpost_expansion_checks.gd')
+    Invoke-GodotCheck 'final-area' @('--headless', '--path', '.', '--script', 'res://tests/final_area_checks.gd')
     Write-Output 'All checks completed. Review any environment warnings above.'
 }
 finally {

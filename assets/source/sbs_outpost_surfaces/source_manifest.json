@@ -1,0 +1,32 @@
+[
+  {
+    "archive": "SBS - Tiny Texture Pack - 256x256.zip",
+    "entry": "256x256/Grass/Grass_12-256x256.png",
+    "file": "Grass_12-256x256.png",
+    "sha256": "7d677dabcbed5a3957351e70b2eb1b348c485e847b89a3c07929d70ab7eb5780"
+  },
+  {
+    "archive": "SBS - Tiny Texture Pack - 256x256.zip",
+    "entry": "256x256/Grass/Grass_13-256x256.png",
+    "file": "Grass_13-256x256.png",
+    "sha256": "256ae67069b64c4043d0ce6cf2386d50e389720335d52236abd55dfc9efee4b2"
+  },
+  {
+    "archive": "SBS - Tiny Texture Pack - 256x256.zip",
+    "entry": "License.txt",
+    "file": "tiny_license.txt",
+    "sha256": "080d1b3c82e6fbd33e7d8e265836264dfc9d2fcc4fee1c2000fb4beb918f76f6"
+  },
+  {
+    "archive": "SBS - Base Materials Pack 256x256.rar",
+    "entry": "Base Materials 256x256\\Concrete\\Mat_Concrete_Gray_01-256x256.png",
+    "file": "Mat_Concrete_Gray_01-256x256.png",
+    "sha256": "fd23e0c78d147050039eb90f91476da672bdfeec56fb5144479d0233b37796bc"
+  },
+  {
+    "archive": "SBS - Base Materials Pack 256x256.rar",
+    "entry": "License.txt",
+    "file": "base_license.txt",
+    "sha256": "60f5bf01bb443e0b8782d42180df679deaac8e55e1bf75fde16b37b5e457f292"
+  }
+]

@@ -10,7 +10,7 @@ func _initialize() -> void:
 	_run.call_deferred()
 
 func _run() -> void:
-	var game: Node3D = load("res://scenes/startup.tscn").instantiate()
+	var game: Node3D = load("res://scenes/fps_test_fallback.tscn").instantiate()
 	game.show_arms = true
 	game.test_weapon = 0
 	root.add_child(game)

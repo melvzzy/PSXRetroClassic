@@ -1,0 +1,56 @@
+[
+  {
+    "archive": "Street Furniture.zip",
+    "entry": "Hammer/Hammer.fbx",
+    "file": "Hammer.fbx",
+    "sha256": "8687138f2f5fa62ac0a53a7909f04ae7743b255fc4e9f6acc124e63099d32632"
+  },
+  {
+    "archive": "Street Furniture.zip",
+    "entry": "Hammer/Hammer.png",
+    "file": "Hammer.png",
+    "sha256": "4f1d48443dcc3ac36931a570af749efb8f180890aefed7ec60ec9f86a4abce15"
+  },
+  {
+    "archive": "Street Furniture.zip",
+    "entry": "Bottles/Bottles.fbx",
+    "file": "Bottles.fbx",
+    "sha256": "cbbdcf5296daaa47c70d3268fd67a1a8fa7c72d93d0601680dafdfc128e2e38b"
+  },
+  {
+    "archive": "Street Furniture.zip",
+    "entry": "Bottles/Bottles.png",
+    "file": "Bottles.png",
+    "sha256": "9d57a012a529ad0b0c22cf63d03cad1ee3d77072e190577fa8dd89af95383668"
+  },
+  {
+    "archive": "Street Furniture.zip",
+    "entry": "TrashCan/TrashCan.fbx",
+    "file": "TrashCan.fbx",
+    "sha256": "49cfd5bcefc019d1f12a234710bc8b9e27fcb8c6d36493c4babd660de089c3db"
+  },
+  {
+    "archive": "Street Furniture.zip",
+    "entry": "TrashCan/TrashCan.png",
+    "file": "TrashCan.png",
+    "sha256": "13feccea32080cf7a8415e2eddcaa1c22a5ebc306efda8a4b4e5c6c375646435"
+  },
+  {
+    "archive": "SBS - Base Materials Pack 256x256.rar",
+    "entry": "Base Materials 256x256\\Stone\\Mat_Stone_Gray_01-256x256.png",
+    "file": "Mat_Stone_Gray_01-256x256.png",
+    "sha256": "5bffbed4dbecea38450c3c60226cb0d27801f4e433223d2b2b2b5a611cfb1271"
+  },
+  {
+    "archive": "SBS - Base Materials Pack 256x256.rar",
+    "entry": "Base Materials 256x256\\Wood\\Mat_Wood_Brown_01-256x256.png",
+    "file": "Mat_Wood_Brown_01-256x256.png",
+    "sha256": "b2c68358cc79e77374508c8689bc3444950a01a6c034ef9e4381837a646cfb9e"
+  },
+  {
+    "archive": "SBS - Base Materials Pack 256x256.rar",
+    "entry": "License.txt",
+    "file": "License.txt",
+    "sha256": "60f5bf01bb443e0b8782d42180df679deaac8e55e1bf75fde16b37b5e457f292"
+  }
+]

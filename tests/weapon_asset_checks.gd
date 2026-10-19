@@ -43,7 +43,7 @@ func _run() -> void:
 			await _capture("candidate_%d" % index)
 	preview.queue_free()
 	await process_frame
-	var game: Node3D = load("res://scenes/startup.tscn").instantiate()
+	var game: Node3D = load("res://scenes/fps_test_fallback.tscn").instantiate()
 	game.show_arms = true
 	game.test_weapon = 0
 	root.add_child(game)

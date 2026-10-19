@@ -9,7 +9,11 @@ Gegner oder Plugins. Separate Arme- und Waffen-Vorschauen dienen der Asset-Prüf
 ## Öffnen und starten
 
 Im Godot-Projektmanager `project.godot` importieren und **F5** drücken.
-`scenes/startup.tscn` instanziiert direkt die kleine `fps_test.tscn`.
+`scenes/startup.tscn` startet direkt den kompakten Außenhof in
+`scenes/environments/outdoor_test.tscn`: Halle, durchquerbarer Cargo, Straße,
+Vegetation, Generator-Schalter, Schießtafel und drei Physikprops.
+Die bisherige Testfläche bleibt unter `scenes/fps_test_fallback.tscn` per **F6**
+verfügbar; `fps_test.tscn` bleibt ebenfalls unverändert.
 Am Root **Startup** im Inspector **Test Weapon** wählen (Makarov / AS Val / VSS /
 SR-3 / M4A4 / EMP / MP40 / STG 44), speichern und F5 starten. **Show Arms** stellt nur für Makarov den
 bisherigen Armaufbau wieder her; **Use Imported Visuals** schaltet den Fallback.
@@ -39,7 +43,7 @@ Während des Spiels bleiben Fadenkreuz, Waffenname, kompakte Munitionszahl und k
 Interaktions-/Waffenhinweise sichtbar. Bestätigte Treffer zeigen kurz ein kleines
 graues Kreuz; Hilfetext und Beenden-Button erscheinen nach Esc.
 
-Die Testfläche enthält Boden, Wand, Rampe, einen niedrigen Duckbereich und drei
+Die erhaltene Fallback-Testfläche enthält Boden, Wand, Rampe, einen niedrigen Duckbereich und drei
 fallende Physikwürfel sowie eine kleine Treffertafel vor der vorhandenen Wand.
 Schüsse geben Physikwürfeln einen Impuls; es gibt kein Greifen oder Tragen.
 Am Rand kann man herunterfallen; zum erneuten Testen das Projekt neu starten.
@@ -135,3 +139,20 @@ Archive; es wurde keine Umgebung importiert oder Karte gebaut.
 Straßen-, Natur- und Prop-Modelle, getrennt von Startup und FPS-Testfläche.
 0–4 wählen Gruppen, rechte Maustaste dreht die Kamera, Mausrad zoomt.
 [Auswahl, Quellen, Einschränkungen und erster Bereichsplan](docs/environment_preview.md).
+
+
+## Spielbarer Außenhof
+
+F5 führt direkt in den etwa 40×40-m-Hof. Die vorhandenen 14 Asset-Typen werden
+mit festen Kollisionen, wenigen Baum-/Buschwiederholungen und drei beweglichen
+Kisten/Fässern genutzt. Halle bleibt geschlossen; Cargo kann durchlaufen werden.
+Generator-Schalter: E; Schießtafel am nördlichen Kugelfang. Alle bisherigen
+Waffen-/Maus-/Bewegungsbefehle bleiben gleich. Licht: einfacher Himmel,
+Umgebungslicht und Richtungsschatten, Forward+ und 4× MSAA unverändert.
+Details, Grenzen und Checks: [Außenhof](docs/playable_outdoor.md).
+
+
+Der Hof besitzt jetzt einen kleinen östlichen Wartungsrundweg mit zwei Zugängen,
+flacher Böschung bis 1,2 m, dichterem Randgrün und sichtbarer Zaunbegrenzung.
+Texturierte Erd-/Betonflächen, Wegweiser und Materiallager ordnen den Bereich.
+F5 bleibt der direkte Einstieg; Steuerung und Waffen unverändert.

@@ -92,3 +92,20 @@ importieren: begehbare Öffnungen, Kollisionen, echte Boden-/Baumhöhe, Texeldic
 Alpha-Schatten und LOD-Bedarf testen. Keine Unity-Shader, Fake-Lichtkegel oder
 Pack-Demoszenen übernehmen. Dieses Review ist eine Auswahlgrundlage, keine
 Behauptung, dass alle Archive bereits fehlerfrei in Godot funktionieren.
+
+
+## Selektive Ergänzung für den spielbaren Hof
+
+Nach erneutem lokalen Inventar wurden aus Street Furniture nur Hammer, Bottles
+und TrashCan ausgewählt (je FBX + PNG). Die offizielle Kkryy-Packseite nennt CC0:
+https://kkryy.itch.io/streetfurniture. Alle drei importieren mit Godots eingebautem
+FBX-Importer und explizit zugewiesenen Originaltexturen. Keine Rigs/Animationen
+benötigt. Der offene Abfallbehälter erhält eine vereinfachte Boxkollision.
+
+Aus SBS Base Materials wurden nur Gray Stone 01 und Brown Wood 01 ergänzt;
+lokale CC0-Lizenz erhalten. Statt Caliber-Rohdaten oder ungeklärten Rocks/Rocas-
+Archiven verwenden die sechs Felsgruppen eigene kleine Godot-Meshes mit der
+CC0-Steintextur. Einfache Werkbank/Regal sind ebenfalls eigene Geometrie. Keine
+zusätzlichen Gebäude-/Innenraum-Massenimporte: der vorhandene Cargo ist praktisch
+begehbar und genügt für diese kleine Werkstatt. Quellen/Originalhashes:
+`assets/source/outpost_workshop/`. Die ursprüngliche Showcase-Auswahl bleibt erhalten.

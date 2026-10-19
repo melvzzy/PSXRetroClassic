@@ -10,7 +10,7 @@ func _initialize() -> void:
 	_run.call_deferred()
 
 func _run() -> void:
-	game = load("res://scenes/startup.tscn").instantiate()
+	game = load("res://scenes/fps_test_fallback.tscn").instantiate()
 	game.test_weapon = 0
 	root.add_child(game)
 	actor = game.get_node("Player")
@@ -163,7 +163,7 @@ func _run() -> void:
 	game.queue_free()
 	await process_frame
 	# Optional arms must also work when the first selected weapon was a rifle.
-	game = load("res://scenes/startup.tscn").instantiate()
+	game = load("res://scenes/fps_test_fallback.tscn").instantiate()
 	game.show_arms = true
 	game.test_weapon = 1
 	root.add_child(game)
@@ -180,7 +180,7 @@ func _run() -> void:
 	_expect(not arms.visible and not gun.show_arms, "Switching away disables the optional arms again")
 	game.queue_free()
 	await process_frame
-	game = load("res://scenes/startup.tscn").instantiate()
+	game = load("res://scenes/fps_test_fallback.tscn").instantiate()
 	game.show_arms = true
 	game.use_imported_visuals = false
 	game.test_weapon = 4

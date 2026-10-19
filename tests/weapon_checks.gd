@@ -13,7 +13,7 @@ func _initialize() -> void:
 	_run.call_deferred()
 
 func _run() -> void:
-	world = load("res://scenes/startup.tscn").instantiate() as Node3D
+	world = load("res://scenes/fps_test_fallback.tscn").instantiate() as Node3D
 	world.test_weapon = 0
 	root.add_child(world)
 	player = world.get_node("Player") as FPSController

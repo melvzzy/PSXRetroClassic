@@ -324,3 +324,97 @@ Texturen, Augenhöhenmaß und Modellunterseiten prüfen. F5 muss unverändert de
 bisherigen Waffentest starten. Die Vorschau hat absichtlich keine begehbaren
 Kollisionen, Türen oder Gameplay-Logik. Auswahl, Lizenzgrenzen und Bereichsplan:
 [Umgebungsvorschau](../docs/environment_preview.md).
+
+
+## Aktueller F5-Außenhof — Abschluss
+
+F5 startet direkt den spielbaren Hof in `scenes/environments/outdoor_test.tscn`.
+`scenes/fps_test_fallback.tscn` erhält die frühere Startup-Komposition unverändert
+(bis auf die entfernte eigene Ressourcen-UID); `fps_test.tscn` bleibt unverändert.
+Die bisherigen positionsabhängigen Tests laden ausdrücklich den Fallback.
+Der neue `outdoor_checks.gd` lädt ausdrücklich den tatsächlichen F5-Startup.
+
+Abschließende Verifikation: **525 Checks** (vorhandene 481 + 44 Outdoor-Checks).
+Headless-Import, begrenzter F5- und Fallback-Start sowie bestehende Vorschauen
+werden im vollständigen Runner geprüft. Der zusätzliche Windows-Grafiklauf
+prüft **49 Fälle und fünf Captures**: Spawn, Cargo, Generator, Hof, Übersicht.
+Die echten First-Person-Ansichten wurden visuell kontrolliert.
+
+Godot **4.7.2.stable.official.ed1daf0bf**, Forward+/Vulkan/RTX 5060 Ti.
+**Godot 4.6.3 nicht verifiziert.** Abschließende Logs müssen frei von Script-,
+Ressourcen- und Szenenfehlern bleiben; nur die bekannte Windows-Zertifikatsspeicher-
+Meldung der Umgebung wird vom Runner ausdrücklich gemeldet und ausgenommen.
+Kein vollständiger manueller Windows-Spieltest oder FPS-Benchmark behauptet.
+
+Outdoor-Prüfungen: sicherer Spawn, tatsächlich gespeicherte sichtbare Instanzen,
+Straße, Sprung/Ducken, Cargo-Durchgang in beide Richtungen ohne Sprung, geschlossene
+Hallenkollision, sichtbare Außenbegrenzung, E-Schalter am Generator, acht Waffen
+mit echtem Zieltreffer/ADS/Reload-Start, physischer Schussimpuls, Holster/Draw.
+Die alte komplette Waffen-/Reload-/Fokus-/Ammo-Suite bleibt zusätzlich aktiv.
+
+F5 manuell: Halle umrunden und Cargo durchqueren; WASD/Shift/Space/Ctrl;
+1–8, RMB/LMB/R/X einschließlich Wechsel während Reload/ADS; Props beschießen;
+E am Generator; Esc/Alt-Tab/Recapture und Beenden. Fallback separat per F6 öffnen.
+Tatsächliche FPS und nahes Waffen-/Wand-Clipping manuell bewerten.
+Details und Grenzen: [Spielbarer Außenhof](../docs/playable_outdoor.md).
+
+
+## Erste Bereichserweiterung — aktueller Stand
+
+**535 Checks bestanden**: bisherige 525 plus zehn Prüfungen für die kleine
+östliche Erweiterung. Vollständiger Runner einschließlich Import, begrenztem
+F5-/Fallback-Start und aller bestehenden Regressionen erfolgreich.
+Die zusätzliche Suite `outpost_expansion_checks.gd` prüft die echte F5-Szene,
+Böschungshöhe mit Raycast, beide Zugänge, normalen Rundweg ohne Sprung,
+Zaunbegrenzung, erhaltene Props/Ziel/Schalter sowie die neuen Textur-Mipmaps.
+
+Grafikläufe: bestehende Outdoor-Suite **49 Checks / fünf Captures**, zusätzlich
+Erweiterung **14 Checks / vier Captures**, zusammen **63 / neun**. Native
+First-Person-Ansichten und Übersichten wurden visuell kontrolliert. Die erste
+fehlerhafte Dreiecksorientierung wurde korrigiert; Weg und Böschung verwenden
+nun dieselben Stützpunkte. Keine flimmernde überlagerte Wegfläche oder fehlende
+Höhenkollision in den abschließenden Aufnahmen/Prüfungen.
+
+Godot **4.7.2.stable.official.ed1daf0bf**, Forward+/Vulkan/RTX 5060 Ti;
+**4.6.3 nicht verifiziert**. Abschließende Logs enthalten nur die bekannte
+Windows-Zertifikatsspeicher-Meldung, keine weiteren Engine-Diagnosen.
+Kein vollständiger manueller Windows-Spieltest oder FPS-Benchmark behauptet.
+
+Bilder: `.godot/checks/expansion/arrival.png`, `ridge_view.png`,
+`service_path.png`, `layout.png`, dazu die bisherigen Outdoor-Ansichten.
+F5 manuell: beide Zugänge und Rundweg vor/zurück, am Zaun springen/ducken,
+Böschung schräg ablaufen, vom erhöhten Weg schießen; 1–8/ADS/R/X/E/Physikprops
+und Esc/Alt-Tab prüfen. Originaltestfläche weiterhin separat per F6.
+
+
+## Abschließender Umgebungsdurchgang
+
+`final_area_checks.gd` ergänzt 15 gezielte Prüfungen der tatsächlichen F5-Szene:
+Werkstatteinrichtung und Texturen, freier Mittelgang anhand bestehender Cargo-Tests,
+Werkbank-/Regalkollision, Licht, Verbindung zur Lichtung und ihre Zaunbegrenzung,
+sechs unskalierte konvexe Felskörper. Der Runner führt diese Suite ebenfalls aus.
+
+Grafikaufruf:
+`Godot.exe --path . --script res://tests/final_area_checks.gd -- --capture`
+Bilder: `.godot/checks/final_area/workshop.png`, `clearing.png`, `overview.png`.
+Die bestehenden Outdoor- und Rundweg-Grafikprüfungen bleiben zusätzlich aktiv.
+Die Vorprüfung fand stehengebliebene automatisch benannte Zaunsegmente an der
+alten Grenze; alle Segmente wurden konsistent versetzt und erneut geprüft.
+
+F5 manuell: Cargo von beiden Enden betreten, zwischen Werkbank und Regal laufen,
+ducken/springen; beide Zugänge und Lichtung in beide Richtungen ablaufen, Zaun,
+Baumstämme und Felsen prüfen. Danach 1–8/RMB/LMB/R/X/E, Physikprops und Fokuswechsel;
+Originaltestfläche per F6 und tatsächliche FPS prüfen. Keine vollständige manuelle
+Gameplay- oder Performance-Verifikation durch Render-Captures ableiten.
+
+
+Abschließendes Ergebnis dieses Durchgangs: **550 Headless-Assertions bestanden,
+0 fehlgeschlagen**, inklusive Editor-Import, begrenztem F5-/Fallback-Start und
+allen bisherigen Suiten. Zusätzlich **81 Grafikprüfungen / zwölf Captures**
+(Outdoor 49/5, Rundweg 14/4, Werkstatt/Lichtung 18/3); Aufnahmen visuell geprüft.
+Originalhashes der neun übernommenen Quelldateien stimmen vollständig überein.
+Godot **4.7.2.stable.official.ed1daf0bf**, Forward+/Vulkan/RTX 5060 Ti.
+**4.6.3 nicht getestet.** Abschließende Logs enthalten ausschließlich die bekannte
+Windows-Zertifikatsspeicher-Meldung als Umgebungsfehler; keine Script-/Ressourcen-/
+Szenenfehler. Die vollständige Suite liegt ignoriert unter
+`.godot/checks/final-foundation-suite.txt`. Kein manueller FPS-Benchmark.

@@ -1,3 +1,6 @@
+> Folgestand: F5 lädt jetzt den [spielbaren Außenhof](playable_outdoor.md).
+> Die hier beschriebene isolierte Asset-Vorschau bleibt unverändert per F6 verfügbar.
+
 # Umgebung: geprüfte Auswahl und isolierte Vorschau
 
 Stand 19.10.2026. Diese Szene ist eine Asset-Ausstellung mit neutralem Boden,
