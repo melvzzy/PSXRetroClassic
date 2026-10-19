@@ -37,7 +37,7 @@ var _pose_blend: float = 0.0
 var _meters_per_unit: float
 
 func _ready() -> void:
-	if not firearm.show_arms:
+	if not firearm.arms_requested:
 		visible = false
 		process_mode = Node.PROCESS_MODE_DISABLED
 		var inactive_player: AnimationPlayer = $ArmsOrientation/Arms.find_child("AnimationPlayer", true, false)
@@ -81,7 +81,7 @@ func _ready() -> void:
 	_magazine_rest_transform = _magazine.transform
 	_meters_per_unit = pistol.get_node("Source").scale.x
 	_placeholder = get_parent().get_node("Placeholder")
-	_muzzle_rest = firearm.get_node("Visuals/Muzzle").transform
+	_muzzle_rest = firearm.placeholder_muzzle
 	for node: Node in find_children("*", "MeshInstance3D", true, false):
 		(node as MeshInstance3D).cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
 	firearm.fired.connect(_on_fired)
@@ -102,7 +102,20 @@ func _ready() -> void:
 	for bone: int in range(skeleton.get_bone_count()):
 		_relaxed_poses.append(skeleton.get_bone_pose(bone))
 		skeleton.set_bone_pose(bone, _ready_poses[bone])
+	firearm.weapon_changed.connect(_weapon_changed)
 	set_imported_visible(use_imported_visuals)
+	_weapon_changed(firearm.test_profile)
+
+func _weapon_changed(_profile: TestWeaponProfile) -> void:
+	_slide_kick = 0.0
+	_reload_reach = 0.0
+	_reload_pull = 0.0
+	_previous_reach = -1.0
+	_pose_blend = -1.0
+	visible = firearm.show_arms and use_imported_visuals
+	process_mode = Node.PROCESS_MODE_INHERIT if firearm.show_arms else Node.PROCESS_MODE_DISABLED
+	if firearm.show_arms:
+		set_imported_visible(use_imported_visuals)
 
 func _bone_in_pistol(bone: int) -> Transform3D:
 	return pistol.global_transform.affine_inverse() * skeleton.global_transform * skeleton.get_bone_global_pose(bone)
@@ -218,6 +231,8 @@ func _sync_hand() -> void:
 		_sync_magazine()
 
 func _on_fired() -> void:
+	if not firearm.show_arms:
+		return
 	_slide_kick = 0.025
 
 func _on_ammunition_changed(magazine: int, _reserve: int) -> void:

@@ -45,6 +45,7 @@ func _run() -> void:
 	await process_frame
 	var game: Node3D = load("res://scenes/startup.tscn").instantiate()
 	game.show_arms = true
+	game.test_weapon = 0
 	root.add_child(game)
 	await _frames(15)
 	var actor := game.get_node("Player") as FPSController

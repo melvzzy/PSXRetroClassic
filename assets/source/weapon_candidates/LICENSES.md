@@ -1,6 +1,6 @@
 # Quellen und Nutzungsangaben — geprüft am 19.10.2026
 
-Die ausgewählten Archive enthalten keine Lizenz-/Readme-Dateien. Diese Datei
+Die ursprünglichen FBX-Kandidaten enthalten keine Lizenz-/Readme-Dateien. Diese Datei
 dokumentiert extern gefundene Autorenaussagen und offene Zuordnungen; sie ist
 keine ursprüngliche Archivbeilage und erklärt die Dateien ausdrücklich nicht zu CC0.
 
@@ -41,3 +41,24 @@ Pro Kandidat wurden nur unveränderte FBX- und PNG-Dateien übernommen. Original
 Dateien ersetzen die Quellen. Laufzeitmaterialien, Maßstab und Teile-Sichtbarkeit
 liegen separat in `scenes/weapons/` bzw. `scripts/weapon_asset.gd`.
 Die bereits importierten Drillimpact-Arme behalten ihren separaten CC0-Nachweis.
+
+
+## Ergänzung: M4A4 — artemoq
+
+Quelle: https://artemoq.itch.io/m4a4 (erneut geprüft am 19.10.2026).
+Die Autorenseite nennt das heruntergeladene `M4A4.rar` und erlaubt die freie
+Verwendung der Waffe. Keine konkrete Standardlizenz; insbesondere nicht CC0.
+Credit: „M4A4 — artemoq“. Nur Original-FBX und zugehöriges PNG übernommen.
+
+## Ergänzung: EMP, MP40, STG 44 — PUNDEL
+
+Archiv: `PSX German Weapons from WW 2 mini-Asset Pack.zip`.
+Der unveränderte Originaltext steht in `ww2_weapons/README.txt`: ausdrücklich
+CC0 1.0, kommerzielle Nutzung, Änderung und Weitergabe erlaubt, Credit optional.
+Freiwilliger Credit: „PSX German Weapons from WW 2 mini-Asset Pack — PUNDEL“
+(https://pundel.itch.io). Nur die drei GLBs mit eingebetteten Texturen und README
+übernommen; redundante FBX-Exporte verbleiben im Archiv.
+
+Kopiernachweis aller sechs neuen Quelldateien: `roster_source_manifest.json`
+(Archiv, Eintrag, Zielpfad und SHA-256). Originalmodelle und Texturen bleiben
+unverändert; Achsen-/Maßstabsanpassungen liegen ausschließlich in den Wrappern.

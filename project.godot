@@ -96,6 +96,39 @@ holster={
 ]
 }
 
+weapon_1={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"physical_keycode":49)]
+}
+weapon_2={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"physical_keycode":50)]
+}
+weapon_3={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"physical_keycode":51)]
+}
+weapon_4={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"physical_keycode":52)]
+}
+weapon_5={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"physical_keycode":53)]
+}
+weapon_6={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"physical_keycode":54)]
+}
+weapon_7={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"physical_keycode":55)]
+}
+weapon_8={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"physical_keycode":56)]
+}
+
 [rendering]
 
 anti_aliasing/quality/msaa_3d=2

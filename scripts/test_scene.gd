@@ -1,6 +1,6 @@
 extends Node3D
 
-@export_enum("Makarov", "AS Val", "VSS", "SR-3") var test_weapon: int = 0
+@export_enum("Makarov", "AS Val", "VSS", "SR-3", "M4A4", "EMP", "MP40", "STG 44") var test_weapon: int = 0
 ## Restores the previous Makarov setup; other weapons have no fitted arm poses.
 @export var show_arms: bool = false
 @export var use_imported_visuals: bool = true
@@ -9,14 +9,15 @@ const WEAPON_PROFILES: Array[TestWeaponProfile] = [
 	preload("res://scenes/weapons/profiles/as_val.tres"),
 	preload("res://scenes/weapons/profiles/vss.tres"),
 	preload("res://scenes/weapons/profiles/sr3.tres"),
+	preload("res://scenes/weapons/profiles/m4a4.tres"),
+	preload("res://scenes/weapons/profiles/emp.tres"),
+	preload("res://scenes/weapons/profiles/mp40.tres"),
+	preload("res://scenes/weapons/profiles/stg44.tres"),
 ]
 
 func _enter_tree() -> void:
 	var gun: TestFirearm = get_node("Player/Head/Camera3D/ViewmodelMount/TestFirearm")
-	gun.apply_test_profile(WEAPON_PROFILES[test_weapon])
-	gun.show_arms = show_arms and test_weapon == 0
-	if gun.show_arms:
-		gun.hip_position = Vector3(0.23, -0.22, -0.45) # Preserve the fitted arm setup.
+	gun.configure_roster(WEAPON_PROFILES, test_weapon, show_arms)
 	gun.use_imported_visuals = use_imported_visuals
 
 
@@ -33,12 +34,15 @@ func _ready() -> void:
 	weapon.status_changed.connect(_on_weapon_status_changed)
 	weapon.hit_confirmed.connect(_on_hit_confirmed)
 	_on_ammunition_changed(weapon.magazine, weapon.reserve)
+	weapon.weapon_changed.connect(_on_weapon_changed)
+	_on_weapon_changed(weapon.test_profile)
 
 func _on_mouse_capture_changed(captured: bool) -> void:
 	$HUD/Help.visible = not captured
 	$HUD/Quit.visible = not captured
 	$HUD/Crosshair.visible = captured
 	$HUD/Ammo.visible = captured
+	$HUD/WeaponName.visible = captured
 	$HUD/WeaponStatus.visible = captured
 	if not captured:
 		_hit_marker_left = 0.0
@@ -47,9 +51,14 @@ func _on_mouse_capture_changed(captured: bool) -> void:
 func _process(delta: float) -> void:
 	var captured: bool = $Player.has_mouse_capture
 	$HUD/Crosshair.visible = captured and not weapon.is_aiming and weapon.is_weapon_ready()
+	$HUD/WeaponName.visible = captured
 	$HUD/Ammo.visible = captured and not weapon.is_holstered
 	_hit_marker_left = maxf(0.0, _hit_marker_left - delta)
 	$HUD/HitMarker.visible = _hit_marker_left > 0.0
+
+func _on_weapon_changed(profile: TestWeaponProfile) -> void:
+	$HUD/WeaponName.text = profile.display_name
+	_hit_marker_left = 0.0
 
 func _on_ammunition_changed(magazine: int, reserve: int) -> void:
 	$HUD/Ammo.text = "%d / %d" % [magazine, reserve]

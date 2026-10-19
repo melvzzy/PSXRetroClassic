@@ -1,3 +1,5 @@
+> Historischer Vier-Waffen-Stand. Aktuell: [acht Waffen und In-Game-Wechsel](weapon_roster.md).
+
 # Vier einzeln testbare Waffen, standardmäßig ohne Arme
 
 ## F5-Auswahl

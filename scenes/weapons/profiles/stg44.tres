@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="TestWeaponProfile" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/test_weapon_profile.gd" id="1"]
+[ext_resource type="PackedScene" path="res://scenes/weapons/stg44.tscn" id="2"]
+
+[resource]
+script = ExtResource("1")
+model = ExtResource("2")
+display_name = "STG 44"
+magazine_capacity = 30
+reserve = 90
+shot_interval = 0.14
+reload_duration = 2.5
+recoil_degrees = 1.15
+ads_fov = 60.0
+part_travel = 0.014
+hip_position = Vector3(0.2, -0.26, -0.58)
+ads_position = Vector3(0, -0.12, -0.62)
+moving_parts = PackedStringArray("bolt")
+
+hip_rotation_degrees = Vector3(0, 4, 0)

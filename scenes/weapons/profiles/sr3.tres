@@ -14,7 +14,9 @@ reload_duration = 1.9
 recoil_degrees = 0.95
 ads_fov = 60.0
 part_travel = 0.012
-hip_position = Vector3(0.2, -0.18, -0.54)
+hip_position = Vector3(0.19, -0.155, -0.5)
 ads_position = Vector3(0, -0.12, -0.5)
 moving_parts = PackedStringArray("extractor")
 hidden_parts = PackedStringArray()
+
+hip_rotation_degrees = Vector3(0, 4, 0)

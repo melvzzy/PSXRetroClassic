@@ -15,11 +15,34 @@ var _muzzle: Node3D
 var _imported: bool = true
 
 func _ready() -> void:
-	if firearm.show_arms:
-		visible = false
-		set_process(false)
+	_muzzle = firearm.get_node("Visuals/Muzzle")
+	_muzzle_rest = firearm.placeholder_muzzle
+	_placeholder = firearm.get_node("Visuals/ModelMount/Placeholder")
+	_imported = firearm.use_imported_visuals
+	firearm.fired.connect(_on_fired)
+	firearm.ammunition_changed.connect(_ammunition_changed)
+	firearm.actor.mouse_capture_changed.connect(_capture_changed)
+	firearm.weapon_changed.connect(_load_profile)
+	_load_profile(firearm.test_profile)
+
+func _on_fired() -> void:
+	if not firearm.show_arms:
+		_kick = _profile.part_travel
+
+func _load_profile(profile: TestWeaponProfile) -> void:
+	if is_instance_valid(model):
+		remove_child(model)
+		model.queue_free()
+	model = null
+	_parts.clear()
+	_origins.clear()
+	_kick = 0.0
+	_aim_blend = 0.0
+	visible = not firearm.show_arms
+	set_process(visible)
+	if not visible:
 		return
-	_profile = firearm.test_profile
+	_profile = profile
 	model = _profile.model.instantiate()
 	add_child(model)
 	for part_name: String in _profile.hidden_parts:
@@ -32,17 +55,11 @@ func _ready() -> void:
 		mesh.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
 	_sight = model.get_node("SightLine")
 	_model_muzzle = model.get_node("Muzzle")
-	_muzzle = firearm.get_node("Visuals/Muzzle")
-	_muzzle_rest = _muzzle.transform
-	_placeholder = firearm.get_node("Visuals/ModelMount/Placeholder")
 	for player: AnimationPlayer in model.find_children("*", "AnimationPlayer", true, false):
 		player.stop()
 		player.active = false
-	firearm.ammunition_changed.connect(_ammunition_changed)
-	_ammunition_changed(_profile.magazine_capacity, _profile.reserve)
-	firearm.fired.connect(func() -> void: _kick = _profile.part_travel)
-	firearm.actor.mouse_capture_changed.connect(_capture_changed)
-	set_imported_visible(firearm.use_imported_visuals)
+	_ammunition_changed(firearm.magazine if firearm.is_node_ready() else _profile.magazine_capacity, 0)
+	set_imported_visible(_imported)
 
 func set_imported_visible(value: bool) -> void:
 	_imported = value
@@ -51,6 +68,8 @@ func set_imported_visible(value: bool) -> void:
 	_update_transform()
 
 func _ammunition_changed(magazine: int, _reserve: int) -> void:
+	if not is_instance_valid(model):
+		return
 	var empty: Node3D = model.get_part("Magazine-Empty")
 	if empty != null:
 		empty.visible = magazine == 0
@@ -65,9 +84,8 @@ func _capture_changed(captured: bool) -> void:
 func _process(delta: float) -> void:
 	_aim_blend = lerpf(_aim_blend, 1.0 if firearm.is_aiming else 0.0, 1.0 - exp(-firearm.ads_response * delta))
 	_kick *= exp(-30.0 * delta)
-	var units: float = model.get_node("Source").scale.x
 	for i: int in range(_parts.size()):
-		_parts[i].position = _origins[i] + Vector3(0.0, 0.0, _kick / units)
+		_parts[i].position = _origins[i] + _parts[i].get_parent().global_basis.inverse() * model.global_basis.z * _kick
 	_update_transform()
 
 func _update_transform() -> void:
@@ -76,7 +94,9 @@ func _update_transform() -> void:
 	var ads_basis: Basis = sight_local.basis.orthonormalized().inverse()
 	var sight_origin: Vector3 = ads_basis * sight_local.origin
 	var ads := Transform3D(ads_basis, Vector3(-firearm.ads_position.x - sight_origin.x, -firearm.ads_position.y - sight_origin.y, 0.0))
-	transform = Transform3D.IDENTITY.interpolate_with(ads, _aim_blend if _imported else 0.0)
+	var rotation := Vector3(deg_to_rad(_profile.hip_rotation_degrees.x), deg_to_rad(_profile.hip_rotation_degrees.y), deg_to_rad(_profile.hip_rotation_degrees.z))
+	var hip := Transform3D(Basis.from_euler(rotation), Vector3.ZERO)
+	transform = hip.interpolate_with(ads, _aim_blend) if _imported else Transform3D.IDENTITY
 	var lowered: float = smoothstep(0.0, 1.0, firearm.holster_amount)
 	position.y -= 0.45 * lowered
 	rotate_x(-0.2 * lowered)

@@ -1,5 +1,10 @@
 # Waffenprüfung und erste Makarov-Integration
 
+Aktueller Stand: Acht spielbare Waffen mit Wechsel über 1–8; M4A4 und alle drei
+WW2-Reserven sind inzwischen gezielt importiert. Aktuelle Auswahl, Quellen,
+Grenzen und Tests: [Waffen-Roster](../../../docs/weapon_roster.md).
+Die folgende Erstprüfung dokumentiert den früheren Importumfang.
+
 Stand: 19.10.2026. Originale/Archive: `source_manifest.json`,
 Lizenzzuordnung: [LICENSES.md](LICENSES.md), maschinenlesbare Sichtung:
 [review_inventory.json](review_inventory.json).

@@ -2,7 +2,7 @@
 
 Eigenständiges Godot-**4.6.3 Standard**-Projekt (GDScript, Forward+) für einen
 zukünftigen Retro-Sandbox-Shooter. Aktuell: kleine spielbare FPS-Grundlage mit
-vier vor dem Start auswählbaren halbautomatischen Testwaffen, standardmäßig ohne
+acht im Spiel auswählbaren halbautomatischen Testwaffen, standardmäßig ohne
 Arme, ohne Inventar,
 Gegner oder Plugins. Separate Arme- und Waffen-Vorschauen dienen der Asset-Prüfung.
 
@@ -11,9 +11,9 @@ Gegner oder Plugins. Separate Arme- und Waffen-Vorschauen dienen der Asset-Prüf
 Im Godot-Projektmanager `project.godot` importieren und **F5** drücken.
 `scenes/startup.tscn` instanziiert direkt die kleine `fps_test.tscn`.
 Am Root **Startup** im Inspector **Test Weapon** wählen (Makarov / AS Val / VSS /
-SR-3), speichern und F5 starten. **Show Arms** stellt nur für Makarov den
+SR-3 / M4A4 / EMP / MP40 / STG 44), speichern und F5 starten. **Show Arms** stellt nur für Makarov den
 bisherigen Armaufbau wieder her; **Use Imported Visuals** schaltet den Fallback.
-Details: [Vier-Waffen-Setup](docs/four_weapon_setup.md).
+Details: [Waffen-Roster und Wechsel](docs/weapon_roster.md).
 Das veränderbare Fenster startet mit 1280 × 720 und VSync. Forward+ benötigt
 passende Grafiktreiber. Das Projekt enthält alle benötigten Ressourcen.
 
@@ -29,10 +29,13 @@ passende Grafiktreiber. Das Projekt enthält alle benötigten Ressourcen.
   R: Nachladen. Startmunition je Profil (Makarov weiterhin 12/48), keine automatische
   Nachladung. Nachladen blockiert Schüsse und beendet ADS; Fokusverlust/Esc
   bricht es ohne Munitionsübertragung ab. Ein Wiederaufnahme-Klick feuert nie.
+- 1–8: Makarov, AS Val, VSS, SR-3, M4A4, EMP, MP40, STG 44 wählen.
+  Magazin/Reserve bleiben je Waffe erhalten. Wechsel bricht Reload/ADS ab und
+  zieht die neue Waffe; gehaltene Maustasten lösen dabei keinen Schuss aus.
 - X: Waffe wegstecken/ziehen; Q beendet nichts.
 - Fenster schließen oder nach Esc auf **Beenden** klicken: Spiel verlassen.
 
-Während des Spiels bleiben Fadenkreuz, kompakte Munitionszahl und kurze
+Während des Spiels bleiben Fadenkreuz, Waffenname, kompakte Munitionszahl und kurze
 Interaktions-/Waffenhinweise sichtbar. Bestätigte Treffer zeigen kurz ein kleines
 graues Kreuz; Hilfetext und Beenden-Button erscheinen nach Esc.
 
@@ -50,7 +53,7 @@ Nach aufgebrauchter Munition ebenfalls neu starten.
 - `scenes/test_firearm.tscn`: gemeinsame Waffenlogik; `WeaponOnlyViewmodel` zeigt
   das ausgewählte Modell. Der erhaltene Makarov-Arm-Adapter ist standardmäßig
   unsichtbar und im Prozessmodus Disabled. `Placeholder` bleibt als Fallback.
-- `scenes/weapons/`: fünf Visual-Wrapper, Makarov-Arm-Adapter und vier kleine
+- `scenes/weapons/`: neun Visual-Wrapper, Makarov-Arm-Adapter und acht kleine
   Testprofile. Nur Izh-54 bleibt ausschließlich Vorschau-Kandidat.
 - `scenes/fps_test.tscn`: ausschließlich kleine Funktions-Testumgebung samt HUD.
 - `scripts/`: kleine, getrennte Controller-, Interaktions- und Testszene-Skripte.

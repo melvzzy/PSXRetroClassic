@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/weapon_asset.gd" id="1"]
+[ext_resource type="PackedScene" path="res://assets/source/weapon_candidates/ww2_weapons/MP 40.glb" id="2"]
+
+[node name="MP40" type="Node3D"]
+script = ExtResource("1")
+preserve_imported_materials = true
+
+[node name="Source" parent="." instance=ExtResource("2")]
+scale = Vector3(1,1,1)
+rotation_degrees = Vector3(0,180,0)
+
+[node name="Muzzle" type="Marker3D" parent="."]
+position = Vector3(0, 0.10336, -0.307326)
+
+[node name="SightLine" type="Marker3D" parent="."]
+position = Vector3(0, 0.12841, 0.05)

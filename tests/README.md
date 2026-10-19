@@ -265,3 +265,33 @@ Keine Behauptung eines vollständigen manuellen Windows-Spieltests oder FPS-Test
 
 Auswahl, Werte, Grenzen und F5-Checkliste:
 [Vier-Waffen-Setup](../docs/four_weapon_setup.md).
+
+
+## Aktueller Acht-Waffen-Modus und Wechsel
+
+Vor der Erweiterung wurden die vorhandenen 322 Checks ausgeführt. Vier ältere
+Makarov-Fixtures setzen nun ausdrücklich `test_weapon = 0`, damit die gespeicherte
+AS-Val-Startauswahl ihre pistolenbezogenen Erwartungen nicht verfälscht.
+Abschließend **442 Checks bestanden**: bisherige 322 plus 120 Roster-Prüfungen.
+Headless-Import, begrenzter Start und beide bestehenden Previews erfolgreich.
+Der Runner enthält jetzt auch `tests/weapon_roster_checks.gd`.
+
+Zusätzlich tatsächlicher Windows-Grafiklauf mit **137 Checks und 17 Captures**:
+Hip/ADS aller acht Waffen und zurückgeschaltete Makarov-Arme. Alle acht Hip-/
+ADS-Paare und die Armansicht visuell geprüft. Forward+/Vulkan/RTX 5060 Ti;
+Godot **4.7.2.stable.official.ed1daf0bf**, keine 4.6.3-Verifikation.
+Nur die bekannte Windows-Zertifikatsspeicher-Meldung in den abschließenden Logs;
+keine weiteren Script-/Ressourcen-/Szenenfehler oder Warnungen.
+
+Die Tests verwenden echte Nummern-/Mausereignisse, prüfen alle Profile samt
+Texturen, physischen Maßen, Hip-/ADS-Nahgrenze, Markerausrichtung, tatsächlichen
+Zieltreffern, Schuss und Reload-/Holster-Abbruch. Sie prüfen Munition nach einer
+Runde durch alle Slots, Reload-Abschluss mit Munitionserhalt, schnelle Wechsel
+bei gehaltenen Maustasten, Cooldown-Erhalt, Ziehsperre, Fokus, HUD-Namen sowie
+Arme und Placeholder (auch nach Start mit einer anderen Waffe).
+
+Aufnahmen: `.godot/checks/roster/`; Übersicht `hip_overview.png` und
+`ads_overview.png`. Diese Dateien sind absichtlich nicht versioniert.
+Das ist eine gesteuerte Renderprüfung, kein vollständiger manueller Windows-
+Spieltest oder FPS-Benchmark. Manuelle F5-Checkliste und Quellen:
+[Acht-Waffen-Setup](../docs/weapon_roster.md).

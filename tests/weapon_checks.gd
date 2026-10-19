@@ -14,6 +14,7 @@ func _initialize() -> void:
 
 func _run() -> void:
 	world = load("res://scenes/startup.tscn").instantiate() as Node3D
+	world.test_weapon = 0
 	root.add_child(world)
 	player = world.get_node("Player") as FPSController
 	weapon = player.get_node("Head/Camera3D/ViewmodelMount/TestFirearm") as TestFirearm

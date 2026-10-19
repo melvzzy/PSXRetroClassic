@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="TestWeaponProfile" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/test_weapon_profile.gd" id="1"]
+[ext_resource type="PackedScene" path="res://scenes/weapons/mp40.tscn" id="2"]
+
+[resource]
+script = ExtResource("1")
+model = ExtResource("2")
+display_name = "MP40"
+magazine_capacity = 32
+reserve = 96
+shot_interval = 0.14
+reload_duration = 2.4
+recoil_degrees = 0.9
+ads_fov = 60.0
+part_travel = 0.014
+hip_position = Vector3(0.2, -0.25, -0.58)
+ads_position = Vector3(0, -0.12, -0.6)
+moving_parts = PackedStringArray("bolt")
+
+hip_rotation_degrees = Vector3(0, 4, 0)

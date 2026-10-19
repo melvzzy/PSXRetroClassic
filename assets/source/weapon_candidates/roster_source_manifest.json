@@ -1,0 +1,38 @@
+[
+  {
+    "archive": "PSX German Weapons from WW 2 mini-Asset Pack.zip",
+    "entry": "PSX German Weapons from WW 2 mini-Asset Pack/GLB/EMP.glb",
+    "file": "assets\\source\\weapon_candidates\\ww2_weapons\\EMP.glb",
+    "sha256": "0cef10fa30909ddf995e76ca8eede0d054c92e1afa3d1af07ef8fcf5803efdcd"
+  },
+  {
+    "archive": "PSX German Weapons from WW 2 mini-Asset Pack.zip",
+    "entry": "PSX German Weapons from WW 2 mini-Asset Pack/GLB/MP 40.glb",
+    "file": "assets\\source\\weapon_candidates\\ww2_weapons\\MP 40.glb",
+    "sha256": "c44986a758c2688bf004186312f8d8b25449e8dc7740f1c7a426cebf2966aa4b"
+  },
+  {
+    "archive": "PSX German Weapons from WW 2 mini-Asset Pack.zip",
+    "entry": "PSX German Weapons from WW 2 mini-Asset Pack/GLB/Sturmgewehr STG 44.glb",
+    "file": "assets\\source\\weapon_candidates\\ww2_weapons\\Sturmgewehr STG 44.glb",
+    "sha256": "f1c74c4e4e50384c64f38b70477f65ff66cd2eb0523ef72d0c7b3f492a50ec5c"
+  },
+  {
+    "archive": "PSX German Weapons from WW 2 mini-Asset Pack.zip",
+    "entry": "PSX German Weapons from WW 2 mini-Asset Pack/README.txt",
+    "file": "assets\\source\\weapon_candidates\\ww2_weapons\\README.txt",
+    "sha256": "b5ebfbb5b0242c5e4c19fee913d685b8b680a56bfdb04e8d2f10589a215bd8b4"
+  },
+  {
+    "archive": "M4A4.rar",
+    "entry": "m4a4/M4A4.fbx",
+    "file": "assets\\source\\weapon_candidates\\m4a4\\M4A4.fbx",
+    "sha256": "aaf8d482bdd0a03066d88e49f4434830369a0540cb8d942ac0043bd7ef367731"
+  },
+  {
+    "archive": "M4A4.rar",
+    "entry": "m4a4/M4A4.png",
+    "file": "assets\\source\\weapon_candidates\\m4a4\\M4A4.png",
+    "sha256": "6dd3b2d7485541d3734cc2f6c212b5580e8de29badab1268c77cb010e9daf2b4"
+  }
+]

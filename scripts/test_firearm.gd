@@ -6,11 +6,19 @@ signal status_changed(text: String)
 signal aim_changed(aiming: bool)
 signal fired()
 signal hit_confirmed()
+signal weapon_changed(profile: TestWeaponProfile)
 
 @export var actor: FPSController
 @export var camera: Camera3D
 var test_profile: TestWeaponProfile
 var show_arms: bool = false
+var arms_requested: bool = false
+var active_weapon: int = 0
+var weapon_profiles: Array[TestWeaponProfile] = []
+var _ammunition: Array[Vector2i] = []
+var _inactive_cooldowns: Array[float] = []
+var _pending_weapon: int = -1
+var placeholder_muzzle: Transform3D
 var use_imported_visuals: bool = true
 @export_group("Firearm")
 @export_range(1, 100) var magazine_capacity: int = 12
@@ -57,8 +65,18 @@ var _query := PhysicsRayQueryParameters3D.new()
 @onready var visuals: Node3D = $Visuals
 @onready var muzzle_flash: MeshInstance3D = $Visuals/Muzzle/Flash
 
+func configure_roster(profiles: Array[TestWeaponProfile], start: int, arms: bool) -> void:
+	weapon_profiles = profiles
+	active_weapon = start
+	arms_requested = arms
+	for profile: TestWeaponProfile in profiles:
+		_ammunition.append(Vector2i(profile.magazine_capacity, profile.reserve))
+		_inactive_cooldowns.append(0.0)
+	placeholder_muzzle = get_node("Visuals/Muzzle").transform
+	apply_test_profile(profiles[start])
+
 func apply_test_profile(profile: TestWeaponProfile) -> void:
-	# Called once before children enter/initialize. Existing firing state stays here.
+	# Profile data changes here; ammunition and transitions stay in this firearm.
 	test_profile = profile
 	magazine_capacity = profile.magazine_capacity
 	starting_reserve = profile.reserve
@@ -68,6 +86,9 @@ func apply_test_profile(profile: TestWeaponProfile) -> void:
 	ads_fov = profile.ads_fov
 	hip_position = profile.hip_position
 	ads_position = profile.ads_position
+	show_arms = arms_requested and profile == weapon_profiles[0]
+	if show_arms:
+		hip_position = Vector3(0.23, -0.22, -0.45)
 
 func _ready() -> void:
 	magazine = magazine_capacity
@@ -86,6 +107,7 @@ func set_input_enabled(value: bool) -> void:
 	_pending_fire = false
 	_pending_reload = false
 	_pending_holster = false
+	_pending_weapon = -1
 	_buffer_left = 0.0
 	_fire_armed = false
 	_aim_blocked = true
@@ -105,6 +127,11 @@ func set_input_enabled(value: bool) -> void:
 func _unhandled_input(event: InputEvent) -> void:
 	if not _input_enabled:
 		return
+	for index: int in range(weapon_profiles.size()):
+		if event.is_action_pressed("weapon_%d" % (index + 1)):
+			_pending_weapon = index
+			get_viewport().set_input_as_handled()
+			return
 	if event.is_action_pressed("holster") and not event.is_echo():
 		_pending_holster = true
 		get_viewport().set_input_as_handled()
@@ -128,9 +155,17 @@ func _unhandled_input(event: InputEvent) -> void:
 
 func _physics_process(delta: float) -> void:
 	_cooldown = maxf(0.0, _cooldown - delta)
+	for index: int in range(_inactive_cooldowns.size()):
+		if index != active_weapon:
+			_inactive_cooldowns[index] = maxf(0.0, _inactive_cooldowns[index] - delta)
 	_holster_left = maxf(0.0, _holster_left - delta)
 	_buffer_left = maxf(0.0, _buffer_left - delta)
 	if not _input_enabled:
+		return
+	if _pending_weapon >= 0:
+		var requested: int = _pending_weapon
+		_pending_weapon = -1
+		_switch_weapon(requested)
 		return
 	if _pending_holster:
 		_pending_holster = false
@@ -177,6 +212,27 @@ func _physics_process(delta: float) -> void:
 		_try_fire()
 	_pending_fire = false
 	_pending_reload = false
+
+func _switch_weapon(index: int) -> void:
+	if index == active_weapon:
+		return
+	_ammunition[active_weapon] = Vector2i(magazine, reserve)
+	_inactive_cooldowns[active_weapon] = _cooldown
+	# Cancel before changing data: reload never transfers ammo on a switch.
+	set_input_enabled(false)
+	active_weapon = index
+	apply_test_profile(weapon_profiles[index])
+	magazine = _ammunition[index].x
+	reserve = _ammunition[index].y
+	_cooldown = _inactive_cooldowns[index]
+	is_holstered = false
+	holster_amount = 1.0
+	_holster_left = holster_duration
+	position = hip_position
+	visuals.transform = Transform3D.IDENTITY
+	set_input_enabled(actor.has_mouse_capture)
+	weapon_changed.emit(test_profile)
+	ammunition_changed.emit(magazine, reserve)
 
 func _process(delta: float) -> void:
 	# Only presentation is interpolated: raw mouse input and shot requests are not.

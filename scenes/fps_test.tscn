@@ -175,7 +175,7 @@ offset_top = 12.0
 offset_right = 1100.0
 offset_bottom = 80.0
 mouse_filter = 2
-text = "PSXRetroClassic\nWASD · Shift: Sprint · Space: Sprung · Ctrl: Ducken\nLMB: Schuss · RMB: ADS · R: Nachladen · E: Interaktion\nEsc: Maus frei · Linksklick: Maus fangen · Q: Beenden"
+text = "PSXRetroClassic\nWASD · Shift: Sprint · Space: Sprung · Ctrl: Ducken\nLMB: Schuss · RMB: ADS · R: Nachladen · E: Interaktion\n1–8: Waffenwahl · X: Wegstecken/Ziehen\nEsc: Maus frei · Linksklick: Maus fangen · Beenden-Button nach Esc"
 theme_override_colors/font_color = Color(0.86, 0.86, 0.86, 1)
 theme_override_colors/font_shadow_color = Color(0.04, 0.04, 0.04, 1)
 theme_override_constants/shadow_offset_x = 1
@@ -259,3 +259,17 @@ offset_right = -16.0
 offset_bottom = 52.0
 text = "Beenden"
 focus_mode = 0
+
+[node name="WeaponName" type="Label" parent="HUD"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -220.0
+offset_top = -104.0
+offset_right = -24.0
+offset_bottom = -80.0
+mouse_filter = 2
+horizontal_alignment = 2
+theme_override_font_sizes/font_size = 14
+theme_override_colors/font_color = Color(0.74, 0.74, 0.72, 1)

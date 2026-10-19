@@ -1,6 +1,6 @@
 class_name TestWeaponProfile
 extends Resource
-## Data for one preselected test weapon; no runtime switching or state.
+## Immutable weapon tuning; live ammo and switching belong to TestFirearm.
 @export var display_name: String = "Makarov"
 @export var model: PackedScene
 @export var magazine_capacity: int = 12
@@ -10,6 +10,7 @@ extends Resource
 @export var recoil_degrees: float = 1.2
 @export var ads_fov: float = 60.0
 @export var hip_position := Vector3(0.23, -0.165, -0.45)
+@export var hip_rotation_degrees := Vector3.ZERO
 @export var ads_position := Vector3(0.0, -0.12, -0.42)
 @export var moving_parts: PackedStringArray = []
 @export var part_travel: float = 0.018
