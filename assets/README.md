@@ -3,6 +3,9 @@
 Erster isolierter Import: [Drillimpact-Arme](source/drillimpact_first_person_arms/README.md),
 noch ohne Gameplay-Anbindung. Diese Regeln gelten für ausdrücklich beauftragte
 Importe; Ordner erst mit den ersten tatsächlichen Dateien anlegen.
+Aktueller Waffenstand: [fünf Kandidaten und spielbare Makarov](source/weapon_candidates/README.md).
+Die ursprüngliche Arme-Vorschau bleibt isoliert; die Makarov verwendet eine eigene
+visuelle Instanz dieser unveränderten Quelldaten.
 Ziel sind glaubwürdige, leicht raue PS1/PS2-Umgebungen mit einfacher Geometrie,
 erkennbaren niedrig aufgelösten Texturen und zurückhaltender moderner Beleuchtung.
 

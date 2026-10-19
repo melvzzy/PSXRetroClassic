@@ -2,8 +2,8 @@
 
 Eigenständiges Godot-**4.6.3 Standard**-Projekt (GDScript, Forward+) für einen
 zukünftigen Retro-Sandbox-Shooter. Aktuell: kleine spielbare FPS-Grundlage mit
-einer halbautomatischen Testwaffe, ohne Inventar, Gegner oder Plugins.
-Separat davon gibt es einen isolierten CC0-Arme-Importtest ohne Gameplay-Anbindung.
+einer halbautomatischen Makarov-Testwaffe und Drillimpact-Armen, ohne Inventar,
+Gegner oder Plugins. Separate Arme- und Waffen-Vorschauen dienen der Asset-Prüfung.
 
 ## Öffnen und starten
 
@@ -42,8 +42,11 @@ Nach aufgebrauchter Munition ebenfalls neu starten.
   `CharacterVisuals` am Player-Fuß und `Head/Camera3D/ViewmodelMount` sind klar
   benannte Modell-Anker, ohne Rig oder Ladesystem.
 - `scenes/test_firearm.tscn`: einzelne konfigurierte Waffe; unter
-  `Visuals/ModelMount/Placeholder` liegen austauschbare Primitive. `Visuals/Muzzle`
-  und `Visuals/AudioMount` markieren spätere Effekt- und Soundpositionen.
+  `Visuals/ModelMount` liegt die Makarov-Präsentation mit Armen. Die ursprünglichen
+  Primitive unter `Placeholder` bleiben als Fallback erhalten; vor dem Start
+  `use_imported_visuals` am `MakarovViewmodel` ausschalten. Die Schusslogik bleibt dieselbe.
+- `scenes/weapons/`: fünf Visual-Wrapper und der Makarov-Viewmodel-Adapter.
+  Die anderen vier Kandidaten sind nur in der Asset-Vorschau montiert.
 - `scenes/fps_test.tscn`: ausschließlich kleine Funktions-Testumgebung samt HUD.
 - `scripts/`: kleine, getrennte Controller-, Interaktions- und Testszene-Skripte.
 - `assets/`, `assets/audio/`: Platz für zukünftige eigene Assets.
@@ -66,17 +69,23 @@ Clips, Timeline, Texturvarianten und Ansicht sind umschaltbar. Details zu Quelle
 Lizenz, Achsen und offenen Anpassungen: [Importbericht](assets/source/drillimpact_first_person_arms/README.md).
 **F5** startet unverändert die FPS-Testszene.
 
+Waffen-Auswahl zur Inspektion: `scenes/previews/weapon_asset_preview.tscn` mit
+**F6** starten. Modell, einzelne Teile, Drehung, Distanz und Arm-Maßstabsreferenz
+sind einstellbar; das ist kein Waffenwechsel im Spiel. Vollständige Auswahl,
+Lizenzen und Einschränkungen: [Waffenbericht](assets/source/weapon_candidates/README.md).
+
 ```powershell
 ./tests/run_checks.ps1 -Godot 'C:\Pfad\Godot_v4.6.3-stable_win64_console.exe'
 ```
 
 Das Skript prüft Version, Headless-Import, Start über 120 Frames und die
-FPS-, Waffen- und Arme-Importtests sowie einen begrenzten Preview-Start;
+FPS-, Waffen-, Arme- und Waffenmodelltests sowie begrenzte Preview-Starts;
 jeder Prozess hat ein Zeitlimit von 60 Sekunden.
 Prüfprotokolle und Test-Benutzerdaten liegen ignoriert unter `.godot/checks/`.
 Ergebnisse und manuelle Windows-Checkliste: [tests/README.md](tests/README.md).
 
-Die technische Integration ist headless geprüft. Zielversion 4.6.3, grafische
-FPS-Spielszene unter Windows und Spielgefühl müssen noch manuell geprüft werden; lokal stand
-nur Godot 4.7.2 zur Verfügung. Modelle, Sounds, Animationen und weitere Spielsysteme
+Die technische Integration ist headless und anhand programmatischer Windows-
+Render-Captures geprüft. Zielversion 4.6.3, vollständige manuelle Bedienung und
+Spielgefühl sind noch offen; lokal stand nur Godot 4.7.2 zur Verfügung.
+Waffen-spezifische Hand-/Nachladeanimationen, Sounds und weitere Spielsysteme
 bleiben bewusst zurückgestellt.

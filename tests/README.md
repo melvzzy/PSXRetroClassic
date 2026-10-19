@@ -20,6 +20,8 @@ godot --headless --path . --script res://tests/fps_checks.gd
 godot --headless --path . --script res://tests/weapon_checks.gd
 godot --headless --path . res://scenes/previews/arms_preview.tscn --quit-after 120
 godot --headless --path . --script res://tests/arms_import_checks.gd
+godot --headless --path . res://scenes/previews/weapon_asset_preview.tscn --quit-after 120
+godot --headless --path . --script res://tests/weapon_asset_checks.gd
 ```
 
 Der Import muss vor dem direkten Testaufruf erfolgt sein, damit Godot die
@@ -79,7 +81,7 @@ auf Farb-Umgebungslicht, Forward+ und aktivierte Richtungsschatten geprüft.
    ein Würfel oder die Wand blockiert Treffer auf dahinterliegende Ziele.
 8. **Beenden:** Q testen; separat Esc und Beenden-Button sowie Fensterschließen.
 9. **Waffe/ADS:** LMB feuert einen Schuss pro Klick, Halten erzeugt kein Dauerfeuer.
-   RMB richtet die Platzhaltervisierung aus und reduziert FOV/Bewegungstempo;
+   RMB richtet die Makarov-Visierung aus und reduziert FOV/Bewegungstempo;
    Mausblick bleibt direkt. Beim Sprinten/Ducken ADS und Schießen kombinieren.
    Kleine Rückstoßauslenkung und Rückstellung prüfen, auch beim Blick nach oben;
    Schüsse auf die Testtafel erhöhen deren Zähler und zeigen kurz einen Hitmarker.
@@ -91,7 +93,7 @@ auf Farb-Umgebungslicht, Forward+ und aktivierte Richtungsschatten geprüft.
     einmal losgelassen werden. Reserve leeren, keine negativen Werte oder Gratis-
     Munition. Der HUD bleibt kompakt und ohne dauerhaftes Hilfe-Overlay.
 
-## Ergebnis des Qualitätsreviews (19.10.2026)
+## Früherer Qualitätsreview vor Waffenmodellintegration (19.10.2026)
 
 Verfügbar war Godot `4.7.2.stable.official.ed1daf0bf`, keine auffindbare 4.6.3.
 Headless-Import und Start über 120 Frames: Exitcode 0, keine Skript-, Ressourcen-
@@ -105,7 +107,7 @@ Godot-4.6.3-Kompatibilität, grafische FPS-Spielszene, echtes Windows-Maus-
 und Tastaturverhalten sowie das subjektive Bewegungs-/Waffengefühl wurden nicht
 verifiziert. Dafür die obige manuelle Checkliste mit der Zielversion ausführen.
 
-## Isolierter Arme-Importtest (19.10.2026)
+## Früherer isolierter Arme-Importtest (19.10.2026)
 
 `run_checks.ps1` führt zusätzlich Preview-Start und `arms_import_checks.gd` aus.
 32 Arms-Prüfungen decken Skelett-/Skin-Verbindung, Gewichte, beide Texturen mit
@@ -133,8 +135,40 @@ Importdetails: [Arme-Bericht](../assets/source/drillimpact_first_person_arms/REA
 
 ## Bewusst zurückgestellt
 
-Weitere Modelle, Waffenanbindung der Arme, neue Rigs/Animationen, Sounds, Waffenwechsel, Inventar,
-Gegner, größere Umgebungen und Retro-Effekte. Die Waffe nutzt austauschbare
-Primitive und einfache Anker. Kein separater Viewmodel-Renderer oder aufwendiges
-Wandnähe-Animationssystem; visuelles Clipping der Platzhalter direkt an einer
-Wand ist derzeit möglich und gehört zur späteren Modell-/Animationsintegration.
+Weitere In-game-Waffen, modellbezogene Hand-/Nachladeclips, neue Rigs, Sounds,
+Waffenwechsel, Inventar, Gegner, größere Umgebungen und Retro-Effekte. Kein
+separater Viewmodel-Renderer oder aufwendiges Wandnähe-Animationssystem;
+visuelles Clipping direkt an einer Wand ist derzeit möglich.
+
+## Aktuelle Waffenmodellintegration (19.10.2026)
+
+Godot **4.7.2.stable.official.ed1daf0bf**: Headless-Import und begrenzte Starts
+für Spiel, Arme- und Waffen-Preview erfolgreich. **151 Prüfungen bestanden**:
+40 FPS, 43 Gunplay, 32 Arme und 36 Waffenmodelle. Die bekannte Zertifikatsspeicher-
+Meldung bleibt; keine Skript-, Ressourcen-, Animations- oder Szenenfehler in den
+abschließenden Logs. Godot 4.6.3 wurde nicht getestet.
+
+Die neuen Prüfungen testen alle fünf Visual-Wrapper, Textur-/Mipmap-Zuordnungen,
+Metermaßstab, einzelne Teile, fehlende/konstante Quellclips, stabile Armhaltung,
+zentrierte ADS-Visierreferenz, Lauf-/Kameraachse, genau eine Schuss-/Schlittenaktion,
+temporäre Magazinbewegung, Fokusabbruch, alternative leere Magazine und Fallback.
+Die bestehenden Hitscan-/Impuls-/Ammo-/Reload-Regressionsprüfungen bleiben aktiv.
+
+Optionaler Grafiklauf:
+
+```text
+godot --path . --script res://tests/weapon_asset_checks.gd -- --capture
+```
+
+**44 Prüfungen bestanden** im Windows-Grafiklauf mit Vulkan 1.4.351 / Forward+
+auf RTX 5060 Ti; acht native Ansichten (fünf Modelle, Hip/ADS/Reload im Spiel)
+unter `.godot/checks/weapon_captures/` erzeugt und visuell betrachtet. Das ist
+programmatische Renderprüfung, kein vollständiger manueller Gameplay-Durchlauf.
+
+Manuell zusätzlich: F5 starten, Griff/Finger in Hip/ADS prüfen, beim Laufen und
+Ducken feuern, leeres/partielles Nachladen sowie Esc/Alt-Tab testen. Magazin und
+Schlitten dürfen nicht doppelt erscheinen; Hand-/Magazin-Durchdringungen bewusst
+beurteilen. Treffer auf Tafel/Props mit Visier vergleichen. Fallback vor Start
+am MakarovViewmodel einschalten und separat prüfen. F6-Waffen-Preview: alle fünf
+Modelle/Teile, Drehung, Distanz und Arms-Referenz prüfen. Tatsächliche FPS und
+Spielgefühl bleiben manuell zu bewerten. Details: [Waffenbericht](../assets/source/weapon_candidates/README.md).

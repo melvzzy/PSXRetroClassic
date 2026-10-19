@@ -109,6 +109,8 @@ Das ist keine vollständige manuelle Prüfung aller Zwischenposen oder UI-Eingab
 
 Die bekannte Umgebungsfehlermeldung `Failed to read the root certificate store`
 tritt weiterhin auf. Keine Skript-, Ressourcen-, Animations- oder Renderfehler
-im abschließenden Lauf. Godot 4.6.3 und Waffenintegration sind nicht verifiziert.
+im abschließenden Armstest. Godot 4.6.3 ist nicht verifiziert. Die spätere
+provisorische Makarov-Anbindung wird separat im [Waffenbericht](../weapon_candidates/README.md)
+beschrieben; sie ändert diese Quelldateien und die isolierte Vorschau nicht.
 Captures/Logs liegen lokal ignoriert unter `.godot/checks/arms_captures/` bzw.
 `.godot/checks/`; ausführbare Prüfungen: `tests/arms_import_checks.gd`.

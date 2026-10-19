@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://scripts/weapon_asset.gd" id="1"]
+[ext_resource type="PackedScene" path="res://assets/source/weapon_candidates/vss/VsVin.fbx" id="2"]
+[ext_resource type="Texture2D" path="res://assets/source/weapon_candidates/vss/VS-VIN.png" id="3"]
+
+[node name="Vss" type="Node3D"]
+script = ExtResource("1")
+albedo = ExtResource("3")
+hidden_parts = PackedStringArray()
+
+[node name="Source" parent="." instance=ExtResource("2")]
+scale = Vector3(0.06314, 0.06314, 0.06314)
+
+[node name="Muzzle" type="Marker3D" parent="."]
+position = Vector3(0, 0.0069, -0.488)

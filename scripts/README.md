@@ -14,6 +14,12 @@ Eigene GDScript-Dateien verwenden `snake_case.gd` und nach Möglichkeit Typangab
 - `test_target.gd`: nicht zerstörbare Testtafel mit Trefferzählung und kurzem
   neutralem Farbfeedback. `receive_hit(damage: float)` ist der kleine Treffervertrag;
   normale Weltgeometrie blockiert Schüsse, ohne als Ziel bestätigt zu werden.
+- `weapon_asset.gd`: kleine reine Visual-Hülle für normalisierte Waffenmodelle,
+  gemeinsam genutztes Material und Zugriff auf vorhandene Teile; keine Spiellogik.
+- `makarov_viewmodel.gd`: reagiert auf die bestehende Testwaffe und verbindet
+  statische Arm-Haltung, Schlitten-/Magazinbewegung und Platzhalter-Fallback.
+  Kein zweiter Input-Handler, keine Schuss-/Munitionslogik. Importdetails und
+  Einschränkungen stehen in `assets/source/weapon_candidates/README.md`.
 
 Controller-Werte einschließlich Geschwindigkeit, Beschleunigung, Schwerkraft,
 Mausempfindlichkeit und FOV sind im Inspector der Player-Szene einstellbar.
@@ -44,7 +50,7 @@ Empfindlichkeit wird optional anhand des FOV skaliert. Bei Mausfreigabe werden
 Schussanforderungen, ADS und Nachladen zurückgesetzt; gehaltene Maustasten müssen
 vor einer erneuten Aktivierung losgelassen werden.
 
-Modelle unter `Visuals/ModelMount/Placeholder` ersetzen; den `ModelMount`,
-`Muzzle`, `AudioMount` und die Root-Logik erhalten. Muzzle und Sound-Anker sind
-bewusst einfache Marker. Die primitiven Kimme-/Korn-Elemente sind nur ein
-Platzhalter. Es existieren keine echten Sounds, Rigs oder Animationssysteme.
+Aktuelle Modelle liegen unter `Visuals/ModelMount/MakarovViewmodel`; `Placeholder`
+bleibt als Fallback. `ModelMount`, `Muzzle`, `AudioMount` und die Root-Logik
+erhalten. Das importierte Arm-Rig wird lokal in einer statischen Pose verwendet;
+keine neuen Rigs, IK-/Animationsframeworks oder Sounds wurden hinzugefügt.

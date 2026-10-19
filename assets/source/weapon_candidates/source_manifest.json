@@ -1,0 +1,42 @@
+{
+  "makarov": {
+    "archive": "Makarov.zip",
+    "archive_sha256": "bdb7b0617a3e9d35b8860ccd4bc2ff70ef831061c833ac8b8f9065fc0b9834f7",
+    "files": {
+      "Makarov.fbx": "25e9188713523e7cef87f53898316a310e0b27955ac96d67e3320fbd98207922",
+      "Makarov.png": "c8c13e20b80d6887a72f00f520b5bd2ca07d53eaa031111f75f2ef0463e6856d"
+    }
+  },
+  "izh54": {
+    "archive": "Izh-54.zip",
+    "archive_sha256": "52033acaa53df67ab946798a0476ba347a9a48602e7d21f214a2cfeb5980ff27",
+    "files": {
+      "Izh54.fbx": "4939ca85644083ded47eaf779c34a66bb822501440f4dafa934b3435a0cebfa1",
+      "Izh54.png": "d7a0572885a319d444e91dff58db3aa361d4128419180a76856830bf541ffd9d"
+    }
+  },
+  "as_val": {
+    "archive": "PackVs-As-Sr-3-Pack.rar",
+    "archive_sha256": "2e889b8283fa877008acff19fa19f162c47865da2eeea50a6d40f63c0b7b41ac",
+    "files": {
+      "AsVal.fbx": "0a0f46fe07e08d14a6c6f457bc5cb3855341e5afa96ca847bae6a1aa4e843f8b",
+      "ASS-VAL.png": "9f8f434d722b207eda9b403970ed09a22868020e2b2511aac26ece9ef6ef8dee"
+    }
+  },
+  "vss": {
+    "archive": "PackVs-As-Sr-3-Pack.rar",
+    "archive_sha256": "2e889b8283fa877008acff19fa19f162c47865da2eeea50a6d40f63c0b7b41ac",
+    "files": {
+      "VsVin.fbx": "e3ac4f5b5bec0e84f6ca75fef6839df74b78778c7e8966a8eb77c257080ef60d",
+      "VS-VIN.png": "f5d45d4322d885f11a9603ebcfa6d45004b91a2b9dd95f025de2d9c8dfe7a992"
+    }
+  },
+  "sr3": {
+    "archive": "PackVs-As-Sr-3-Pack.rar",
+    "archive_sha256": "2e889b8283fa877008acff19fa19f162c47865da2eeea50a6d40f63c0b7b41ac",
+    "files": {
+      "VihrSR-3.fbx": "2665f6a4fbfdb9dbdbec9821a020755aba240a381153995f72d80cded8e34aee",
+      "SR-3.png": "8fd69713deaaa2e3665b2efb9b419c69fed723b400c289ff8ee57043b7e4bb76"
+    }
+  }
+}

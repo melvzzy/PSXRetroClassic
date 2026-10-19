@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://scripts/weapon_asset.gd" id="1"]
+[ext_resource type="PackedScene" path="res://assets/source/weapon_candidates/as_val/AsVal.fbx" id="2"]
+[ext_resource type="Texture2D" path="res://assets/source/weapon_candidates/as_val/ASS-VAL.png" id="3"]
+
+[node name="AsVal" type="Node3D"]
+script = ExtResource("1")
+albedo = ExtResource("3")
+hidden_parts = PackedStringArray()
+
+[node name="Source" parent="." instance=ExtResource("2")]
+scale = Vector3(0.06162, 0.06162, 0.06162)
+
+[node name="Muzzle" type="Marker3D" parent="."]
+position = Vector3(0, 0.0068, -0.476)
