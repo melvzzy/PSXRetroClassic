@@ -1,0 +1,32 @@
+[
+  {
+    "archive": "Simple_Character_PSX.zip",
+    "entry": "Simple_Character_PSX/model/glb/simple-character-psx.glb",
+    "destination": "simple_character_psx/original/simple-character-psx.glb",
+    "sha256": "3340c376d349be0eb8b6eae8cdbe7355f38ea2f5767fa277ba3696e8ccec7f95"
+  },
+  {
+    "archive": "Simple_Character_PSX.zip",
+    "entry": "Simple_Character_PSX/texture/character_256.png",
+    "destination": "simple_character_psx/original/character_256.png",
+    "sha256": "5216c33e86fa217bf156f24cab3bfad448dfc240faca10db74a04e6678dd77c2"
+  },
+  {
+    "archive": "Simple_Character_PSX.zip",
+    "entry": "Simple_Character_PSX/README.txt",
+    "destination": "simple_character_psx/original/README.txt",
+    "sha256": "8a47d77036b4c29b9ac025f9932d917a9f8f6cb3b62a7d56a5824834847e264d"
+  },
+  {
+    "archive": "male_casual.zip",
+    "entry": "male_casual.fbx",
+    "destination": "male_casual/original/male_casual.fbx",
+    "sha256": "c5a9e10f5f3dc858cee2993fbfd198e6bfe274b9994bfb883d7d600c2072937a"
+  },
+  {
+    "archive": "male_casual.zip",
+    "entry": "man_tex.png",
+    "destination": "male_casual/original/man_tex.png",
+    "sha256": "698f10310f95cb779456a91d7f3b164139a3e03e78759247ae956b00dafd3532"
+  }
+]

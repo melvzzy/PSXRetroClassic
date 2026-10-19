@@ -11,3 +11,6 @@ export_credentials.cfg
 Thumbs.db
 *.tmp
 *.log
+
+# Local evaluation only: vendor forbids redistribution of these raw assets.
+/assets/source/character_candidates/simple_character_psx/original/

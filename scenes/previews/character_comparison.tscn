@@ -1,0 +1,60 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://scripts/previews/character_comparison.gd" id="1"]
+[sub_resource type="ProceduralSkyMaterial" id="SkyMaterial"]
+sky_top_color = Color(0.18, 0.21, 0.25, 1)
+sky_horizon_color = Color(0.55, 0.56, 0.57, 1)
+[sub_resource type="Sky" id="Sky"]
+sky_material = SubResource("SkyMaterial")
+[sub_resource type="Environment" id="Environment"]
+background_mode = 2
+sky = SubResource("Sky")
+ambient_light_source = 3
+ambient_light_color = Color(0.75, 0.78, 0.82, 1)
+ambient_light_energy = 0.65
+[sub_resource type="StandardMaterial3D" id="FloorMaterial"]
+albedo_color = Color(0.22, 0.23, 0.24, 1)
+roughness = 1.0
+[sub_resource type="PlaneMesh" id="Floor"]
+material = SubResource("FloorMaterial")
+size = Vector2(8, 8)
+
+[node name="CharacterComparison" type="Node3D"]
+script = ExtResource("1")
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment")
+[node name="Sun" type="DirectionalLight3D" parent="."]
+rotation_degrees = Vector3(-35, 150, 0)
+light_energy = 1.2
+shadow_enabled = true
+[node name="Floor" type="MeshInstance3D" parent="."]
+mesh = SubResource("Floor")
+[node name="SimpleMount" type="Node3D" parent="."]
+position = Vector3(0.95, 0, 0)
+[node name="MaleMount" type="Node3D" parent="."]
+position = Vector3(-0.95, 0, 0)
+[node name="SimpleLabel" type="Label3D" parent="."]
+position = Vector3(0.95, 2.05, 0)
+text = "Simple PSX · JashiPSX\n64 bones · keine Clips"
+font_size = 26
+pixel_size = 0.003
+billboard = 1
+[node name="MaleLabel" type="Label3D" parent="."]
+position = Vector3(-0.95, 2.05, 0)
+text = "male_casual · Vinrax\n25 bones · keine Clips"
+font_size = 26
+pixel_size = 0.003
+billboard = 1
+[node name="Camera3D" type="Camera3D" parent="."]
+current = true
+fov = 48.0
+near = 0.02
+[node name="HUD" type="CanvasLayer" parent="."]
+[node name="Info" type="Label" parent="HUD"]
+offset_left = 18.0
+offset_top = 16.0
+text = "LOKALE ASSET-PRÜFUNG · beide auf 1,80 m kalibriert\n0: Vergleich · 1/2: Körper · 3/4: rechte Hand\nRMB ziehen: Orbit · Mausrad: Zoom · Esc: Vorschau schließen"
+[node name="Probe" type="Label" parent="HUD"]
+offset_left = 18.0
+offset_top = 92.0
+text = "B: lokale Fingergelenk-Probe AUS · Quellpose"

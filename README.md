@@ -1,7 +1,8 @@
 # PSXRetroClassic
 
 Aktuell verifiziert: **Godot 4.6.3.stable.official.7d41c59c4**, vollständiger
-Neuimport, 629 Regressionstests und grafische Windows-Prüfungen erfolgreich.
+Neuimport und grafische Windows-Prüfungen erfolgreich; aktuell 648 Regressionstests
+mit beiden lokalen Charakterkandidaten bestanden.
 Details und Grenzen: [Kompatibilitätsnachweis](tests/README.md).
 
 Eigenständiges Godot-**4.6.3 Standard**-Projekt (GDScript, Forward+) für einen
@@ -163,3 +164,8 @@ Der Hof besitzt jetzt einen kleinen östlichen Wartungsrundweg mit zwei Zugänge
 flacher Böschung bis 1,2 m, dichterem Randgrün und sichtbarer Zaunbegrenzung.
 Texturierte Erd-/Betonflächen, Wegweiser und Materiallager ordnen den Bereich.
 F5 bleibt der direkte Einstieg; Steuerung und Waffen unverändert.
+
+
+Isolierter Ganzkörpervergleich: `scenes/previews/character_comparison.tscn`
+öffnen und F6. Auswahl/Lizenzgrenzen: [Charakterreview](docs/character_asset_review.md).
+F5 und der bestehende FPS-Spieler bleiben unverändert.

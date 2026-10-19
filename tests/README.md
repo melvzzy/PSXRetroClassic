@@ -1,9 +1,10 @@
 # FPS-Prüfung
 
 **Aktueller Stand: Godot 4.6.3.stable.official.7d41c59c4 tatsächlich verifiziert.**
-629 Regressionstests plus 191 Grafikprüfungen nach vollständigem Neuimport
-bestanden. Ältere Abschnitte dokumentieren frühere 4.7.2-Läufe; deren damalige
-4.6.3-Einschränkung ist durch den abschließenden Nachweis unten aufgehoben.
+648 Regressionstests mit beiden lokalen Charaktermodellen bestanden; zusätzliche
+Charakter-Grafikprüfung: 26 Checks / sieben Aufnahmen. Der frühere vollständige
+FPS-Grafiklauf mit 191 Checks nach Neuimport bleibt ebenfalls dokumentiert.
+Ältere Abschnitte zeigen frühere 4.7.2-Läufe und deren damalige Einschränkungen.
 
 ## Automatisch unter Windows
 
@@ -533,3 +534,34 @@ Hauptlog: `.godot/checks/compatibility-463-cold-suite.txt`; Grafiklogs:
 `compatibility-463-cold-*-render.log` samt Fehlerlogs. Importnachweis:
 `compatibility-463-cold-import-clean.txt`. Bilder wie zuvor unter
 `.godot/checks/core_upgrade/`, `outdoor/` und `weapon_captures/`.
+
+
+## Isolierter Ganzkörper-Charaktervergleich
+
+`tests/character_comparison_checks.gd` ergänzt 19 fokussierte Headless-Prüfungen
+und ist im Runner eingetragen. **648 Prüfungen bestanden** (629 bestehende + 19
+Charakterprüfungen, mit beiden lokalen Modellen). Bestehende FPS-, Waffen-,
+Arme-, Physik-, Eingabe- und Outdoor-Prüfungen unverändert erhalten. Import und
+begrenzter Start der F5-Hauptszene erfolgreich.
+
+Grafiklauf mit Godot **4.6.3.stable.official.7d41c59c4**, Forward+/Vulkan:
+**26 Prüfungen / sieben Captures**: beide Figuren, Einzelansichten, rechte Hände
+und reversible Gelenkproben. Bilder unter `.godot/checks/character_comparison/`
+(`view_0.png` bis `view_4.png`, `probe_3.png`, `probe_4.png`) visuell kontrolliert.
+Source-/Skinanalyse und Beispielproben sind keine verifizierten Waffenhaltungen.
+In den exportierten Modellen sind keine Animationsclips vorhanden.
+
+Lizenzbedingt bleibt Simple nur lokal. Auch der fehlende Simple-Quellpfad wurde
+mit einem tatsächlichen temporären Dateientzug geprüft: elf verbleibende Checks
+bestehen mit explizitem SKIP, keine Resource-/Skriptfehler. Originaldatei danach
+wiederhergestellt; alle fünf extrahierten Originale stimmen mit ihren SHA-256
+im Quellenmanifest überein. Originalarchive nicht verändert.
+
+Keine weiteren Engine-Diagnosen neben der bekannten Zertifikatsspeicher-Meldung.
+Vollständiges Log `.godot/checks/characters-full-suite.txt`, Grafiklogs
+`characters-render.log` / `characters-render-errors.log`. Kein manueller
+F5-Langzeittest und keine Waffen-/Spieler-Integration der neuen Modelle.
+
+F6: `scenes/previews/character_comparison.tscn`; 0 Vergleich, 1/2 Körper,
+3/4 rechte Hand, B Gelenkprobe, RMB-Orbit, Mausrad-Zoom, Esc schließen.
+Befund, Empfehlung und Lizenzgrenzen: [Charakterreview](../docs/character_asset_review.md).
