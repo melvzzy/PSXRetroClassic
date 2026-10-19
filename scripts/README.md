@@ -9,7 +9,7 @@ Eigene GDScript-Dateien verwenden `snake_case.gd` und nach Möglichkeit Typangab
   Der erste Collider blockiert den Strahl, auch ohne Interaktionskomponente.
 - `test_switch.gd`: ausschließlich sichtbares Schalterfeedback der Testszene.
 - `test_scene.gd`: einfache HUD-Anbindung und Beenden, kein allgemeiner Manager.
-- `test_firearm.gd`: eine halbautomatische Waffe mit Munition, abbrechbarem
+- `test_firearm.gd`: ein gemeinsames Einzel-/Dauerfeuer-System mit Munition, abbrechbarem
   Nachladen, ADS, kamerabasiertem Hitscan, Rückstoß und Physikimpulsen.
 - `test_target.gd`: nicht zerstörbare Testtafel mit Trefferzählung und kurzem
   neutralem Farbfeedback. `receive_hit(damage: float)` ist der kleine Treffervertrag;
@@ -59,10 +59,18 @@ Die Pistole bleibt an hand.R, das gezogene Magazin zeitweise an hand.L;
 keine neuen Rigs, IK-/Animationsframeworks oder Sounds wurden hinzugefügt.
 
 
-Aktueller Standard: `test_scene.gd` wählt vor `_ready` eines der vier typisierten
+Aktueller Standard: `test_scene.gd` wählt vor `_ready` eines der acht typisierten
 Testprofile und setzt `show_arms`/`use_imported_visuals`. `test_weapon_profile.gd`
 enthält nur Daten. `weapon_only_viewmodel.gd` verarbeitet Modelle, Sicht-/Mündungs-
-marker, geringe Teilebewegung, Holster-Darstellung und Fallback; keine Eingaben,
+marker, geringe Teile-/Gehbewegung, Sprint-/Holster-Darstellung und Fallback; keine Eingaben,
 Munition oder zweite Schusslogik. Der Makarov-Arm-Adapter ist im Standardmodus
 unsichtbar und samt untergeordnetem AnimationPlayer deaktiviert. Die alten
 Armprüfungen aktivieren ihn ausdrücklich; keine Quellassets wurden entfernt.
+
+
+Aktuelles Tuning und Timer-/Input-Verträge: [FPS-Kern](../docs/fps_core_upgrade.md).
+Profile enthalten Feuermodus, ADS-Reaktion, Rückstoßerholung und Obergrenze;
+`TestFirearm` bleibt alleiniger Besitzer von Munition und Zuständen. Keine
+Map-/Asset-/Armsystem-Änderung. Der Controller ergänzt nur konfigurierbaren
+Sprungpuffer/Bodentoleranz und ein auslesbares Sprintsignal für die Darstellung.
+Aktuelle Prüfergebnisse stehen in `tests/README.md`.

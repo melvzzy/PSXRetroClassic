@@ -1,11 +1,16 @@
 extends Node3D
 ## Shared model presentation. TestFirearm owns all gameplay and input states.
 @export var firearm: TestFirearm
+@export_range(0.0, 0.015) var walk_motion: float = 0.004
+@export_range(0.0, 0.05) var sprint_lowering: float = 0.018
 var model: WeaponAsset
 var _profile: TestWeaponProfile
 var _parts: Array[Node3D] = []
 var _origins: Array[Vector3] = []
 var _kick: float = 0.0
+var _motion_phase: float = 0.0
+var _movement_pose := Vector3.ZERO
+var _movement_rotation := Vector3.ZERO
 var _aim_blend: float = 0.0
 var _muzzle_rest: Transform3D
 var _placeholder: Node3D
@@ -37,6 +42,8 @@ func _load_profile(profile: TestWeaponProfile) -> void:
 	_parts.clear()
 	_origins.clear()
 	_kick = 0.0
+	_movement_pose = Vector3.ZERO
+	_movement_rotation = Vector3.ZERO
 	_aim_blend = 0.0
 	visible = not firearm.show_arms
 	set_process(visible)
@@ -83,6 +90,20 @@ func _capture_changed(captured: bool) -> void:
 
 func _process(delta: float) -> void:
 	_aim_blend = lerpf(_aim_blend, 1.0 if firearm.is_aiming else 0.0, 1.0 - exp(-firearm.ads_response * delta))
+	var actor: FPSController = firearm.actor
+	var speed: float = Vector2(actor.velocity.x, actor.velocity.z).length()
+	var weight: float = clampf(speed / maxf(actor.walk_speed, 0.01), 0.0, 1.0) if actor.is_on_floor() and actor.has_mouse_capture else 0.0
+	weight *= pow(1.0 - _aim_blend, 2.0) * (1.0 - firearm.holster_amount)
+	if firearm.is_reloading:
+		weight = 0.0
+	_motion_phase = fmod(_motion_phase + speed * delta * 1.8, TAU)
+	var sprint: float = weight if actor.is_sprinting and firearm._cooldown <= 0.0 else 0.0
+	var response: float = 1.0 - exp(-16.0 * delta)
+	var motion_target := Vector3(sin(_motion_phase) * walk_motion * weight,
+		-sprint_lowering * sprint + cos(_motion_phase * 2.0) * walk_motion * 0.5 * weight,
+		0.015 * sprint)
+	_movement_pose = _movement_pose.lerp(motion_target, response)
+	_movement_rotation = _movement_rotation.lerp(Vector3(-0.06 * sprint, 0.0, sin(_motion_phase) * 0.004 * weight), response)
 	_kick *= exp(-30.0 * delta)
 	for i: int in range(_parts.size()):
 		_parts[i].position = _origins[i] + _parts[i].get_parent().global_basis.inverse() * model.global_basis.z * _kick
@@ -98,13 +119,15 @@ func _update_transform() -> void:
 	var hip := Transform3D(Basis.from_euler(rotation), Vector3.ZERO)
 	transform = hip.interpolate_with(ads, _aim_blend) if _imported else Transform3D.IDENTITY
 	var lowered: float = smoothstep(0.0, 1.0, firearm.holster_amount)
+	position += _movement_pose
+	rotation += _movement_rotation
 	position.y -= 0.45 * lowered
 	rotate_x(-0.2 * lowered)
 	# Without a hand, magazines stay seated. The existing recoil and smoothed
 	# reload tilt move the whole model rather than floating a detached magazine.
 	model.visible = _imported and firearm.holster_amount < 0.98
 	_placeholder.visible = not _imported and firearm.holster_amount < 0.98
-	_placeholder.position.y = -0.45 * lowered
-	_placeholder.rotation.x = -0.2 * lowered
+	_placeholder.position = _movement_pose + Vector3(0.0, -0.45 * lowered, 0.0)
+	_placeholder.rotation = _movement_rotation + Vector3(-0.2 * lowered, 0.0, 0.0)
 	if _imported:
 		_muzzle.transform = _muzzle.get_parent().global_transform.affine_inverse() * _model_muzzle.global_transform

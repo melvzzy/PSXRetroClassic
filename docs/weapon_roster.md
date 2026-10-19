@@ -1,21 +1,23 @@
 # Acht Waffen, ein Firearm
 
-Startup bleibt dieselbe kleine Testszene. Im Inspector am Startup-Root bestimmt
+F5 startet weiterhin direkt im spielbaren Außenposten. Im Inspector am Startup-Root bestimmt
 **Test Weapon** die Startwaffe; die gespeicherte AS-Val-Auswahl bleibt erhalten.
 **1–8** wechseln im Spiel direkt, ohne Inventar oder Mausradbelegung.
 
 | Taste | Waffe | Magazin / Reserve | Schussabstand | Reload |
 | --- | --- | --- | --- | --- |
 | 1 | Makarov | 12 / 48 | 0,18 s | 1,35 s |
-| 2 | AS Val | 20 / 80 | 0,12 s | 2,1 s |
+| 2 | AS Val | 20 / 80 | 0,075 s | 2,1 s |
 | 3 | VSS | 10 / 40 | 0,22 s | 2,4 s |
-| 4 | SR-3 | 20 / 80 | 0,11 s | 1,9 s |
-| 5 | M4A4 | 30 / 90 | 0,12 s | 2,2 s |
-| 6 | EMP | 32 / 96 | 0,14 s | 2,4 s |
-| 7 | MP40 | 32 / 96 | 0,14 s | 2,4 s |
-| 8 | STG 44 | 30 / 90 | 0,14 s | 2,5 s |
+| 4 | SR-3 | 20 / 80 | 0,075 s | 1,9 s |
+| 5 | M4A4 | 30 / 90 | 0,085 s | 2,2 s |
+| 6 | EMP | 32 / 96 | 0,11 s | 2,4 s |
+| 7 | MP40 | 32 / 96 | 0,12 s | 2,4 s |
+| 8 | STG 44 | 30 / 90 | 0,105 s | 2,5 s |
 
-Alle schießen bewusst halbautomatisch. Werte sind konfigurierbare Testprofile,
+Makarov und VSS verwenden Einzelfeuer, die übrigen sechs Waffen Dauerfeuer.
+Aktuelles Handling und Eingabesicherheit: [FPS-Kern](fps_core_upgrade.md).
+Werte sind konfigurierbare Testprofile,
 keine Simulation der historischen Vorbilder. Die bestehenden Profile sind die
 Wahrheitsquelle für Werte; Gameplay bleibt ausschließlich in `TestFirearm`.
 

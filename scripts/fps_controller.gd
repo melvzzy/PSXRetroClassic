@@ -12,6 +12,8 @@ signal mouse_capture_changed(captured: bool)
 @export var air_acceleration: float = 8.0
 @export var jump_speed: float = 6.0
 @export var gravity: float = 18.0
+@export_range(0.0, 0.2) var coyote_time: float = 0.08
+@export_range(0.0, 0.2) var jump_buffer_time: float = 0.10
 @export_group("Stance")
 @export var standing_height: float = 1.8
 @export var crouching_height: float = 1.1
@@ -30,6 +32,9 @@ var has_mouse_capture: bool = false
 var is_aiming: bool = false
 var _pitch: float = 0.0
 var _jump_requested: bool = false
+var _ground_grace: float = 0.0
+var _jump_buffer: float = 0.0
+var is_sprinting: bool = false
 var _eye_query := PhysicsRayQueryParameters3D.new()
 var _standing_query := PhysicsShapeQueryParameters3D.new()
 
@@ -54,6 +59,9 @@ func _ready() -> void:
 
 func set_mouse_capture(captured: bool) -> void:
 	has_mouse_capture = captured
+	is_sprinting = false
+	_jump_buffer = 0.0
+	_ground_grace = 0.0
 	_jump_requested = false
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED if captured else Input.MOUSE_MODE_VISIBLE
 	mouse_capture_changed.emit(captured)
@@ -65,7 +73,7 @@ func _unhandled_input(event: InputEvent) -> void:
 	elif event.is_action_pressed("capture_mouse") and not has_mouse_capture:
 		set_mouse_capture(true)
 		get_viewport().set_input_as_handled()
-	elif has_mouse_capture and event.is_action_pressed("jump"):
+	elif has_mouse_capture and event.is_action_pressed("jump") and not event.is_echo():
 		_jump_requested = true
 		get_viewport().set_input_as_handled()
 	elif event is InputEventMouseMotion and has_mouse_capture:
@@ -90,7 +98,13 @@ func _physics_process(delta: float) -> void:
 	var controls_active: bool = has_mouse_capture
 	var jump_requested: bool = _jump_requested
 	_jump_requested = false
+	_ground_grace = coyote_time if is_on_floor() else maxf(0.0, _ground_grace - delta)
+	_jump_buffer = maxf(0.0, _jump_buffer - delta)
+	if controls_active and jump_requested:
+		_jump_buffer = maxf(jump_buffer_time, delta)
 	var wants_crouch: bool = controls_active and Input.is_action_pressed("crouch")
+	if wants_crouch:
+		_jump_buffer = 0.0
 	if wants_crouch and not is_crouching:
 		_set_crouching(true)
 	elif not wants_crouch and is_crouching and can_stand():
@@ -105,6 +119,8 @@ func _physics_process(delta: float) -> void:
 		speed = crouch_speed
 	elif controls_active and Input.is_action_pressed("sprint") and not is_aiming:
 		speed = sprint_speed
+	is_sprinting = (controls_active and Input.is_action_pressed("sprint")
+		and not is_crouching and not is_aiming and not input_vector.is_zero_approx())
 	if is_aiming:
 		speed *= aim_speed_multiplier
 	var response: float = acceleration if not input_vector.is_zero_approx() else stopping_acceleration
@@ -115,10 +131,13 @@ func _physics_process(delta: float) -> void:
 	velocity.z = horizontal.y
 	if is_on_floor():
 		velocity.y = 0.0
-		if controls_active and jump_requested and not is_crouching:
-			velocity.y = jump_speed
 	else:
 		velocity.y -= gravity * delta
+	# Buffer a fresh press through landing; allow a short ledge grace period.
+	if controls_active and _jump_buffer > 0.0 and not is_crouching and (is_on_floor() or _ground_grace > 0.0):
+		velocity.y = jump_speed
+		_jump_buffer = 0.0
+		_ground_grace = 0.0
 	move_and_slide()
 	# Clamp only against actual ceilings, not the instantly resized capsule.
 	if is_crouching and head.position.y > crouching_eye_height:

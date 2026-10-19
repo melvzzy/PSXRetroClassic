@@ -418,3 +418,37 @@ Godot **4.7.2.stable.official.ed1daf0bf**, Forward+/Vulkan/RTX 5060 Ti.
 Windows-Zertifikatsspeicher-Meldung als Umgebungsfehler; keine Script-/Ressourcen-/
 Szenenfehler. Die vollständige Suite liegt ignoriert unter
 `.godot/checks/final-foundation-suite.txt`. Kein manueller FPS-Benchmark.
+
+
+## FPS-Kern-/Gunplay-Upgrade
+
+Vollständiger Runner: **629 Headless-Prüfungen bestanden, 0 fehlgeschlagen**
+(bisherige 550 plus 79 neue Kernprüfungen), inklusive Import, begrenztem F5-/
+Fallback-Start, allen acht Waffen, Arme/Placeholder, Vorschauen und Outdoor.
+`core_upgrade_checks.gd` ist im Runner aufgenommen. Die bisherige Vier-Waffen-
+Suite erwartet nun korrekt das konfigurierte Einzel-/Dauerfeuer; ihre übrigen
+Treffer-, Reload-, Munitions-, Holster- und Sicherheitsprüfungen bleiben aktiv.
+
+Windows-Grafikläufe: **191 Prüfungen / 40 Captures**: neuer Kern 106/27,
+optionale Makarov-Arme 36/8, Outdoor mit echten Treffern/Physikimpulsen 49/5.
+Hip/ADS/Schuss aller acht Waffen, Reload, Holster und Sprint wurden gerendert
+und visuell kontrolliert; zusätzliche Armbilder bestätigen den erhaltenen Aufbau.
+Kadenzmessung zählt tatsächliche Physikticks, da ein Renderframe mehrere enthalten
+kann. Kein manueller Windows-Spieltest oder FPS-Benchmark wird damit behauptet.
+
+Getestet: **4.7.2.stable.official.ed1daf0bf**, Forward+/Vulkan/RTX 5060 Ti.
+**4.6.3 unbestätigt.** Logs wurden auf Diagnosen geprüft: ausschließlich bekannte
+Windows-Zertifikatsspeicher-Meldung, keine Script-/Ressourcen-/Szenenfehler.
+Log: `.godot/checks/core-upgrade-final-suite.txt`. Native Bilder:
+`.godot/checks/core_upgrade/`, `.godot/checks/weapon_captures/`,
+`.godot/checks/outdoor/`; Übersicht `.godot/checks/core_upgrade/contact_sheet.png`.
+
+F5 manuell: WASD/Shift/Space/Ctrl über Böschung, Schwellen und Cargo testen;
+kurz vor Landung springen, unter Hindernissen ducken. 1–8 einzeln prüfen:
+Makarov/VSS Einzelfeuer, übrige sechs halten; ADS beim Laufen, gezielte Treffer,
+Rückstoß/Erholung und Ziel-/Physikreaktionen beurteilen. Reload vollständig und
+mit 1–8/X/Esc abbrechen, Munition nach Rückwechsel kontrollieren. LMB während
+Wechsel/Draw/Reload/Fokusverlust halten: kein unbeabsichtigter Neustart; erst
+loslassen und frisch drücken. Generator-E, Alt-Tab/Recapture und Beenden prüfen.
+Optional Show Arms + Makarov und Placeholder separat starten; tatsächliche FPS
+und subjektive Stärke der Waffenbewegungen manuell bewerten.

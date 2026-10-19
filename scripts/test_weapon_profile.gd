@@ -5,6 +5,10 @@ extends Resource
 @export var model: PackedScene
 @export var magazine_capacity: int = 12
 @export var reserve: int = 48
+@export var automatic_fire: bool = false
+@export var ads_response: float = 20.0
+@export var recoil_recovery: float = 12.0
+@export var max_recoil_degrees: float = 4.0
 @export var shot_interval: float = 0.18
 @export var reload_duration: float = 1.35
 @export var recoil_degrees: float = 1.2

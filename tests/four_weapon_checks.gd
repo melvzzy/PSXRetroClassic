@@ -67,7 +67,8 @@ func _run() -> void:
 		_button(true)
 		await _frames(30)
 		_button(false)
-		_expect(shots == before + 2, "Held trigger remains semi-automatic")
+		_expect(shots > before + 2 if profile.automatic_fire else shots == before + 2, "Held trigger follows the selected semi/automatic profile")
+		var shots_after_hold: int = shots
 		var total: int = gun.magazine + gun.reserve
 		var magazine: Node3D = model.get_part("Magazine-Full" if index == 0 else "magazine")
 		var seated: Transform3D = magazine.transform
@@ -83,11 +84,11 @@ func _run() -> void:
 		_button(true)
 		_key(KEY_R)
 		await _frames(3)
-		_expect(shots == before + 2 and not gun.is_reloading, "Holster blocks fire and reload")
+		_expect(shots == shots_after_hold and not gun.is_reloading, "Holster blocks fire and reload")
 		await _capture("holstered_%d" % index)
 		_key(KEY_X)
 		await _frames(25)
-		_expect(gun.is_weapon_ready() and model.visible and shots == before + 2, "Draw restores the selected model without firing held input")
+		_expect(gun.is_weapon_ready() and model.visible and shots == shots_after_hold, "Draw restores the selected model without firing held input")
 		_button(false)
 		var imported_muzzle: Transform3D = gun.get_node("Visuals/Muzzle").transform
 		view.set_imported_visible(false)

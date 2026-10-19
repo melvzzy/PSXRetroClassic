@@ -1,6 +1,6 @@
 class_name TestFirearm
 extends Node3D
-## One semi-automatic firearm. Queries, impulses and ammo transitions run in physics.
+## One shared semi/automatic firearm. Queries, impulses and ammo transitions run in physics.
 signal ammunition_changed(magazine: int, reserve: int)
 signal status_changed(text: String)
 signal aim_changed(aiming: bool)
@@ -23,6 +23,7 @@ var use_imported_visuals: bool = true
 @export_group("Firearm")
 @export_range(1, 100) var magazine_capacity: int = 12
 @export_range(0, 500) var starting_reserve: int = 48
+@export var automatic_fire: bool = false
 @export_range(0.05, 2.0) var shot_interval: float = 0.18
 @export_range(0.1, 5.0) var reload_duration: float = 1.35
 @export_range(1.0, 300.0) var shot_range: float = 100.0
@@ -52,6 +53,8 @@ var is_aiming: bool = false
 var _input_enabled: bool = false
 var _fire_armed: bool = false
 var _aim_blocked: bool = true
+var _automatic_firing: bool = false
+var _reload_pose: float = 0.0
 var _pending_fire: bool = false
 var _pending_reload: bool = false
 var _cooldown: float = 0.0
@@ -81,6 +84,10 @@ func apply_test_profile(profile: TestWeaponProfile) -> void:
 	magazine_capacity = profile.magazine_capacity
 	starting_reserve = profile.reserve
 	shot_interval = profile.shot_interval
+	automatic_fire = profile.automatic_fire
+	ads_response = profile.ads_response
+	recoil_recovery = profile.recoil_recovery
+	max_recoil_degrees = profile.max_recoil_degrees
 	reload_duration = profile.reload_duration
 	recoil_degrees = profile.recoil_degrees
 	ads_fov = profile.ads_fov
@@ -104,6 +111,7 @@ func _ready() -> void:
 
 func set_input_enabled(value: bool) -> void:
 	_input_enabled = value
+	_automatic_firing = false
 	_pending_fire = false
 	_pending_reload = false
 	_pending_holster = false
@@ -137,6 +145,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		get_viewport().set_input_as_handled()
 		return
 	if event.is_action_released("fire"):
+		_automatic_firing = false
 		_buffer_left = 0.0
 	if not is_weapon_ready():
 		return
@@ -145,8 +154,10 @@ func _unhandled_input(event: InputEvent) -> void:
 		_set_aiming(false)
 	elif event.is_action_pressed("aim") and not _aim_blocked:
 		_set_aiming(not is_reloading)
-	elif event.is_action_pressed("fire") and _fire_armed:
+	elif event.is_action_pressed("fire") and not event.is_echo() and _fire_armed:
 		_pending_fire = true
+		# Only an accepted gameplay press starts a burst, never polling alone.
+		_automatic_firing = automatic_fire and not is_reloading
 		_fire_armed = false
 		get_viewport().set_input_as_handled()
 	elif event.is_action_pressed("reload"):
@@ -154,7 +165,8 @@ func _unhandled_input(event: InputEvent) -> void:
 		get_viewport().set_input_as_handled()
 
 func _physics_process(delta: float) -> void:
-	_cooldown = maxf(0.0, _cooldown - delta)
+	# Retain at most one tick of overrun during a burst; no catch-up shot loops.
+	_cooldown = maxf(-delta if _automatic_firing else 0.0, _cooldown - delta)
 	for index: int in range(_inactive_cooldowns.size()):
 		if index != active_weapon:
 			_inactive_cooldowns[index] = maxf(0.0, _inactive_cooldowns[index] - delta)
@@ -170,6 +182,7 @@ func _physics_process(delta: float) -> void:
 	if _pending_holster:
 		_pending_holster = false
 		if _holster_left <= 0.0:
+			_automatic_firing = false
 			is_holstered = not is_holstered
 			_holster_left = holster_duration
 			is_reloading = false
@@ -186,6 +199,7 @@ func _physics_process(delta: float) -> void:
 	if not is_weapon_ready():
 		return
 	if not Input.is_action_pressed("fire"):
+		_automatic_firing = false
 		_fire_armed = true
 		_buffer_left = 0.0
 	if not Input.is_action_pressed("aim"):
@@ -210,6 +224,8 @@ func _physics_process(delta: float) -> void:
 	if _buffer_left > 0.0 and _cooldown <= 0.0 and Input.is_action_pressed("fire"):
 		_buffer_left = 0.0
 		_try_fire()
+	if _automatic_firing and not _pending_fire and Input.is_action_pressed("fire"):
+		_try_fire()
 	_pending_fire = false
 	_pending_reload = false
 
@@ -229,6 +245,7 @@ func _switch_weapon(index: int) -> void:
 	holster_amount = 1.0
 	_holster_left = holster_duration
 	position = hip_position
+	_reload_pose = 0.0
 	visuals.transform = Transform3D.IDENTITY
 	set_input_enabled(actor.has_mouse_capture)
 	weapon_changed.emit(test_profile)
@@ -243,9 +260,11 @@ func _process(delta: float) -> void:
 	_recoil *= exp(-recoil_recovery * delta)
 	_kick *= exp(-18.0 * delta)
 	_apply_recoil()
-	visuals.position.z = _kick
-	visuals.rotation.x = _kick * 1.5
-	visuals.rotation.z = lerpf(visuals.rotation.z, -0.15 if is_reloading else 0.0, blend)
+	# A smooth whole-weapon service gesture; magazines remain seated.
+	var reload_target: float = sin(PI * get_reload_progress()) if is_reloading else 0.0
+	_reload_pose = lerpf(_reload_pose, reload_target, blend)
+	visuals.position = Vector3(-0.025 * _reload_pose, -0.065 * _reload_pose, _kick + 0.025 * _reload_pose)
+	visuals.rotation = Vector3(_kick * 1.5 - 0.08 * _reload_pose, 0.0, -0.22 * _reload_pose)
 	_flash_left = maxf(0.0, _flash_left - delta)
 	muzzle_flash.visible = _flash_left > 0.0
 
@@ -264,6 +283,8 @@ func _start_reload() -> void:
 	if not is_weapon_ready() or is_reloading or magazine >= magazine_capacity or reserve <= 0:
 		return
 	_buffer_left = 0.0
+	_automatic_firing = false
+	_fire_armed = false
 	is_reloading = true
 	_reload_left = reload_duration
 	status_changed.emit("Nachladen …")
@@ -272,6 +293,7 @@ func _try_fire() -> void:
 	if not is_weapon_ready() or is_reloading or _cooldown > 0.0:
 		return
 	if magazine <= 0:
+		_automatic_firing = false
 		status_changed.emit("Leer · R" if reserve > 0 else "Keine Munition")
 		return
 	# Query the exact current crosshair direction BEFORE adding this shot's kick.
@@ -280,7 +302,7 @@ func _try_fire() -> void:
 	_query.to = _query.from + direction * shot_range
 	var hit: Dictionary = get_world_3d().direct_space_state.intersect_ray(_query)
 	magazine -= 1
-	_cooldown = shot_interval
+	_cooldown = shot_interval + minf(_cooldown, 0.0)
 	status_changed.emit("")
 	ammunition_changed.emit(magazine, reserve)
 	if not hit.is_empty():

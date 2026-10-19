@@ -2,7 +2,7 @@
 
 Eigenständiges Godot-**4.6.3 Standard**-Projekt (GDScript, Forward+) für einen
 zukünftigen Retro-Sandbox-Shooter. Aktuell: kleine spielbare FPS-Grundlage mit
-acht im Spiel auswählbaren halbautomatischen Testwaffen, standardmäßig ohne
+acht im Spiel auswählbaren Testwaffen mit profilabhängigem Einzel-/Dauerfeuer, standardmäßig ohne
 Arme, ohne Inventar,
 Gegner oder Plugins. Separate Arme- und Waffen-Vorschauen dienen der Asset-Prüfung.
 
@@ -17,7 +17,8 @@ verfügbar; `fps_test.tscn` bleibt ebenfalls unverändert.
 Am Root **Startup** im Inspector **Test Weapon** wählen (Makarov / AS Val / VSS /
 SR-3 / M4A4 / EMP / MP40 / STG 44), speichern und F5 starten. **Show Arms** stellt nur für Makarov den
 bisherigen Armaufbau wieder her; **Use Imported Visuals** schaltet den Fallback.
-Details: [Waffen-Roster und Wechsel](docs/weapon_roster.md).
+Details: [Waffen-Roster und Wechsel](docs/weapon_roster.md),
+[aktuelles FPS-/Gunplay-Tuning](docs/fps_core_upgrade.md).
 Das veränderbare Fenster startet mit 1280 × 720 und VSync. Forward+ benötigt
 passende Grafiktreiber. Das Projekt enthält alle benötigten Ressourcen.
 
@@ -29,10 +30,12 @@ passende Grafiktreiber. Das Projekt enthält alle benötigten Ressourcen.
 - Maus: direkte Blicksteuerung. Esc oder Fokusverlust gibt sie frei und sperrt
   Gameplay-Eingaben; Linksklick außerhalb des Beenden-Buttons fängt sie erneut.
 - E: Schalter innerhalb von 2,5 Metern bedienen; Text und Farbe zeigen den Zustand.
-- Linke Maustaste: einzelner präziser Schuss; rechte Maustaste halten: ADS.
+- Linke Maustaste: Makarov/VSS Einzelfeuer; AS Val, SR-3, M4A4, EMP, MP40 und
+  STG 44 feuern beim Halten automatisch. Rechte Maustaste halten: ADS.
   R: Nachladen. Startmunition je Profil (Makarov weiterhin 12/48), keine automatische
   Nachladung. Nachladen blockiert Schüsse und beendet ADS; Fokusverlust/Esc
-  bricht es ohne Munitionsübertragung ab. Ein Wiederaufnahme-Klick feuert nie.
+  bricht es ohne Munitionsübertragung ab. Ein Wiederaufnahme-Klick feuert nie. Nach Reload, Wechsel oder Ziehen braucht
+  Dauerfeuer einen neuen bewussten Tastendruck.
 - 1–8: Makarov, AS Val, VSS, SR-3, M4A4, EMP, MP40, STG 44 wählen.
   Magazin/Reserve bleiben je Waffe erhalten. Wechsel bricht Reload/ADS ab und
   zieht die neue Waffe; gehaltene Maustasten lösen dabei keinen Schuss aus.

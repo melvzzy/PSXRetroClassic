@@ -38,7 +38,7 @@ func _physics_process(_delta: float) -> void:
 		_target.interact(actor)
 
 func _unhandled_input(event: InputEvent) -> void:
-	if _input_enabled and event.is_action_pressed("interact"):
+	if _input_enabled and event.is_action_pressed("interact") and not event.is_echo():
 		_interaction_requested = true
 		get_viewport().set_input_as_handled()
 

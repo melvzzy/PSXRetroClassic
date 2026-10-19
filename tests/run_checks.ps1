@@ -63,6 +63,7 @@ try {
     Invoke-GodotCheck 'fallback-startup' @('--headless', '--path', '.', 'res://scenes/fps_test_fallback.tscn', '--quit-after', '120')
     Invoke-GodotCheck 'outpost-expansion' @('--headless', '--path', '.', '--script', 'res://tests/outpost_expansion_checks.gd')
     Invoke-GodotCheck 'final-area' @('--headless', '--path', '.', '--script', 'res://tests/final_area_checks.gd')
+    Invoke-GodotCheck 'core-upgrade' @('--headless', '--path', '.', '--script', 'res://tests/core_upgrade_checks.gd')
     Write-Output 'All checks completed. Review any environment warnings above.'
 }
 finally {
