@@ -9,6 +9,9 @@ signal hit_confirmed()
 
 @export var actor: FPSController
 @export var camera: Camera3D
+var test_profile: TestWeaponProfile
+var show_arms: bool = false
+var use_imported_visuals: bool = true
 @export_group("Firearm")
 @export_range(1, 100) var magazine_capacity: int = 12
 @export_range(0, 500) var starting_reserve: int = 48
@@ -53,6 +56,18 @@ var _query := PhysicsRayQueryParameters3D.new()
 
 @onready var visuals: Node3D = $Visuals
 @onready var muzzle_flash: MeshInstance3D = $Visuals/Muzzle/Flash
+
+func apply_test_profile(profile: TestWeaponProfile) -> void:
+	# Called once before children enter/initialize. Existing firing state stays here.
+	test_profile = profile
+	magazine_capacity = profile.magazine_capacity
+	starting_reserve = profile.reserve
+	shot_interval = profile.shot_interval
+	reload_duration = profile.reload_duration
+	recoil_degrees = profile.recoil_degrees
+	ads_fov = profile.ads_fov
+	hip_position = profile.hip_position
+	ads_position = profile.ads_position
 
 func _ready() -> void:
 	magazine = magazine_capacity
@@ -174,9 +189,12 @@ func _process(delta: float) -> void:
 	_apply_recoil()
 	visuals.position.z = _kick
 	visuals.rotation.x = _kick * 1.5
-	visuals.rotation.z = -0.15 if is_reloading else 0.0
+	visuals.rotation.z = lerpf(visuals.rotation.z, -0.15 if is_reloading else 0.0, blend)
 	_flash_left = maxf(0.0, _flash_left - delta)
 	muzzle_flash.visible = _flash_left > 0.0
+
+func get_reload_progress() -> float:
+	return clampf(1.0 - _reload_left / reload_duration, 0.0, 1.0) if is_reloading else 0.0
 
 func is_weapon_ready() -> bool:
 	return not is_holstered and _holster_left <= 0.0 and holster_amount <= 0.001

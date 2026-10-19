@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="TestWeaponProfile" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/test_weapon_profile.gd" id="1"]
+[ext_resource type="PackedScene" path="res://scenes/weapons/makarov.tscn" id="2"]
+
+[resource]
+script = ExtResource("1")
+model = ExtResource("2")
+display_name = "Makarov"
+magazine_capacity = 12
+reserve = 48
+shot_interval = 0.18
+reload_duration = 1.35
+recoil_degrees = 1.2
+ads_fov = 60.0
+part_travel = 0.025
+hip_position = Vector3(0.23, -0.165, -0.45)
+ads_position = Vector3(0, -0.12, -0.42)
+moving_parts = PackedStringArray("Slide", "Sight", "Extractor")
+hidden_parts = PackedStringArray()

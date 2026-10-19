@@ -218,3 +218,50 @@ X während Reload/ADS, gedrückte LMB/RMB beim Ziehen, einzelne/rasche Schüsse,
 Reload partiell/leer, Props/Tafel treffen, E weggesteckt, Esc/Alt-Tab/Recapture,
 HUD und Q ohne Wirkung, Beenden-Button. Fingerkontakt, Holster-Übergang und
 Wand-Clipping visuell bewerten; FPS im Godot-Monitor separat messen.
+
+
+## Aktueller Arm-/Waffenpolish und Umgebungssichtung
+
+Ausgangsbasis 205 Checks; aktuell **235 Checks bestanden**: 40 FPS, 43 Gunplay,
+32 Arme, 60 Waffenmodelle, 32 Foundation-Polish, 28 neue Arm-/Waffenprüfungen.
+Die vorhandenen Magazin-Checks unterscheiden jetzt Greifen, Herausziehen und
+sanfte visuelle Rückkehr nach sofortigem logischem Reload-Abbruch.
+
+Godot 4.7.2.stable.official.ed1daf0bf. Headless-Import, begrenzte Starts und
+Previews bestanden; 4.6.3 nicht verifiziert. Die bekannte Zertifikatsspeicher-
+Meldung bleibt. Grafiklauf: 36 Checks mit acht geprüften nativen Captures
+(Idle, Detail, ADS, Feuer, Reload-Greifen/-Ziehen/-Einsetzen, Holstered),
+Forward+/Vulkan/RTX 5060 Ti. Kein vollständiger manueller Windows-Spieltest.
+
+Details, Einschränkungen und F5-Checkliste:
+[Arm-/Waffenbericht](../docs/first_person_arms_polish.md).
+42 Umgebungs-/Texturarchive gesichtet, 43 Modellstichproben dokumentiert;
+keine Umgebung importiert: [Umgebungsbericht](../docs/environment_asset_review.md).
+
+
+## Aktueller Weapon-only-/Vier-Waffen-Modus
+
+Standard F5 zeigt ausschließlich das vorab ausgewählte Modell. Die bisherigen
+Arm-Regressionsfixtures setzen nun ausdrücklich `show_arms = true`; ihre
+Prüfungen bleiben erhalten. Die allgemeine Gunplay-Suite läuft gegen den neuen
+Standardmodus, einschließlich alternativer leeren Makarov-Magazinmeshes.
+
+Vor Änderungen: 235 Checks. Abschließend bestehende 235 plus **87 neue
+Vier-Waffen-Checks = 322 bestanden**. Die neue Suite prüft Auswahl/Profile,
+Texturen, deaktivierte Arme, Unabhängigkeit von Armtransforms, Nahgrenze,
+ADS-Marker und tatsächliches Korn, Mündung, echte Zieltreffer vor Recoil,
+Einzelschuss/Halten, Reload/Munitionssumme, Holster/Draw, Fokus und Fallback.
+Headless-Import, begrenzter Spielstart und beide Vorschauen erfolgreich.
+
+Godot **4.7.2.stable.official.ed1daf0bf**, keine 4.6.3-Verifikation. Grafiklauf:
+`godot --path . --script res://tests/four_weapon_checks.gd -- --capture`
+mit **107 Checks / 20 Aufnahmen** (vier Modelle × Hip/ADS/Feuer/Reload/Holstered).
+Forward+/Vulkan/RTX 5060 Ti; repräsentative Hip-/ADS-Ansichten einzeln und alle
+Zustände als Kontaktübersicht visuell geprüft. Die wiederherstellbaren Makarov-
+Arme wurden zusätzlich über den bisherigen Grafiktest geprüft: 36 Checks /
+8 Aufnahmen, inklusive visuell kontrollierter wiederhergestellter Haltepose. Bekannte Windows-
+Zertifikatsmeldung bleibt; keine anderen abschließenden Engine-Diagnosen.
+Keine Behauptung eines vollständigen manuellen Windows-Spieltests oder FPS-Tests.
+
+Auswahl, Werte, Grenzen und F5-Checkliste:
+[Vier-Waffen-Setup](../docs/four_weapon_setup.md).

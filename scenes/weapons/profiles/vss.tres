@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="TestWeaponProfile" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/test_weapon_profile.gd" id="1"]
+[ext_resource type="PackedScene" path="res://scenes/weapons/vss.tscn" id="2"]
+
+[resource]
+script = ExtResource("1")
+model = ExtResource("2")
+display_name = "VSS"
+magazine_capacity = 10
+reserve = 40
+shot_interval = 0.22
+reload_duration = 2.4
+recoil_degrees = 1.0
+ads_fov = 55.0
+part_travel = 0.012
+hip_position = Vector3(0.2, -0.18, -0.59)
+ads_position = Vector3(0, -0.12, -0.55)
+moving_parts = PackedStringArray("extractor")
+hidden_parts = PackedStringArray("scope")

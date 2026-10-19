@@ -44,6 +44,7 @@ func _run() -> void:
 	preview.queue_free()
 	await process_frame
 	var game: Node3D = load("res://scenes/startup.tscn").instantiate()
+	game.show_arms = true
 	root.add_child(game)
 	await _frames(15)
 	var actor := game.get_node("Player") as FPSController
@@ -127,11 +128,15 @@ func _run() -> void:
 	reload = InputEventKey.new()
 	reload.physical_keycode = KEY_R
 	Input.parse_input_event(reload)
-	_expect(firearm.is_reloading and magazine.position.y < magazine_rest.y, "Existing reload state drives the temporary magazine presentation")
+	_expect(firearm.is_reloading and view._reload_reach > 0.0, "Reload first reaches toward the magazine")
+	await _frames(16)
+	_expect(firearm.is_reloading and magazine.position.y < magazine_rest.y, "Reload withdrawal synchronizes the support hand and magazine")
 	if captures:
 		await _capture("game_reload")
 	actor.set_mouse_capture(false)
-	_expect(not firearm.is_reloading and magazine.position.is_equal_approx(magazine_rest), "Focus/capture release cancels reload and resets the visual magazine")
+	_expect(not firearm.is_reloading, "Focus/capture release cancels the authoritative reload immediately")
+	await _frames(20)
+	_expect(magazine.position.is_equal_approx(magazine_rest), "Canceled reload smoothly restores the visual magazine")
 	var imported_muzzle: Vector3 = firearm.get_node("Visuals/Muzzle").position
 	# A rotated animated muzzle must also restore the placeholder orientation.
 	firearm.get_node("Visuals/Muzzle").rotation = Vector3(0.2, -0.3, 0.1)

@@ -1,7 +1,9 @@
-[gd_scene load_steps=9 format=3]
+[gd_scene load_steps=10 format=3]
 
 [ext_resource type="Script" path="res://scripts/test_firearm.gd" id="1"]
 [ext_resource type="PackedScene" path="res://scenes/weapons/makarov_viewmodel.tscn" id="2"]
+
+[ext_resource type="Script" path="res://scripts/weapon_only_viewmodel.gd" id="3"]
 
 [sub_resource type="StandardMaterial3D" id="BodyMaterial"]
 albedo_color = Color(0.18, 0.18, 0.18, 1)
@@ -61,4 +63,8 @@ cast_shadow = 0
 [node name="AudioMount" type="Marker3D" parent="Visuals"]
 
 [node name="MakarovViewmodel" parent="Visuals/ModelMount" node_paths=PackedStringArray("firearm") instance=ExtResource("2")]
+firearm = NodePath("../../..")
+
+[node name="WeaponOnlyViewmodel" type="Node3D" parent="Visuals/ModelMount" node_paths=PackedStringArray("firearm")]
+script = ExtResource("3")
 firearm = NodePath("../../..")

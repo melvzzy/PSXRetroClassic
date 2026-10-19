@@ -13,4 +13,7 @@ hidden_parts = PackedStringArray("supresse")
 scale = Vector3(0.06595, 0.06595, 0.06595)
 
 [node name="Muzzle" type="Marker3D" parent="."]
-position = Vector3(0, 0.0042, -0.213)
+position = Vector3(0.000563, 0.004221, -0.212898)
+
+[node name="SightLine" type="Marker3D" parent="."]
+position = Vector3(0, 0.05697, 0.12193)

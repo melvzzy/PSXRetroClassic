@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="TestWeaponProfile" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/test_weapon_profile.gd" id="1"]
+[ext_resource type="PackedScene" path="res://scenes/weapons/as_val.tscn" id="2"]
+
+[resource]
+script = ExtResource("1")
+model = ExtResource("2")
+display_name = "AS Val"
+magazine_capacity = 20
+reserve = 80
+shot_interval = 0.12
+reload_duration = 2.1
+recoil_degrees = 0.85
+ads_fov = 60.0
+part_travel = 0.012
+hip_position = Vector3(0.2, -0.18, -0.57)
+ads_position = Vector3(0, -0.12, -0.53)
+moving_parts = PackedStringArray("extractor")
+hidden_parts = PackedStringArray()

@@ -1,5 +1,25 @@
 extends Node3D
 
+@export_enum("Makarov", "AS Val", "VSS", "SR-3") var test_weapon: int = 0
+## Restores the previous Makarov setup; other weapons have no fitted arm poses.
+@export var show_arms: bool = false
+@export var use_imported_visuals: bool = true
+const WEAPON_PROFILES: Array[TestWeaponProfile] = [
+	preload("res://scenes/weapons/profiles/makarov.tres"),
+	preload("res://scenes/weapons/profiles/as_val.tres"),
+	preload("res://scenes/weapons/profiles/vss.tres"),
+	preload("res://scenes/weapons/profiles/sr3.tres"),
+]
+
+func _enter_tree() -> void:
+	var gun: TestFirearm = get_node("Player/Head/Camera3D/ViewmodelMount/TestFirearm")
+	gun.apply_test_profile(WEAPON_PROFILES[test_weapon])
+	gun.show_arms = show_arms and test_weapon == 0
+	if gun.show_arms:
+		gun.hip_position = Vector3(0.23, -0.22, -0.45) # Preserve the fitted arm setup.
+	gun.use_imported_visuals = use_imported_visuals
+
+
 @onready var prompt: Label = $HUD/Prompt
 @onready var weapon: TestFirearm = $Player/Head/Camera3D/ViewmodelMount/TestFirearm
 var _hit_marker_left: float = 0.0

@@ -17,7 +17,7 @@ Import und Renderprüfung erfolgten gezielt nur für die fünf ausgewählten Mod
 | Archiv/Paket | Befund und Entscheidung |
 | --- | --- |
 | **Makarov.zip** | **Ausgewählt, spielbar.** 10 getrennte Teile inkl. Schlitten, Hahn, Abzug und zwei alternativen Magazinen; passende Textur. Kein Skin, keine exportierten Clips. Gute erste Pistole. |
-| **PackVs-As-Sr-3-Pack.rar** | **Alle drei ausgewählt:** AS Val, VSS, SR-3. 8/8/9 Teile, Magazine/Verschlüsse/Schäfte separat. Leere `CorpsAction`-Exporte, keine Feuer-/Reload-Clips. Einheitliche Qualität und Materialien; kein künstliches Limit pro Paket. |
+| **PackVs-As-Sr-3-Pack.rar** | **Alle drei ausgewählt und vor F5 einzeln spielbar:** AS Val, VSS, SR-3. 8/8/9 Teile, Magazine/Verschlüsse/Schäfte separat. Leere `CorpsAction`-Exporte, keine Feuer-/Reload-Clips. Einheitliche Qualität und Materialien; kein künstliches Limit pro Paket. |
 | **Izh-54.zip** | **Ausgewählt als Preview-Kandidat mit offener Lizenzzuordnung.** 5 Teile inkl. Lauf, Verschluss, Abzug und loser Patrone. Kein Skin/Clip. Gute Flintenabdeckung; nicht für Veröffentlichung freigegeben. |
 | M4A4.rar | Technisch brauchbare Reserve: 10 Teile. Drei Action-Namen, aber keine nichtkonstanten Kurven. Für diesen Import zurückgestellt, weil das vollständig behaltene Val/VSS/SR-3-Paket die Langwaffen bereits abdeckt. Nicht wegen eines Paketlimits ausgeschlossen. |
 | M1 Garand.zip | 7 getrennte Teile, kein Skin/Clip. Mehrere alte/abweichende Texturpfade im FBX, zwei PNGs; Clip-Texturbezeichnung passt nicht direkt zu einer exportierten Referenz. Zusätzliche Remaps und eigene Hand-/Clip-Bewegungen nötig; zurückgestellt. Lizenz im ZIP fehlt. |
@@ -73,23 +73,25 @@ Play bleibt deaktiviert. Kein Waffenwechsel innerhalb des eigentlichen Spiels.
 ## Tatsächlich im Spiel
 
 **F5** startet dieselbe FPS-Testszene mit der Makarov und Drillimpact-Armen.
-Die bestehende Datei `scripts/test_firearm.gd` bleibt unverändert und besitzt
+Die bestehende Waffenlogik in `scripts/test_firearm.gd` besitzt
 weiterhin Schussrate, Hitscan, Impulse, Munition, Reload, ADS und Rückstoß.
 Die Werte 12/48 bleiben absichtlich die bestehende Testkonfiguration und sind
 keine Aussage über eine originalgetreue PM-Magazinkapazität.
 
 `MakarovViewmodel` unter `Visuals/ModelMount` ist ausschließlich Präsentation:
 
-- Eingefrorene `finger_gun_idle`-Pose bei 0,3 s mit lokaler Daumenkorrektur,
-  kein abgespieltes Fingerpistolen-Feuer als angebliche Waffenanimation.
+- `finger_gun_idle` liefert nur die Grundreferenz für den rechten Arm. Alle
+  30 Fingergelenke und die linke Stützhand werden auf die Makarov kalibriert;
+  kein Fingerpistolen-Feuer wird als Waffenanimation abgespielt.
 - Die Pistole folgt `hand.R` über `Skeleton3D.skeleton_updated` mit konstantem
   handlokalem Grifftransform. Die Visier-
   referenz liegt in ADS auf der Kameramitte; Lauf und Kamera zeigen parallel −Z.
   Die Quell-Armkamera-Höhe bleibt berücksichtigt, keine Kamerasteuerung aus dem Rig.
-- Das einzelne vorhandene `fired`-Signal treibt einen kurzen Schlittenweg.
-  Der vorhandene Reload-Zustand senkt das Magazin kurz ab; Parent-Recoil/ADS und
-  bestehende Reload-Neigung bewegen das gesamte Visual gemeinsam. Das ist eine
-  einfache provisorische Bewegung, kein mitgelieferter vollständiger Reload-Clip.
+- Das vorhandene `fired`-Signal bewegt Schlitten, Sight und Extractor gemeinsam
+  und zieht den Zeigefinger kurz an. Der autoritative Reload-Fortschritt steuert
+  Greifen, Herausziehen, Wiedereinsetzen und Rückkehr der linken Hand. Während
+  des Herausziehens ist das vorhandene Magazin an die linke Hand gebunden.
+  Keine zweite Munition, keine erfundene Tasche oder mitgelieferte Reload-Clips.
 - Leeres/volles Magazin sind alternative Meshes und werden nicht gleichzeitig
   angezeigt. Fokus-/Mausfreigabe setzt temporäre Teilebewegungen zurück. Der
   Mündungsmarker wurde an die Modellmündung versetzt; Hitscan bleibt kamerabasiert.
@@ -97,21 +99,19 @@ keine Aussage über eine originalgetreue PM-Magazinkapazität.
   Dann erscheinen die unveränderten Primitive und der ursprüngliche Mündungsmarker.
   Kein Inventar, keine zusätzliche Eingabe und keine zweite Schussinstanz.
 
-**Nur Preview:** AS Val, VSS, SR-3 und Izh-54. Sie haben keine montierten
-Waffen-Halteposen und erhalten in diesem Auftrag keine eigene Feuer-/Reloadlogik.
+**Nur Preview:** Izh-54. AS Val, VSS und SR-3 sind inzwischen ohne Arme einzeln
+spielbar; sie nutzen die gemeinsame Waffenlogik statt eigener Controller.
 
 ## Offene Punkte und nächste sinnvolle Verfeinerungen
 
-Die einhändige Haltung ist bewusst vorläufig. Finger-/Griffkontakt, Abzugsfinger,
-Unterstützungshand und Handgelenk verdienen eine echte modellbezogene Pose;
-es wird keine perfekte anatomische Anpassung oder vollständig ausgeführte
-Magazinmanipulation behauptet. Reload kann noch kleine Durchdringungen zeigen.
-Als Nächstes eine eigene Makarov-Halte-/Feuer-/Nachladesequenz im vorhandenen
-Rig autoren, ohne Kamera-/Recoil-Transforms zu überschreiben. Danach weitere
-Waffen einzeln anpassen; keine inkompatiblen Clips zusammenzwingen.
+Die Zweihandhaltung und alle Fingerketten sind jetzt Makarov-spezifisch,
+mit lokal authorierten Halte-/Greif-/Ziehposen. Die grobe Skin-Geometrie bleibt
+unverändert: extreme Nahansichten können Finger-/Hand-Durchdringungen und
+kantige Gelenke zeigen. Reload ist eine sichtbare Teilsequenz mit demselben
+Magazin; eine vollständige Magazinentnahme/-ersetzung aus einer Tasche und
+der korrekte PM-Magazinhalter sind nicht umgesetzt. Source-Dateien bleiben
+unverändert. Details: `docs/first_person_arms_polish.md`.
 
-Kimmenteil/Extractor sind separate Quellteile; der erste provisorische
-Schlittenimpuls ersetzt noch keine komplette mechanische Kopplung aller Kleinteile.
 Kein Geräuschpaket wurde importiert, kein IK-/Retargeting-/Animationsframework
 gebaut. Near-/Wand-Clipping und endgültiges FOV-Framing bleiben Modellarbeit.
 Izh-Lizenz vor Veröffentlichung klären. Bei den übrigen Quellen keine CC0-
@@ -136,4 +136,18 @@ Foundation-Polish: X steuert jetzt eine kurze, zustandsgebundene Absenk-/Zieh-
 bewegung. Die Arme interpolieren zwischen der erhaltenen Haltepose und einem
 Sample der vorhandenen `relax`-Pose; die Pistole wird beim Absenken verborgen.
 Handbindung und markerbasierte ADS bleiben erhalten. Das ersetzt keine eigens
-autorierte Holster-/Reload-Animation. Waffenlogik bleibt alleiniger Zustandsbesitzer.
+mitgelieferte Holster-/Reload-Animation. Aktuell wurden lokale Zweihand- und
+Teil-Reload-Posen authoriert; Details stehen in `docs/first_person_arms_polish.md`.
+Waffenlogik bleibt alleiniger Zustandsbesitzer.
+
+
+## Aktueller Vier-Waffen-Testmodus
+
+Makarov, AS Val, VSS und SR-3 sind jetzt einzeln vor F5 am Startup-Root wählbar.
+Alle vier nutzen dieselbe Gunplay-Instanz. Standard ist ohne Arme, mit eigenen
+Hip-/ADS-Profilen und tatsächlichen Korn-/Mündungsmarkern. Magazine bleiben ohne
+Hände eingesetzt. VSS-Scope ist nur im spielbaren offenen-Visierungs-Modus
+verborgen und bleibt im Original/Preview erhalten. Nur Izh-54 ist weiterhin
+reiner Preview-Kandidat. Show Arms stellt den vorherigen Makarov-Aufbau wieder
+her. Der oben beschriebene Arm-/Teil-Reload gilt ausschließlich für diese Option.
+Details: `docs/four_weapon_setup.md`.

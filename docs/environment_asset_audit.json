@@ -1,0 +1,5449 @@
+[
+  {
+    "archive": "- Classic 64 Asset Pack 0.6.zip",
+    "model_files": 0,
+    "texture_files": 732,
+    "formats": [],
+    "samples": [],
+    "textures": [
+      {
+        "file": "- Classic 64 Asset Pack 0.6/Art/Materials/art_vintage_01.jpg",
+        "size": [
+          64,
+          81
+        ],
+        "mode": "RGB"
+      },
+      {
+        "file": "- Classic 64 Asset Pack 0.6/Art/Materials/art_vintage_02.jpg",
+        "size": [
+          64,
+          108
+        ],
+        "mode": "RGB"
+      }
+    ],
+    "license": [
+      {
+        "file": "- Classic 64 Asset Pack 0.6/Readme.txt",
+        "text": "Classic64 Asset Library\r\nVersion 0.2\r\nBy Craig Snedeker\r\n\r\nLicence //\r\n  This asset library is being released for free, for personal \r\n  and commerical projects.\r\n\r\n  >> https://creativecommons.org/share-your-work/public-domain/cc0/\r\n\r\n  I ask that you do not directly sell this asset library, \r\n  or items within it. I can't stop you under the CC0 licence,\r\n  but I put a lot of effort into making this avaiable for free\r\n  and ask you respect that if you distribute it. Thanks! \r\n\r\nUsing This Asset Library //\r\n  If you use any items in this asset library in your project, \r\n  please let me know! I would love to see them being \r\n  used. It would make my day!\r\n\r\nNotice(s) //\r\n  The items in this asset library do not represent any brands \r\n  and/or persons. Any likeness to a brand or person that may \r\n  exsist are coincidental. \r\n\r\n  I, and/or any artists who contributed, can not be held \r\n  responsible for any issues/damages caused by using any of the \r\n  files in this asset library. \r\n\r\nContact //\r\n  You can reach out to me at my blog\r\n  >> http://craigsnedeker.tumblr.com\r\n\r\n  or on my Itch.io \r\n  >> https://craigsnedeker.itch.io"
+      }
+    ]
+  },
+  {
+    "archive": "All bushes.zip",
+    "model_files": 524,
+    "texture_files": 7,
+    "formats": [
+      ".fbx",
+      ".glb"
+    ],
+    "samples": [
+      {
+        "file": "All bushes/bushes_autumn/bushes_roots_autumn/bush_end_roots_autumn.glb",
+        "sha256": "b9aea559057ba4e2296167b20a66197bcee73f155b9f83b14d9883f6c023822a",
+        "nodes": 1,
+        "meshes": 1,
+        "names": [
+          "bush_end_roots_autumn"
+        ],
+        "triangles": 24,
+        "bounds": [
+          {
+            "min": [
+              -0.6927294135093689,
+              -0.01515054702758789,
+              -0.6901506781578064
+            ],
+            "max": [
+              0.6927294135093689,
+              1.085042953491211,
+              0.6953081488609314
+            ]
+          },
+          {
+            "min": [
+              -0.30000001192092896,
+              0,
+              -0.30000001192092896
+            ],
+            "max": [
+              0.30000001192092896,
+              0.6000000238418579,
+              0.30000001192092896
+            ]
+          }
+        ],
+        "materials": [
+          {
+            "name": "bush_autumn",
+            "alpha": "BLEND",
+            "double_sided": true
+          },
+          {
+            "name": "roots",
+            "alpha": "BLEND",
+            "double_sided": true
+          }
+        ],
+        "images": [
+          "embedded",
+          "embedded"
+        ],
+        "skins": 0
+      }
+    ],
+    "textures": [
+      {
+        "file": "All bushes/textures/Foliage_Roots_small.png",
+        "size": [
+          58,
+          62
+        ],
+        "mode": "P"
+      },
+      {
+        "file": "All bushes/textures/Hedge.jpg",
+        "size": [
+          256,
+          192
+        ],
+        "mode": "RGB"
+      }
+    ],
+    "license": []
+  },
+  {
+    "archive": "all_fences.zip",
+    "model_files": 158,
+    "texture_files": 34,
+    "formats": [
+      ".fbx",
+      ".glb"
+    ],
+    "samples": [
+      {
+        "file": "Fences/brick_fence/brick_wall.glb",
+        "sha256": "ae4d25eb8c193704ac96b7f51a73fad687810bf927161028985f8673ec861da1",
+        "nodes": 1,
+        "meshes": 1,
+        "names": [
+          "brick_wall"
+        ],
+        "triangles": 44,
+        "bounds": [
+          {
+            "min": [
+              0,
+              0,
+              -0.10000002384185791
+            ],
+            "max": [
+              4,
+              2,
+              0.10000002384185791
+            ]
+          },
+          {
+            "min": [
+              0,
+              2,
+              -0.15110912919044495
+            ],
+            "max": [
+              4,
+              2.081082582473755,
+              0.1485283076763153
+            ]
+          }
+        ],
+        "materials": [
+          {
+            "name": "brick",
+            "alpha": "OPAQUE",
+            "double_sided": true
+          },
+          {
+            "name": "concrete",
+            "alpha": "OPAQUE",
+            "double_sided": true
+          }
+        ],
+        "images": [
+          "embedded",
+          "embedded"
+        ],
+        "skins": 0
+      },
+      {
+        "file": "Fences/low_wooden_fence/wooden_fence_beam.fbx",
+        "sha256": "9f83fe0ac2765a0d7e7fb9414c050d00d8681f5cb52cb32cc456114f15d6c5a9",
+        "models": [
+          {
+            "name": "wooden_fence_beam",
+            "type": "Mesh",
+            "Lcl Rotation": [
+              -90.00000933466734,
+              0.0,
+              0.0
+            ],
+            "Lcl Scaling": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          }
+        ],
+        "geometry": [
+          {
+            "name": "Cube.046",
+            "vertices": 20,
+            "min": [
+              -1.9914727210998535,
+              -0.057195842266082764,
+              -0.057868894189596176
+            ],
+            "max": [
+              0.0059727574698626995,
+              0.07092360407114029,
+              0.1205916702747345
+            ],
+            "faces": 18
+          }
+        ],
+        "textures": [
+          "low_wooden_wall.jpg",
+          "low_wooden_wall.jpg"
+        ],
+        "skin_clusters": 0,
+        "clips": []
+      }
+    ],
+    "textures": [
+      {
+        "file": "textures/bag.png",
+        "size": [
+          256,
+          256
+        ],
+        "mode": "RGBA"
+      },
+      {
+        "file": "textures/barbage_container.jpg",
+        "size": [
+          120,
+          256
+        ],
+        "mode": "RGB"
+      }
+    ],
+    "license": []
+  },
+  {
+    "archive": "Buildings.rar",
+    "model_files": 3,
+    "texture_files": 54,
+    "formats": [
+      ".dae",
+      ".fbx",
+      ".glb"
+    ],
+    "samples": [
+      {
+        "file": "Buildings/Models/Buildings.glb",
+        "sha256": "ce1e6a1099a8f2719d737e0f241a367749c39d1634d6c093721e47d20c9dd29c",
+        "nodes": 10,
+        "meshes": 10,
+        "names": [
+          "Building_03",
+          "Building_01",
+          "Building",
+          "Building_02",
+          "Building_04",
+          "Building_09",
+          "Building_05",
+          "Building_07",
+          "Building_08",
+          "Building_06"
+        ],
+        "triangles": 2470,
+        "bounds": [
+          {
+            "min": [
+              -11.468401908874512,
+              -9.415736198425293,
+              7.811487197875977
+            ],
+            "max": [
+              -3.4948558807373047,
+              -4.196346282958984,
+              8.864805221557617
+            ]
+          },
+          {
+            "min": [
+              -3.4948558807373047,
+              -9.415736198425293,
+              7.811487197875977
+            ],
+            "max": [
+              4.013795375823975,
+              -4.196346282958984,
+              8.245469093322754
+            ]
+          },
+          {
+            "min": [
+              4.013795375823975,
+              -9.415736198425293,
+              7.811487197875977
+            ],
+            "max": [
+              11.478141784667969,
+              -4.196346282958984,
+              8.851823806762695
+            ]
+          },
+          {
+            "min": [
+              -11.468401908874512,
+              -4.196346282958984,
+              7.811487197875977
+            ],
+            "max": [
+              11.478141784667969,
+              9.132115364074707,
+              7.811487197875977
+            ]
+          },
+          {
+            "min": [
+              -11.468401908874512,
+              -9.415736198425293,
+              -8.166447639465332
+            ],
+            "max": [
+              11.478141784667969,
+              9.132115364074707,
+              7.811487197875977
+            ]
+          },
+          {
+            "min": [
+              -11.58883285522461,
+              9.132115364074707,
+              -8.283387184143066
+            ],
+            "max": [
+              11.604328155517578,
+              9.383784294128418,
+              7.928426742553711
+            ]
+          }
+        ],
+        "materials": [
+          {
+            "name": "Shops",
+            "alpha": "OPAQUE",
+            "double_sided": true
+          },
+          {
+            "name": "Shops_01",
+            "alpha": "OPAQUE",
+            "double_sided": true
+          },
+          {
+            "name": "Shops_02",
+            "alpha": "OPAQUE",
+            "double_sided": true
+          },
+          {
+            "name": "building_09",
+            "alpha": "OPAQUE",
+            "double_sided": true
+          },
+          {
+            "name": "brick_modern_03",
+            "alpha": "OPAQUE",
+            "double_sided": true
+          },
+          {
+            "name": "ConcreteBare",
+            "alpha": "OPAQUE",
+            "double_sided": true
+          },
+          {
+            "name": "Roof_tiles",
+            "alpha": "OPAQUE",
+            "double_sided": true
+          },
+          {
+            "name": "Shops_03",
+            "alpha": "OPAQUE",
+            "double_sided": true
+          },
+          {
+            "name": "Shops_04",
+            "alpha": "OPAQUE",
+            "double_sided": true
+          },
+          {
+            "name": "Shops_05",
+            "alpha": "OPAQUE",
+            "double_sided": true
+          },
+          {
+            "name": "building_04",
+            "alpha": "OPAQUE",
+            "double_sided": true
+          },
+          {
+            "name": "Shops_06",
+            "alpha": "OPAQUE",
+            "double_sided": true
+          }
+        ],
+        "images": [
+          "embedded",
+          "embedded",
+          "embedded",
+          "embedded",
+          "embedded",
+          "embedded",
+          "embedded",
+          "embedded",
+          "embedded",
+          "embedded",
+          "embedded",
+          "embedded"
+        ],
+        "skins": 0
+      }
+    ],
+    "textures": [
+      {
+        "file": "Buildings/Textures/BrickSmallBrown.jpg",
+        "size": [
+          256,
+          253
+        ],
+        "mode": "RGB"
+      },
+      {
+        "file": "Buildings/Textures/BrickSmallPainted.jpg",
+        "size": [
+          256,
+          237
+        ],
+        "mode": "RGB"
+      }
+    ],
+    "license": []
+  },
+  {
+    "archive": "Builduings.rar",
+    "model_files": 1,
+    "texture_files": 17,
+    "formats": [
+      ".dae"
+    ],
+    "samples": [
+      {
+        "file": "Bui/Edificios.dae",
+        "sha256": "072041d25bc8071677225c60618dd31dfd9051b3da7092e818b92dac694e29bc",
+        "geometries": 17,
+        "unit": [
+          {
+            "name": "meter",
+            "meter": "1"
+          }
+        ],
+        "up_axis": [
+          "Z_UP"
+        ],
+        "nodes": [
+          "Cube.015",
+          "Cube.014",
+          "Cube.013",
+          "Cube.012",
+          "Cube.011",
+          "Cube.010",
+          "Cube.009",
+          "Cube.008",
+          "Cube.007",
+          "Cube.006",
+          "Cube.005",
+          "Cube.004",
+          "Cube.003",
+          "Plane",
+          "Cube.002",
+          "Cube.001",
+          "Cube"
+        ]
+      }
+    ],
+    "textures": [
+      {
+        "file": "Bui/building (1).jpg",
+        "size": [
+          873,
+          750
+        ],
+        "mode": "RGB"
+      },
+      {
+        "file": "Bui/building (10).jpg",
+        "size": [
+          600,
+          498
+        ],
+        "mode": "RGB"
+      }
+    ],
+    "license": []
+  },
+  {
+    "archive": "Cabañas.rar",
+    "model_files": 1,
+    "texture_files": 4,
+    "formats": [
+      ".dae"
+    ],
+    "samples": [
+      {
+        "file": "Caba�as/Caba�as.dae",
+        "sha256": "35e86e44612a7ccec0d47b3f09417230538b853adb8464b697fe232cc363348a",
+        "geometries": 31,
+        "unit": [
+          {
+            "name": "meter",
+            "meter": "0.3"
+          }
+        ],
+        "up_axis": [
+          "Z_UP"
+        ],
+        "nodes": [
+          "Cube.033",
+          "Cube.032",
+          "Cube.031",
+          "Cube.030",
+          "Cube.029",
+          "Cube.028",
+          "Cube.027",
+          "Cube.026",
+          "Cube.025",
+          "Cabaña",
+          "Cube.023",
+          "Cube.020",
+          "Cube.017",
+          "Cube.014",
+          "Cube.011",
+          "Cube.022",
+          "Cube.021",
+          "Cube.019",
+          "Cube.018",
+          "Cube.016",
+          "Cube.015",
+          "Cube.013",
+          "Cube.012",
+          "Cabaña.001",
+          "Cube.005",
+          "Cube.008",
+          "Cube.006",
+          "Cube.002",
+          "Cube.007",
+          "Cube.004"
+        ]
+      }
+    ],
+    "textures": [
+      {
+        "file": "Caba�as/doors_wood_doors_0012_01_s.jpg",
+        "size": [
+          256,
+          557
+        ],
+        "mode": "RGB"
+      },
+      {
+        "file": "Caba�as/old_planks_02_diff_1k.jpg",
+        "size": [
+          256,
+          256
+        ],
+        "mode": "RGB"
+      }
+    ],
+    "license": []
+  },
+  {
+    "archive": "Chairs&Tables_PSX_Asset_Pack.zip",
+    "model_files": 0,
+    "texture_files": 22,
+    "formats": [],
+    "samples": [],
+    "textures": [
+      {
+        "file": "64_textures/wood01_tex_64x64.png",
+        "size": [
+          64,
+          64
+        ],
+        "mode": "RGBA"
+      },
+      {
+        "file": "64_textures/wood02_tex_64x64.png",
+        "size": [
+          64,
+          64
+        ],
+        "mode": "RGBA"
+      }
+    ],
+    "license": []
+  },
+  {
+    "archive": "DEMO_LoomingLandmarks-V1.2.zip",
+    "model_files": 3,
+    "texture_files": 1,
+    "formats": [
+      ".fbx",
+      ".glb",
+      ".obj"
+    ],
+    "samples": [
+      {
+        "file": "DemoPack - Compressed/WindTurbine/WindTurbine.glb",
+        "sha256": "85f0baf26302d463e5f12ae3a018aa5ca64dc68736a144839e33358aa02367df",
+        "nodes": 2,
+        "meshes": 2,
+        "names": [
+          "WindTurbine.002",
+          "WindTurbine_Blades.001"
+        ],
+        "triangles": 1120,
+        "bounds": [
+          {
+            "min": [
+              -0.21612049639225006,
+              -4.100275993347168,
+              0.019216597080230713
+            ],
+            "max": [
+              0.22312188148498535,
+              0.4575345516204834,
+              0.999897837638855
+            ]
+          },
+          {
+            "min": [
+              -1.404891848564148,
+              -1.5136852264404297,
+              -0.3237478733062744
+            ],
+            "max": [
+              2.036294460296631,
+              2.035118579864502,
+              0.028865838423371315
+            ]
+          }
+        ],
+        "materials": [
+          {
+            "name": "Material.002",
+            "alpha": "BLEND",
+            "double_sided": true
+          }
+        ],
+        "images": [
+          "embedded"
+        ],
+        "skins": 0
+      }
+    ],
+    "textures": [
+      {
+        "file": "DemoPack - Compressed/WindTurbine/WindTurbineBake.png",
+        "size": [
+          1024,
+          1024
+        ],
+        "mode": "RGBA"
+      }
+    ],
+    "license": [
+      {
+        "file": "DemoPack - Compressed/readme.txt",
+        "text": "for issues and inquires please message me on discord @3dexter3d \r\n\r\nThank you for your support! Leave a rating on the asset if you'd like to further support my work. \r\n\r\nCatch the full pack on a sale, my assets go on sale frequently!\r\n\r\n- 3Dexter"
+      }
+    ]
+  },
+  {
+    "archive": "Forest Model Pack.zip",
+    "model_files": 20,
+    "texture_files": 30,
+    "formats": [
+      ".fbx"
+    ],
+    "samples": [
+      {
+        "file": "Forest Model Pack/Fbx/BlueberryBush/BlueberryBush.fbx",
+        "sha256": "c88f2cda0bb974172e1ad66381997e209de4dd2d8458aeaac0166a0237fd9edd",
+        "models": [
+          {
+            "name": "Plane.026",
+            "type": "Mesh",
+            "Lcl Translation": [
+              0.029604345560073853,
+              -0.15158043801784515,
+              0.04782886803150177
+            ],
+            "Lcl Rotation": [
+              33.75145491569888,
+              157.44193923715522,
+              -75.62237233933129
+            ],
+            "Lcl Scaling": [
+              0.16408151388168335,
+              0.03577851504087448,
+              0.16408152878284454
+            ]
+          }
+        ],
+        "geometry": [
+          {
+            "name": "Plane.023",
+            "vertices": 94,
+            "min": [
+              -0.13818293809890747,
+              -7.458276271820068,
+              -1.156728982925415
+            ],
+            "max": [
+              3.1207029819488525,
+              1.8459488153457642,
+              0.3386780619621277
+            ],
+            "faces": 59
+          }
+        ],
+        "textures": [
+          "R_1_256.png",
+          "R_1_256.png",
+          "R_1_256.png",
+          "R_1_256.png",
+          "R_1_256.png",
+          "R_1_256.png",
+          "R_1_256.png",
+          "R_1_256.png",
+          "R_1_256.png",
+          "R_1_256.png",
+          "R_1_256.png",
+          "R_1_256.png"
+        ],
+        "skin_clusters": 0,
+        "clips": []
+      },
+      {
+        "file": "Forest Model Pack/Fbx/Pine_1/Pine_1.fbx",
+        "sha256": "8fb4f95e88d1e651c63283f9fc4e1718cf7056af2425e8b9e0d50a8ae6a575a6",
+        "models": [
+          {
+            "name": "Cylinder.020",
+            "type": "Mesh",
+            "Lcl Translation": [
+              -5.587935802964239e-08,
+              -2.008136749267578,
+              -1.862645149230957e-09
+            ],
+            "Lcl Rotation": [
+              -90.00000933466734,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "name": "Plane.013",
+            "type": "Mesh",
+            "Lcl Translation": [
+              0.008971747942268848,
+              0.015654563903808594,
+              3.621079683303833
+            ]
+          }
+        ],
+        "geometry": [
+          {
+            "name": "Cylinder.008",
+            "vertices": 17,
+            "min": [
+              -0.23423591256141663,
+              -0.23423591256141663,
+              2.5710380668897415e-07
+            ],
+            "max": [
+              0.23423592746257782,
+              0.23423591256141663,
+              6.303144454956055
+            ],
+            "faces": 17
+          },
+          {
+            "name": "Plane.022",
+            "vertices": 260,
+            "min": [
+              -1.7081674337387085,
+              -1.596548318862915,
+              -1.4667612314224243
+            ],
+            "max": [
+              1.7204952239990234,
+              1.5095347166061401,
+              2.8225696086883545
+            ],
+            "faces": 65
+          }
+        ],
+        "textures": [
+          "Wood_5_256.png",
+          "Wood_5_256.png",
+          "PineBranch_3.png",
+          "PineBranch_3.png",
+          "PineBranch_3.png",
+          "PineBranch_3.png"
+        ],
+        "skin_clusters": 0,
+        "clips": []
+      },
+      {
+        "file": "Forest Model Pack/Fbx/Fern/Fern.fbx",
+        "sha256": "1234d6168e5184d4c71401b77e1af857756b584cab9ed136b664b78f6e3cfab9",
+        "models": [
+          {
+            "name": "Plane.039",
+            "type": "Mesh",
+            "Lcl Rotation": [
+              -90.00000933466734,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "name": "Plane.040",
+            "type": "Mesh",
+            "Lcl Translation": [
+              -0.09184668958187103,
+              -0.2922949194908142,
+              0.3421125113964081
+            ],
+            "Lcl Rotation": [
+              36.71220531711601,
+              -31.315409891605885,
+              -163.84775509365673
+            ],
+            "Lcl Scaling": [
+              0.3334468603134155,
+              0.3334468901157379,
+              0.3334468603134155
+            ]
+          },
+          {
+            "name": "Plane.041",
+            "type": "Mesh",
+            "Lcl Translation": [
+              -0.18670989573001862,
+              0.09087176620960236,
+              0.2564310133457184
+            ],
+            "Lcl Rotation": [
+              28.37374645382436,
+              -49.912211831609724,
+              85.25501544655695
+            ],
+            "Lcl Scaling": [
+              0.23819531500339508,
+              0.23819532990455627,
+              0.23819531500339508
+            ]
+          }
+        ],
+        "geometry": [
+          {
+            "name": "Plane.005",
+            "vertices": 5,
+            "min": [
+              1.1513858311218428e-08,
+              -0.12975874543190002,
+              -8.044319876887585e-09
+            ],
+            "max": [
+              0.3738809823989868,
+              0.4530785381793976,
+              0.45746976137161255
+            ],
+            "faces": 4
+          },
+          {
+            "name": "Plane.040",
+            "vertices": 5,
+            "min": [
+              -1.0,
+              -1.0,
+              -0.3911025822162628
+            ],
+            "max": [
+              1.0,
+              1.0,
+              0.32857635617256165
+            ],
+            "faces": 4
+          },
+          {
+            "name": "Plane.041",
+            "vertices": 5,
+            "min": [
+              -1.0,
+              -1.0,
+              -0.3911025822162628
+            ],
+            "max": [
+              1.0,
+              1.0,
+              0.32857635617256165
+            ],
+            "faces": 4
+          }
+        ],
+        "textures": [
+          "R_1_256.png",
+          "R_1_256.png",
+          "R_1_256.png",
+          "R_1_256.png",
+          "R_1_256.png",
+          "R_1_256.png",
+          "R_1_256.png",
+          "R_1_256.png",
+          "R_1_256.png",
+          "R_1_256.png",
+          "R_1_256.png",
+          "R_1_256.png"
+        ],
+        "skin_clusters": 0,
+        "clips": []
+      }
+    ],
+    "textures": [
+      {
+        "file": "Forest Model Pack/Fbx/BlueberryBush/BluberryBush.png",
+        "size": [
+          256,
+          256
+        ],
+        "mode": "RGBA"
+      },
+      {
+        "file": "Forest Model Pack/Fbx/BracketFungus/BracketFungus.png",
+        "size": [
+          256,
+          256
+        ],
+        "mode": "RGBA"
+      }
+    ],
+    "license": []
+  },
+  {
+    "archive": "FREE APOCA.zip",
+    "model_files": 2,
+    "texture_files": 8,
+    "formats": [
+      ".fbx",
+      ".glb"
+    ],
+    "samples": [
+      {
+        "file": "FREE APOCA/models/FREE APOCA ITEMS.glb",
+        "sha256": "c7df1018bdf3ba7aa75c0379a5709e68a6080835e78c2f1d43607f95874af008",
+        "nodes": 11,
+        "meshes": 11,
+        "names": [
+          "plastic_bottle",
+          "air_con",
+          "plastic_bottle2",
+          "cardboard_box",
+          "pOS_machine",
+          "plant_pot",
+          "radio",
+          "sleeping_bag",
+          "metal_cabinet",
+          "first_aid_kit",
+          "tyre"
+        ],
+        "triangles": 1714,
+        "bounds": [
+          {
+            "min": [
+              -0.6421048045158386,
+              -1.0961436033248901,
+              -1.2022144794464111
+            ],
+            "max": [
+              0.6421048045158386,
+              2.658604145050049,
+              1.1930229663848877
+            ]
+          },
+          {
+            "min": [
+              -1,
+              -1,
+              -1
+            ],
+            "max": [
+              1,
+              1,
+              1.1228437423706055
+            ]
+          },
+          {
+            "min": [
+              -0.740680992603302,
+              -1.0073565244674683,
+              -0.7034555077552795
+            ],
+            "max": [
+              0.740680992603302,
+              0.6832046508789062,
+              1
+            ]
+          },
+          {
+            "min": [
+              -1,
+              -1,
+              -1
+            ],
+            "max": [
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "min": [
+              -1,
+              -1,
+              -4.639382362365723
+            ],
+            "max": [
+              1.1302390098571777,
+              1.017835021018982,
+              1.3714860677719116
+            ]
+          },
+          {
+            "min": [
+              -1,
+              -38.086517333984375,
+              -1
+            ],
+            "max": [
+              1,
+              1,
+              1
+            ]
+          }
+        ],
+        "materials": [
+          {
+            "name": "Material.001",
+            "alpha": "OPAQUE",
+            "double_sided": true
+          },
+          {
+            "name": "Material.002",
+            "alpha": "OPAQUE",
+            "double_sided": true
+          },
+          {
+            "name": "Material.003",
+            "alpha": "OPAQUE",
+            "double_sided": true
+          },
+          {
+            "name": "Material.004",
+            "alpha": "OPAQUE",
+            "double_sided": true
+          },
+          {
+            "name": "Material.005",
+            "alpha": "OPAQUE",
+            "double_sided": true
+          },
+          {
+            "name": "Material.006",
+            "alpha": "OPAQUE",
+            "double_sided": true
+          },
+          {
+            "name": "Material.007",
+            "alpha": "OPAQUE",
+            "double_sided": true
+          },
+          {
+            "name": "Material.008",
+            "alpha": "OPAQUE",
+            "double_sided": true
+          },
+          {
+            "name": "Material.009",
+            "alpha": "OPAQUE",
+            "double_sided": true
+          },
+          {
+            "name": "Material.010",
+            "alpha": "OPAQUE",
+            "double_sided": true
+          },
+          {
+            "name": "Material.011",
+            "alpha": "OPAQUE",
+            "double_sided": true
+          }
+        ],
+        "images": [
+          "embedded",
+          "embedded",
+          "embedded",
+          "embedded",
+          "embedded",
+          "embedded",
+          "embedded",
+          "embedded",
+          "embedded",
+          "embedded",
+          "embedded"
+        ],
+        "skins": 0
+      }
+    ],
+    "textures": [
+      {
+        "file": "FREE APOCA/textures/5LP_text.png",
+        "size": [
+          256,
+          256
+        ],
+        "mode": "RGB"
+      },
+      {
+        "file": "FREE APOCA/textures/POS_text.png",
+        "size": [
+          256,
+          256
+        ],
+        "mode": "RGB"
+      }
+    ],
+    "license": []
+  },
+  {
+    "archive": "Industrial_exterior_v1.zip",
+    "model_files": 1,
+    "texture_files": 68,
+    "formats": [
+      ".fbx"
+    ],
+    "samples": [
+      {
+        "file": "Industrial_exterior_v2/Models/IndustrialHorror_PS_like.fbx",
+        "sha256": "f17fc1dbb8a569f74f7f8d8b0f0b027417ce8f477564ba5999605151a89ca232",
+        "models": [
+          {
+            "name": "Building_1",
+            "type": "Mesh",
+            "Lcl Translation": [
+              6707.06103515625,
+              1.2497901916503906,
+              -7094.216796875
+            ]
+          },
+          {
+            "name": "Building_2",
+            "type": "Mesh",
+            "Lcl Translation": [
+              6600.0,
+              0.0,
+              -4700.0
+            ]
+          },
+          {
+            "name": "Building_3",
+            "type": "Mesh",
+            "Lcl Translation": [
+              7049.763671875,
+              -24.44300651550293,
+              -3102.396484375
+            ]
+          },
+          {
+            "name": "Building_4",
+            "type": "Mesh",
+            "Lcl Translation": [
+              6992.455078125,
+              -1.462721824645996,
+              -1436.682373046875
+            ]
+          },
+          {
+            "name": "Building_5",
+            "type": "Mesh",
+            "Lcl Translation": [
+              6993.8505859375,
+              -4.940938949584961,
+              -224.83843994140625
+            ]
+          },
+          {
+            "name": "Building_6",
+            "type": "Mesh",
+            "Lcl Translation": [
+              7099.2431640625,
+              -8.49761962890625,
+              880.5706176757812
+            ]
+          },
+          {
+            "name": "Building_7",
+            "type": "Mesh",
+            "Lcl Translation": [
+              7080.7685546875,
+              -1.9425630569458008,
+              2167.1875
+            ]
+          },
+          {
+            "name": "Building_8",
+            "type": "Mesh",
+            "Lcl Translation": [
+              7000.0,
+              0.0,
+              3600.0
+            ]
+          },
+          {
+            "name": "Building_9",
+            "type": "Mesh",
+            "Lcl Translation": [
+              6600.0,
+              0.0,
+              5400.0
+            ]
+          },
+          {
+            "name": "Building_10",
+            "type": "Mesh",
+            "Lcl Translation": [
+              6700.0,
+              0.0,
+              7600.0
+            ]
+          },
+          {
+            "name": "Building_11",
+            "type": "Mesh",
+            "Lcl Translation": [
+              6800.0,
+              0.0,
+              9700.0
+            ]
+          },
+          {
+            "name": "Building_12",
+            "type": "Mesh",
+            "Lcl Translation": [
+              6864.74365234375,
+              0.0,
+              11346.171875
+            ]
+          },
+          {
+            "name": "Cooling_tower",
+            "type": "Mesh",
+            "Lcl Translation": [
+              7400.0,
+              3.308582305908203,
+              12691.9755859375
+            ]
+          },
+          {
+            "name": "Building_13",
+            "type": "Mesh",
+            "Lcl Translation": [
+              8000.0,
+              2.004384994506836,
+              -200.0
+            ]
+          },
+          {
+            "name": "Barrel_1",
+            "type": "Mesh",
+            "Lcl Translation": [
+              2714.09814453125,
+              0.8084535598754883,
+              -6945.1162109375
+            ]
+          },
+          {
+            "name": "Barrel_2",
+            "type": "Mesh",
+            "Lcl Translation": [
+              2614.09814453125,
+              0.8084535598754883,
+              -6945.1162109375
+            ]
+          },
+          {
+            "name": "Barrel_3",
+            "type": "Mesh",
+            "Lcl Translation": [
+              2514.098388671875,
+              0.8084535598754883,
+              -6945.1162109375
+            ]
+          },
+          {
+            "name": "Box_wide_wood",
+            "type": "Mesh",
+            "Lcl Translation": [
+              2491.47998046875,
+              1.7778635025024414,
+              -7201.615234375
+            ]
+          },
+          {
+            "name": "Box_wood",
+            "type": "Mesh",
+            "Lcl Translation": [
+              2700.9228515625,
+              0.22501949965953827,
+              -7206.7861328125
+            ]
+          },
+          {
+            "name": "Cargo_1_close",
+            "type": "Mesh",
+            "Lcl Translation": [
+              2722.95654296875,
+              -0.11518001556396484,
+              -8003.67578125
+            ]
+          },
+          {
+            "name": "Cargo_1_open",
+            "type": "Mesh",
+            "Lcl Translation": [
+              2722.95654296875,
+              -3.6334991455078125,
+              -7580.65087890625
+            ]
+          },
+          {
+            "name": "Cargo_2_empty",
+            "type": "Mesh",
+            "Lcl Translation": [
+              2702.09130859375,
+              1.0494768619537354,
+              -6708.00390625
+            ]
+          },
+          {
+            "name": "Cargo_2_full",
+            "type": "Mesh",
+            "Lcl Translation": [
+              2702.09130859375,
+              1.0494768619537354,
+              -6497.10595703125
+            ]
+          },
+          {
+            "name": "Liquid_reservoir_1",
+            "type": "Mesh",
+            "Lcl Translation": [
+              2900.0,
+              -0.6015777587890625,
+              -5600.0
+            ]
+          },
+          {
+            "name": "Liquid_reservoir_2",
+            "type": "Mesh",
+            "Lcl Translation": [
+              1900.0,
+              -0.22156238555908203,
+              -5600.0
+            ]
+          },
+          {
+            "name": "Bridges_1",
+            "type": "Mesh",
+            "Lcl Translation": [
+              553.8894653320312,
+              475.0373840332031,
+              -5970.1328125
+            ]
+          },
+          {
+            "name": "Bridges_2",
+            "type": "Mesh",
+            "Lcl Translation": [
+              553.8894653320312,
+              486.05364990234375,
+              -6498.2900390625
+            ]
+          },
+          {
+            "name": "Bridges_3",
+            "type": "Mesh",
+            "Lcl Translation": [
+              544.56494140625,
+              23.36651039123535,
+              -7056.03173828125
+            ]
+          },
+          {
+            "name": "Bridges_end",
+            "type": "Mesh",
+            "Lcl Translation": [
+              541.2236328125,
+              507.93560791015625,
+              -7435.6123046875
+            ]
+          },
+          {
+            "name": "Bridges_stairs_1",
+            "type": "Mesh",
+            "Lcl Translation": [
+              8.115482330322266,
+              4.801881313323975,
+              -6285.77978515625
+            ]
+          },
+          {
+            "name": "Bridges_stairs_2",
+            "type": "Mesh",
+            "Lcl Translation": [
+              281.79022216796875,
+              9.836840629577637,
+              -6274.1328125
+            ]
+          },
+          {
+            "name": "Bridges_turn",
+            "type": "Mesh",
+            "Lcl Translation": [
+              478.9839782714844,
+              500.6734924316406,
+              -7757.12890625
+            ]
+          },
+          {
+            "name": "Bridges_support_3",
+            "type": "Mesh",
+            "Lcl Translation": [
+              292.6924133300781,
+              -4.430580139160156,
+              -6905.80517578125
+            ]
+          },
+          {
+            "name": "Bridges_support_1",
+            "type": "Mesh",
+            "Lcl Translation": [
+              288.89678955078125,
+              -4.430675506591797,
+              -7052.642578125
+            ]
+          },
+          {
+            "name": "Bridges_support_2",
+            "type": "Mesh",
+            "Lcl Translation": [
+              292.69232177734375,
+              -4.430580139160156,
+              -6766.302734375
+            ]
+          }
+        ],
+        "geometry": [
+          {
+            "name": "Building_1",
+            "vertices": 446,
+            "min": [
+              -583.5224151611328,
+              -17.491674423217773,
+              -1130.8189392089844
+            ],
+            "max": [
+              583.5227966308594,
+              1270.7469940185547,
+              1130.8189392089844
+            ],
+            "faces": 339
+          },
+          {
+            "name": "Building_2",
+            "vertices": 631,
+            "min": [
+              -480.1647663116455,
+              -12.862223386764526,
+              -715.297269821167
+            ],
+            "max": [
+              605.3872108459473,
+              923.0337142944336,
+              635.0343704223633
+            ],
+            "faces": 361
+          },
+          {
+            "name": "Building_3",
+            "vertices": 591,
+            "min": [
+              -985.0069046020508,
+              -8.505342155694962,
+              -647.0407485961914
+            ],
+            "max": [
+              1002.6277542114258,
+              805.552864074707,
+              738.7260437011719
+            ],
+            "faces": 343
+          },
+          {
+            "name": "Building_4",
+            "vertices": 350,
+            "min": [
+              -423.3279228210449,
+              -12.352848052978516,
+              -779.189920425415
+            ],
+            "max": [
+              422.2397804260254,
+              615.0883197784424,
+              789.6127700805664
+            ],
+            "faces": 210
+          },
+          {
+            "name": "Building_5",
+            "vertices": 212,
+            "min": [
+              -806.9404602050781,
+              -12.175542116165161,
+              -261.71741485595703
+            ],
+            "max": [
+              64.06459212303162,
+              533.948278427124,
+              259.1397523880005
+            ],
+            "faces": 158
+          },
+          {
+            "name": "Building_6",
+            "vertices": 913,
+            "min": [
+              -1293.0012702941895,
+              -20.66609263420105,
+              -702.4154663085938
+            ],
+            "max": [
+              997.8999137878418,
+              1126.3506889343262,
+              683.3515167236328
+            ],
+            "faces": 607
+          },
+          {
+            "name": "Building_7",
+            "vertices": 59,
+            "min": [
+              -483.49571228027344,
+              -8.532887697219849,
+              -359.8655700683594
+            ],
+            "max": [
+              483.4953308105469,
+              494.3655014038086,
+              359.8655700683594
+            ],
+            "faces": 34
+          },
+          {
+            "name": "Building_8",
+            "vertices": 615,
+            "min": [
+              -1528.8774490356445,
+              -10.335111618041992,
+              -841.7552947998047
+            ],
+            "max": [
+              1528.8777351379395,
+              1044.2153930664062,
+              841.7534828186035
+            ],
+            "faces": 451
+          }
+        ],
+        "textures": [
+          "Building_1.png",
+          "Building_1.png",
+          "Building_2.png",
+          "Building_2.png",
+          "Building_3.png",
+          "Building_3.png",
+          "Building_3.png",
+          "Building_3.png",
+          "Building_3.png",
+          "Building_3.png",
+          "Building_4.png",
+          "Building_4.png"
+        ],
+        "skin_clusters": 0,
+        "clips": []
+      }
+    ],
+    "textures": [
+      {
+        "file": "Industrial_exterior_v2/Textures/Asphalt_1-4.png",
+        "size": [
+          512,
+          512
+        ],
+        "mode": "P"
+      },
+      {
+        "file": "Industrial_exterior_v2/Textures/Asphalt_1-4_n.png",
+        "size": [
+          512,
+          512
+        ],
+        "mode": "RGB"
+      }
+    ],
+    "license": []
+  },
+  {
+    "archive": "Maquinas.rar",
+    "model_files": 1,
+    "texture_files": 10,
+    "formats": [
+      ".dae"
+    ],
+    "samples": [
+      {
+        "file": "Maquinas/Maquinas.dae",
+        "sha256": "651e7a08258f1834309024e52656f2168ab60ab9876f15d6ca86a2c3c4d1f080",
+        "geometries": 12,
+        "unit": [
+          {
+            "name": "meter",
+            "meter": "1"
+          }
+        ],
+        "up_axis": [
+          "Z_UP"
+        ],
+        "nodes": [
+          "Cube.012",
+          "Cube.011",
+          "Cube.010",
+          "Cube.008",
+          "Cube.007",
+          "Cube.006",
+          "Cube.005",
+          "Cube.004",
+          "Cube.003",
+          "Cube.002",
+          "Cube.001",
+          "Cube"
+        ]
+      }
+    ],
+    "textures": [
+      {
+        "file": "Maquinas/M (1).png",
+        "size": [
+          256,
+          256
+        ],
+        "mode": "RGB"
+      },
+      {
+        "file": "Maquinas/M (10).png",
+        "size": [
+          256,
+          256
+        ],
+        "mode": "RGB"
+      }
+    ],
+    "license": []
+  },
+  {
+    "archive": "Objects_Interior(Village)_Demo.rar",
+    "model_files": 1,
+    "texture_files": 121,
+    "formats": [
+      ".fbx"
+    ],
+    "samples": [
+      {
+        "file": "Objects_Interior(Village)_Demo/Models/Objects_Interior(Village)_Demo.fbx",
+        "sha256": "7eef5ad963c1574812c2b4ad50d1b56a3b0daf7176ee1ebccfc0df1509001990",
+        "models": [
+          {
+            "name": "House_Demo_040",
+            "type": "Mesh",
+            "Lcl Translation": [
+              1192.7523193359375,
+              50.7397575378418,
+              668.947509765625
+            ],
+            "Lcl Rotation": [
+              -90.00000933466734,
+              0.0,
+              0.0
+            ],
+            "Lcl Scaling": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          },
+          {
+            "name": "House_Demo_001",
+            "type": "Mesh",
+            "Lcl Translation": [
+              824.843994140625,
+              345.00689697265625,
+              194.9093780517578
+            ],
+            "Lcl Rotation": [
+              -90.00000933466734,
+              0.0,
+              0.0
+            ],
+            "Lcl Scaling": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          },
+          {
+            "name": "House_Demo_002",
+            "type": "Mesh",
+            "Lcl Translation": [
+              793.3612060546875,
+              -14.356163024902344,
+              803.167724609375
+            ],
+            "Lcl Rotation": [
+              -90.00000933466734,
+              0.0,
+              0.0
+            ],
+            "Lcl Scaling": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          },
+          {
+            "name": "House_Demo_003",
+            "type": "Mesh",
+            "Lcl Translation": [
+              1602.2855224609375,
+              -14.356163024902344,
+              107.8896484375
+            ],
+            "Lcl Rotation": [
+              -90.00000250447816,
+              90.00000250447816,
+              0.0
+            ],
+            "Lcl Scaling": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          },
+          {
+            "name": "House_Demo_004",
+            "type": "Mesh",
+            "Lcl Translation": [
+              794.3626098632812,
+              141.88412475585938,
+              749.3330078125
+            ],
+            "Lcl Rotation": [
+              -90.00000933466734,
+              0.0,
+              0.0
+            ],
+            "Lcl Scaling": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          },
+          {
+            "name": "House_Demo_005",
+            "type": "Mesh",
+            "Lcl Translation": [
+              749.0994873046875,
+              141.88412475585938,
+              -173.0063934326172
+            ],
+            "Lcl Rotation": [
+              -90.00000933466734,
+              0.0,
+              0.0
+            ],
+            "Lcl Scaling": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          },
+          {
+            "name": "House_Demo_006",
+            "type": "Mesh",
+            "Lcl Translation": [
+              959.6074829101562,
+              141.88412475585938,
+              250.61492919921875
+            ],
+            "Lcl Rotation": [
+              -90.00000933466734,
+              0.0,
+              0.0
+            ],
+            "Lcl Scaling": [
+              100.0,
+              116.07638549804688,
+              100.0
+            ]
+          },
+          {
+            "name": "House_Demo_007",
+            "type": "Mesh",
+            "Lcl Translation": [
+              1188.4510498046875,
+              141.88412475585938,
+              250.61492919921875
+            ],
+            "Lcl Rotation": [
+              -90.00000933466734,
+              0.0,
+              0.0
+            ],
+            "Lcl Scaling": [
+              100.0,
+              116.07638549804688,
+              100.0
+            ]
+          },
+          {
+            "name": "House_Demo_008",
+            "type": "Mesh",
+            "Lcl Translation": [
+              975.1489868164062,
+              141.88412475585938,
+              -19.922876358032227
+            ],
+            "Lcl Rotation": [
+              -90.00000933466734,
+              0.0,
+              0.0
+            ],
+            "Lcl Scaling": [
+              100.0,
+              116.07638549804688,
+              100.0
+            ]
+          },
+          {
+            "name": "House_Demo_009",
+            "type": "Mesh",
+            "Lcl Translation": [
+              979.7550048828125,
+              141.88412475585938,
+              672.4033203125
+            ],
+            "Lcl Rotation": [
+              -90.00000933466734,
+              0.0,
+              0.0
+            ],
+            "Lcl Scaling": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          },
+          {
+            "name": "House_Demo_010",
+            "type": "Mesh",
+            "Lcl Translation": [
+              1269.3189697265625,
+              163.11798095703125,
+              672.4033203125
+            ],
+            "Lcl Rotation": [
+              -90.00000933466734,
+              0.0,
+              0.0
+            ],
+            "Lcl Scaling": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          },
+          {
+            "name": "House_Demo_011",
+            "type": "Mesh",
+            "Lcl Translation": [
+              1197.281982421875,
+              162.3619842529297,
+              -465.4685363769531
+            ],
+            "Lcl Rotation": [
+              -90.00000933466734,
+              0.0,
+              0.0
+            ],
+            "Lcl Scaling": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          },
+          {
+            "name": "House_Demo_012",
+            "type": "Mesh",
+            "Lcl Translation": [
+              536.9176635742188,
+              141.88412475585938,
+              511.957275390625
+            ],
+            "Lcl Rotation": [
+              -90.00000933466734,
+              0.0,
+              0.0
+            ],
+            "Lcl Scaling": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          },
+          {
+            "name": "House_Demo_013",
+            "type": "Mesh",
+            "Lcl Translation": [
+              1549.9674072265625,
+              141.88412475585938,
+              407.3644714355469
+            ],
+            "Lcl Rotation": [
+              -90.00000250447816,
+              90.00000250447816,
+              0.0
+            ],
+            "Lcl Scaling": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          },
+          {
+            "name": "House_Demo_014",
+            "type": "Mesh",
+            "Lcl Translation": [
+              1549.9674072265625,
+              141.88412475585938,
+              -187.2994842529297
+            ],
+            "Lcl Rotation": [
+              -90.00000250447816,
+              90.00000250447816,
+              0.0
+            ],
+            "Lcl Scaling": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          },
+          {
+            "name": "House_Demo_015",
+            "type": "Mesh",
+            "Lcl Translation": [
+              1550.549072265625,
+              141.88412475585938,
+              109.433837890625
+            ],
+            "Lcl Rotation": [
+              -90.00000250447816,
+              90.00000250447816,
+              0.0
+            ],
+            "Lcl Scaling": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          },
+          {
+            "name": "House_Demo_016",
+            "type": "Mesh",
+            "Lcl Translation": [
+              905.84375,
+              163.46153259277344,
+              685.4273681640625
+            ],
+            "Lcl Rotation": [
+              -90.00000933466734,
+              0.0,
+              0.0
+            ],
+            "Lcl Scaling": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          },
+          {
+            "name": "House_Demo_017",
+            "type": "Mesh",
+            "Lcl Translation": [
+              1034.6812744140625,
+              163.46153259277344,
+              685.4273681640625
+            ],
+            "Lcl Rotation": [
+              -90.00000933466734,
+              0.0,
+              0.0
+            ],
+            "Lcl Scaling": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          },
+          {
+            "name": "House_Demo_018",
+            "type": "Mesh",
+            "Lcl Translation": [
+              1150.6591796875,
+              163.46153259277344,
+              685.5136108398438
+            ],
+            "Lcl Rotation": [
+              -90.00000933466734,
+              0.0,
+              0.0
+            ],
+            "Lcl Scaling": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          },
+          {
+            "name": "House_Demo_019",
+            "type": "Mesh",
+            "Lcl Translation": [
+              1387.9083251953125,
+              163.46153259277344,
+              685.5136108398438
+            ],
+            "Lcl Rotation": [
+              -90.00000933466734,
+              0.0,
+              0.0
+            ],
+            "Lcl Scaling": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          },
+          {
+            "name": "House_Demo_020",
+            "type": "Mesh",
+            "Lcl Translation": [
+              1078.514892578125,
+              163.46153259277344,
+              -476.3539733886719
+            ],
+            "Lcl Rotation": [
+              -90.00000933466734,
+              -0.0,
+              180.00000500895632
+            ],
+            "Lcl Scaling": [
+              -100.0,
+              -100.0,
+              -100.0
+            ]
+          },
+          {
+            "name": "House_Demo_021",
+            "type": "Mesh",
+            "Lcl Translation": [
+              1315.7640380859375,
+              163.46153259277344,
+              -476.3539733886719
+            ],
+            "Lcl Rotation": [
+              -90.00000933466734,
+              -0.0,
+              180.00000500895632
+            ],
+            "Lcl Scaling": [
+              -100.0,
+              -100.0,
+              -100.0
+            ]
+          },
+          {
+            "name": "House_Demo_022",
+            "type": "Mesh",
+            "Lcl Translation": [
+              461.3116760253906,
+              163.46153259277344,
+              523.4559936523438
+            ],
+            "Lcl Rotation": [
+              -90.00000933466734,
+              0.0,
+              0.0
+            ],
+            "Lcl Scaling": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          },
+          {
+            "name": "House_Demo_023",
+            "type": "Mesh",
+            "Lcl Translation": [
+              592.9965209960938,
+              163.46153259277344,
+              523.4559936523438
+            ],
+            "Lcl Rotation": [
+              -90.00000933466734,
+              0.0,
+              0.0
+            ],
+            "Lcl Scaling": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          },
+          {
+            "name": "House_Demo_024",
+            "type": "Mesh",
+            "Lcl Translation": [
+              1561.2490234375,
+              163.46153259277344,
+              482.63958740234375
+            ],
+            "Lcl Rotation": [
+              -90.00000250447816,
+              90.00000250447816,
+              0.0
+            ],
+            "Lcl Scaling": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          },
+          {
+            "name": "House_Demo_025",
+            "type": "Mesh",
+            "Lcl Translation": [
+              1561.2490234375,
+              163.46153259277344,
+              350.9547119140625
+            ],
+            "Lcl Rotation": [
+              -90.00000250447816,
+              90.00000250447816,
+              0.0
+            ],
+            "Lcl Scaling": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          },
+          {
+            "name": "House_Demo_026",
+            "type": "Mesh",
+            "Lcl Translation": [
+              1561.2490234375,
+              163.46153259277344,
+              -111.93394470214844
+            ],
+            "Lcl Rotation": [
+              -90.00000250447816,
+              90.00000250447816,
+              0.0
+            ],
+            "Lcl Scaling": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          },
+          {
+            "name": "House_Demo_027",
+            "type": "Mesh",
+            "Lcl Translation": [
+              1561.2490234375,
+              163.46153259277344,
+              -243.6188201904297
+            ],
+            "Lcl Rotation": [
+              -90.00000250447816,
+              90.00000250447816,
+              0.0
+            ],
+            "Lcl Scaling": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          },
+          {
+            "name": "House_Demo_028",
+            "type": "Mesh",
+            "Lcl Translation": [
+              511.5419006347656,
+              77.97733306884766,
+              -42.37694549560547
+            ],
+            "Lcl Rotation": [
+              -90.00000933466734,
+              0.0,
+              0.0
+            ],
+            "Lcl Scaling": [
+              47.25292205810547,
+              47.25292205810547,
+              47.25292205810547
+            ]
+          },
+          {
+            "name": "House_Demo_029",
+            "type": "Mesh",
+            "Lcl Translation": [
+              418.25384521484375,
+              58.623756408691406,
+              19.4730281829834
+            ],
+            "Lcl Rotation": [
+              -90.00000933466734,
+              0.0,
+              0.0
+            ],
+            "Lcl Scaling": [
+              39.364864349365234,
+              39.364864349365234,
+              39.364864349365234
+            ]
+          },
+          {
+            "name": "House_Demo_030",
+            "type": "Mesh",
+            "Lcl Translation": [
+              413.9607849121094,
+              195.57594299316406,
+              104.36172485351562
+            ],
+            "Lcl Rotation": [
+              -90.00000933466734,
+              0.0,
+              0.0
+            ],
+            "Lcl Scaling": [
+              31.282211303710938,
+              31.282211303710938,
+              31.282211303710938
+            ]
+          },
+          {
+            "name": "House_Demo_031",
+            "type": "Mesh",
+            "Lcl Translation": [
+              413.9607849121094,
+              195.57594299316406,
+              -53.232337951660156
+            ],
+            "Lcl Rotation": [
+              -90.00000933466734,
+              0.0,
+              0.0
+            ],
+            "Lcl Scaling": [
+              31.282211303710938,
+              31.282211303710938,
+              31.282211303710938
+            ]
+          },
+          {
+            "name": "House_Demo_032",
+            "type": "Mesh",
+            "Lcl Translation": [
+              560.461181640625,
+              88.42286682128906,
+              368.87005615234375
+            ],
+            "Lcl Rotation": [
+              -90.00000933466734,
+              0.0,
+              0.0
+            ],
+            "Lcl Scaling": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          },
+          {
+            "name": "House_Demo_033",
+            "type": "Mesh",
+            "Lcl Translation": [
+              651.8855590820312,
+              59.25209426879883,
+              368.51007080078125
+            ],
+            "Lcl Rotation": [
+              -90.00000933466734,
+              0.0,
+              0.0
+            ],
+            "Lcl Scaling": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          },
+          {
+            "name": "House_Demo_034",
+            "type": "Mesh",
+            "Lcl Translation": [
+              560.3648681640625,
+              95.3442153930664,
+              369.0682373046875
+            ],
+            "Lcl Rotation": [
+              -90.00000933466734,
+              0.0,
+              0.0
+            ],
+            "Lcl Scaling": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          }
+        ],
+        "geometry": [
+          {
+            "name": "House_Demo_014",
+            "vertices": 457,
+            "min": [
+              -8.244441986083984,
+              -0.898677408695221,
+              -0.8963363766670227
+            ],
+            "max": [
+              3.6620712280273438,
+              11.429418563842773,
+              4.5226731300354
+            ],
+            "faces": 419
+          },
+          {
+            "name": "House_Demo_015",
+            "vertices": 103,
+            "min": [
+              -4.673558235168457,
+              -5.635451793670654,
+              -0.814954400062561
+            ],
+            "max": [
+              7.799026966094971,
+              6.79740047454834,
+              1.6761881113052368
+            ],
+            "faces": 87
+          },
+          {
+            "name": "House_Demo_031",
+            "vertices": 16,
+            "min": [
+              -0.6960833668708801,
+              -0.3988352119922638,
+              -0.23901298642158508
+            ],
+            "max": [
+              0.6960833668708801,
+              0.4848520755767822,
+              0.13102683424949646
+            ],
+            "faces": 14
+          },
+          {
+            "name": "House_Demo_030",
+            "vertices": 16,
+            "min": [
+              -0.6960833668708801,
+              -0.3988352119922638,
+              -0.23901298642158508
+            ],
+            "max": [
+              0.6960833668708801,
+              0.4848520755767822,
+              0.13102683424949646
+            ],
+            "faces": 14
+          },
+          {
+            "name": "House_Demo_005",
+            "vertices": 24,
+            "min": [
+              -0.5455915331840515,
+              -0.10755881667137146,
+              -1.334007740020752
+            ],
+            "max": [
+              0.5455917119979858,
+              0.10755881667137146,
+              0.9610497951507568
+            ],
+            "faces": 22
+          },
+          {
+            "name": "House_Demo_037",
+            "vertices": 24,
+            "min": [
+              -0.5128293037414551,
+              -0.10755881667137146,
+              -1.334007740020752
+            ],
+            "max": [
+              0.5455917119979858,
+              0.10755881667137146,
+              0.9610497951507568
+            ],
+            "faces": 22
+          },
+          {
+            "name": "House_Demo_006",
+            "vertices": 24,
+            "min": [
+              -0.5128293037414551,
+              -0.10755881667137146,
+              -1.334007740020752
+            ],
+            "max": [
+              0.5455917119979858,
+              0.10755881667137146,
+              0.9610497951507568
+            ],
+            "faces": 22
+          },
+          {
+            "name": "House_Demo_020",
+            "vertices": 24,
+            "min": [
+              -0.5128293037414551,
+              -0.10755881667137146,
+              -1.334007740020752
+            ],
+            "max": [
+              0.5455917119979858,
+              0.10755881667137146,
+              0.9610497951507568
+            ],
+            "faces": 22
+          }
+        ],
+        "textures": [
+          "Wood.jpg",
+          "Wood.jpg",
+          "Wood_01.jpg",
+          "Wood_01.jpg",
+          "WallpaperForties.jpg",
+          "WallpaperForties.jpg",
+          "Tiles.jpg",
+          "Tiles.jpg",
+          "Concrete.jpg",
+          "Concrete.jpg",
+          "Tiles_01.png",
+          "Tiles_01.png"
+        ],
+        "skin_clusters": 0,
+        "clips": []
+      }
+    ],
+    "textures": [
+      {
+        "file": "Objects_Interior(Village)_Demo/Textures/Alarm_clock.png",
+        "size": [
+          256,
+          256
+        ],
+        "mode": "RGBA"
+      },
+      {
+        "file": "Objects_Interior(Village)_Demo/Textures/Alarm_clock_01.png",
+        "size": [
+          256,
+          256
+        ],
+        "mode": "RGBA"
+      }
+    ],
+    "license": []
+  },
+  {
+    "archive": "Post-apocaliptic Shelter_Base.rar",
+    "model_files": 2,
+    "texture_files": 8,
+    "formats": [
+      ".fbx",
+      ".glb"
+    ],
+    "samples": [
+      {
+        "file": "PostapocalipticShelter.glb",
+        "sha256": "7b987bad1fee7c37ac995c91fd3fc1957f5afe901cb905eb885c2b391698dadc",
+        "nodes": 40,
+        "meshes": 40,
+        "names": [
+          "RustyTruck",
+          "Trailer",
+          "Wheels",
+          "Roof",
+          "Poles",
+          "WoodenBox",
+          "Sign",
+          "WoodenPole",
+          "Tire",
+          "CarLight",
+          "StreetLight",
+          "Bag",
+          "Barrel",
+          "ClosedBox.3",
+          "Generator",
+          "Cable",
+          "Plane.001",
+          "ElectricalPanel",
+          "ElectricalPanel.2",
+          "RolledCarpet",
+          "Fence",
+          "Light",
+          "Floor",
+          "Fence.001",
+          "Fence.002",
+          "WoodenBox.001",
+          "ClosedBox",
+          "Tire.001",
+          "Tire.002",
+          "Tire.003",
+          "Tire.004",
+          "Tire.005",
+          "Tire.006",
+          "Table",
+          "PSXFakeLight"
+        ],
+        "triangles": 8563,
+        "bounds": [
+          {
+            "min": [
+              -1.3343251943588257,
+              -1.0047876834869385,
+              -1.9823689460754395
+            ],
+            "max": [
+              1.3343251943588257,
+              2.194385290145874,
+              3.7042274475097656
+            ]
+          },
+          {
+            "min": [
+              -1.8242148160934448,
+              -2.3096201419830322,
+              -4.182711124420166
+            ],
+            "max": [
+              1.228864312171936,
+              1.1054097414016724,
+              3.8532824516296387
+            ]
+          },
+          {
+            "min": [
+              -2.272773265838623,
+              -0.5961584448814392,
+              -0.5961586236953735
+            ],
+            "max": [
+              0.22835323214530945,
+              0.5961584448814392,
+              0.5961584448814392
+            ]
+          },
+          {
+            "min": [
+              -2.603564500808716,
+              -0.7455371618270874,
+              -2.511106252670288
+            ],
+            "max": [
+              0.9292742013931274,
+              0.3672304153442383,
+              2.511106252670288
+            ]
+          },
+          {
+            "min": [
+              -0.1141267865896225,
+              -1.3283898830413818,
+              -2.373345375061035
+            ],
+            "max": [
+              0.1141267865896225,
+              1.3283897638320923,
+              2.3733458518981934
+            ]
+          },
+          {
+            "min": [
+              -0.4671471118927002,
+              -0.16257625818252563,
+              -0.5748181939125061
+            ],
+            "max": [
+              0.4671471118927002,
+              0.16257625818252563,
+              0.5748181939125061
+            ]
+          }
+        ],
+        "materials": [
+          {
+            "name": "Truck",
+            "alpha": "OPAQUE",
+            "double_sided": true
+          },
+          {
+            "name": "Trailer",
+            "alpha": "OPAQUE",
+            "double_sided": true
+          },
+          {
+            "name": "Wheel",
+            "alpha": "OPAQUE",
+            "double_sided": true
+          },
+          {
+            "name": "Props",
+            "alpha": "OPAQUE",
+            "double_sided": true
+          },
+          {
+            "name": "Lamp",
+            "alpha": "OPAQUE",
+            "double_sided": true
+          },
+          {
+            "name": "Generator",
+            "alpha": "OPAQUE",
+            "double_sided": true
+          },
+          {
+            "name": "Cable",
+            "alpha": "OPAQUE",
+            "double_sided": true
+          },
+          {
+            "name": "Grill",
+            "alpha": "OPAQUE",
+            "double_sided": true
+          },
+          {
+            "name": "FakeLight",
+            "alpha": "BLEND",
+            "double_sided": true
+          }
+        ],
+        "images": [
+          "embedded",
+          "embedded",
+          "embedded",
+          "embedded",
+          "embedded",
+          "embedded",
+          "embedded"
+        ],
+        "skins": 0
+      }
+    ],
+    "textures": [
+      {
+        "file": "Textures/Generator.png",
+        "size": [
+          128,
+          128
+        ],
+        "mode": "P"
+      },
+      {
+        "file": "Textures/Gradient.png",
+        "size": [
+          128,
+          128
+        ],
+        "mode": "RGBA"
+      }
+    ],
+    "license": []
+  },
+  {
+    "archive": "PSX modular house interior pack.zip",
+    "model_files": 267,
+    "texture_files": 0,
+    "formats": [
+      ".glb"
+    ],
+    "samples": [
+      {
+        "file": "geometry/archBrick.glb",
+        "sha256": "5a894d19efae158f69edccb3d5fdd79770ee96c8f66d027fb7cceb784e68dcd7",
+        "nodes": 1,
+        "meshes": 1,
+        "names": [
+          "archBrick"
+        ],
+        "triangles": 36,
+        "bounds": [
+          {
+            "min": [
+              -2,
+              -8.74227694680485e-08,
+              1.8999998569488525
+            ],
+            "max": [
+              2,
+              4,
+              2.000000238418579
+            ]
+          }
+        ],
+        "materials": [
+          {
+            "name": "wallBrick",
+            "alpha": "OPAQUE",
+            "double_sided": true
+          }
+        ],
+        "images": [
+          "embedded",
+          "embedded"
+        ],
+        "skins": 0
+      }
+    ],
+    "textures": [],
+    "license": []
+  },
+  {
+    "archive": "psxAssets.zip",
+    "model_files": 146,
+    "texture_files": 109,
+    "formats": [
+      ".fbx",
+      ".obj"
+    ],
+    "samples": [
+      {
+        "file": "Assets/Models/bus.obj",
+        "sha256": "ee15b125ae6501a4a259b4c388eec250809fa749e14f41b9a3e1ad31552483e8",
+        "objects": [
+          "bus"
+        ]
+      },
+      {
+        "file": "Assets/Models/road.obj",
+        "sha256": "1d827ac95f1f078314fed8ff85815c493669dfb2ef543dd8fd3c118365fd0ebd",
+        "objects": [
+          "silnica"
+        ]
+      }
+    ],
+    "textures": [
+      {
+        "file": "Assets/Textures/batoh2.png",
+        "size": [
+          1024,
+          1024
+        ],
+        "mode": "RGBA"
+      },
+      {
+        "file": "Assets/Textures/batoh3.png",
+        "size": [
+          1024,
+          1024
+        ],
+        "mode": "RGBA"
+      }
+    ],
+    "license": [
+      {
+        "file": "Assets/LICENSE.txt",
+        "text": "These assets are licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0) License.\nTo view a copy of this license, visit http://creativecommons.org/licenses/by/4.0/\n\nAttribution (CC BY): You are free to share and adapt the material for any purpose, even commercially, as long as you give appropriate credit, provide a link to the license, and indicate if changes were made.\n"
+      }
+    ]
+  },
+  {
+    "archive": "PSX_Large_Terrain_Rock_Pack.zip",
+    "model_files": 24,
+    "texture_files": 6,
+    "formats": [
+      ".fbx"
+    ],
+    "samples": [
+      {
+        "file": "RP/FBX_Exports/SM_RP_Rock_2m_0.fbx",
+        "sha256": "39862bf6606e6f704ac9bfc5bfd7615b4c03b1f4ac5663c92940b7b27a513700",
+        "models": [
+          {
+            "name": "SM_RP_Rock_2m_0",
+            "type": "Mesh",
+            "Lcl Translation": [
+              132.03611755371094,
+              335.3619689941406,
+              2.926612377166748
+            ],
+            "Lcl Rotation": [
+              0.0,
+              -74.99999184178138,
+              0.0
+            ]
+          }
+        ],
+        "geometry": [
+          {
+            "name": "SM_RP_Rock_2m_0",
+            "vertices": 393,
+            "min": [
+              -0.9047242403030396,
+              -1.3559648990631104,
+              -1.9286777973175049
+            ],
+            "max": [
+              0.9100902080535889,
+              1.3871986865997314,
+              1.7494571208953857
+            ],
+            "faces": 782
+          }
+        ],
+        "textures": [],
+        "skin_clusters": 0,
+        "clips": []
+      }
+    ],
+    "textures": [
+      {
+        "file": "RP/Textures/T_RP_Rocks_0_2K.png",
+        "size": [
+          2048,
+          2048
+        ],
+        "mode": "RGB"
+      },
+      {
+        "file": "RP/Textures/T_RP_Rocks_0_4K.png",
+        "size": [
+          4096,
+          4096
+        ],
+        "mode": "RGB"
+      }
+    ],
+    "license": [
+      {
+        "file": "RP/Licence.txt",
+        "text": "PSX Large Terrain Rock Pack\r\nEnd User Licence Agreement\r\n\r\nCopyright © Rob Hickman / Caliber Creations.\r\nAll rights reserved.\r\n\r\nBy downloading, accessing, or using this asset pack, you agree to the following terms.\r\n\r\n1. What you can do\r\n\r\nYou may use the assets from PSX Large Terrain Rock Pack in personal, commercial, and free projects.\r\n\r\nThis includes, but is not limited to:\r\n\r\n* video games\r\n* game jam projects\r\n* prototypes\r\n* demos\r\n* rendered images\r\n* videos\r\n* trailers\r\n* interactive media\r\n* commercial releases\r\n\r\nYou may modify, edit, recolour, resize, combine, or adapt the assets for use in your own projects.\r\n\r\nYou may use the assets in any game engine or software, including Unity, Unreal Engine, Godot, Blender, or custom engines.\r\n\r\nYou may include the assets in compiled builds of your game or project.\r\n\r\nCredit is appreciated but not required.\r\n\r\nSuggested credit:\r\n\r\n\"PSX Large Terrain Rock Pack by Caliber Creations\"\r\n\r\n2. What you cannot do\r\n\r\nYou may not resell, redistribute, share, upload, give away, or repackage the assets as standalone files.\r\n\r\nYou may not sell or distribute the assets as part of another asset pack, texture pack, model pack, template project, starter project, template project, or marketplace product.\r\n\r\nYou may not upload the raw source files, including but not limited to Blender files, FBX files, textures, materials, Unity packages, prefabs, or source images, in a way that allows other people to download or extract them as reusable assets.\r\n\r\nYou may not claim ownership or authorship of the original assets.\r\n\r\nYou may not mint, sell, or distribute the assets as NFTs or blockchain-based collectibles.\r\n\r\n3. Team use\r\n\r\nOne download or licence may be used by one individual or by one small development team working on the same project.\r\n\r\nThe assets may be shared internally with team members only for the purpose of working on that project.\r\n\r\nTeam members may not use the assets separately outside of that project unless they have their own licence.\r\n\r\n4. Game releases and modding\r\n\r\nYou may release games that include these assets, including commercial games.\r\n\r\nYour released project must not expose the raw asset files in a way that allows users to easily extract and reuse them outside of your project.\r\n\r\nYou may use the assets in modding projects, provided the original raw assets are not redistributed as a standalone asset pack or resource library.\r\n\r\n5. No warranty\r\n\r\nThe assets are provided \"as is\", without warranty of any kind.\r\n\r\nThe creator is not responsible for any loss, damage, legal issue, project issue, compatibility issue, or other problem caused by use of the assets.\r\n\r\n6. Ownership\r\n\r\nThe original assets remain the property of Rob Hickman / Caliber Creations.\r\n\r\nDownloading this pack gives you a licence to use the assets under these terms. It does not transfer ownership of the original assets.\r\n\r\n7. Payments, donations, and refunds\r\n\r\nThis asset pack may be made available for free, as pay-what-you-want, or as a paid product depending on the platform where it is offered.\r\n\r\nAny payments, donations, or refunds are handled according to the platform where the asset pack was downloaded or purchased.\r\n\r\n8. Contact\r\n\r\nFor questions about this licence, contact the creator through the itch.io product page.\r\n"
+      }
+    ]
+  },
+  {
+    "archive": "PSX_Large_Terrain_Rock_Pack_2.zip",
+    "model_files": 24,
+    "texture_files": 7,
+    "formats": [
+      ".fbx"
+    ],
+    "samples": [
+      {
+        "file": "PSX_Large_Terrain_Rock_Pack_2/RP2/FBX_Exports/SM_RP2_Rock_2m_0.fbx",
+        "sha256": "3cb87f100b1548b660589ff7f7170689505ba2cbe9bea74063251f0eb9241b18",
+        "models": [
+          {
+            "name": "SM_RP2_Rock_2m_0",
+            "type": "Mesh",
+            "Lcl Translation": [
+              23.821929931640625,
+              30.400146484375,
+              8.800806045532227
+            ]
+          }
+        ],
+        "geometry": [
+          {
+            "name": "SM_RP2_Rock_2m_0",
+            "vertices": 731,
+            "min": [
+              -1.4316520690917969,
+              -1.509701132774353,
+              -1.8519550561904907
+            ],
+            "max": [
+              1.5699846744537354,
+              1.3100446462631226,
+              1.8830260038375854
+            ],
+            "faces": 1458
+          }
+        ],
+        "textures": [],
+        "skin_clusters": 0,
+        "clips": []
+      }
+    ],
+    "textures": [
+      {
+        "file": "PSX_Large_Terrain_Rock_Pack_2/RP2/Textures/T_RP2_Rock_0_2K.png",
+        "size": [
+          2048,
+          2048
+        ],
+        "mode": "P"
+      },
+      {
+        "file": "PSX_Large_Terrain_Rock_Pack_2/RP2/Textures/T_RP2_Rock_0_4K.png",
+        "size": [
+          4096,
+          4096
+        ],
+        "mode": "P"
+      }
+    ],
+    "license": [
+      {
+        "file": "PSX_Large_Terrain_Rock_Pack_2/RP2/Licence.txt",
+        "text": "PSX Large Terrain Rock Pack 2\r\nEnd User Licence Agreement\r\n\r\nCopyright © Rob Hickman / Caliber Creations.\r\nAll rights reserved.\r\n\r\nBy downloading, accessing, or using this asset pack, you agree to the following terms.\r\n\r\n1. What you can do\r\n\r\nYou may use the assets from PSX Large Terrain Rock Pack in personal, commercial, and free projects.\r\n\r\nThis includes, but is not limited to:\r\n\r\n* video games\r\n* game jam projects\r\n* prototypes\r\n* demos\r\n* rendered images\r\n* videos\r\n* trailers\r\n* interactive media\r\n* commercial releases\r\n\r\nYou may modify, edit, recolour, resize, combine, or adapt the assets for use in your own projects.\r\n\r\nYou may use the assets in any game engine or software, including Unity, Unreal Engine, Godot, Blender, or custom engines.\r\n\r\nYou may include the assets in compiled builds of your game or project.\r\n\r\nCredit is appreciated but not required.\r\n\r\nSuggested credit:\r\n\r\n\"PSX Large Terrain Rock Pack 2 by Caliber Creations\"\r\n\r\n2. What you cannot do\r\n\r\nYou may not resell, redistribute, share, upload, give away, or repackage the assets as standalone files.\r\n\r\nYou may not sell or distribute the assets as part of another asset pack, texture pack, model pack, template project, starter project, template project, or marketplace product.\r\n\r\nYou may not upload the raw source files, including but not limited to Blender files, FBX files, textures, materials, Unity packages, prefabs, or source images, in a way that allows other people to download or extract them as reusable assets.\r\n\r\nYou may not claim ownership or authorship of the original assets.\r\n\r\nYou may not mint, sell, or distribute the assets as NFTs or blockchain-based collectibles.\r\n\r\n3. Team use\r\n\r\nOne download or licence may be used by one individual or by one small development team working on the same project.\r\n\r\nThe assets may be shared internally with team members only for the purpose of working on that project.\r\n\r\nTeam members may not use the assets separately outside of that project unless they have their own licence.\r\n\r\n4. Game releases and modding\r\n\r\nYou may release games that include these assets, including commercial games.\r\n\r\nYour released project must not expose the raw asset files in a way that allows users to easily extract and reuse them outside of your project.\r\n\r\nYou may use the assets in modding projects, provided the original raw assets are not redistributed as a standalone asset pack or resource library.\r\n\r\n5. No warranty\r\n\r\nThe assets are provided \"as is\", without warranty of any kind.\r\n\r\nThe creator is not responsible for any loss, damage, legal issue, project issue, compatibility issue, or other problem caused by use of the assets.\r\n\r\n6. Ownership\r\n\r\nThe original assets remain the property of Rob Hickman / Caliber Creations.\r\n\r\nDownloading this pack gives you a licence to use the assets under these terms. It does not transfer ownership of the original assets.\r\n\r\n7. Payments, donations, and refunds\r\n\r\nThis asset pack may be made available for free, as pay-what-you-want, or as a paid product depending on the platform where it is offered.\r\n\r\nAny payments, donations, or refunds are handled according to the platform where the asset pack was downloaded or purchased.\r\n\r\n8. Contact\r\n\r\nFor questions about this licence, contact the creator through the itch.io product page.\r\n"
+      }
+    ]
+  },
+  {
+    "archive": "PSX_The_Island_Pack.zip",
+    "model_files": 96,
+    "texture_files": 58,
+    "formats": [
+      ".fbx"
+    ],
+    "samples": [
+      {
+        "file": "PSX_The_Island_Pack/TI/FBX/SM_TI_Beach_Cabbage_0.fbx",
+        "sha256": "f7aab726ae35dcee962f5780ec530a3ee68db8ead4baccb6c31ee9ecbeb576ce",
+        "models": [
+          {
+            "name": "SM_TI_Beach_Cabbage_0",
+            "type": "Mesh",
+            "Lcl Translation": [
+              45.62126159667969,
+              461.3013000488281,
+              1.8383591175079346
+            ]
+          }
+        ],
+        "geometry": [
+          {
+            "name": "SM_TI_Beach_Cabbage_0",
+            "vertices": 1037,
+            "min": [
+              -2.4648921489715576,
+              -2.486569404602051,
+              -0.392265260219574
+            ],
+            "max": [
+              2.3002846240997314,
+              2.2818288803100586,
+              3.4017672538757324
+            ],
+            "faces": 1194
+          }
+        ],
+        "textures": [
+          "T_TI_Cabbage_0.png",
+          "T_TI_Cabbage_0.png",
+          "T_TI_Cabbage_0.png",
+          "T_TI_Cabbage_0.png"
+        ],
+        "skin_clusters": 0,
+        "clips": []
+      },
+      {
+        "file": "PSX_The_Island_Pack/TI/FBX/SM_TI_Fern_0.fbx",
+        "sha256": "866654215a56488b80facd472fa3bf0c9ac0b6ca967d7a86bdfc8d62cff026a4",
+        "models": [
+          {
+            "name": "SM_TI_Fern_0",
+            "type": "Mesh",
+            "Lcl Translation": [
+              30.544845581054688,
+              459.0222473144531,
+              2.643648862838745
+            ]
+          }
+        ],
+        "geometry": [
+          {
+            "name": "SM_TI_Fern_0",
+            "vertices": 972,
+            "min": [
+              -1.3826322555541992,
+              -1.4218783378601074,
+              -0.037204183638095856
+            ],
+            "max": [
+              1.3873356580734253,
+              1.383527159690857,
+              1.1058145761489868
+            ],
+            "faces": 1152
+          }
+        ],
+        "textures": [
+          "T_TI_Fern_0.png",
+          "T_TI_Fern_0.png",
+          "T_TI_Fern_0.png",
+          "T_TI_Fern_0.png"
+        ],
+        "skin_clusters": 0,
+        "clips": []
+      },
+      {
+        "file": "PSX_The_Island_Pack/TI/FBX/SM_TI_Ground_0.fbx",
+        "sha256": "1c35ab0a8edc61682bb3c99b8a3922dc1e8e0d87d5662d7e692542636f3967b5",
+        "models": [
+          {
+            "name": "SM_TI_Ground_0",
+            "type": "Mesh",
+            "Lcl Translation": [
+              50.549835205078125,
+              417.208984375,
+              2.0674142837524414
+            ]
+          }
+        ],
+        "geometry": [
+          {
+            "name": "SM_TI_Ground_0",
+            "vertices": 1515,
+            "min": [
+              -9.19644546508789,
+              -9.15576171875,
+              -0.6880801916122437
+            ],
+            "max": [
+              9.19644546508789,
+              9.15576171875,
+              0.6880801916122437
+            ],
+            "faces": 3026
+          }
+        ],
+        "textures": [],
+        "skin_clusters": 0,
+        "clips": []
+      }
+    ],
+    "textures": [
+      {
+        "file": "PSX_The_Island_Pack/TI/gltf/T_TI_Cabbage_0.png.png",
+        "size": [
+          256,
+          256
+        ],
+        "mode": "RGBA"
+      },
+      {
+        "file": "PSX_The_Island_Pack/TI/gltf/T_TI_Columns_0.png.png",
+        "size": [
+          1024,
+          1024
+        ],
+        "mode": "RGB"
+      }
+    ],
+    "license": [
+      {
+        "file": "PSX_The_Island_Pack/TI/Licence.txt",
+        "text": "PSX The Island Pack\r\nEnd User Licence Agreement\r\n\r\nCopyright © Rob Hickman / Caliber Creations.\r\nAll rights reserved.\r\n\r\nBy purchasing, downloading, or using this asset pack, you agree to the following terms.\r\n\r\n1. What you can do\r\n\r\nYou may use the assets from PSX The Island Pack in personal, commercial, and free projects.\r\n\r\nThis includes, but is not limited to:\r\n\r\n- video games\r\n- game jam projects\r\n- prototypes\r\n- demos\r\n- rendered images\r\n- videos\r\n- trailers\r\n- interactive media\r\n- commercial releases\r\n\r\nYou may modify, edit, recolour, resize, combine, or adapt the assets for use in your own projects.\r\n\r\nYou may use the assets in any game engine or software, including Unity, Unreal Engine, Godot, Blender, or custom engines.\r\n\r\nYou may include the assets in compiled builds of your game or project.\r\n\r\nCredit is appreciated but not required.\r\n\r\nSuggested credit:\r\n\r\n\"PSX The Island Pack by Caliber Creations\"\r\n\r\n2. What you cannot do\r\n\r\nYou may not resell, redistribute, share, upload, give away, or repackage the assets as standalone files.\r\n\r\nYou may not sell or distribute the assets as part of another asset pack, texture pack, model pack, template project, or marketplace product.\r\n\r\nYou may not upload the raw source files, including but not limited to Blender files, FBX files, textures, materials, Unity packages, prefabs, or source images, in a way that allows other people to download or extract them as reusable assets.\r\n\r\nYou may not claim ownership or authorship of the original assets.\r\n\r\nYou may not use the assets to train, fine-tune, or create datasets for generative AI models.\r\n\r\nYou may not mint, sell, or distribute the assets as NFTs or blockchain-based collectibles.\r\n\r\n3. Team use\r\n\r\nA single purchase may be used by one individual or by one small development team working on the same project.\r\n\r\nThe assets may be shared internally with team members only for the purpose of working on that project.\r\n\r\nTeam members may not use the assets separately outside of that project unless they have their own licence.\r\n\r\n4. Game releases and modding\r\n\r\nYou may release games that include these assets, including commercial games.\r\n\r\nYour released project must not expose the raw asset files in a way that allows users to easily extract and reuse them outside of your project.\r\n\r\nYou may use the assets in modding projects, provided the original raw assets are not redistributed as a standalone asset pack or resource library.\r\n\r\n5. No warranty\r\n\r\nThe assets are provided \"as is\", without warranty of any kind.\r\n\r\nThe creator is not responsible for any loss, damage, legal issue, project issue, compatibility issue, or other problem caused by use of the assets.\r\n\r\n6. Ownership\r\n\r\nThe original assets remain the property of Rob Hickman / Caliber Creations.\r\n\r\nPurchasing or downloading this pack gives you a licence to use the assets under these terms. It does not transfer ownership of the original assets.\r\n\r\n7. Refunds\r\n\r\nRefunds are handled according to the platform where the asset pack was purchased.\r\n\r\n8. Contact\r\n\r\nFor questions about this licence, contact the creator through the itch.io product page."
+      }
+    ]
+  },
+  {
+    "archive": "Retro Tree Pack v1.0.zip",
+    "model_files": 64,
+    "texture_files": 52,
+    "formats": [
+      ".dae",
+      ".fbx",
+      ".glb",
+      ".obj"
+    ],
+    "samples": [
+      {
+        "file": "Retro Tree Pack/Models/Low Res/GLB/dead_tree_rt_1.glb",
+        "sha256": "d1f667d745e7ff8fc63e0e8933daa6daf5ea66e374d8b3d91fb024871ebd353b",
+        "nodes": 1,
+        "meshes": 1,
+        "names": [
+          "dead_tree_rt_1"
+        ],
+        "triangles": 125,
+        "bounds": [
+          {
+            "min": [
+              -0.23447349667549133,
+              -0.2128937989473343,
+              -4.190054893493652
+            ],
+            "max": [
+              0.2652011215686798,
+              0.24622409045696259,
+              -2.7487280931381974e-06
+            ]
+          },
+          {
+            "min": [
+              -2.019960403442383,
+              -2.02305269241333,
+              -6.582004070281982
+            ],
+            "max": [
+              1.946153163909912,
+              1.9430607557296753,
+              -0.5189986824989319
+            ]
+          }
+        ],
+        "materials": [
+          {
+            "name": "tree_bark_rt_a_1",
+            "alpha": "OPAQUE",
+            "double_sided": true
+          },
+          {
+            "name": "dead_tree_rt_1",
+            "alpha": "MASK",
+            "double_sided": true
+          }
+        ],
+        "images": [
+          "embedded",
+          "embedded"
+        ],
+        "skins": 0
+      }
+    ],
+    "textures": [
+      {
+        "file": "Retro Tree Pack/Dead Trees (Low Res).png",
+        "size": [
+          1920,
+          1080
+        ],
+        "mode": "RGBA"
+      },
+      {
+        "file": "Retro Tree Pack/Live Trees (Low Res).png",
+        "size": [
+          1920,
+          1080
+        ],
+        "mode": "RGBA"
+      }
+    ],
+    "license": []
+  },
+  {
+    "archive": "retro_nature_pack.zip",
+    "model_files": 120,
+    "texture_files": 101,
+    "formats": [
+      ".fbx",
+      ".glb",
+      ".obj"
+    ],
+    "samples": [
+      {
+        "file": "retro_nature_pack/models/glTF/bushes/bush01.glb",
+        "sha256": "ea15b60383d33f5cea44c38e8466ef5eb5503fff98f2272382f7e4032e28de51",
+        "nodes": 1,
+        "meshes": 1,
+        "names": [
+          "bush1"
+        ],
+        "triangles": 160,
+        "bounds": [
+          {
+            "min": [
+              -0.34999996423721313,
+              -4.9564359727582996e-08,
+              -0.3499999940395355
+            ],
+            "max": [
+              0.3499999940395355,
+              1.0000001192092896,
+              0.3499999940395355
+            ]
+          }
+        ],
+        "materials": [],
+        "images": [],
+        "skins": 0
+      },
+      {
+        "file": "retro_nature_pack/models/FBX/bushes/bush01.fbx",
+        "sha256": "dc5ad2258d7fc98d9e04365de729362c1c4b1344417e15fa226a5d138fd82835",
+        "models": [
+          {
+            "name": "bush1",
+            "type": "Mesh"
+          }
+        ],
+        "geometry": [
+          {
+            "name": "bush1",
+            "vertices": 168,
+            "min": [
+              -34.999996185302734,
+              -4.956435986969154e-06,
+              -35.0
+            ],
+            "max": [
+              35.0,
+              100.00001525878906,
+              35.0
+            ],
+            "faces": 160
+          }
+        ],
+        "textures": [],
+        "skin_clusters": 0,
+        "clips": []
+      }
+    ],
+    "textures": [
+      {
+        "file": "retro_nature_pack/textures/bushes/bush1_fall.png",
+        "size": [
+          128,
+          128
+        ],
+        "mode": "RGBA"
+      },
+      {
+        "file": "retro_nature_pack/textures/bushes/bush1_spring.png",
+        "size": [
+          128,
+          128
+        ],
+        "mode": "RGBA"
+      }
+    ],
+    "license": []
+  },
+  {
+    "archive": "Rocas.rar",
+    "model_files": 1,
+    "texture_files": 1,
+    "formats": [
+      ".dae"
+    ],
+    "samples": [
+      {
+        "file": "Rocas/Rock low poly.dae",
+        "sha256": "b7f6ca2e758a939d09e3ce1d9e30bcab618eb83ac7af47cf80d648f41c980846",
+        "geometries": 8,
+        "unit": [
+          {
+            "name": "meter",
+            "meter": "1"
+          }
+        ],
+        "up_axis": [
+          "Z_UP"
+        ],
+        "nodes": [
+          "Rock8",
+          "Rock7",
+          "Rock6",
+          "Rock5",
+          "Rock4",
+          "Rock3",
+          "Rock2",
+          "Rock1"
+        ]
+      }
+    ],
+    "textures": [
+      {
+        "file": "Rocas/R.jpg",
+        "size": [
+          256,
+          256
+        ],
+        "mode": "RGB"
+      }
+    ],
+    "license": []
+  },
+  {
+    "archive": "rocks.rar",
+    "model_files": 1,
+    "texture_files": 2,
+    "formats": [
+      ".fbx"
+    ],
+    "samples": [
+      {
+        "file": "rocks/rocks.fbx",
+        "sha256": "886fca86efc21f4686730b84fc86404e8744597009bea9e384b9cadf6e8bccd1",
+        "models": [
+          {
+            "name": "mediun rock 3",
+            "type": "Mesh",
+            "Lcl Translation": [
+              16.178434371948242,
+              44.07584762573242,
+              295.140869140625
+            ],
+            "Lcl Rotation": [
+              -96.63381007547471,
+              8.665945943426248,
+              -21.435384162831532
+            ],
+            "Lcl Scaling": [
+              65.24353790283203,
+              65.24353790283203,
+              65.24353790283203
+            ]
+          },
+          {
+            "name": "mediun rock 2",
+            "type": "Mesh",
+            "Lcl Translation": [
+              28.890058517456055,
+              26.593006134033203,
+              25.936948776245117
+            ],
+            "Lcl Rotation": [
+              -90.00000933466734,
+              0.0,
+              0.0
+            ],
+            "Lcl Scaling": [
+              117.66166687011719,
+              117.66166687011719,
+              117.66166687011719
+            ]
+          },
+          {
+            "name": "mediun rock",
+            "type": "Mesh",
+            "Lcl Translation": [
+              0.0,
+              0.03302255645394325,
+              -317.0587158203125
+            ],
+            "Lcl Rotation": [
+              -92.6549038650513,
+              1.5570299868767936,
+              19.50866634514639
+            ],
+            "Lcl Scaling": [
+              100.0,
+              100.0,
+              100.00000762939453
+            ]
+          },
+          {
+            "name": "big rock",
+            "type": "Mesh",
+            "Lcl Translation": [
+              -10.400421142578125,
+              64.85757446289062,
+              -507.6661071777344
+            ],
+            "Lcl Rotation": [
+              -90.00000933466734,
+              0.0,
+              0.0
+            ],
+            "Lcl Scaling": [
+              104.41900634765625,
+              152.061767578125,
+              179.1175537109375
+            ]
+          },
+          {
+            "name": "small rock",
+            "type": "Mesh",
+            "Lcl Translation": [
+              0.8770346641540527,
+              10.164115905761719,
+              495.1867980957031
+            ],
+            "Lcl Rotation": [
+              28.52087897383019,
+              28.59676066796174,
+              129.8482481978705
+            ],
+            "Lcl Scaling": [
+              54.34584426879883,
+              54.34584426879883,
+              54.345848083496094
+            ]
+          }
+        ],
+        "geometry": [
+          {
+            "name": "Cube",
+            "vertices": 24,
+            "min": [
+              -1.2859201431274414,
+              -1.2084908485412598,
+              -1.0594664812088013
+            ],
+            "max": [
+              1.0442819595336914,
+              1.5260837078094482,
+              0.8052178621292114
+            ],
+            "faces": 15
+          },
+          {
+            "name": "Cube.001",
+            "vertices": 24,
+            "min": [
+              -0.9125320911407471,
+              -0.5663514733314514,
+              -0.30983808636665344
+            ],
+            "max": [
+              0.7588726282119751,
+              0.8262059688568115,
+              0.7281700372695923
+            ],
+            "faces": 16
+          },
+          {
+            "name": "Cube.002",
+            "vertices": 26,
+            "min": [
+              -0.8533530831336975,
+              -1.3296006917953491,
+              -0.2252608984708786
+            ],
+            "max": [
+              1.0847032070159912,
+              0.7349683046340942,
+              1.1741341352462769
+            ],
+            "faces": 22
+          },
+          {
+            "name": "Cube.003",
+            "vertices": 24,
+            "min": [
+              -0.5258750319480896,
+              -0.368114709854126,
+              -1.0
+            ],
+            "max": [
+              1.0891281366348267,
+              1.0741866827011108,
+              1.1214616298675537
+            ],
+            "faces": 16
+          },
+          {
+            "name": "Cube.005",
+            "vertices": 24,
+            "min": [
+              -0.3490099310874939,
+              -0.4219781160354614,
+              -0.42197805643081665
+            ],
+            "max": [
+              0.42197805643081665,
+              0.4219779968261719,
+              0.42197805643081665
+            ],
+            "faces": 16
+          }
+        ],
+        "textures": [
+          "Rokcs 2.png",
+          "Rokcs 2.png",
+          "pedra mossi.png",
+          "pedra mossi.png"
+        ],
+        "skin_clusters": 0,
+        "clips": []
+      }
+    ],
+    "textures": [
+      {
+        "file": "rocks/Rocks.png",
+        "size": [
+          128,
+          128
+        ],
+        "mode": "RGBA"
+      },
+      {
+        "file": "rocks/Rokcs 2.png",
+        "size": [
+          128,
+          128
+        ],
+        "mode": "RGBA"
+      }
+    ],
+    "license": []
+  },
+  {
+    "archive": "Sewer.rar",
+    "model_files": 2,
+    "texture_files": 23,
+    "formats": [
+      ".dae",
+      ".fbx"
+    ],
+    "samples": [
+      {
+        "file": "Sewer/Models/Sewers.dae",
+        "sha256": "f23cd2a14ab57db839105ee30b9697a5b2fd5901bf7709facf209c694f0bc428",
+        "geometries": 118,
+        "unit": [
+          {
+            "name": "meter",
+            "meter": "1"
+          }
+        ],
+        "up_axis": [
+          "Z_UP"
+        ],
+        "nodes": [
+          "door_metal_02",
+          "door_metal_01",
+          "door_metal",
+          "Pipe_P_001",
+          "Pipe_013",
+          "Pipe_P",
+          "Pipe_012",
+          "Pipe_009",
+          "Pipe_004",
+          "Pipe_002",
+          "Pipe_011",
+          "Pipe_010",
+          "Pipe",
+          "Pipe_001",
+          "Pipe_008",
+          "Pipe_007",
+          "Pipe_006",
+          "Pipe_005",
+          "Pipe_003",
+          "Trash_M",
+          "Trash_M_01",
+          "debris_04",
+          "debris_03",
+          "debris_05",
+          "debris_02",
+          "debris_01",
+          "debris",
+          "Garbage_bag_001",
+          "Garbage_bag",
+          "Box_T_01"
+        ]
+      }
+    ],
+    "textures": [
+      {
+        "file": "Sewer/Textures/bricks.jpg",
+        "size": [
+          512,
+          512
+        ],
+        "mode": "RGB"
+      },
+      {
+        "file": "Sewer/Textures/brick_modern.jpg",
+        "size": [
+          256,
+          256
+        ],
+        "mode": "RGB"
+      }
+    ],
+    "license": []
+  },
+  {
+    "archive": "Street Furniture.zip",
+    "model_files": 13,
+    "texture_files": 13,
+    "formats": [
+      ".fbx"
+    ],
+    "samples": [
+      {
+        "file": "Barrel/Barrel.fbx",
+        "sha256": "318b9b945eb26acfff33d5c43acfac771445bf307d7b004fd90a54f5bdf32df8",
+        "models": [
+          {
+            "name": "Cylinder.001",
+            "type": "Mesh",
+            "Lcl Rotation": [
+              -90.00000933466734,
+              0.0,
+              0.0
+            ]
+          }
+        ],
+        "geometry": [
+          {
+            "name": "Cylinder.002",
+            "vertices": 347,
+            "min": [
+              -0.6000000238418579,
+              -0.6000001430511475,
+              -5.245366807571372e-08
+            ],
+            "max": [
+              0.6312317848205566,
+              0.6000000238418579,
+              1.7714406251907349
+            ],
+            "faces": 319
+          }
+        ],
+        "textures": [],
+        "skin_clusters": 0,
+        "clips": []
+      }
+    ],
+    "textures": [
+      {
+        "file": "Barrel/barrel.png",
+        "size": [
+          256,
+          256
+        ],
+        "mode": "RGBA"
+      },
+      {
+        "file": "Bottles/Bottles.png",
+        "size": [
+          256,
+          256
+        ],
+        "mode": "P"
+      }
+    ],
+    "license": []
+  },
+  {
+    "archive": "Survival.rar",
+    "model_files": 2,
+    "texture_files": 31,
+    "formats": [
+      ".dae",
+      ".fbx"
+    ],
+    "samples": [
+      {
+        "file": "Survival/Models/Survival.dae",
+        "sha256": "5d43061bfe21c72698a22e720b982b486a06249ab94cfcb806e68c41c86c5a8b",
+        "geometries": 44,
+        "unit": [
+          {
+            "name": "meter",
+            "meter": "1"
+          }
+        ],
+        "up_axis": [
+          "Z_UP"
+        ],
+        "nodes": [
+          "Trunk_01",
+          "Antibiotics",
+          "Antiseptic",
+          "Can_Soda",
+          "Trunk",
+          "Shelter_tent",
+          "Bullet",
+          "Ammunition",
+          "hunting_rifle",
+          "hunting_rifle_01",
+          "Charger",
+          "Farol_G",
+          "Glass",
+          "Handle.001",
+          "Farol",
+          "Handle",
+          "Cup",
+          "Casserole",
+          "bengal_01",
+          "Backpack.001",
+          "Backpack",
+          "branch_01",
+          "branch",
+          "bonfire",
+          "Torch",
+          "bengal",
+          "knife",
+          "Axe",
+          "Water",
+          "band"
+        ]
+      }
+    ],
+    "textures": [
+      {
+        "file": "Survival/Textures/Axe.png",
+        "size": [
+          256,
+          256
+        ],
+        "mode": "RGBA"
+      },
+      {
+        "file": "Survival/Textures/Backpack.png",
+        "size": [
+          1024,
+          1024
+        ],
+        "mode": "RGBA"
+      }
+    ],
+    "license": []
+  },
+  {
+    "archive": "URBAN.zip",
+    "model_files": 966,
+    "texture_files": 40,
+    "formats": [
+      ".fbx",
+      ".glb"
+    ],
+    "samples": [
+      {
+        "file": "URBAN/Building Parts/block_foot_wall.glb",
+        "sha256": "2eb03d3ada172cc7df752dde278ae3bf8842ec9762452fc9bc23b6a29e29a285",
+        "nodes": 1,
+        "meshes": 1,
+        "names": [
+          "block_foot_wall"
+        ],
+        "triangles": 2,
+        "bounds": [
+          {
+            "min": [
+              -2.2649371089755732e-07,
+              0,
+              2.86102294921875e-06
+            ],
+            "max": [
+              0,
+              1,
+              3.000002861022949
+            ]
+          }
+        ],
+        "materials": [
+          {
+            "name": "Houses",
+            "alpha": "OPAQUE",
+            "double_sided": true
+          }
+        ],
+        "images": [
+          "embedded"
+        ],
+        "skins": 0
+      },
+      {
+        "file": "URBAN/Roads/Road sides/bridge_support.fbx",
+        "sha256": "a6cd03ea23c851b563e358f861912b1e5410128e0cca89d37691fa83cbf310ff",
+        "models": [
+          {
+            "name": "bridge_support",
+            "type": "Mesh",
+            "Lcl Translation": [
+              -6729.22900390625,
+              -209.5508575439453,
+              7459.1689453125
+            ],
+            "Lcl Rotation": [
+              -90.00000933466734,
+              0.0,
+              0.0
+            ],
+            "Lcl Scaling": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          }
+        ],
+        "geometry": [
+          {
+            "name": "Plane.496",
+            "vertices": 24,
+            "min": [
+              -2.5,
+              -0.999448835849762,
+              0.0
+            ],
+            "max": [
+              2.5,
+              0.999448835849762,
+              12.0
+            ],
+            "faces": 22
+          }
+        ],
+        "textures": [
+          "worn_concrete.psd",
+          "worn_concrete.psd"
+        ],
+        "skin_clusters": 0,
+        "clips": []
+      },
+      {
+        "file": "URBAN/Fences/low_wooden_fence/wooden_fence_beam.fbx",
+        "sha256": "9f83fe0ac2765a0d7e7fb9414c050d00d8681f5cb52cb32cc456114f15d6c5a9",
+        "models": [
+          {
+            "name": "wooden_fence_beam",
+            "type": "Mesh",
+            "Lcl Rotation": [
+              -90.00000933466734,
+              0.0,
+              0.0
+            ],
+            "Lcl Scaling": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          }
+        ],
+        "geometry": [
+          {
+            "name": "Cube.046",
+            "vertices": 20,
+            "min": [
+              -1.9914727210998535,
+              -0.057195842266082764,
+              -0.057868894189596176
+            ],
+            "max": [
+              0.0059727574698626995,
+              0.07092360407114029,
+              0.1205916702747345
+            ],
+            "faces": 18
+          }
+        ],
+        "textures": [
+          "low_wooden_wall.jpg",
+          "low_wooden_wall.jpg"
+        ],
+        "skin_clusters": 0,
+        "clips": []
+      },
+      {
+        "file": "URBAN/Roads/Road type 1/road_1_straight.glb",
+        "sha256": "9cbbdcffb0f343558d9c27f815cf92a30550b934cffecb225e524c5992609455",
+        "meshes": 1,
+        "triangles": 80,
+        "names": [
+          "road_1_straight"
+        ],
+        "materials": [
+          "Road",
+          "Sidewalk"
+        ]
+      }
+    ],
+    "textures": [
+      {
+        "file": "URBAN/textures/bag.png",
+        "size": [
+          256,
+          256
+        ],
+        "mode": "RGBA"
+      },
+      {
+        "file": "URBAN/textures/barbage_container.jpg",
+        "size": [
+          120,
+          256
+        ],
+        "mode": "RGB"
+      }
+    ],
+    "license": []
+  },
+  {
+    "archive": "Vegetation.zip",
+    "model_files": 1,
+    "texture_files": 131,
+    "formats": [
+      ".fbx"
+    ],
+    "samples": [
+      {
+        "file": "Vegetation/Models/Vegetation.fbx",
+        "sha256": "477622a983672c484da0b28cbfaf7f484ea40aed99d7924e596a31dc54abf77a",
+        "models": [
+          {
+            "name": "Archivist",
+            "type": "Mesh",
+            "Lcl Translation": [
+              -19.182464599609375,
+              0.018732920289039612,
+              47.17256546020508
+            ],
+            "Lcl Rotation": [
+              -90.00000933466734,
+              0.0,
+              0.0
+            ],
+            "Lcl Scaling": [
+              0.811669111251831,
+              0.811669111251831,
+              0.811669111251831
+            ]
+          },
+          {
+            "name": "Axe",
+            "type": "Mesh",
+            "Lcl Translation": [
+              -19.18194580078125,
+              -0.5689903497695923,
+              50.366573333740234
+            ],
+            "Lcl Rotation": [
+              -90.00000933466734,
+              0.0,
+              0.0
+            ],
+            "Lcl Scaling": [
+              -0.01767079159617424,
+              -0.026440203189849854,
+              -0.026440203189849854
+            ]
+          },
+          {
+            "name": "Book.005",
+            "type": "Mesh",
+            "Lcl Translation": [
+              -19.965362548828125,
+              -0.5417336225509644,
+              48.679054260253906
+            ],
+            "Lcl Rotation": [
+              -124.77834904113179,
+              2.1398252830362528e-06,
+              -89.999995674289
+            ],
+            "Lcl Scaling": [
+              0.9265837073326111,
+              0.9265838861465454,
+              0.9265838861465454
+            ]
+          },
+          {
+            "name": "Book.006",
+            "type": "Mesh",
+            "Lcl Translation": [
+              -19.965362548828125,
+              -0.5417336225509644,
+              49.0499267578125
+            ],
+            "Lcl Rotation": [
+              2.9719194543569925e-06,
+              179.999991348578,
+              3.0972340161766723
+            ],
+            "Lcl Scaling": [
+              0.9265836477279663,
+              0.9265836477279663,
+              0.9265837073326111
+            ]
+          },
+          {
+            "name": "Box",
+            "type": "Mesh",
+            "Lcl Translation": [
+              -20.190353393554688,
+              -0.5042010545730591,
+              48.09838104248047
+            ],
+            "Lcl Rotation": [
+              -89.999995674289,
+              -179.99997768819966,
+              -0.0
+            ],
+            "Lcl Scaling": [
+              0.15519215166568756,
+              0.15519215166568756,
+              0.15519215166568756
+            ]
+          },
+          {
+            "name": "calendar",
+            "type": "Mesh",
+            "Lcl Translation": [
+              -19.088333129882812,
+              0.5017963647842407,
+              49.27423858642578
+            ],
+            "Lcl Rotation": [
+              -90.00000933466734,
+              0.0,
+              0.0
+            ],
+            "Lcl Scaling": [
+              0.2071835845708847,
+              0.2071835845708847,
+              0.2071835845708847
+            ]
+          },
+          {
+            "name": "Cube.001",
+            "type": "Mesh",
+            "Lcl Translation": [
+              -19.207366943359375,
+              -0.2131713479757309,
+              48.77039337158203
+            ],
+            "Lcl Rotation": [
+              89.99998201391065,
+              1.2213329976819904e-12,
+              -89.999995674289
+            ],
+            "Lcl Scaling": [
+              0.7191250324249268,
+              0.7191250324249268,
+              0.7191250324249268
+            ]
+          },
+          {
+            "name": "Cup",
+            "type": "Mesh",
+            "Lcl Translation": [
+              -19.166305541992188,
+              -0.5493851900100708,
+              52.12742233276367
+            ],
+            "Lcl Rotation": [
+              -90.00000933466734,
+              0.0,
+              0.0
+            ],
+            "Lcl Scaling": [
+              0.06552276760339737,
+              0.06552276760339737,
+              0.06552276760339737
+            ]
+          },
+          {
+            "name": "Cylinder.014",
+            "type": "Mesh",
+            "Lcl Translation": [
+              -19.233306884765625,
+              -0.2620352506637573,
+              48.090702056884766
+            ],
+            "Lcl Rotation": [
+              -90.00000933466734,
+              -0.0,
+              -179.999991348578
+            ],
+            "Lcl Scaling": [
+              0.3529691696166992,
+              0.3529691696166992,
+              0.3529691696166992
+            ]
+          },
+          {
+            "name": "dishes",
+            "type": "Mesh",
+            "Lcl Translation": [
+              -19.503387451171875,
+              -0.5727840662002563,
+              50.42709732055664
+            ],
+            "Lcl Rotation": [
+              2.5044776583766666e-06,
+              -6.717621729366312e-14,
+              -89.99998884409983
+            ],
+            "Lcl Scaling": [
+              0.8857430815696716,
+              0.8857430815696716,
+              0.8857430815696716
+            ]
+          },
+          {
+            "name": "dishes.001",
+            "type": "Mesh",
+            "Lcl Translation": [
+              -19.503387451171875,
+              -0.5727840662002563,
+              50.76395034790039
+            ],
+            "Lcl Rotation": [
+              2.5044776583766666e-06,
+              -6.717621729366312e-14,
+              -89.99998884409983
+            ],
+            "Lcl Scaling": [
+              0.8857430815696716,
+              0.8857430815696716,
+              0.8857430815696716
+            ]
+          },
+          {
+            "name": "dishes.002",
+            "type": "Mesh",
+            "Lcl Translation": [
+              -19.503387451171875,
+              -0.5727840662002563,
+              51.10464859008789
+            ],
+            "Lcl Rotation": [
+              2.5044776583766666e-06,
+              -6.717621729366312e-14,
+              -89.99998884409983
+            ],
+            "Lcl Scaling": [
+              0.8857430815696716,
+              0.8857430815696716,
+              0.8857430815696716
+            ]
+          },
+          {
+            "name": "Documents",
+            "type": "Mesh",
+            "Lcl Translation": [
+              -20.024215698242188,
+              -0.5179792642593384,
+              49.96054458618164
+            ],
+            "Lcl Rotation": [
+              -89.999995674289,
+              0.0,
+              0.0
+            ],
+            "Lcl Scaling": [
+              0.7071571350097656,
+              0.7071571350097656,
+              0.7071571350097656
+            ]
+          },
+          {
+            "name": "Documents.001",
+            "type": "Mesh",
+            "Lcl Translation": [
+              -20.05548095703125,
+              -0.50548255443573,
+              49.55205154418945
+            ],
+            "Lcl Rotation": [
+              -89.999995674289,
+              0.0,
+              0.0
+            ],
+            "Lcl Scaling": [
+              0.7071571350097656,
+              0.7071571350097656,
+              0.7071571350097656
+            ]
+          },
+          {
+            "name": "Documents.002",
+            "type": "Mesh",
+            "Lcl Translation": [
+              -19.316314697265625,
+              -0.5179792642593384,
+              49.98781204223633
+            ],
+            "Lcl Rotation": [
+              -89.999995674289,
+              0.0,
+              0.0
+            ],
+            "Lcl Scaling": [
+              0.7071571350097656,
+              0.7071571350097656,
+              0.7071571350097656
+            ]
+          },
+          {
+            "name": "Documents.003",
+            "type": "Mesh",
+            "Lcl Translation": [
+              -19.66668701171875,
+              -0.5179795026779175,
+              49.97380447387695
+            ],
+            "Lcl Rotation": [
+              -89.999995674289,
+              0.0,
+              0.0
+            ],
+            "Lcl Scaling": [
+              0.7071571350097656,
+              0.7071571350097656,
+              0.7071571350097656
+            ]
+          },
+          {
+            "name": "Documents.004",
+            "type": "Mesh",
+            "Lcl Translation": [
+              -19.279647827148438,
+              -0.50548255443573,
+              49.55205154418945
+            ],
+            "Lcl Rotation": [
+              -89.999995674289,
+              0.0,
+              0.0
+            ],
+            "Lcl Scaling": [
+              0.7071571350097656,
+              0.7071571350097656,
+              0.7071571350097656
+            ]
+          },
+          {
+            "name": "Documents.005",
+            "type": "Mesh",
+            "Lcl Translation": [
+              -19.64068603515625,
+              -0.50548255443573,
+              49.55205154418945
+            ],
+            "Lcl Rotation": [
+              -89.999995674289,
+              0.0,
+              0.0
+            ],
+            "Lcl Scaling": [
+              0.7071571350097656,
+              0.7071571350097656,
+              0.7071571350097656
+            ]
+          },
+          {
+            "name": "drawer_01",
+            "type": "Mesh",
+            "Lcl Translation": [
+              -20.07708740234375,
+              -0.10397492349147797,
+              44.91086959838867
+            ],
+            "Lcl Rotation": [
+              -90.00000933466734,
+              -3.415094177895376e-06,
+              -90.00000250447816
+            ],
+            "Lcl Scaling": [
+              1.2268480062484741,
+              1.2268480062484741,
+              1.2268480062484741
+            ]
+          },
+          {
+            "name": "firewood",
+            "type": "Mesh",
+            "Lcl Translation": [
+              -20.035934448242188,
+              -0.5127063989639282,
+              51.043209075927734
+            ],
+            "Lcl Rotation": [
+              -106.16919811910856,
+              43.40754264725061,
+              68.24770097925263
+            ]
+          },
+          {
+            "name": "firewood.001",
+            "type": "Mesh",
+            "Lcl Translation": [
+              -20.05517578125,
+              -0.4582000970840454,
+              50.38840103149414
+            ],
+            "Lcl Rotation": [
+              -46.79806904181245,
+              -3.4484143366492415e-15,
+              8.70927144813114e-15
+            ]
+          },
+          {
+            "name": "firewood.002",
+            "type": "Mesh",
+            "Lcl Translation": [
+              -20.018798828125,
+              -0.5561338663101196,
+              50.55874252319336
+            ],
+            "Lcl Rotation": [
+              40.3188047460712,
+              -2.09540032510739e-14,
+              9.70012972403708e-15
+            ]
+          },
+          {
+            "name": "firewood.003",
+            "type": "Mesh",
+            "Lcl Translation": [
+              -20.054412841796875,
+              -0.4553772211074829,
+              50.588504791259766
+            ],
+            "Lcl Rotation": [
+              -106.16919811910856,
+              43.40754264725061,
+              68.24770097925263
+            ]
+          },
+          {
+            "name": "firewood.004",
+            "type": "Mesh",
+            "Lcl Translation": [
+              -20.020416259765625,
+              -0.49192488193511963,
+              50.48191452026367
+            ],
+            "Lcl Rotation": [
+              -39.95663738042586,
+              -4.5519136429444844e-15,
+              9.751971131049603e-15
+            ]
+          },
+          {
+            "name": "firewood.005",
+            "type": "Mesh",
+            "Lcl Translation": [
+              -20.020416259765625,
+              -0.559395432472229,
+              50.31998062133789
+            ],
+            "Lcl Rotation": [
+              -109.6835626735119,
+              -7.433940892095386e-16,
+              -4.285160352314179e-15
+            ]
+          },
+          {
+            "name": "firewood.006",
+            "type": "Mesh",
+            "Lcl Translation": [
+              -20.05517578125,
+              -0.5526596307754517,
+              50.418392181396484
+            ],
+            "Lcl Rotation": [
+              -14.866405332342163,
+              -9.458124799968089e-15,
+              1.229636770975342e-14
+            ]
+          },
+          {
+            "name": "firewood_01",
+            "type": "Mesh",
+            "Lcl Translation": [
+              -20.04986572265625,
+              -0.49272453784942627,
+              51.74223709106445
+            ],
+            "Lcl Rotation": [
+              2.5044780654876655e-06,
+              -1.2722220242460723e-14,
+              1.2722220242460723e-14
+            ],
+            "Lcl Scaling": [
+              0.14555637538433075,
+              0.14555637538433075,
+              0.14555637538433075
+            ]
+          },
+          {
+            "name": "fuel_tank",
+            "type": "Mesh",
+            "Lcl Translation": [
+              -19.542129516601562,
+              -0.3671315908432007,
+              51.99757766723633
+            ],
+            "Lcl Rotation": [
+              -90.00000933466734,
+              0.0,
+              0.0
+            ],
+            "Lcl Scaling": [
+              0.08782334625720978,
+              0.14149117469787598,
+              0.14149117469787598
+            ]
+          },
+          {
+            "name": "kit",
+            "type": "Mesh",
+            "Lcl Translation": [
+              -19.074295043945312,
+              0.405997633934021,
+              49.84141159057617
+            ],
+            "Lcl Rotation": [
+              -90.00000250447816,
+              -90.00000250447816,
+              0.0
+            ],
+            "Lcl Scaling": [
+              0.7655572295188904,
+              0.7655572295188904,
+              0.7655572295188904
+            ]
+          },
+          {
+            "name": "Photos",
+            "type": "Mesh",
+            "Lcl Translation": [
+              -19.075973510742188,
+              0.6543236970901489,
+              48.005775451660156
+            ],
+            "Lcl Rotation": [
+              -90.00000933466734,
+              0.0,
+              0.0
+            ],
+            "Lcl Scaling": [
+              0.5047667026519775,
+              0.5047667026519775,
+              0.5047667026519775
+            ]
+          },
+          {
+            "name": "Photos.001",
+            "type": "Mesh",
+            "Lcl Translation": [
+              -19.067733764648438,
+              0.6597727537155151,
+              48.3698616027832
+            ],
+            "Lcl Rotation": [
+              -90.00000933466734,
+              0.0,
+              0.0
+            ],
+            "Lcl Scaling": [
+              0.5047667026519775,
+              0.5047667026519775,
+              0.5047667026519775
+            ]
+          },
+          {
+            "name": "Photos.002",
+            "type": "Mesh",
+            "Lcl Translation": [
+              -19.069686889648438,
+              0.6661301851272583,
+              48.73766326904297
+            ],
+            "Lcl Rotation": [
+              -90.00000933466734,
+              0.0,
+              0.0
+            ],
+            "Lcl Scaling": [
+              0.5047667026519775,
+              0.5047667026519775,
+              0.5047667026519775
+            ]
+          },
+          {
+            "name": "shelve",
+            "type": "Mesh",
+            "Lcl Translation": [
+              -19.05462646484375,
+              -0.5634976625442505,
+              45.443115234375
+            ],
+            "Lcl Rotation": [
+              -89.999995674289,
+              0.0,
+              0.0
+            ],
+            "Lcl Scaling": [
+              0.22782009840011597,
+              0.22782009840011597,
+              0.22782009840011597
+            ]
+          },
+          {
+            "name": "Shovel",
+            "type": "Mesh",
+            "Lcl Translation": [
+              -19.1751708984375,
+              -0.11763463914394379,
+              50.72694778442383
+            ],
+            "Lcl Rotation": [
+              -90.00000933466734,
+              -3.415094177895376e-06,
+              -90.00000250447816
+            ],
+            "Lcl Scaling": [
+              0.18846920132637024,
+              0.18846920132637024,
+              0.18846920132637024
+            ]
+          },
+          {
+            "name": "Table",
+            "type": "Mesh",
+            "Lcl Translation": [
+              -20.05517578125,
+              -0.014388665556907654,
+              47.018402099609375
+            ],
+            "Lcl Rotation": [
+              -89.999995674289,
+              -0.0,
+              -89.999995674289
+            ],
+            "Lcl Scaling": [
+              0.23813152313232422,
+              0.23813152313232422,
+              0.23813152313232422
+            ]
+          }
+        ],
+        "geometry": [
+          {
+            "name": "Archivist",
+            "vertices": 8,
+            "min": [
+              -0.3120822012424469,
+              -0.3468455374240875,
+              -0.8552388548851013
+            ],
+            "max": [
+              0.3120822310447693,
+              0.3468455672264099,
+              0.8552387952804565
+            ],
+            "faces": 6
+          },
+          {
+            "name": "Axe",
+            "vertices": 80,
+            "min": [
+              -1.2204874753952026,
+              -4.451761722564697,
+              -9.224705696105957
+            ],
+            "max": [
+              1.2204874753952026,
+              1.2640738487243652,
+              5.885290622711182
+            ],
+            "faces": 77
+          },
+          {
+            "name": "Book.005",
+            "vertices": 32,
+            "min": [
+              -0.114102303981781,
+              -0.1835741549730301,
+              -0.18349170684814453
+            ],
+            "max": [
+              0.06920647621154785,
+              0.18356700241565704,
+              0.18347644805908203
+            ],
+            "faces": 24
+          },
+          {
+            "name": "Book.010",
+            "vertices": 48,
+            "min": [
+              -0.16640082001686096,
+              -0.15325988829135895,
+              -0.11124099045991898
+            ],
+            "max": [
+              0.27598804235458374,
+              0.15405945479869843,
+              0.11197849363088608
+            ],
+            "faces": 36
+          },
+          {
+            "name": "Box",
+            "vertices": 48,
+            "min": [
+              -1.926970362663269,
+              -1.4161745309829712,
+              -1.0000019073486328
+            ],
+            "max": [
+              0.9999999403953552,
+              1.4162050485610962,
+              1.0378327369689941
+            ],
+            "faces": 34
+          },
+          {
+            "name": "calendar",
+            "vertices": 8,
+            "min": [
+              -0.1344415545463562,
+              -1.0086820125579834,
+              -1.7168917655944824
+            ],
+            "max": [
+              0.10459190607070923,
+              1.008682131767273,
+              1.7577693462371826
+            ],
+            "faces": 6
+          },
+          {
+            "name": "Cube.001",
+            "vertices": 132,
+            "min": [
+              -0.7323001623153687,
+              -0.31860172748565674,
+              -0.3339172601699829
+            ],
+            "max": [
+              0.6075940728187561,
+              0.3183984160423279,
+              0.4259176254272461
+            ],
+            "faces": 98
+          },
+          {
+            "name": "Cylinder.008",
+            "vertices": 84,
+            "min": [
+              -1.0436453819274902,
+              -1.7082808017730713,
+              -0.9316404461860657
+            ],
+            "max": [
+              1.0436427593231201,
+              1.0436433553695679,
+              1.0709675550460815
+            ],
+            "faces": 74
+          }
+        ],
+        "textures": [
+          "Archivist.png",
+          "Archivist.png",
+          "Axe.png",
+          "Axe.png",
+          "Book.png",
+          "Book.png",
+          "Box.png",
+          "Box.png",
+          "calendar.png",
+          "calendar.png",
+          "Chair_01.png",
+          "Chair_01.png"
+        ],
+        "skin_clusters": 0,
+        "clips": []
+      }
+    ],
+    "textures": [
+      {
+        "file": "Vegetation/Textures/Ammunition.png",
+        "size": [
+          256,
+          256
+        ],
+        "mode": "RGBA"
+      },
+      {
+        "file": "Vegetation/Textures/Archivist.png",
+        "size": [
+          256,
+          256
+        ],
+        "mode": "RGBA"
+      }
+    ],
+    "license": []
+  },
+  {
+    "archive": "Comida low poly.rar",
+    "model_files": 1,
+    "texture_files": 21,
+    "formats": [
+      ".dae"
+    ],
+    "samples": [
+      {
+        "file": "Comida low poly/Comida low poly.dae",
+        "sha256": "81131e2b98985185ae55256b5afe347411f042d0a991e7d60eb53dd4b7a7ee04",
+        "geometries": 121,
+        "nodes": [
+          "Helado.008",
+          "Helado.007",
+          "Helado.006",
+          "Helado.005",
+          "Helado.004",
+          "Helado.003",
+          "Helado.002",
+          "Helado.001",
+          "Helado",
+          "manzana",
+          "zanahoria",
+          "pepino",
+          "naranja",
+          "lechuga",
+          "papaya",
+          "platano",
+          "Plane",
+          "Cylinder.044",
+          "Cylinder.043",
+          "Cylinder.042",
+          "Cylinder.041",
+          "Cylinder.040",
+          "Cylinder.039",
+          "Cylinder.038",
+          "Cylinder.037",
+          "Cylinder.036",
+          "Cylinder.035",
+          "Cylinder.034",
+          "Cylinder.033",
+          "Cylinder.032",
+          "Cylinder.031",
+          "Cylinder.030",
+          "Cylinder.029",
+          "Cylinder.028",
+          "Cylinder.027"
+        ]
+      }
+    ],
+    "textures": [
+      {
+        "file": "Comida low poly/aci.jpg",
+        "size": [
+          256,
+          256
+        ],
+        "mode": "RGB"
+      },
+      {
+        "file": "Comida low poly/bc.jpg",
+        "size": [
+          256,
+          256
+        ],
+        "mode": "RGB"
+      }
+    ],
+    "license": []
+  },
+  {
+    "archive": "Exploration objects.rar",
+    "model_files": 8,
+    "texture_files": 16,
+    "formats": [
+      ".fbx"
+    ],
+    "samples": [
+      {
+        "file": "Exploration objects/EMF_Detector/EMF_Detector.fbx",
+        "sha256": "78990d0e0807b0b483190b687eb2f48b7373a19471d69e0b28a4821d2021f10a",
+        "models": [
+          {
+            "name": "EMF_Detector",
+            "type": "Mesh",
+            "Lcl Rotation": [
+              -90.00000250447816,
+              90.00000250447816,
+              0.0
+            ],
+            "Lcl Scaling": [
+              3.9143409729003906,
+              3.9143409729003906,
+              3.9143409729003906
+            ]
+          }
+        ],
+        "geometry": [
+          {
+            "name": "EMF_Detector",
+            "vertices": 31,
+            "min": [
+              -2.214794158935547,
+              -0.8380089402198792,
+              -0.26639413833618164
+            ],
+            "max": [
+              2.0131492614746094,
+              0.841727077960968,
+              0.26640135049819946
+            ],
+            "faces": 28
+          }
+        ],
+        "clips": []
+      }
+    ],
+    "textures": [
+      {
+        "file": "Exploration objects/EMF_Detector/EMF_Detector.png",
+        "size": [
+          512,
+          512
+        ],
+        "mode": "RGBA"
+      },
+      {
+        "file": "Exploration objects/EMF_Detector/EMF_Detector_Emissor.png",
+        "size": [
+          512,
+          512
+        ],
+        "mode": "RGBA"
+      }
+    ],
+    "license": []
+  },
+  {
+    "archive": "miscmodelsAll.rar",
+    "model_files": 2,
+    "texture_files": 91,
+    "formats": [
+      ".dae",
+      ".fbx"
+    ],
+    "samples": [
+      {
+        "file": "All/Models/All.dae",
+        "sha256": "fa8f7ca07f87ec894ae36805284df50426fde65e5c23d6f79429d5a3faad1513",
+        "geometries": 672,
+        "nodes": [
+          "Lamps_06",
+          "Book_07",
+          "Book_06",
+          "Book_02",
+          "Book_05",
+          "Book_04",
+          "Book_03",
+          "Book_01",
+          "Book",
+          "Magazine_01",
+          "Magazine",
+          "Magazine_03",
+          "Magazine_02",
+          "Magazine_04",
+          "Magazines",
+          "Paintings",
+          "Paintings_03",
+          "Paintings_02",
+          "Paintings_06",
+          "Paintings_08",
+          "Paintings_07",
+          "Paintings_04",
+          "Paintings_01",
+          "Paintings_05",
+          "Control_02",
+          "Control_01",
+          "Control",
+          "Radio_03",
+          "Radio_02",
+          "Radio_01",
+          "Radio",
+          "Video_player_02",
+          "Video_player",
+          "Video_player_01",
+          "TV_03"
+        ]
+      }
+    ],
+    "textures": [
+      {
+        "file": "All/PSXFo.png",
+        "size": [
+          1080,
+          1080
+        ],
+        "mode": "RGBA"
+      },
+      {
+        "file": "All/Textures/Broom.png",
+        "size": [
+          256,
+          256
+        ],
+        "mode": "RGBA"
+      }
+    ],
+    "license": []
+  },
+  {
+    "archive": "Models pack psx - new.rar",
+    "model_files": 2,
+    "texture_files": 147,
+    "formats": [
+      ".dae",
+      ".fbx"
+    ],
+    "samples": [
+      {
+        "file": "Models pack psx/Models/models.dae",
+        "sha256": "6db6dae6b56b153733c3bfdd63a41dbbde7ec83cd63992ec4945de4e09b7877d",
+        "geometries": 546,
+        "nodes": [
+          "Cube.248",
+          "Cube.247",
+          "Cube.246",
+          "Cube.245",
+          "Cube.241",
+          "Cube.244",
+          "Cube.227",
+          "Cube.243",
+          "Cube.242",
+          "Cube.240",
+          "Cube.239",
+          "Cube.238",
+          "Cube.237",
+          "Cube.235",
+          "Plane.003",
+          "Cylinder.037",
+          "Cube.226",
+          "Cube.225",
+          "Cube.218",
+          "Cube.183",
+          "Cube.180",
+          "Cube.179",
+          "Plane.002",
+          "Cube.178",
+          "Cube.177",
+          "Cylinder.036",
+          "Cylinder.035",
+          "Cylinder.034",
+          "Cube.176",
+          "Cube.175",
+          "Cube.174",
+          "Cube.173",
+          "Cube.172",
+          "Cube.171",
+          "Cube.170"
+        ]
+      }
+    ],
+    "textures": [
+      {
+        "file": "Models pack psx/Texture/Asphalt.png",
+        "size": [
+          256,
+          256
+        ],
+        "mode": "RGB"
+      },
+      {
+        "file": "Models pack psx/Texture/Auto.jpg",
+        "size": [
+          256,
+          256
+        ],
+        "mode": "RGB"
+      }
+    ],
+    "license": []
+  },
+  {
+    "archive": "Pesca.rar",
+    "model_files": 1,
+    "texture_files": 2,
+    "formats": [
+      ".dae"
+    ],
+    "samples": [
+      {
+        "file": "Pesca/Pesca.dae",
+        "sha256": "fbb38b816c09d324dc379bee1079bccc28f5f29bbf3e2a8cbe0cb81ac00b1487",
+        "geometries": 27,
+        "nodes": [
+          "Camera",
+          "Cube.019",
+          "Cube.018",
+          "Cube.017",
+          "Cube.016",
+          "Cylinder.006",
+          "Cylinder.005",
+          "Cylinder.004",
+          "Cylinder.003",
+          "Cylinder.002",
+          "Cylinder.001",
+          "Cylinder",
+          "Cube.015",
+          "Cube.014",
+          "Cube.013",
+          "Cube.012",
+          "Cube.011",
+          "Cube.010",
+          "Cube.009",
+          "Cube.008",
+          "Cube.007",
+          "Cube.006",
+          "Cube.005",
+          "Cube.004",
+          "Cube.003",
+          "Cube.002",
+          "Cube.001",
+          "Cube"
+        ]
+      }
+    ],
+    "textures": [
+      {
+        "file": "Pesca/Pe.jpg",
+        "size": [
+          256,
+          256
+        ],
+        "mode": "RGB"
+      },
+      {
+        "file": "Pesca/wood_planks_new_0001_02_tiled_s.jpg",
+        "size": [
+          256,
+          256
+        ],
+        "mode": "RGB"
+      }
+    ],
+    "license": []
+  },
+  {
+    "archive": "PSX-Ocean-Surface.zip",
+    "model_files": 0,
+    "texture_files": 1,
+    "formats": [],
+    "samples": [],
+    "textures": [
+      {
+        "file": "ocean_surface/clear+sea+water-2048x2048.png",
+        "size": [
+          2048,
+          2048
+        ],
+        "mode": "RGB"
+      }
+    ],
+    "license": [
+      {
+        "file": "README.md",
+        "text": "# ocean-shader\nLightweight ocean shaders for Godot 4.X\n"
+      }
+    ]
+  },
+  {
+    "archive": "psx-textures-free-assets.zip",
+    "model_files": 0,
+    "texture_files": 48,
+    "formats": [],
+    "samples": [],
+    "textures": [
+      {
+        "file": "psx-textures-free/addons/psx_textures/textures/brick/brick_red.png",
+        "size": [
+          128,
+          128
+        ],
+        "mode": "P"
+      },
+      {
+        "file": "psx-textures-free/addons/psx_textures/textures/concrete_stone/concrete.png",
+        "size": [
+          128,
+          128
+        ],
+        "mode": "P"
+      }
+    ],
+    "license": [
+      {
+        "file": "psx-textures-free/LICENSE.txt",
+        "text": "PSX Textures Free - license\n\nMade and licensed by heyheythere (https://heyheythere.itch.io)\n\nPSX Textures Free is licensed under the Creative Commons Attribution 4.0 International License\n(CC BY 4.0), https://creativecommons.org/licenses/by/4.0/. You may use, change and share its\ntextures, materials and scripts, commercially too, as long as you give credit. Put this line in\nyour game's credits, or next to the files if you share them:\n\n    PSX Textures Free by heyheythere - https://heyheythere.itch.io/psx-textures-free - CC BY 4.0\n\nThe full pack, PSX Textures, is sold under its own license at\nhttps://heyheythere.itch.io/psx-textures.\n\nThe legal code follows.\n\nAttribution 4.0 International\n\n=======================================================================\n\nCreative Commons Corporation (\"Creative Commons\") is not a law firm and\ndoes not provide legal services or legal advice. Distribution of\nCreative Commons public licenses does not create a lawyer-client or\nother relationship. Creative Commons makes its licenses and related\ninformation available on an \"as-is\" basis. Creative Commons gives no\nwarranties regarding its licenses, any material licensed under their\nterms and conditions, or any related information. Creative Commons\ndisclaims all liability for damages resulting from their use to the\nfullest extent possible.\n\nUsing Creative Commons Public Licenses\n\nCreative Commons public licenses provide a standard set of terms and\nconditions that creators and other rights holders may use to share\noriginal works of authorship and other material subject to copyright\nand certain other rights specified in the public license below. The\nfollowing considerations are for informational purposes only, are not\nexhaustive, and do not form part of our licenses.\n\n     Considerations for licensors: Our public licenses are\n     intended for use by those authorized to give the public\n     permission to use material in ways otherwise restricted by\n     copyright and certain other rights. Our licenses are\n     irrevocable. Licensors should read and understand the terms\n     and conditions of the license they choose before applying it.\n     Licensors should also secure all rights necessary before\n     applying our licenses so that the public can reuse the\n     material as expected. Licensors should clearly mark any\n     material not subject to the license. This includes other CC-\n     licensed material, or material used under an exception or\n     limitation to copyright. More considerations for licensors:\n    wiki.creativecommons.org/Considerations_for_licensors\n\n     Considerations for the public: By using one of our public\n     licenses, a licensor grants the public permission to use the\n     licensed material under specified terms and conditions. If\n     the licensor's permission is not necessary for any reason--for\n     example, because of any applicable exception or limitation to\n     copyright--then that use is not regulated by the license. Our\n     licenses grant only permissions under copyright and certain\n     other rights that a licensor has authority to grant. Use of\n     the licensed material may still be restricted for other\n     reasons, including because others have copyright or other\n     rights in the material. A licensor may make special requests,\n     such as asking that all changes be marked or described.\n     Although not required by our licenses, you are encouraged to\n     respect those requests where reasonable. More considerations\n     for the public:\n    wiki.creativecommons.org/Considerations_for_licensees\n\n=======================================================================\n\nCreative Commons Attribution 4.0 International Public License\n\nBy exercising the Licensed Rights (defined below), You accept and agree\nto be bound by the terms and conditions of this Creative Commons\nAttribution 4.0 International Public License (\"Public License\"). To the\nextent this Public License may be interpreted as a contract, You are\ngranted the Licensed Rights in consideration of Your acceptance of\nthese terms and conditions, and the Licensor grants You such rights in\nconsideration of benefits the Licensor receives from making the\nLicensed Material available under these terms and conditions.\n\n\nSection 1 -- Definitions.\n\n  a. Adapted Material means material subject to Copyright and Similar\n     Rights that is derived from or based upon the Licensed Material\n     and in which the Licensed Material is translated, altered,\n     arranged, transformed, or otherwise modified in a manner requiring\n     permission under the Copyright and Similar Rights held by the\n     Licensor. For purposes of this Public License, where the Licensed\n     Material is a musical work, performance, or sound recording,\n     Adapted Material is always produced where the Licensed Material is\n     synched in timed relation with a moving image.\n\n  b. Adapter's License means the license You apply to Your Copyright\n     and Similar Rights in Your contributions to Adapted Material in\n     accordance with the terms and conditions of this Public License.\n\n  c. Copyright and Similar Rights means copyright and/or similar rights\n     closely related to copyright including, without limitation,\n     performance, broadcast, sound recording, and Sui Generis Database\n     Rights, without regard to how the rights are labeled or\n     categorized. For purposes of this Public License, the rights\n     specified in Section 2(b)(1)-(2) are not Copyright and Similar\n     Rights.\n\n  d. Effective Technological Measures means those measures that, in the\n     absence of proper authority, may not be circumvented under laws\n     fulfilling obligations under Article 11 of the WIPO Copyright\n     Treaty adopted on December 20, 1996, and/or similar international\n     agreements.\n\n  e. Exceptions and Limitations means fair use, fair dealing, and/or\n     any other exception or limitation to Copyright and Similar Rights\n     that applies to Your use of the Licensed Material.\n\n  f. Licensed Material means the artistic or literary work, database,\n     or other material to which the Licensor applied this Public\n     License.\n\n  g. Licensed Rights means the rights granted to You subject to the\n     terms and conditions of this Public License, which are limited to\n     all Copyright and Similar Rights that apply to Your use of the\n     Licensed Material and that the Licensor has authority to license.\n\n  h. Licensor means the individual(s) or entity(ies) granting ri"
+      },
+      {
+        "file": "psx-textures-free/README.txt",
+        "text": "PSX Textures Free\n=================\n\n16 PS1-style textures for retro 3D levels, taken from PSX Textures (138 textures):\nhttps://heyheythere.itch.io/psx-textures\nEach is a 16-colour indexed PNG, ordered-dithered like the PS1's 4-bit textures, at 128 pixels to\nthe metre, and again at 64 for the crunchier look. Walls, floors and ceilings tile seamlessly both\nways, the wainscot sideways; the door, sign and blood splatter don't tile, and the splatter has\non-or-off transparency.\n\nWhat's in the zip\n-----------------\ntextures/128/  every texture by category, 128 px a metre: most are 128x128, the door 128x256,\n               the sign 128x32\ntextures/64/   the same at half the size\naddons/        the Godot addon, psx_textures/: this folder is a Godot 4.3+ project that opens on\n               its demo room (.gdignore keeps Godot out of the other folders)\n\nGodot 4.3 and later\n-------------------\nCopy addons/psx_textures/ into your project's addons/ folder. materials/ has a\nStandardMaterial3D per texture: point filtered, repeating, lit by your lights, the splatter an\nalpha-scissor cutout. Drag one onto a mesh. To tile a texture once a metre, give your mesh UVs in\nmetres, or set the material's UV1 scale (or Triplanar) to fit.\ndemo/room.tscn is a room to try them in: pick a surface with up / down, its texture with left /\nright, Space for the next set of them.\nFor the full PS1 look (vertex snap, affine textures, 240p, dither), our PSX Look shaders turn the\nmaterials over in one line: https://heyheythere.itch.io/psx-look\nWith PSX Look in res://addons/psx_look/, the room shows through it (P toggles it).\nPSX Textures uses the same addon folder: it installs over this one.\n\nOther engines and apps\n----------------------\nUse textures/128/ or textures/64/. Set the filtering to nearest/point, turn mipmaps and\ncompression off for the crisp PS1 texels, and repeat (wrap) on. For the splatter, use alpha test\n/ cutout (alpha clip at 0.5).\n\nLicense: CC BY 4.0, see LICENSE.txt for the credit line. Made by heyheythere:\nhttps://heyheythere.itch.io\n"
+      }
+    ]
+  },
+  {
+    "archive": "PSX_Sky_Sampler_v1-sky2test.zip",
+    "model_files": 1,
+    "texture_files": 50,
+    "formats": [
+      ".glb"
+    ],
+    "samples": [
+      {
+        "file": "PSX_Sky_Sampler/Godot_Demo/foreground.glb",
+        "sha256": "86cfc91a5ce13f57f64d0bb7b324b7b77f212758a9a1972f0e5ead87056458e3",
+        "meshes": 331,
+        "names": [
+          "Ground",
+          "Road",
+          "Verge",
+          "Pole_00",
+          "PoleArm_00",
+          "Pole_01",
+          "PoleArm_01",
+          "Pole_02",
+          "PoleArm_02",
+          "Pole_03",
+          "PoleArm_03",
+          "Pole_04",
+          "PoleArm_04",
+          "Pole_05",
+          "PoleArm_05",
+          "Pole_06",
+          "PoleArm_06",
+          "Pole_07",
+          "PoleArm_07",
+          "Pole_08",
+          "PoleArm_08",
+          "Pole_09",
+          "PoleArm_09",
+          "Pole_10",
+          "PoleArm_10",
+          "Wire_0",
+          "Wire_1",
+          "Wire_2",
+          "FencePost_00",
+          "FencePost_01",
+          "FencePost_02",
+          "FencePost_03",
+          "FencePost_04",
+          "FencePost_05",
+          "FencePost_06"
+        ],
+        "materials": [
+          "grass",
+          "road",
+          "dirt",
+          "wood",
+          "wire",
+          "bark",
+          "pine"
+        ]
+      }
+    ],
+    "textures": [
+      {
+        "file": "PSX_Sky_Sampler/Cubemap_256/Blood_Moon/back.png",
+        "size": [
+          256,
+          256
+        ],
+        "mode": "RGB"
+      },
+      {
+        "file": "PSX_Sky_Sampler/Cubemap_256/Blood_Moon/down.png",
+        "size": [
+          256,
+          256
+        ],
+        "mode": "RGB"
+      }
+    ],
+    "license": [
+      {
+        "file": "PSX_Sky_Sampler/LICENSE.txt",
+        "text": "PSX Asset Pack - Licence\n\nYou MAY:\n  - use these assets in personal and commercial projects\n    (games, films, videos, renders, jams)\n  - modify them however you like\n  - use them in as many projects as you want, forever\n\nYou MAY NOT:\n  - resell, share or redistribute the assets themselves,\n    on their own or inside another asset pack or template\n\nCredit is not required, but it is always appreciated.\n"
+      },
+      {
+        "file": "PSX_Sky_Sampler/README.txt",
+        "text": "PSX SKY SAMPLER\n===============\nby Munchkin Gaming - https://munchkin-jonesy.itch.io\n\nFive free PS1-style skyboxes: a summer day, a sunset, a moonlit night, a blood moon and a Silent-Hill fog. Dithered 15-bit colour, crisp pixels, drop-in ready.\n\nSKIES (5)\n  01  Summer Cumulus\n  02  Sunset Orange\n  03  Full Moon Night\n  04  Blood Moon\n  05  Silent Fog\n\n\nWHAT'S INSIDE\n-------------\n  Equirect_1024x512/    every sky as a 2:1 panorama (the native PS1-style size)\n  Equirect_2048x1024/   the same pixels doubled, for engines that want 2K\n  Cubemap_256/<Sky>/    six 256x256 faces: right, left, up, down, front, back\n  Cubemap_6x1_Strip/    the six faces in one 1536x256 strip (+X -X +Y -Y +Z -Z)\n  Godot_Demo/           a Godot 4 sky viewer (see below)\n\nAll images are PNG in dithered 15-bit colour, like the original hardware.\nEvery sky is seamless all the way round. The lower half is a plain ground/fog\ntone, so it works under a floor or a far terrain.\n\n\nHOW TO USE\n----------\nUse nearest / point filtering (no smoothing) to keep the crunchy pixels.\n\nGodot 4:   WorldEnvironment > Environment > Background: Sky >\n           Sky Material: PanoramaSkyMaterial, Panorama = an Equirect PNG,\n           Filter OFF. Set Sky Rotation Y to 180 so the image centre faces -Z.\nUnity:     import an Equirect PNG, Texture Shape: Cube, Mapping: Latitude-Longitude,\n           Filter Mode: Point. Make a Skybox/Cubemap material with it and set it\n           in Lighting > Environment. (Or use the 6x1 strip with Mapping: Auto.)\nUnreal:    import an Equirect PNG as a Texture Cube (Filter: Nearest) and use it\n           in a Sky Sphere / Sky Light, or on an inward-facing sphere.\nBlender:   World > Environment Texture > Equirect PNG, interpolation: Closest.\n\nGodot_Demo: open project.godot in Godot 4, press F5.\n  Left/Right or Q/E  change sky      mouse  look around\n  WASD               walk            H      hide the label\nThe demo lights each sky with a matching sun or moon so you can see how your\nlevel will look under it.\n\n\nLICENCE\n-------\nSee LICENSE.txt. Use them in personal and commercial projects. Don't resell\nor share the skies themselves.\n\nMade with AI assistance (procedural generation scripts written with AI).\n"
+      }
+    ]
+  },
+  {
+    "archive": "PSX_Wood_Textures.zip",
+    "model_files": 0,
+    "texture_files": 180,
+    "formats": [],
+    "samples": [],
+    "textures": [
+      {
+        "file": "PSX Wood textures/128/wood_10_128_.png",
+        "size": [
+          128,
+          128
+        ],
+        "mode": "RGBA"
+      },
+      {
+        "file": "PSX Wood textures/128/wood_11_128_.png",
+        "size": [
+          128,
+          128
+        ],
+        "mode": "RGBA"
+      }
+    ],
+    "license": []
+  },
+  {
+    "archive": "SBS - Base Materials Pack 256x256.rar",
+    "model_files": 0,
+    "texture_files": 118,
+    "formats": [],
+    "samples": [],
+    "textures": [
+      {
+        "file": "Base Materials 256x256/Cardboard/Mat_Cardboard_Brown_01-256x256.png",
+        "size": [
+          256,
+          256
+        ],
+        "mode": "RGB"
+      },
+      {
+        "file": "Base Materials 256x256/Cardboard/Mat_Cardboard_Brown_02-256x256.png",
+        "size": [
+          256,
+          256
+        ],
+        "mode": "RGB"
+      }
+    ],
+    "license": [
+      {
+        "file": "License.txt",
+        "text": "All Screaming Brain Studios assets have been released \r\nunder the CC0/Public Domain License. You are free to \r\nuse these assets in any and all projects, commercial \r\nor non-commercial, with no restrictions, and can be \r\nreleased with or without credit.\r\n\r\n--------------------------------------------------\r\nCC0 1.0 Universal (CC0 1.0) \r\nPublic Domain\r\nhttps://creativecommons.org/publicdomain/zero/1.0/\r\n--------------------------------------------------\r\n\r\n\r\n|| A Very Special Thanks to all my Patrons ||\r\n\r\nDwayne Jarvis\r\nPeardox\t\t\t- peardox.itch.io\r\nDavid Williams\r\nKevin North\r\ngrob\t\t\t- groverburger.itch.io\r\nRagnar Random\t\t- ragnarrandom.com\r\nwarpdkirby\r\nThe Augur\r\nn1ght4ngel19\r\nMarina Kittaka\t\t- marinakittaka.com\r\nJeremy Dumont\r\nMars\r\nAstralCastoff\t\t- astralcastoff.itch.io\r\nCyberFoxar\r\nCody Sevier"
+      }
+    ]
+  },
+  {
+    "archive": "SBS - Noise Texture Pack - 256x256.rar",
+    "model_files": 0,
+    "texture_files": 262,
+    "formats": [],
+    "samples": [],
+    "textures": [
+      {
+        "file": "256x256/Cracks/Cracks_01-256x256.png",
+        "size": [
+          256,
+          256
+        ],
+        "mode": "RGB"
+      },
+      {
+        "file": "256x256/Cracks/Cracks_02-256x256.png",
+        "size": [
+          256,
+          256
+        ],
+        "mode": "RGBA"
+      }
+    ],
+    "license": [
+      {
+        "file": "License.txt",
+        "text": "All Screaming Brain Studios assets have been released under the CC0/Public Domain License.\r\nYou are free to use these assets in any and all projects, commercial or non-commercial, \r\nwith no restrictions, and can be released with or without credit.\r\n--------------------------------------------------\r\nCC0 1.0 Universal (CC0 1.0) \r\nPublic Domain\r\nhttps://creativecommons.org/publicdomain/zero/1.0/\r\n--------------------------------------------------\r\nA Special thanks to all my Patrons:\r\nDwayne Jarvis\r\nPeardox"
+      }
+    ]
+  },
+  {
+    "archive": "SBS - Seamless Sky Backgrounds - 512x512.rar",
+    "model_files": 0,
+    "texture_files": 96,
+    "formats": [],
+    "samples": [],
+    "textures": [
+      {
+        "file": "512x512/Bumpy Sky/Bumpy_Sky-Blue_01-512x512.png",
+        "size": [
+          512,
+          512
+        ],
+        "mode": "RGBA"
+      },
+      {
+        "file": "512x512/Bumpy Sky/Bumpy_Sky-Blue_02-512x512.png",
+        "size": [
+          512,
+          512
+        ],
+        "mode": "RGBA"
+      }
+    ],
+    "license": [
+      {
+        "file": "License.txt",
+        "text": "All Screaming Brain Studios assets have been released \r\nunder the CC0/Public Domain License. You are free to \r\nuse these assets in any and all projects, commercial \r\nor non-commercial, with no restrictions, and can be \r\nreleased with or without credit.\r\n\r\n--------------------------------------------------\r\nCC0 1.0 Universal (CC0 1.0) \r\nPublic Domain\r\nhttps://creativecommons.org/publicdomain/zero/1.0/\r\n--------------------------------------------------\r\n\r\n\r\n|| A Very Special Thanks to all my Patrons ||\r\n\r\nDwayne Jarvis\r\nPeardox\r\nDavid Williams\r\nKevin North"
+      }
+    ]
+  },
+  {
+    "archive": "SBS - Tiny Texture Pack - 256x256.zip",
+    "model_files": 0,
+    "texture_files": 125,
+    "formats": [],
+    "samples": [],
+    "textures": [
+      {
+        "file": "256x256/Bricks/Bricks_01-256x256.png",
+        "size": [
+          256,
+          256
+        ],
+        "mode": "RGBA"
+      },
+      {
+        "file": "256x256/Bricks/Bricks_02-256x256.png",
+        "size": [
+          256,
+          256
+        ],
+        "mode": "RGBA"
+      }
+    ],
+    "license": [
+      {
+        "file": "License.txt",
+        "text": "All Screaming Brain Studios assets have been released \r\nunder the CC0/Public Domain License. You are free to \r\nuse these assets in any and all projects, commercial \r\nor non-commercial, with no restrictions, and can be \r\nreleased with or without credit.\r\n\r\n--------------------------------------------------\r\nCC0 1.0 Universal (CC0 1.0) \r\nPublic Domain\r\nhttps://creativecommons.org/publicdomain/zero/1.0/\r\n--------------------------------------------------\r\n\r\n\r\n|| A Very Special Thanks to all my Patrons ||\r\n\r\nDwayne Jarvis\r\nPeardox\r\nCaleb Ralph\r\nHeruca"
+      }
+    ]
+  },
+  {
+    "archive": "skyscraper_pack.zip",
+    "model_files": 18,
+    "texture_files": 8,
+    "formats": [
+      ".fbx"
+    ],
+    "samples": [
+      {
+        "file": "skyscraper_pack/models/building_01.1.fbx",
+        "sha256": "a67abc16a634c9d906d2bca2eece095c792a414a56b170551e999efa18c5c0b9",
+        "models": [
+          {
+            "name": "building_01.1",
+            "type": "Mesh"
+          }
+        ],
+        "geometry": [
+          {
+            "name": "building_01.1",
+            "vertices": 24,
+            "min": [
+              -1250.0,
+              -50.00035858154297,
+              -1250.0
+            ],
+            "max": [
+              1250.0,
+              7250.0,
+              1250.0
+            ],
+            "faces": 32
+          }
+        ],
+        "clips": []
+      }
+    ],
+    "textures": [
+      {
+        "file": "skyscraper_pack/textures/building_01.png",
+        "size": [
+          256,
+          256
+        ],
+        "mode": "RGBA"
+      },
+      {
+        "file": "skyscraper_pack/textures/building_02.png",
+        "size": [
+          256,
+          256
+        ],
+        "mode": "RGBA"
+      }
+    ],
+    "license": []
+  }
+]

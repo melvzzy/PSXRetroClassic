@@ -160,7 +160,7 @@ func _run() -> void:
 	await _frames(15)
 	await _click()
 	_expect(weapon.magazine == 0 and weapon.reserve == 0 and world.get_node("HUD/WeaponStatus").text == "Keine Munition", "Fully depleted weapon remains in a valid state")
-	var pistol: WeaponAsset = weapon.get_node("Visuals/ModelMount/MakarovViewmodel/Pistol")
+	var pistol: WeaponAsset = weapon.get_node("Visuals/ModelMount/WeaponOnlyViewmodel").model
 	_expect(pistol.get_part("Magazine-Empty").visible and not pistol.get_part("Magazine-Full").visible, "Depleted pistol shows only its empty magazine variant")
 	_expect(not player.camera.is_ancestor_of(player.body_shape), "View recoil cannot rotate the player collision capsule")
 	print("Weapon checks: %d passed, %d failed" % [checks - failures, failures])

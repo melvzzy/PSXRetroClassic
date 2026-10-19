@@ -17,7 +17,7 @@ Eigene GDScript-Dateien verwenden `snake_case.gd` und nach Möglichkeit Typangab
 - `weapon_asset.gd`: kleine reine Visual-Hülle für normalisierte Waffenmodelle,
   gemeinsam genutztes Material und Zugriff auf vorhandene Teile; keine Spiellogik.
 - `makarov_viewmodel.gd`: reagiert auf die bestehende Testwaffe und verbindet
-  statische Arm-Haltung, Schlitten-/Magazinbewegung und Platzhalter-Fallback.
+  kalibrierte Finger-/Stützhandposen, Handbindung, Reload-Phasen und Fallback.
   Kein zweiter Input-Handler, keine Schuss-/Munitionslogik. Importdetails und
   Einschränkungen stehen in `assets/source/weapon_candidates/README.md`.
 
@@ -39,8 +39,9 @@ Weltpause. Eine spätere echte Pause muss zuerst die Mausaufnahme freigeben.
 Die Testwaffe benötigt die Inspector-Referenzen `actor` (FPSController) und
 `camera` (Camera3D); `player.tscn` setzt diese. Kein Autoload, keine Registrierung.
 Mauseingaben werden als kurze Schussanforderung erfasst; die Physikabfrage erfolgt
-nach der Player-Bewegung im nächsten Physiktakt. Es gibt keine Streuung,
-Schusspufferung oder automatische Nachladung. Schussrate und Reload sperren
+nach der Player-Bewegung im nächsten Physiktakt. Es gibt keine Streuung oder automatische Nachladung. Ein kurzer gehaltene-Taste-
+Puffer gilt nur für die letzten 60 ms des Cooldowns und wird bei Loslassen/
+Fokusverlust/Holstern/Reload gelöscht. Schussrate und Reload sperren
 unzulässige Anforderungen, ohne dabei Munition zu verbrauchen.
 
 Rückstoß wirkt nur auf die lokale Kamera und den visuellen Waffen-Knoten,
@@ -52,5 +53,16 @@ vor einer erneuten Aktivierung losgelassen werden.
 
 Aktuelle Modelle liegen unter `Visuals/ModelMount/MakarovViewmodel`; `Placeholder`
 bleibt als Fallback. `ModelMount`, `Muzzle`, `AudioMount` und die Root-Logik
-erhalten. Das importierte Arm-Rig wird lokal in einer statischen Pose verwendet;
+erhalten. Das importierte Arm-Rig erhält lokale Makarov-Posen und zustandsgebundene
+Übergänge; Griffpunkte werden nur beim Start aus den Quellmaßen kalibriert.
+Die Pistole bleibt an hand.R, das gezogene Magazin zeitweise an hand.L;
 keine neuen Rigs, IK-/Animationsframeworks oder Sounds wurden hinzugefügt.
+
+
+Aktueller Standard: `test_scene.gd` wählt vor `_ready` eines der vier typisierten
+Testprofile und setzt `show_arms`/`use_imported_visuals`. `test_weapon_profile.gd`
+enthält nur Daten. `weapon_only_viewmodel.gd` verarbeitet Modelle, Sicht-/Mündungs-
+marker, geringe Teilebewegung, Holster-Darstellung und Fallback; keine Eingaben,
+Munition oder zweite Schusslogik. Der Makarov-Arm-Adapter ist im Standardmodus
+unsichtbar und samt untergeordnetem AnimationPlayer deaktiviert. Die alten
+Armprüfungen aktivieren ihn ausdrücklich; keine Quellassets wurden entfernt.

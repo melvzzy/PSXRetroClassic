@@ -12,6 +12,7 @@ func _initialize() -> void:
 
 func _run() -> void:
 	game = load("res://scenes/startup.tscn").instantiate()
+	game.show_arms = true
 	root.add_child(game)
 	actor = game.get_node("Player")
 	gun = actor.get_node("Head/Camera3D/ViewmodelMount/TestFirearm")
