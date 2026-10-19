@@ -65,6 +65,7 @@ try {
     Invoke-GodotCheck 'final-area' @('--headless', '--path', '.', '--script', 'res://tests/final_area_checks.gd')
     Invoke-GodotCheck 'core-upgrade' @('--headless', '--path', '.', '--script', 'res://tests/core_upgrade_checks.gd')
     Invoke-GodotCheck 'character-comparison' @('--headless', '--path', '.', '--script', 'res://tests/character_comparison_checks.gd')
+    Invoke-GodotCheck 'weapon-motion' @('--headless', '--path', '.', '--script', 'res://tests/weapon_motion_checks.gd')
     Write-Output 'All checks completed. Review any environment warnings above.'
 }
 finally {

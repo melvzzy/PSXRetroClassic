@@ -123,8 +123,8 @@ func _run() -> void:
 	await _frames(15)
 	_expect(actor.is_sprinting and absf(actor.velocity.z + actor.sprint_speed) < 0.05, "Sprint transition preserves responsive acceleration")
 	var moving_view: Node3D = gun.get_node("Visuals/ModelMount/WeaponOnlyViewmodel")
-	_expect(moving_view._movement_pose.length() > 0.005 and moving_view._movement_pose.length() < 0.04
-		and moving_view._movement_rotation.length() < 0.08 and is_zero_approx(actor.head.rotation.x),
+	_expect(moving_view.position.length() > 0.04 and moving_view.position.length() < 0.13
+		and moving_view.rotation.length() < 0.55 and is_zero_approx(actor.head.rotation.x),
 		"Sprint feedback is restrained and affects the weapon, not mouse aim")
 	await _capture("sprint")
 	Input.action_press("aim")

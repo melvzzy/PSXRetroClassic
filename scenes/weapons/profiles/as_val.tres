@@ -24,3 +24,6 @@ moving_parts = PackedStringArray("extractor")
 hidden_parts = PackedStringArray()
 
 hip_rotation_degrees = Vector3(0, 4, 0)
+
+visual_kick = 0.021
+visual_recovery = 21.0

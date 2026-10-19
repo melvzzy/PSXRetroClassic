@@ -30,9 +30,9 @@ Ducken und Fokuswechsel löschen den Puffer. OS-Tastenwiederholung erzeugt weder
 neue Sprünge noch wiederholtes Schalterbedienen.
 
 Der gemeinsame WeaponOnlyViewmodel bewegt nur die Waffe: maximal etwa 4 mm
-Gehbewegung, sanftes Absenken/Neigen beim Sprint, Ausblenden der Bewegung beim
+Gehbewegung, eine profilabhängige diagonale Tragehaltung beim Sprint, Ausblenden der Bewegung beim
 Zielen/Nachladen. Kein Kamera-Headbob oder Kamerawackeln ergänzt. Walk Motion
-und Sprint Lowering sind am Adapter konfigurierbar. Im Stillstand bleibt die
+und Motion Response sind am Adapter konfigurierbar; die Tragepose steht im Profil. Im Stillstand bleibt die
 Waffe ruhig. Der Placeholder folgt denselben Bewegungen.
 
 Reload nutzt eine glatte, vom echten Reload-Fortschritt abhängige Absenk-/
@@ -64,3 +64,5 @@ Mündung, Unterbrechungen, reine UI-Input-Zustände, leeres Magazin, Bewegung,
 Sprungpuffer und Wiederholschutz. Im Grafikmodus (`-- --capture`) werden Hip,
 ADS und Schuss für jede Waffe sowie Reload, Holster und Sprint gespeichert unter
 `.godot/checks/core_upgrade/`. Bestehende Arm-/Waffen-/Outdoor-Suiten bleiben aktiv.
+
+Aktuelle Verfeinerung der Übergänge und Prüfergebnisse: [Waffenbewegung](weapon_motion_polish.md).

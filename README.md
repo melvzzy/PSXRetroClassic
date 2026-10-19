@@ -1,8 +1,8 @@
 # PSXRetroClassic
 
 Aktuell verifiziert: **Godot 4.6.3.stable.official.7d41c59c4**, vollständiger
-Neuimport und grafische Windows-Prüfungen erfolgreich; aktuell 648 Regressionstests
-mit beiden lokalen Charakterkandidaten bestanden.
+Neuimport und grafische Windows-Prüfungen erfolgreich; aktuell 747 Regressionstests
+inklusive Waffenbewegung und beider lokaler Charakterkandidaten bestanden.
 Details und Grenzen: [Kompatibilitätsnachweis](tests/README.md).
 
 Eigenständiges Godot-**4.6.3 Standard**-Projekt (GDScript, Forward+) für einen
@@ -23,7 +23,8 @@ Am Root **Startup** im Inspector **Test Weapon** wählen (Makarov / AS Val / VSS
 SR-3 / M4A4 / EMP / MP40 / STG 44), speichern und F5 starten. **Show Arms** stellt nur für Makarov den
 bisherigen Armaufbau wieder her; **Use Imported Visuals** schaltet den Fallback.
 Details: [Waffen-Roster und Wechsel](docs/weapon_roster.md),
-[aktuelles FPS-/Gunplay-Tuning](docs/fps_core_upgrade.md).
+[aktuelles FPS-/Gunplay-Tuning](docs/fps_core_upgrade.md),
+[Waffenbewegung und Übergänge](docs/weapon_motion_polish.md).
 Das veränderbare Fenster startet mit 1280 × 720 und VSync. Forward+ benötigt
 passende Grafiktreiber. Das Projekt enthält alle benötigten Ressourcen.
 

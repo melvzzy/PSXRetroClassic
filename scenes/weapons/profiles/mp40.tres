@@ -23,3 +23,6 @@ ads_position = Vector3(0, -0.12, -0.6)
 moving_parts = PackedStringArray("bolt")
 
 hip_rotation_degrees = Vector3(0, 4, 0)
+
+visual_kick = 0.027
+visual_recovery = 18.0

@@ -1,9 +1,9 @@
 # FPS-Prüfung
 
 **Aktueller Stand: Godot 4.6.3.stable.official.7d41c59c4 tatsächlich verifiziert.**
-648 Regressionstests mit beiden lokalen Charaktermodellen bestanden; zusätzliche
-Charakter-Grafikprüfung: 26 Checks / sieben Aufnahmen. Der frühere vollständige
-FPS-Grafiklauf mit 191 Checks nach Neuimport bleibt ebenfalls dokumentiert.
+747 Regressionstests mit beiden lokalen Charaktermodellen bestanden. Aktueller
+Grafiklauf für Waffenbewegung, optionale Arme und Außenposten: 203 Checks /
+32 Aufnahmen. Frühere Grafikläufe bleiben unten dokumentiert.
 Ältere Abschnitte zeigen frühere 4.7.2-Läufe und deren damalige Einschränkungen.
 
 ## Automatisch unter Windows
@@ -565,3 +565,28 @@ F5-Langzeittest und keine Waffen-/Spieler-Integration der neuen Modelle.
 F6: `scenes/previews/character_comparison.tscn`; 0 Vergleich, 1/2 Körper,
 3/4 rechte Hand, B Gelenkprobe, RMB-Orbit, Mausrad-Zoom, Esc schließen.
 Befund, Empfehlung und Lizenzgrenzen: [Charakterreview](../docs/character_asset_review.md).
+
+
+## Waffenbewegung und Übergänge
+
+`weapon_motion_checks.gd` ergänzt 99 fokussierte Checks; der vollständige Runner
+besteht mit **747 Checks, 0 fehlgeschlagen**, einschließlich Import und begrenztem
+Startup. Der abschließende fokussierte Wiederholungslauf besteht ebenfalls.
+
+Native Grafikprüfung unter **Godot 4.6.3.stable.official.7d41c59c4**:
+WeaponMotion 118 Checks / 19 Captures, Makarov-Arme 36/8, Outdoor 49/5;
+insgesamt **203 Checks / 32 Captures**. Sprint und ADS aller acht Waffen sowie
+Burst-Ready, Reload und Draw-zu-Sprint gerendert und visuell kontrolliert.
+Forward+/Vulkan und 4× MSAA unverändert. Keine Projektfehler oder zusätzlichen
+Warnungen; bekannte Windows-Zertifikatsspeicher-Meldung weiterhin vorhanden.
+
+Logs: `.godot/checks/motion-polish-final-suite.txt`, `motion-final-*-render.log`
+samt Fehlerlogs und `motion-final-focused.log`. Bilder unter
+`.godot/checks/weapon_motion/`, `weapon_captures/` und `outdoor/`.
+Kein vollständiger manueller Spielgefühl-/FPS-Benchmark.
+
+F5: 1–8 jeweils im Stand/Lauf/Sprint und ADS prüfen; Sprint mit Schuss, Reload,
+Holster und Wechsel unterbrechen. Automatik halten, Munition nach Rückwechsel
+prüfen. Gegen Wand sprinten, springen/landen/ducken; Esc/Alt-Tab und bewusste
+Wiederaufnahme testen. Optionale Makarov-Arme und Placeholder separat prüfen.
+Details: [Waffenbewegung](../docs/weapon_motion_polish.md).

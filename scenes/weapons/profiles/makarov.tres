@@ -24,3 +24,8 @@ moving_parts = PackedStringArray("Slide", "Sight", "Extractor")
 hidden_parts = PackedStringArray()
 
 hip_rotation_degrees = Vector3(0, 4, 0)
+
+visual_kick = 0.03
+visual_recovery = 21.0
+sprint_offset = Vector3(0.025, -0.06, 0.035)
+sprint_rotation_degrees = Vector3(15, 10, -18)

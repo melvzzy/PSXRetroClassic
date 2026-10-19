@@ -15,6 +15,10 @@ extends Resource
 @export var ads_fov: float = 60.0
 @export var hip_position := Vector3(0.23, -0.165, -0.45)
 @export var hip_rotation_degrees := Vector3.ZERO
+@export var sprint_offset := Vector3(0.025, -0.065, 0.045)
+@export var sprint_rotation_degrees := Vector3(8.0, 12.0, -12.0)
+@export var visual_kick: float = 0.025
+@export var visual_recovery: float = 18.0
 @export var ads_position := Vector3(0.0, -0.12, -0.42)
 @export var moving_parts: PackedStringArray = []
 @export var part_travel: float = 0.018

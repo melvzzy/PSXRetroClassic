@@ -40,6 +40,8 @@ var use_imported_visuals: bool = true
 @export var ads_recoil_multiplier: float = 0.55
 @export var recoil_recovery: float = 12.0
 @export var max_recoil_degrees: float = 4.0
+@export var visual_kick: float = 0.025
+@export var visual_recovery: float = 18.0
 
 var magazine: int = 0
 var reserve: int = 0
@@ -88,6 +90,8 @@ func apply_test_profile(profile: TestWeaponProfile) -> void:
 	ads_response = profile.ads_response
 	recoil_recovery = profile.recoil_recovery
 	max_recoil_degrees = profile.max_recoil_degrees
+	visual_kick = profile.visual_kick
+	visual_recovery = profile.visual_recovery
 	reload_duration = profile.reload_duration
 	recoil_degrees = profile.recoil_degrees
 	ads_fov = profile.ads_fov
@@ -109,7 +113,7 @@ func _ready() -> void:
 	aim_changed.connect(actor.set_aiming)
 	set_input_enabled(actor.has_mouse_capture)
 
-func set_input_enabled(value: bool) -> void:
+func set_input_enabled(value: bool, reset_view: bool = true) -> void:
 	_input_enabled = value
 	_automatic_firing = false
 	_pending_fire = false
@@ -129,8 +133,9 @@ func set_input_enabled(value: bool) -> void:
 		_kick = 0.0
 		_flash_left = 0.0
 		muzzle_flash.visible = false
-		camera.rotation = Vector3.ZERO
-		camera.fov = actor.field_of_view
+		if reset_view:
+			camera.rotation = Vector3.ZERO
+			camera.fov = actor.field_of_view
 
 func _unhandled_input(event: InputEvent) -> void:
 	if not _input_enabled:
@@ -235,7 +240,8 @@ func _switch_weapon(index: int) -> void:
 	_ammunition[active_weapon] = Vector2i(magazine, reserve)
 	_inactive_cooldowns[active_weapon] = _cooldown
 	# Cancel before changing data: reload never transfers ammo on a switch.
-	set_input_enabled(false)
+	# Preserve the current zoom for the existing presentation interpolation.
+	set_input_enabled(false, false)
 	active_weapon = index
 	apply_test_profile(weapon_profiles[index])
 	magazine = _ammunition[index].x
@@ -258,7 +264,7 @@ func _process(delta: float) -> void:
 	position = position.lerp(ads_position if is_aiming else hip_position, blend)
 	camera.fov = lerpf(camera.fov, minf(ads_fov, actor.field_of_view) if is_aiming else actor.field_of_view, blend)
 	_recoil *= exp(-recoil_recovery * delta)
-	_kick *= exp(-18.0 * delta)
+	_kick *= exp(-visual_recovery * delta)
 	_apply_recoil()
 	# A smooth whole-weapon service gesture; magazines remain seated.
 	var reload_target: float = sin(PI * get_reload_progress()) if is_reloading else 0.0
@@ -321,7 +327,7 @@ func _try_fire() -> void:
 	var strength: float = ads_recoil_multiplier if is_aiming else 1.0
 	_recoil.x = minf(_recoil.x + deg_to_rad(recoil_degrees) * strength, deg_to_rad(max_recoil_degrees))
 	_recoil.y += deg_to_rad(0.12) * strength * (1.0 if _shot_number % 2 == 0 else -1.0)
-	_kick = 0.035 * strength
+	_kick = visual_kick * strength
 	_flash_left = 0.035
 	_apply_recoil()
 	fired.emit()
