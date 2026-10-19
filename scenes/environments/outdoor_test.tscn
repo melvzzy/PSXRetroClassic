@@ -34,6 +34,8 @@
 [ext_resource type="Texture2D" path="res://assets/source/outpost_workshop/TrashCan.png" id="39_4tdi0"]
 [ext_resource type="Texture2D" path="res://assets/source/outpost_workshop/Mat_Stone_Gray_01-256x256.png" id="40_1j018"]
 
+[ext_resource type="PackedScene" path="res://scenes/environments/workshop_door.tscn" id="41_door"]
+
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_udhg2"]
 sky_top_color = Color(0.27, 0.34, 0.41, 1)
 sky_horizon_color = Color(0.65, 0.67, 0.65, 1)
@@ -990,9 +992,10 @@ shadow_enabled = true
 shadow_normal_bias = 1.0
 directional_shadow_max_distance = 85.0
 
-[node name="Switch" type="StaticBody3D" parent="." unique_id=941974981]
+[node name="Switch" type="StaticBody3D" parent="." unique_id=941974981 node_paths=PackedStringArray("controlled_light")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 1.4, -13)
 script = ExtResource("2_rlemt")
+controlled_light = NodePath("../FoundationDetails/WorkshopLight")
 
 [node name="Indicator" type="MeshInstance3D" parent="Switch" unique_id=552320996]
 material_override = SubResource("StandardMaterial3D_vcvh3")
@@ -2754,6 +2757,9 @@ mesh = SubResource("ArrayMesh_fgmnd")
 cast_shadow = 0
 mesh = SubResource("ArrayMesh_ho6er")
 
+
+[node name="WorkshopDoor" parent="." instance=ExtResource("41_door")]
+position = Vector3(6, 0.12, -3.72)
 
 [editable path="Yard/Baum 01/tree012"]
 [editable path="Yard/Baum 05/tree052"]

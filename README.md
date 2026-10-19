@@ -1,7 +1,7 @@
 # PSXRetroClassic
 
 Aktuell verifiziert: **Godot 4.6.3.stable.official.7d41c59c4**, vollständiger
-Neuimport und grafische Windows-Prüfungen erfolgreich; aktuell 747 Regressionstests
+Neuimport und grafische Windows-Prüfungen erfolgreich; aktuell 773 Regressionstests
 inklusive Waffenbewegung und beider lokaler Charakterkandidaten bestanden.
 Details und Grenzen: [Kompatibilitätsnachweis](tests/README.md).
 
@@ -35,7 +35,10 @@ passende Grafiktreiber. Das Projekt enthält alle benötigten Ressourcen.
   Player geduckt, bis genügend Platz zum Aufstehen vorhanden ist.
 - Maus: direkte Blicksteuerung. Esc oder Fokusverlust gibt sie frei und sperrt
   Gameplay-Eingaben; Linksklick außerhalb des Beenden-Buttons fängt sie erneut.
-- E: Schalter innerhalb von 2,5 Metern bedienen; Text und Farbe zeigen den Zustand.
+- E: Schalter und Werkstatttor innerhalb von 2,5 Metern bedienen. Der Generator-
+  schalter steuert das Werkstattlicht. Das seitliche Tor startet offen; es lässt
+  sich am Bedienkasten links vom Cargo-Südzugang oder direkt an der Tür bedienen.
+  Beim Schließen kehrt es vor Player oder Physikprops um.
 - Linke Maustaste: Makarov/VSS Einzelfeuer; AS Val, SR-3, M4A4, EMP, MP40 und
   STG 44 feuern beim Halten automatisch. Rechte Maustaste halten: ADS.
   R: Nachladen. Startmunition je Profil (Makarov weiterhin 12/48), keine automatische

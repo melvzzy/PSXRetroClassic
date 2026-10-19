@@ -1,9 +1,9 @@
 # FPS-Prüfung
 
 **Aktueller Stand: Godot 4.6.3.stable.official.7d41c59c4 tatsächlich verifiziert.**
-747 Regressionstests mit beiden lokalen Charaktermodellen bestanden. Aktueller
-Grafiklauf für Waffenbewegung, optionale Arme und Außenposten: 203 Checks /
-32 Aufnahmen. Frühere Grafikläufe bleiben unten dokumentiert.
+773 Regressionstests mit beiden lokalen Charaktermodellen bestanden. Aktueller
+Grafiklauf für Interaktionen und Außenposten: 79 Checks / neun Aufnahmen.
+Frühere Grafikläufe bleiben unten dokumentiert.
 Ältere Abschnitte zeigen frühere 4.7.2-Läufe und deren damalige Einschränkungen.
 
 ## Automatisch unter Windows
@@ -590,3 +590,33 @@ Holster und Wechsel unterbrechen. Automatik halten, Munition nach Rückwechsel
 prüfen. Gegen Wand sprinten, springen/landen/ducken; Esc/Alt-Tab und bewusste
 Wiederaufnahme testen. Optionale Makarov-Arme und Placeholder separat prüfen.
 Details: [Waffenbewegung](../docs/weapon_motion_polish.md).
+
+
+## Praktische Interaktionen und Werkstatttor
+
+`practical_gameplay_checks.gd` ergänzt 26 Prüfungen für den echten F5-Außenposten:
+E/HUD, Key-Echo, Reichweite, Wegdrehen, Capture-Wechsel, Tür-/Schusskollision,
+Durchgang, Rücköffnung vor Player/Physikprop, Umkehr während der Fahrt sowie
+Lichtschalter während Reload, ADS und Holster.
+Keine Änderung an Bewegung oder Waffenwerten. Das Tor startet offen; die alte
+Fallback-Testszene bleibt erhalten. Der Interactor prüft den beim Tastendruck
+aufgezeichneten Strahl erst im Physikschritt und aktualisiert Hinweise nach der
+Aktion. Direktes Anvisieren plus E wird weiterhin von `weapon_checks.gd` geprüft.
+
+Vollständiger Lauf unter Godot **4.6.3.stable.official.7d41c59c4**: **773 Checks,
+0 fehlgeschlagen**, Import und begrenzte Startprüfungen inklusive.
+Native Forward+-Grafikprüfung: praktische Interaktionen 30/4 Captures und
+Outdoor 49/5, insgesamt **79 Checks / neun Captures**. Offenes/geschlossenes Tor,
+blockierter Durchgang und Generator sowie Außenpostenansichten kontrolliert.
+Logs: `.godot/checks/practical-full-suite.txt`, `practical-*-render.log` samt
+Fehlerlogs. Bilder `.godot/checks/practical_gameplay/` und `outdoor/`.
+Ausschließlich die bekannte Windows-Zertifikatsspeicher-Meldung; kein manueller
+Langzeittest oder FPS-Benchmark.
+
+F5: links am Cargo-Südzugang E drücken, auch direkt auf das Tor schauen; öffnen,
+schließen, während der Fahrt umkehren und im Durchgang stehen bleiben. Eine
+Kiste in den Schließweg bringen. Am Generator das Werkstattlicht umschalten,
+auch während Reload/ADS oder mit weggepackter Waffe. Außer Reichweite, hinter
+Hindernissen und nach Esc/Alt-Tab darf E nichts auslösen. Waffen 1–8 und die
+bestehenden Wege kurz nachprüfen. Das Tor besitzt bewusst nur einfache eigene
+Primitivvisuals, keinen Schloss-/Schlüssel-, Audio- oder Tragesystem-Unterbau.
