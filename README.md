@@ -1,5 +1,9 @@
 # PSXRetroClassic
 
+Aktuell verifiziert: **Godot 4.6.3.stable.official.7d41c59c4**, vollständiger
+Neuimport, 629 Regressionstests und grafische Windows-Prüfungen erfolgreich.
+Details und Grenzen: [Kompatibilitätsnachweis](tests/README.md).
+
 Eigenständiges Godot-**4.6.3 Standard**-Projekt (GDScript, Forward+) für einen
 zukünftigen Retro-Sandbox-Shooter. Aktuell: kleine spielbare FPS-Grundlage mit
 acht im Spiel auswählbaren Testwaffen mit profilabhängigem Einzel-/Dauerfeuer, standardmäßig ohne

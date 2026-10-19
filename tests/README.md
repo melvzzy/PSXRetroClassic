@@ -1,5 +1,10 @@
 # FPS-Prüfung
 
+**Aktueller Stand: Godot 4.6.3.stable.official.7d41c59c4 tatsächlich verifiziert.**
+629 Regressionstests plus 191 Grafikprüfungen nach vollständigem Neuimport
+bestanden. Ältere Abschnitte dokumentieren frühere 4.7.2-Läufe; deren damalige
+4.6.3-Einschränkung ist durch den abschließenden Nachweis unten aufgehoben.
+
 ## Automatisch unter Windows
 
 Mit Godot **4.6.3 Standard** im Repository-Verzeichnis:
@@ -479,3 +484,52 @@ damit nicht getestet werden.** Das Originalarchiv bleibt unverändert; extrahier
 Starter und Audit-/Engine-Logs liegen im ignorierten `.godot/checks/`.
 Ergebnislog: `.godot/checks/quality-pass-suite.txt`. Kein vollständiger manueller
 Gameplay-Test oder FPS-Benchmark.
+
+
+## Godot 4.6.3 — abschließender Kompatibilitätsnachweis
+
+Offizielle Windows-x64-Standard-Engine aus dem
+[Godot-Downloadarchiv](https://godotengine.org/download/archive/4.6.3-stable/),
+über dessen HTTPS-Downloadlink bezogen. Beide EXEs im vollständigen ZIP erhalten.
+Versionsausgabe: **4.6.3.stable.official.7d41c59c4**. Authenticode der Haupt-EXE:
+**Valid**, Herausgeber **Prehensile Tales B.V.**. ZIP-/EXE-Hashes und Herkunft
+stehen unter `.godot/checks/tools/godot_4_6_3/provenance.json`.
+
+Die portable Engine liegt separat in `.godot/checks/tools/godot_4_6_3/`;
+vorhandene 4.7.2-Installation und unvollständiges Downloadarchiv bleiben unberührt.
+Keine Dateizuordnungen, PATH- oder Projekteinstellungen geändert. Erneuter Lauf:
+
+```powershell
+./tests/run_checks.ps1 -Godot "$PWD/.godot/checks/tools/godot_4_6_3/Godot_v4.6.3-stable_win64.exe"
+```
+
+Nach einem ersten erfolgreichen Gesamtlauf wurde ausschließlich der generierte
+Import-Cache innerhalb von `.godot/` gesichert. Danach wurden **60 Assets frisch
+mit 4.6.3 aus den Quelldateien importiert**, ohne die alten 4.7-Importdaten zu nutzen.
+Der vollständige Runner lief anschließend erneut erfolgreich: **629 Prüfungen,
+0 fehlgeschlagen**, einschließlich Import, begrenztem Haupt-/Fallback-/Preview-
+Start, Bewegung, acht Waffen/Feuermodi, ADS, Reload, Wechsel, Holster, Fokus,
+Interaktion, Physik, Armen, Markern und Umgebung. Die alten Tests wurden nicht
+abgeschwächt oder für den Versionswechsel verändert.
+
+Grafischer Start der echten F5-Hauptszene plus **191 Prüfungen / 40 Captures**
+auf dem frisch erzeugten Cache: Kern 106/27, Outdoor 49/5, Makarov-Arme 36/8.
+Forward+/Vulkan, NVIDIA RTX 5060 Ti; 4× MSAA bleibt unverändert. Gerenderte
+Ansichten von Waffen, ADS, Schuss, Reload, Holster, Sprint und Armaufbau kontrolliert.
+Kein vollständiger manueller F5-Langzeittest, Export-Build oder FPS-Benchmark.
+
+Kein Code-/Szenen-Fix nötig. Der 4.6.3-Importer hat **27 Import-Sidecars**
+normalisiert: nur die zusätzlichen Optionen `mesh_library/use_node_names_as_mesh_names`,
+`array_mesh/deduplicate_surfaces` und bei GLB `gltf/texture_map_mode` entfernt.
+UIDs, Maßstab, Material-/Animationsparameter und übrige Importwerte bleiben erhalten.
+Alle Skripte, Szenen, Projektsettings, Originalassets und UID-Dateien wurden vor
+Dokumentationsänderungen zusätzlich per Dateihash als unverändert bestätigt.
+Keine Gameplay-, Bewegungs-, Waffen-, Animations- oder Umgebungsänderung.
+
+Alle abschließenden Engine-Logs geprüft: keine Script-/Ressourcen-/Szenenfehler
+oder weiteren Kompatibilitätswarnungen. Ausschließlich die bekannte Meldung
+`Failed to read the root certificate store` bleibt eine Umgebungsbeschränkung.
+Hauptlog: `.godot/checks/compatibility-463-cold-suite.txt`; Grafiklogs:
+`compatibility-463-cold-*-render.log` samt Fehlerlogs. Importnachweis:
+`compatibility-463-cold-import-clean.txt`. Bilder wie zuvor unter
+`.godot/checks/core_upgrade/`, `outdoor/` und `weapon_captures/`.
