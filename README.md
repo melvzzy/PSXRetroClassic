@@ -127,3 +127,11 @@ Bewegungsimpulse betreffen nur das Viewmodel, nicht die Kamera.
 Details und Grenzen: [Arm-/Waffenpolish](docs/first_person_arms_polish.md).
 Die [Umgebungsauswahl](docs/environment_asset_review.md) bewertet 42 lokale
 Archive; es wurde keine Umgebung importiert oder Karte gebaut.
+
+
+## Isolierte Umgebungsvorschau
+
+`scenes/previews/environment_preview.tscn` öffnen, **F6**: 14 ausgewählte Gebäude-,
+Straßen-, Natur- und Prop-Modelle, getrennt von Startup und FPS-Testfläche.
+0–4 wählen Gruppen, rechte Maustaste dreht die Kamera, Mausrad zoomt.
+[Auswahl, Quellen, Einschränkungen und erster Bereichsplan](docs/environment_preview.md).

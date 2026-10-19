@@ -1,0 +1,100 @@
+[
+  {
+    "height": 5.30000019073486,
+    "name": "Urban Hangar",
+    "scale": 1.0,
+    "size": "(11.5693, 5.3, 8.0)",
+    "source": "res://assets/source/environment_candidates/urban/Hangar1.glb"
+  },
+  {
+    "height": 3.0,
+    "name": "Cargo offen",
+    "scale": 1.0,
+    "size": "(8.0, 3.0, 3.0)",
+    "source": "res://assets/environment/industrial/cargo_1_open.glb"
+  },
+  {
+    "height": 0.08,
+    "name": "Straße gerade 8 m",
+    "scale": 0.499999918043627,
+    "size": "(7.999999, 0.08, 7.999999)",
+    "source": "res://assets/source/environment_candidates/urban/road_1_straight_no_sides.glb"
+  },
+  {
+    "height": 0.08,
+    "name": "Straßenkurve",
+    "scale": 0.499999964609745,
+    "size": "(8.0, 0.08, 8.0)",
+    "source": "res://assets/source/environment_candidates/urban/road_1_corner_no_sides.glb"
+  },
+  {
+    "height": 4.03740835189819,
+    "name": "Baum 01",
+    "scale": 1.0,
+    "size": "(3.360001, 4.037408, 3.360001)",
+    "source": "res://assets/source/environment_candidates/nature/tree01.glb"
+  },
+  {
+    "height": 4.19466352462769,
+    "name": "Baum 05",
+    "scale": 1.0,
+    "size": "(3.36, 4.194664, 3.360001)",
+    "source": "res://assets/source/environment_candidates/nature/tree05.glb"
+  },
+  {
+    "height": 1.00000011920929,
+    "name": "Busch 01",
+    "scale": 1.0,
+    "size": "(0.7, 1.0, 0.7)",
+    "source": "res://assets/source/environment_candidates/nature/bush01.glb"
+  },
+  {
+    "height": 0.5,
+    "name": "Gras 01",
+    "scale": 1.0,
+    "size": "(0.405, 0.5, 0.404)",
+    "source": "res://assets/source/environment_candidates/nature/grass01.glb"
+  },
+  {
+    "height": 1.74708640575409,
+    "name": "Generator",
+    "scale": 1.0,
+    "size": "(3.648362, 1.747086, 1.305132)",
+    "source": "res://assets/environment/industrial/generator.glb"
+  },
+  {
+    "height": 0.812382340431213,
+    "name": "Industrial Kiste",
+    "scale": 1.0,
+    "size": "(0.810146, 0.812382, 0.810147)",
+    "source": "res://assets/environment/industrial/box_wood.glb"
+  },
+  {
+    "height": 0.954746305942535,
+    "name": "Industrial Fass",
+    "scale": 1.0,
+    "size": "(0.529676, 0.954746, 0.556934)",
+    "source": "res://assets/environment/industrial/barrel_1.glb"
+  },
+  {
+    "height": 0.9,
+    "name": "Street Fass",
+    "scale": 0.508061024815608,
+    "size": "(0.625541, 0.9, 0.609673)",
+    "source": "res://assets/source/environment_candidates/street_furniture/Barrel/Barrel.fbx"
+  },
+  {
+    "height": 0.8,
+    "name": "Street Kiste",
+    "scale": 0.4,
+    "size": "(0.8, 0.8, 0.8)",
+    "source": "res://assets/source/environment_candidates/street_furniture/Box/Box.fbx"
+  },
+  {
+    "height": 0.7,
+    "name": "Klimagerät",
+    "scale": 0.5833332522048,
+    "size": "(0.7, 0.7, 1.05)",
+    "source": "res://assets/source/environment_candidates/street_furniture/Conditioner/Conditioner.fbx"
+  }
+]

@@ -1,0 +1,546 @@
+[gd_scene format=4]
+
+[ext_resource type="Script" path="res://scripts/environment_preview.gd" id="1_kutrm"]
+[ext_resource type="PackedScene" path="res://assets/source/environment_candidates/urban/Hangar1.glb" id="2_jo7j6"]
+[ext_resource type="Texture2D" path="res://assets/source/environment_candidates/urban/Hangar1_houses.png" id="3_usmno"]
+[ext_resource type="PackedScene" path="res://assets/environment/industrial/cargo_1_open.glb" id="4_n65lk"]
+[ext_resource type="Texture2D" path="res://assets/environment/industrial/cargo_1_open_Cargo_1.png" id="5_1c8n7"]
+[ext_resource type="PackedScene" path="res://assets/source/environment_candidates/urban/road_1_straight_no_sides.glb" id="6_dy8gq"]
+[ext_resource type="Texture2D" path="res://assets/source/environment_candidates/urban/road_1_straight_no_sides_road1_alt.png" id="7_kf3qb"]
+[ext_resource type="PackedScene" path="res://assets/source/environment_candidates/urban/road_1_corner_no_sides.glb" id="8_l4urr"]
+[ext_resource type="Texture2D" path="res://assets/source/environment_candidates/urban/road_1_corner_no_sides_road1_alt.png" id="9_3fcvf"]
+[ext_resource type="PackedScene" path="res://assets/source/environment_candidates/nature/tree01.glb" id="10_3ed04"]
+[ext_resource type="Texture2D" path="res://assets/source/environment_candidates/nature/tree01_summer.png" id="11_8lr0r"]
+[ext_resource type="PackedScene" path="res://assets/source/environment_candidates/nature/tree05.glb" id="12_lafgd"]
+[ext_resource type="Texture2D" path="res://assets/source/environment_candidates/nature/tree05_summer.png" id="13_lmlyc"]
+[ext_resource type="PackedScene" path="res://assets/source/environment_candidates/nature/bush01.glb" id="14_7pbof"]
+[ext_resource type="Texture2D" path="res://assets/source/environment_candidates/nature/bush1_summer.png" id="15_nn3os"]
+[ext_resource type="PackedScene" path="res://assets/source/environment_candidates/nature/grass01.glb" id="16_togwg"]
+[ext_resource type="Texture2D" path="res://assets/source/environment_candidates/nature/grass_summer.png" id="17_kknh3"]
+[ext_resource type="PackedScene" path="res://assets/environment/industrial/generator.glb" id="18_7bdj3"]
+[ext_resource type="Texture2D" path="res://assets/environment/industrial/generator_Generator5.png" id="19_qi5fe"]
+[ext_resource type="PackedScene" path="res://assets/environment/industrial/box_wood.glb" id="20_st61t"]
+[ext_resource type="Texture2D" path="res://assets/environment/industrial/box_wood_Box_wood5.png" id="21_xud2y"]
+[ext_resource type="PackedScene" path="res://assets/environment/industrial/barrel_1.glb" id="22_5hasu"]
+[ext_resource type="Texture2D" path="res://assets/environment/industrial/barrel_1_Barrel_15.png" id="23_8crik"]
+[ext_resource type="PackedScene" path="res://assets/source/environment_candidates/street_furniture/Barrel/Barrel.fbx" id="24_rf1ji"]
+[ext_resource type="Texture2D" path="res://assets/source/environment_candidates/street_furniture/Barrel/barrel.png" id="25_sg1hf"]
+[ext_resource type="PackedScene" path="res://assets/source/environment_candidates/street_furniture/Box/Box.fbx" id="26_8syo8"]
+[ext_resource type="Texture2D" path="res://assets/source/environment_candidates/street_furniture/Box/Box.png" id="27_e5s4f"]
+[ext_resource type="PackedScene" path="res://assets/source/environment_candidates/street_furniture/Conditioner/Conditioner.fbx" id="28_txjnm"]
+[ext_resource type="Texture2D" path="res://assets/source/environment_candidates/street_furniture/Conditioner/Conditioner.png" id="29_pymci"]
+
+[sub_resource type="Environment" id="Environment_2rvc7"]
+background_mode = 1
+background_color = Color(0.18, 0.2, 0.23, 1)
+ambient_light_source = 2
+ambient_light_color = Color(0.82, 0.86, 0.91, 1)
+ambient_light_energy = 0.65
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wtji2"]
+albedo_color = Color(0.26, 0.28, 0.29, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_m1qg7"]
+material = SubResource("StandardMaterial3D_wtji2")
+size = Vector2(65, 60)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yvfjc"]
+resource_name = "Houses"
+cull_mode = 2
+albedo_texture = ExtResource("3_usmno")
+texture_filter = 2
+metadata/_gltf_primary_texture_coord = 0
+
+
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d287b"]
+resource_name = "material_0"
+albedo_texture = ExtResource("5_1c8n7")
+metadata/_gltf_primary_texture_coord = 0
+
+
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oam2b"]
+resource_name = "Road"
+cull_mode = 2
+albedo_texture = ExtResource("7_kf3qb")
+texture_filter = 2
+metadata/_gltf_primary_texture_coord = 0
+
+
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gyd33"]
+resource_name = "Road"
+cull_mode = 2
+albedo_texture = ExtResource("9_3fcvf")
+texture_filter = 2
+metadata/_gltf_primary_texture_coord = 0
+
+
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_efmlk"]
+transparency = 2
+alpha_scissor_threshold = 0.45
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("11_8lr0r")
+roughness = 0.95
+texture_filter = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mkf4w"]
+
+
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uv8oj"]
+
+
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_02ucj"]
+transparency = 2
+alpha_scissor_threshold = 0.45
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("13_lmlyc")
+roughness = 0.95
+texture_filter = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rllbc"]
+
+
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2d3sy"]
+
+
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p3444"]
+transparency = 2
+alpha_scissor_threshold = 0.45
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("15_nn3os")
+roughness = 0.95
+texture_filter = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_el5yi"]
+
+
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pi7cs"]
+transparency = 2
+alpha_scissor_threshold = 0.45
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("17_kknh3")
+roughness = 0.95
+texture_filter = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xxo3h"]
+
+
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_047cd"]
+resource_name = "Generator4"
+albedo_texture = ExtResource("19_qi5fe")
+emission_enabled = true
+emission_energy_multiplier = 0.0
+metadata/_gltf_primary_texture_coord = 0
+
+
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l27ps"]
+resource_name = "Box_wood4"
+albedo_texture = ExtResource("21_xud2y")
+emission_enabled = true
+emission_energy_multiplier = 0.0
+metadata/_gltf_primary_texture_coord = 0
+
+
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6fs54"]
+resource_name = "Barrel_14"
+albedo_texture = ExtResource("23_8crik")
+emission_enabled = true
+emission_energy_multiplier = 0.0
+metadata/_gltf_primary_texture_coord = 0
+
+
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_odv8j"]
+albedo_texture = ExtResource("25_sg1hf")
+roughness = 0.95
+texture_filter = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jcoic"]
+resource_name = "Material.001"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.9063318, 0.9063318, 0.9063318, 1)
+emission_enabled = true
+
+
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cxvik"]
+albedo_texture = ExtResource("27_e5s4f")
+roughness = 0.95
+texture_filter = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n0mre"]
+resource_name = "Material.001"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.9063318, 0.9063318, 0.9063318, 1)
+emission_enabled = true
+
+
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_amh7n"]
+albedo_texture = ExtResource("29_pymci")
+roughness = 0.95
+texture_filter = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_isuhp"]
+resource_name = "Material.001"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.9063318, 0.9063318, 0.9063318, 1)
+emission_enabled = true
+
+
+
+[sub_resource type="BoxMesh" id="BoxMesh_d5a7d"]
+size = Vector3(0.12, 1.8, 0.12)
+
+[node name="EnvironmentPreview" type="Node3D" unique_id=273038249]
+script = ExtResource("1_kutrm")
+
+[node name="@WorldEnvironment@2" type="WorldEnvironment" parent="." unique_id=1108375961]
+environment = SubResource("Environment_2rvc7")
+
+[node name="@DirectionalLight3D@3" type="DirectionalLight3D" parent="." unique_id=17710796]
+transform = Transform3D(0.81915206, 0.43938506, -0.36868784, 0, 0.64278764, 0.76604444, 0.57357645, -0.62750685, 0.5265408, 0, 0, 0)
+shadow_enabled = true
+
+[node name="InspectionFloor" type="MeshInstance3D" parent="." unique_id=934801]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.03, 0)
+mesh = SubResource("PlaneMesh_m1qg7")
+
+[node name="Buildings" type="Node3D" parent="." unique_id=458595626]
+
+[node name="Urban Hangar" type="Node3D" parent="Buildings" unique_id=1201051379]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0, -10)
+
+[node name="Hangar12" parent="Buildings/Urban Hangar" unique_id=1547940896 instance=ExtResource("2_jo7j6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.78465, 0.005010128, 34)
+
+[node name="Hangar1" parent="Buildings/Urban Hangar/Hangar12" index="0" unique_id=1975474017]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, -0.005010128, -34)
+
+[node name="Cargo offen" type="Node3D" parent="Buildings" unique_id=2124353563]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -10)
+
+[node name="Cargo_1_open" parent="Buildings/Cargo offen" unique_id=252228091 instance=ExtResource("4_n65lk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1920929e-06, -1.8626451e-09, -1.9073486e-06)
+
+[node name="Cargo_1_open2" parent="Buildings/Cargo offen/Cargo_1_open" index="0" unique_id=1917713832]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.060352325, 0.010575838, -0.0058898926)
+
+[node name="Roads" type="Node3D" parent="." unique_id=898061311]
+
+[node name="Straße gerade 8 m" type="Node3D" parent="Roads" unique_id=932981727]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0, 14)
+
+[node name="road_1_straight_no_sides2" parent="Roads/Straße gerade 8 m" unique_id=1221269937 instance=ExtResource("6_dy8gq")]
+transform = Transform3D(0.4999999, 0, 0, 0, 0.4999999, 0, 0, 0, 0.4999999, 0, 0, -46.999992)
+
+[node name="road_1_straight_no_sides" parent="Roads/Straße gerade 8 m/road_1_straight_no_sides2" index="0" unique_id=174209468]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 86)
+
+[node name="Straßenkurve" type="Node3D" parent="Roads" unique_id=79487984]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 14)
+
+[node name="road_1_corner_no_sides2" parent="Roads/Straßenkurve" unique_id=2144733112 instance=ExtResource("8_l4urr")]
+transform = Transform3D(0.49999997, 0, 0, 0, 0.49999997, 0, 0, 0, 0.49999997, 0, 0, -73.99999)
+
+[node name="road_1_corner_no_sides" parent="Roads/Straßenkurve/road_1_corner_no_sides2" index="0" unique_id=124975524]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 140)
+
+[node name="Vegetation" type="Node3D" parent="." unique_id=717522739]
+
+[node name="Baum 01" type="Node3D" parent="Vegetation" unique_id=1165904942]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 0, 5)
+
+[node name="tree012" parent="Vegetation/Baum 01" unique_id=773377958 instance=ExtResource("10_3ed04")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1920929e-07, 0.23740837, 1.1920929e-07)
+
+[node name="tree01" parent="Vegetation/Baum 01/tree012" index="0" unique_id=1916118342]
+material_override = SubResource("StandardMaterial3D_efmlk")
+
+[node name="tree01_top" parent="Vegetation/Baum 01/tree012/tree01" index="0" unique_id=1311200054]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.4, 0.001)
+material_override = SubResource("StandardMaterial3D_efmlk")
+
+[node name="Baum 05" type="Node3D" parent="Vegetation" unique_id=1915570643]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, 0, 5)
+
+[node name="tree052" parent="Vegetation/Baum 05" unique_id=1619255065 instance=ExtResource("12_lafgd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.19466354, 0)
+
+[node name="tree05" parent="Vegetation/Baum 05/tree052" index="0" unique_id=737813193]
+material_override = SubResource("StandardMaterial3D_02ucj")
+
+[node name="tree05_top" parent="Vegetation/Baum 05/tree052/tree05" index="0" unique_id=23952858]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.4, 0)
+material_override = SubResource("StandardMaterial3D_02ucj")
+
+[node name="Busch 01" type="Node3D" parent="Vegetation" unique_id=1252384321]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 0, 12)
+
+[node name="bush01" parent="Vegetation/Busch 01" unique_id=750986683 instance=ExtResource("14_7pbof")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.956436e-08, 0)
+
+[node name="bush1" parent="Vegetation/Busch 01/bush01" index="0" unique_id=434351739]
+material_override = SubResource("StandardMaterial3D_p3444")
+
+[node name="Gras 01" type="Node3D" parent="Vegetation" unique_id=1442281307]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25, 0, 12)
+
+[node name="grass01" parent="Vegetation/Gras 01" unique_id=1184693542 instance=ExtResource("16_togwg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0024999976, 0, 0)
+
+[node name="grass1" parent="Vegetation/Gras 01/grass01" index="0" unique_id=101496627]
+material_override = SubResource("StandardMaterial3D_pi7cs")
+
+[node name="IndustrialProps" type="Node3D" parent="." unique_id=1050475672]
+
+[node name="Generator" type="Node3D" parent="IndustrialProps" unique_id=995002931]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -12)
+
+[node name="Generator" parent="IndustrialProps/Generator" unique_id=997167492 instance=ExtResource("18_7bdj3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1920929e-07, 0, 2.9802322e-07)
+
+[node name="Generator2" parent="IndustrialProps/Generator/Generator" index="0" unique_id=1970741987]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.026715787, 0)
+
+[node name="Industrial Kiste" type="Node3D" parent="IndustrialProps" unique_id=442332633]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, -6)
+
+[node name="Box_wood" parent="IndustrialProps/Industrial Kiste" unique_id=1858383621 instance=ExtResource("20_st61t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.9604645e-08, 0, -5.9604645e-08)
+
+[node name="Box_wood2" parent="IndustrialProps/Industrial Kiste/Box_wood" index="0" unique_id=556993312]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.037495624, 0)
+
+[node name="Industrial Fass" type="Node3D" parent="IndustrialProps" unique_id=813441600]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, -6)
+
+[node name="Barrel_1" parent="IndustrialProps/Industrial Fass" unique_id=661194179 instance=ExtResource("22_5hasu")]
+
+[node name="Barrel_12" parent="IndustrialProps/Industrial Fass/Barrel_1" index="0" unique_id=1243759817]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.032030176, 0)
+
+[node name="Street Fass" type="Node3D" parent="IndustrialProps" unique_id=888532105]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, -6)
+
+[node name="Barrel" parent="IndustrialProps/Street Fass" unique_id=1368890596 instance=ExtResource("24_rf1ji")]
+transform = Transform3D(0.50806105, 0, 0, 0, 0.50806105, 0, 0, 0, 0.50806105, -0.007933821, 6.2989024e-08, 3.02828e-08)
+
+[node name="Cylinder_001" parent="IndustrialProps/Street Fass/Barrel" index="0" unique_id=221771533]
+transform = Transform3D(1, 0, 0, 0, -1.1920929e-07, 0.99999994, 0, -0.99999994, -1.1920929e-07, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_odv8j")
+
+[node name="Street Kiste" type="Node3D" parent="IndustrialProps" unique_id=244710401]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23, 0, -6)
+
+[node name="Box" parent="IndustrialProps/Street Kiste" unique_id=1928103826 instance=ExtResource("26_8syo8")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.0035265207, 4.7683717e-08)
+
+[node name="Cube" parent="IndustrialProps/Street Kiste/Box" index="0" unique_id=680320446]
+transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, -0.008816183, 0)
+material_override = SubResource("StandardMaterial3D_cxvik")
+
+[node name="Klimagerät" type="Node3D" parent="IndustrialProps" unique_id=1565509168]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, -12)
+
+[node name="Conditioner" parent="IndustrialProps/Klimagerät" unique_id=652244408 instance=ExtResource("28_txjnm")]
+transform = Transform3D(0.58333325, 0, 0, 0, 0.58333325, 0, 0, 0, 0.58333325, 0, 6.2584874e-08, 3.476937e-08)
+
+[node name="Cube" parent="IndustrialProps/Klimagerät/Conditioner" index="0" unique_id=1090240432]
+transform = Transform3D(1, 0, 0, 0, -1.1920929e-07, 0.99999994, 0, -0.99999994, -1.1920929e-07, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_amh7n")
+
+[node name="@Label3D@4" type="Label3D" parent="." unique_id=47007103]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0.4, -5)
+pixel_size = 0.012
+billboard = 1
+modulate = Color(0.88, 0.88, 0.84, 1)
+text = "Urban Hangar"
+font_size = 36
+
+[node name="@Label3D@5" type="Label3D" parent="." unique_id=1020691625]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0.4, -7.5)
+pixel_size = 0.012
+billboard = 1
+modulate = Color(0.88, 0.88, 0.84, 1)
+text = "Cargo offen"
+font_size = 36
+
+[node name="@Label3D@6" type="Label3D" parent="." unique_id=1684664991]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0.4, 19)
+pixel_size = 0.012
+billboard = 1
+modulate = Color(0.88, 0.88, 0.84, 1)
+text = "Straße gerade 8 m"
+font_size = 36
+
+[node name="@Label3D@7" type="Label3D" parent="." unique_id=1824576161]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0.4, 19)
+pixel_size = 0.012
+billboard = 1
+modulate = Color(0.88, 0.88, 0.84, 1)
+text = "Straßenkurve"
+font_size = 36
+
+[node name="@Label3D@8" type="Label3D" parent="." unique_id=1013531644]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 0.4, 7.6800003)
+pixel_size = 0.012
+billboard = 1
+modulate = Color(0.88, 0.88, 0.84, 1)
+text = "Baum 01"
+font_size = 36
+
+[node name="@Label3D@9" type="Label3D" parent="." unique_id=910896338]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, 0.4, 7.6800003)
+pixel_size = 0.012
+billboard = 1
+modulate = Color(0.88, 0.88, 0.84, 1)
+text = "Baum 05"
+font_size = 36
+
+[node name="@Label3D@10" type="Label3D" parent="." unique_id=51406622]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 0.4, 13.35)
+pixel_size = 0.012
+billboard = 1
+modulate = Color(0.88, 0.88, 0.84, 1)
+text = "Busch 01"
+font_size = 36
+
+[node name="@Label3D@11" type="Label3D" parent="." unique_id=97398496]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25, 0.4, 13.202)
+pixel_size = 0.012
+billboard = 1
+modulate = Color(0.88, 0.88, 0.84, 1)
+text = "Gras 01"
+font_size = 36
+
+[node name="@Label3D@12" type="Label3D" parent="." unique_id=615805978]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0.4, -10.347434)
+pixel_size = 0.012
+billboard = 1
+modulate = Color(0.88, 0.88, 0.84, 1)
+text = "Generator"
+font_size = 36
+
+[node name="@Label3D@13" type="Label3D" parent="." unique_id=213047108]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0.4, -4.594927)
+pixel_size = 0.012
+billboard = 1
+modulate = Color(0.88, 0.88, 0.84, 1)
+text = "Industrial Kiste"
+font_size = 36
+
+[node name="@Label3D@14" type="Label3D" parent="." unique_id=5277897]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0.4, -4.721533)
+pixel_size = 0.012
+billboard = 1
+modulate = Color(0.88, 0.88, 0.84, 1)
+text = "Industrial Fass"
+font_size = 36
+
+[node name="@Label3D@15" type="Label3D" parent="." unique_id=722994406]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0.4, -4.6951632)
+pixel_size = 0.012
+billboard = 1
+modulate = Color(0.88, 0.88, 0.84, 1)
+text = "Street Fass"
+font_size = 36
+
+[node name="@Label3D@16" type="Label3D" parent="." unique_id=1633700225]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23, 0.4, -4.6)
+pixel_size = 0.012
+billboard = 1
+modulate = Color(0.88, 0.88, 0.84, 1)
+text = "Street Kiste"
+font_size = 36
+
+[node name="@Label3D@17" type="Label3D" parent="." unique_id=2079141384]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0.4, -10.475)
+pixel_size = 0.012
+billboard = 1
+modulate = Color(0.88, 0.88, 0.84, 1)
+text = "Klimagerät"
+font_size = 36
+
+[node name="@Label3D@18" type="Label3D" parent="." unique_id=402502052]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0.5, 18)
+pixel_size = 0.012
+billboard = 1
+modulate = Color(0.88, 0.88, 0.84, 1)
+text = "Felsen: Lizenz für Rohdatenweitergabe fehlt"
+font_size = 36
+
+[node name="ScaleReference_1_8m" type="MeshInstance3D" parent="." unique_id=189855472]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0.9, 1)
+mesh = SubResource("BoxMesh_d5a7d")
+
+[node name="@Label3D@19" type="Label3D" parent="." unique_id=1297963350]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 2.2, 1)
+pixel_size = 0.012
+billboard = 1
+modulate = Color(0.88, 0.88, 0.84, 1)
+text = "1,8 m"
+font_size = 36
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=961583737]
+transform = Transform3D(0.8422714, -0.26790944, 0.4677643, 0, 0.8677508, 0.49699956, -0.5390537, -0.41860852, 0.7308817, 32, 35, 50)
+current = true
+fov = 55.0
+far = 180.0
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=1415192581]
+
+[node name="Title" type="Label" parent="HUD" unique_id=1896308500]
+offset_left = 20.0
+offset_top = 16.0
+offset_right = 20.0
+offset_bottom = 16.0
+theme_override_font_sizes/font_size = 20
+
+[node name="@Label@20" type="Label" parent="HUD" unique_id=1320847846]
+offset_left = 20.0
+offset_top = 46.0
+offset_right = 20.0
+offset_bottom = 46.0
+theme_override_font_sizes/font_size = 14
+text = "0 Gesamt · 1 Gebäude · 2 Straße · 3 Natur · 4 Props | RMB ziehen: Orbit · Mausrad: Zoom"
+
+[node name="Credits" type="Label" parent="HUD"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = -26.0
+offset_right = 1260.0
+offset_bottom = -6.0
+theme_override_font_sizes/font_size = 12
+text = "Urban: valsekamerplant (CC0) · Industrial: godgoldfear (CC BY 4.0) · Natur: Elegant Crow · Props: Kkryy (CC0)"
+
+[editable path="Buildings/Urban Hangar/Hangar12"]
+[editable path="Buildings/Cargo offen/Cargo_1_open"]
+[editable path="Roads/Straße gerade 8 m/road_1_straight_no_sides2"]
+[editable path="Roads/Straßenkurve/road_1_corner_no_sides2"]
+[editable path="Vegetation/Baum 01/tree012"]
+[editable path="Vegetation/Baum 05/tree052"]
+[editable path="Vegetation/Busch 01/bush01"]
+[editable path="Vegetation/Gras 01/grass01"]
+[editable path="IndustrialProps/Generator/Generator"]
+[editable path="IndustrialProps/Industrial Kiste/Box_wood"]
+[editable path="IndustrialProps/Industrial Fass/Barrel_1"]
+[editable path="IndustrialProps/Street Fass/Barrel"]
+[editable path="IndustrialProps/Street Kiste/Box"]
+[editable path="IndustrialProps/Klimagerät/Conditioner"]

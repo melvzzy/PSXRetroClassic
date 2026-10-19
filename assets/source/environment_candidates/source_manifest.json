@@ -1,0 +1,194 @@
+[
+  {
+    "archive": "URBAN.zip",
+    "entry": "URBAN/Buildings Prebuild/Hangar1.glb",
+    "file": "assets/source/environment_candidates/urban/Hangar1.glb",
+    "sha256": "4803ebf50a6b77028207375fbe5ef94f1661fce0b264962621849ef0d6f05715",
+    "bytes": 246992,
+    "archive_sha256": "a92eb1f2be095bd63ff5f313f6a2ddf38057975dea830c1683971922f30c894d"
+  },
+  {
+    "archive": "URBAN.zip",
+    "entry": "URBAN/Roads/Road type 1/road_1_straight_no_sides.glb",
+    "file": "assets/source/environment_candidates/urban/road_1_straight_no_sides.glb",
+    "sha256": "7b711e573440b1fc2496d1af8a4e941b97228343fe57fe2510d9a2a73b1f5479",
+    "bytes": 68516,
+    "archive_sha256": "a92eb1f2be095bd63ff5f313f6a2ddf38057975dea830c1683971922f30c894d"
+  },
+  {
+    "archive": "URBAN.zip",
+    "entry": "URBAN/Roads/Road type 1/road_1_corner_no_sides.glb",
+    "file": "assets/source/environment_candidates/urban/road_1_corner_no_sides.glb",
+    "sha256": "e25205112a670f6044fbf06cef8b13f04bf863f8444f10c0514ec198a16d7eab",
+    "bytes": 68756,
+    "archive_sha256": "a92eb1f2be095bd63ff5f313f6a2ddf38057975dea830c1683971922f30c894d"
+  },
+  {
+    "archive": "Industrial_exterior_v1.zip",
+    "entry": "Industrial_exterior_v2/Models/IndustrialHorror_PS_like.fbx",
+    "file": "assets/source/environment_candidates/industrial/IndustrialHorror_PS_like.fbx",
+    "sha256": "f17fc1dbb8a569f74f7f8d8b0f0b027417ce8f477564ba5999605151a89ca232",
+    "bytes": 668796,
+    "archive_sha256": "a64ac6e29820571b5c9e97f7adc384b82c959478097ca7f433da6d836f59b6d3"
+  },
+  {
+    "archive": "Industrial_exterior_v1.zip",
+    "entry": "Industrial_exterior_v2/Textures/Building_1.png",
+    "file": "assets/source/environment_candidates/industrial/Building_1.png",
+    "sha256": "753dc2b58357f9b77749c9143a4840f2cb961b372506d9411d7df92954440500",
+    "bytes": 34122,
+    "archive_sha256": "a64ac6e29820571b5c9e97f7adc384b82c959478097ca7f433da6d836f59b6d3"
+  },
+  {
+    "archive": "Industrial_exterior_v1.zip",
+    "entry": "Industrial_exterior_v2/Textures/Cargo_1.png",
+    "file": "assets/source/environment_candidates/industrial/Cargo_1.png",
+    "sha256": "c743d00a968c088f11dd99a4daa2a299784b0ccf753ecb999dc4365e77b2024b",
+    "bytes": 29431,
+    "archive_sha256": "a64ac6e29820571b5c9e97f7adc384b82c959478097ca7f433da6d836f59b6d3"
+  },
+  {
+    "archive": "Industrial_exterior_v1.zip",
+    "entry": "Industrial_exterior_v2/Textures/Generator.png",
+    "file": "assets/source/environment_candidates/industrial/Generator.png",
+    "sha256": "a467f5f332fa0988e5d0dfc4ed57a4293351c8c989686e247883c8ff1b0e0aa8",
+    "bytes": 5367,
+    "archive_sha256": "a64ac6e29820571b5c9e97f7adc384b82c959478097ca7f433da6d836f59b6d3"
+  },
+  {
+    "archive": "Industrial_exterior_v1.zip",
+    "entry": "Industrial_exterior_v2/Textures/Box_wood.png",
+    "file": "assets/source/environment_candidates/industrial/Box_wood.png",
+    "sha256": "2a993c6eeb2b9db47f175a6faf7b7494d545a1874a2f7533a79bb49857630061",
+    "bytes": 7951,
+    "archive_sha256": "a64ac6e29820571b5c9e97f7adc384b82c959478097ca7f433da6d836f59b6d3"
+  },
+  {
+    "archive": "Industrial_exterior_v1.zip",
+    "entry": "Industrial_exterior_v2/Textures/Barrel_1.png",
+    "file": "assets/source/environment_candidates/industrial/Barrel_1.png",
+    "sha256": "0a4c6207060877519be9344be613d0ebe4021d40cb3460826774bfa5a4775f8b",
+    "bytes": 9255,
+    "archive_sha256": "a64ac6e29820571b5c9e97f7adc384b82c959478097ca7f433da6d836f59b6d3"
+  },
+  {
+    "archive": "Street Furniture.zip",
+    "entry": "Barrel/Barrel.fbx",
+    "file": "assets/source/environment_candidates/street_furniture/Barrel/Barrel.fbx",
+    "sha256": "318b9b945eb26acfff33d5c43acfac771445bf307d7b004fd90a54f5bdf32df8",
+    "bytes": 30092,
+    "archive_sha256": "f0750ab44a7edc705ff351509c74065f103a6abeddd3974ceb44f660e971d7e3"
+  },
+  {
+    "archive": "Street Furniture.zip",
+    "entry": "Barrel/barrel.png",
+    "file": "assets/source/environment_candidates/street_furniture/Barrel/barrel.png",
+    "sha256": "146f539d2f3c765efe811aa0cf212cf705e750e26a0447b456eebe974d7f8c61",
+    "bytes": 98580,
+    "archive_sha256": "f0750ab44a7edc705ff351509c74065f103a6abeddd3974ceb44f660e971d7e3"
+  },
+  {
+    "archive": "Street Furniture.zip",
+    "entry": "Box/Box.fbx",
+    "file": "assets/source/environment_candidates/street_furniture/Box/Box.fbx",
+    "sha256": "3ee7a2aa7c830dda013abfabf30a06f3876a3aa7f0db521f302188d1385af575",
+    "bytes": 15116,
+    "archive_sha256": "f0750ab44a7edc705ff351509c74065f103a6abeddd3974ceb44f660e971d7e3"
+  },
+  {
+    "archive": "Street Furniture.zip",
+    "entry": "Box/Box.png",
+    "file": "assets/source/environment_candidates/street_furniture/Box/Box.png",
+    "sha256": "170925e15cf4cbec6d2d6098e11dbb3ccc5f74e10069208d014e314d0a626da8",
+    "bytes": 15085,
+    "archive_sha256": "f0750ab44a7edc705ff351509c74065f103a6abeddd3974ceb44f660e971d7e3"
+  },
+  {
+    "archive": "Street Furniture.zip",
+    "entry": "Conditioner/Conditioner.fbx",
+    "file": "assets/source/environment_candidates/street_furniture/Conditioner/Conditioner.fbx",
+    "sha256": "96e70ec9ce683cbfcd0a7016291a60d4be0b2d750668889af8684b2d69e3c5ee",
+    "bytes": 16956,
+    "archive_sha256": "f0750ab44a7edc705ff351509c74065f103a6abeddd3974ceb44f660e971d7e3"
+  },
+  {
+    "archive": "Street Furniture.zip",
+    "entry": "Conditioner/Conditioner.png",
+    "file": "assets/source/environment_candidates/street_furniture/Conditioner/Conditioner.png",
+    "sha256": "0fd2b7c3fff2c2ebae5c2afdabfff38ccb95d2f2ae2587d014c2548e0ec19eea",
+    "bytes": 7908,
+    "archive_sha256": "f0750ab44a7edc705ff351509c74065f103a6abeddd3974ceb44f660e971d7e3"
+  },
+  {
+    "archive": "retro_nature_pack.zip",
+    "entry": "retro_nature_pack/models/glTF/trees/tree01.glb",
+    "file": "assets/source/environment_candidates/nature/tree01.glb",
+    "sha256": "6272d054a328fc74b03facb309c031511d82fa178f25143aa5f2ef4f426976ad",
+    "bytes": 38340,
+    "archive_sha256": "ff390aacfd1ecda2ba7124a95e05080f3ad0ce498a54fa7fbf31bb15f576a1c8"
+  },
+  {
+    "archive": "retro_nature_pack.zip",
+    "entry": "retro_nature_pack/models/glTF/trees/tree05.glb",
+    "file": "assets/source/environment_candidates/nature/tree05.glb",
+    "sha256": "3d1ca2e3e36418dae4a81decfa709cf537a34ae507c74da0ce29c14b5db87376",
+    "bytes": 46428,
+    "archive_sha256": "ff390aacfd1ecda2ba7124a95e05080f3ad0ce498a54fa7fbf31bb15f576a1c8"
+  },
+  {
+    "archive": "retro_nature_pack.zip",
+    "entry": "retro_nature_pack/models/glTF/bushes/bush01.glb",
+    "file": "assets/source/environment_candidates/nature/bush01.glb",
+    "sha256": "ea15b60383d33f5cea44c38e8466ef5eb5503fff98f2272382f7e4032e28de51",
+    "bytes": 21244,
+    "archive_sha256": "ff390aacfd1ecda2ba7124a95e05080f3ad0ce498a54fa7fbf31bb15f576a1c8"
+  },
+  {
+    "archive": "retro_nature_pack.zip",
+    "entry": "retro_nature_pack/models/glTF/grass/grass01.glb",
+    "file": "assets/source/environment_candidates/nature/grass01.glb",
+    "sha256": "4079b9c106bffd69a35cf39702114193ed33a580fcc8e52b86d2feb50ee8a8da",
+    "bytes": 1468,
+    "archive_sha256": "ff390aacfd1ecda2ba7124a95e05080f3ad0ce498a54fa7fbf31bb15f576a1c8"
+  },
+  {
+    "archive": "retro_nature_pack.zip",
+    "entry": "retro_nature_pack/textures/trees/tree01_summer.png",
+    "file": "assets/source/environment_candidates/nature/tree01_summer.png",
+    "sha256": "956f9cce3b538e523d03362fb42b94502cd5f7ed18adb130c1a7a0501c744ad5",
+    "bytes": 123358,
+    "archive_sha256": "ff390aacfd1ecda2ba7124a95e05080f3ad0ce498a54fa7fbf31bb15f576a1c8"
+  },
+  {
+    "archive": "retro_nature_pack.zip",
+    "entry": "retro_nature_pack/textures/trees/tree05_summer.png",
+    "file": "assets/source/environment_candidates/nature/tree05_summer.png",
+    "sha256": "bf60ecda9d5e0353e11b492a33b89cee6df0f0bf0a09839a0e63bf3eda4147b2",
+    "bytes": 118453,
+    "archive_sha256": "ff390aacfd1ecda2ba7124a95e05080f3ad0ce498a54fa7fbf31bb15f576a1c8"
+  },
+  {
+    "archive": "retro_nature_pack.zip",
+    "entry": "retro_nature_pack/textures/bushes/bush1_summer.png",
+    "file": "assets/source/environment_candidates/nature/bush1_summer.png",
+    "sha256": "7f50a3d4479858bd9e2ba69f6ef17ed7dceef8144d9af3b426f23b725e784b53",
+    "bytes": 20905,
+    "archive_sha256": "ff390aacfd1ecda2ba7124a95e05080f3ad0ce498a54fa7fbf31bb15f576a1c8"
+  },
+  {
+    "archive": "retro_nature_pack.zip",
+    "entry": "retro_nature_pack/textures/grass/grass_summer.png",
+    "file": "assets/source/environment_candidates/nature/grass_summer.png",
+    "sha256": "2fb5d72ed7d65d71a75958b3ef3b1dd2b7b93e010251619522123276adad06d4",
+    "bytes": 4581,
+    "archive_sha256": "ff390aacfd1ecda2ba7124a95e05080f3ad0ce498a54fa7fbf31bb15f576a1c8"
+  },
+  {
+    "archive": "retro_nature_pack.zip",
+    "entry": "retro_nature_pack/READ ME.txt",
+    "file": "assets/source/environment_candidates/nature/READ ME.txt",
+    "sha256": "558e9dadff9ca269451963f1098c5b795e160a9a580de5269c7c9b1589fc49c1",
+    "bytes": 331,
+    "archive_sha256": "ff390aacfd1ecda2ba7124a95e05080f3ad0ce498a54fa7fbf31bb15f576a1c8"
+  }
+]

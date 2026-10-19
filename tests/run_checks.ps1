@@ -57,6 +57,8 @@ try {
     Invoke-GodotCheck 'arms-weapon-polish' @('--headless', '--path', '.', '--script', 'res://tests/arms_weapon_polish_checks.gd')
     Invoke-GodotCheck 'four-weapons' @('--headless', '--path', '.', '--script', 'res://tests/four_weapon_checks.gd')
     Invoke-GodotCheck 'weapon-roster' @('--headless', '--path', '.', '--script', 'res://tests/weapon_roster_checks.gd')
+    Invoke-GodotCheck 'environment-preview' @('--headless', '--path', '.', 'res://scenes/previews/environment_preview.tscn', '--quit-after', '120')
+    Invoke-GodotCheck 'environment-assets' @('--headless', '--path', '.', '--script', 'res://tests/environment_preview_checks.gd')
     Write-Output 'All checks completed. Review any environment warnings above.'
 }
 finally {

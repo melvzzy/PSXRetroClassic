@@ -1,0 +1,389 @@
+[
+  {
+    "archive": "Classic 64 Asset Pack 0.6.zip",
+    "files": 872,
+    "models": 130,
+    "formats": [
+      ".blend"
+    ],
+    "license_entries": [
+      "- Classic 64 Asset Pack 0.6/Nature/Read Me.txt",
+      "- Classic 64 Asset Pack 0.6/Readme.txt",
+      "- Classic 64 Asset Pack 0.6/Rocks/- Read Me.txt"
+    ]
+  },
+  {
+    "archive": "All bushes.zip",
+    "files": 531,
+    "models": 524,
+    "formats": [
+      ".fbx",
+      ".glb"
+    ],
+    "license_entries": []
+  },
+  {
+    "archive": "all_fences.zip",
+    "files": 192,
+    "models": 158,
+    "formats": [
+      ".fbx",
+      ".glb"
+    ],
+    "license_entries": []
+  },
+  {
+    "archive": "Buildings.rar",
+    "files": 60,
+    "models": 0,
+    "formats": [],
+    "license_entries": []
+  },
+  {
+    "archive": "Builduings.rar",
+    "files": 19,
+    "models": 0,
+    "formats": [],
+    "license_entries": []
+  },
+  {
+    "archive": "Cabañas.rar",
+    "files": 6,
+    "models": 0,
+    "formats": [],
+    "license_entries": []
+  },
+  {
+    "archive": "Chairs&Tables_PSX_Asset_Pack.zip",
+    "files": 24,
+    "models": 1,
+    "formats": [
+      ".blend"
+    ],
+    "license_entries": []
+  },
+  {
+    "archive": "DEMO_LoomingLandmarks-V1.2.zip",
+    "files": 6,
+    "models": 3,
+    "formats": [
+      ".fbx",
+      ".glb",
+      ".obj"
+    ],
+    "license_entries": [
+      "DemoPack - Compressed/readme.txt"
+    ]
+  },
+  {
+    "archive": "Forest Model Pack.zip",
+    "files": 51,
+    "models": 21,
+    "formats": [
+      ".blend",
+      ".fbx"
+    ],
+    "license_entries": []
+  },
+  {
+    "archive": "FREE APOCA.zip",
+    "files": 24,
+    "models": 6,
+    "formats": [
+      ".blend",
+      ".fbx",
+      ".glb"
+    ],
+    "license_entries": []
+  },
+  {
+    "archive": "Industrial_exterior_v1.zip",
+    "files": 69,
+    "models": 1,
+    "formats": [
+      ".fbx"
+    ],
+    "license_entries": []
+  },
+  {
+    "archive": "Maquinas.rar",
+    "files": 12,
+    "models": 0,
+    "formats": [],
+    "license_entries": []
+  },
+  {
+    "archive": "Objects_Interior(Village)_Demo.rar",
+    "files": 125,
+    "models": 0,
+    "formats": [],
+    "license_entries": []
+  },
+  {
+    "archive": "Post-apocaliptic Shelter_Base.rar",
+    "files": 11,
+    "models": 0,
+    "formats": [],
+    "license_entries": []
+  },
+  {
+    "archive": "PSX modular house interior pack.zip",
+    "files": 269,
+    "models": 267,
+    "formats": [
+      ".glb"
+    ],
+    "license_entries": []
+  },
+  {
+    "archive": "psxAssets.zip",
+    "files": 351,
+    "models": 148,
+    "formats": [
+      ".blend",
+      ".fbx",
+      ".obj"
+    ],
+    "license_entries": [
+      "Assets/LICENSE.txt"
+    ]
+  },
+  {
+    "archive": "PSX_Large_Terrain_Rock_Pack.zip",
+    "files": 34,
+    "models": 25,
+    "formats": [
+      ".blend",
+      ".fbx"
+    ],
+    "license_entries": [
+      "RP/Licence.txt"
+    ]
+  },
+  {
+    "archive": "PSX_Large_Terrain_Rock_Pack_2.zip",
+    "files": 35,
+    "models": 25,
+    "formats": [
+      ".blend",
+      ".fbx"
+    ],
+    "license_entries": [
+      "PSX_Large_Terrain_Rock_Pack_2/RP2/Licence.txt"
+    ]
+  },
+  {
+    "archive": "PSX_The_Island_Pack.zip",
+    "files": 348,
+    "models": 192,
+    "formats": [
+      ".blend",
+      ".fbx",
+      ".gltf"
+    ],
+    "license_entries": [
+      "PSX_The_Island_Pack/TI/Licence.txt"
+    ]
+  },
+  {
+    "archive": "Retro Tree Pack v1.0.zip",
+    "files": 132,
+    "models": 64,
+    "formats": [
+      ".dae",
+      ".fbx",
+      ".glb",
+      ".obj"
+    ],
+    "license_entries": []
+  },
+  {
+    "archive": "retro_nature_pack.zip",
+    "files": 222,
+    "models": 120,
+    "formats": [
+      ".fbx",
+      ".glb",
+      ".obj"
+    ],
+    "license_entries": [
+      "retro_nature_pack/READ ME.txt"
+    ]
+  },
+  {
+    "archive": "Rocas.rar",
+    "files": 3,
+    "models": 0,
+    "formats": [],
+    "license_entries": []
+  },
+  {
+    "archive": "rocks.rar",
+    "files": 4,
+    "models": 0,
+    "formats": [],
+    "license_entries": []
+  },
+  {
+    "archive": "Sewer.rar",
+    "files": 29,
+    "models": 0,
+    "formats": [],
+    "license_entries": []
+  },
+  {
+    "archive": "Street Furniture.zip",
+    "files": 39,
+    "models": 26,
+    "formats": [
+      ".blend",
+      ".fbx"
+    ],
+    "license_entries": []
+  },
+  {
+    "archive": "Survival.rar",
+    "files": 36,
+    "models": 0,
+    "formats": [],
+    "license_entries": []
+  },
+  {
+    "archive": "URBAN.zip",
+    "files": 1011,
+    "models": 971,
+    "formats": [
+      ".blend",
+      ".fbx",
+      ".glb"
+    ],
+    "license_entries": []
+  },
+  {
+    "archive": "Vegetation.zip",
+    "files": 132,
+    "models": 1,
+    "formats": [
+      ".fbx"
+    ],
+    "license_entries": []
+  },
+  {
+    "archive": "Comida low poly.rar",
+    "files": 23,
+    "models": 0,
+    "formats": [],
+    "license_entries": []
+  },
+  {
+    "archive": "Exploration objects.rar",
+    "files": 33,
+    "models": 0,
+    "formats": [],
+    "license_entries": []
+  },
+  {
+    "archive": "miscmodelsAll.rar",
+    "files": 96,
+    "models": 0,
+    "formats": [],
+    "license_entries": []
+  },
+  {
+    "archive": "Models pack psx - new.rar",
+    "files": 152,
+    "models": 0,
+    "formats": [],
+    "license_entries": []
+  },
+  {
+    "archive": "Pesca.rar",
+    "files": 4,
+    "models": 0,
+    "formats": [],
+    "license_entries": []
+  },
+  {
+    "archive": "PSX-Ocean-Surface.zip",
+    "files": 10,
+    "models": 0,
+    "formats": [],
+    "license_entries": [
+      "README.md"
+    ]
+  },
+  {
+    "archive": "psx-textures-free-assets.zip",
+    "files": 87,
+    "models": 0,
+    "formats": [],
+    "license_entries": [
+      "psx-textures-free/LICENSE.txt",
+      "psx-textures-free/README.txt"
+    ]
+  },
+  {
+    "archive": "PSX_Sky_Sampler_v1-sky2test.zip",
+    "files": 57,
+    "models": 1,
+    "formats": [
+      ".glb"
+    ],
+    "license_entries": [
+      "PSX_Sky_Sampler/LICENSE.txt",
+      "PSX_Sky_Sampler/README.txt"
+    ]
+  },
+  {
+    "archive": "PSX_Wood_Textures.zip",
+    "files": 180,
+    "models": 0,
+    "formats": [],
+    "license_entries": []
+  },
+  {
+    "archive": "SBS - Base Materials Pack 256x256.rar",
+    "files": 128,
+    "models": 0,
+    "formats": [],
+    "license_entries": [
+      "License.txt\r"
+    ]
+  },
+  {
+    "archive": "SBS - Noise Texture Pack - 256x256.rar",
+    "files": 282,
+    "models": 0,
+    "formats": [],
+    "license_entries": [
+      "License.txt\r"
+    ]
+  },
+  {
+    "archive": "SBS - Seamless Sky Backgrounds - 512x512.rar",
+    "files": 106,
+    "models": 0,
+    "formats": [],
+    "license_entries": [
+      "License.txt\r"
+    ]
+  },
+  {
+    "archive": "SBS - Tiny Texture Pack - 256x256.zip",
+    "files": 126,
+    "models": 0,
+    "formats": [],
+    "license_entries": [
+      "License.txt"
+    ]
+  },
+  {
+    "archive": "skyscraper_pack.zip",
+    "files": 26,
+    "models": 18,
+    "formats": [
+      ".fbx"
+    ],
+    "license_entries": []
+  }
+]

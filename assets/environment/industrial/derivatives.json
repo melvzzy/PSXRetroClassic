@@ -1,0 +1,30 @@
+[
+  {
+    "source_mesh": "Cargo_1_open",
+    "source_archive": "Industrial_exterior_v1.zip",
+    "file": "assets/environment/industrial/cargo_1_open.glb",
+    "sha256": "59adbc60fc5a32858ee740b5063a30226284aab36be24ac121596162db7b76d4",
+    "conversion": "Godot 4.7.2 GLTFDocument, global basis preserved, bounds centered/grounded; Cargo albedo remapped to original Cargo_1.png"
+  },
+  {
+    "source_mesh": "Generator",
+    "source_archive": "Industrial_exterior_v1.zip",
+    "file": "assets/environment/industrial/generator.glb",
+    "sha256": "de64b3db162219ccfccbb05139010dee06b4d8185e082688370500b0452b4ffc",
+    "conversion": "Godot 4.7.2 GLTFDocument, global basis preserved, bounds centered/grounded; Cargo albedo remapped to original Cargo_1.png"
+  },
+  {
+    "source_mesh": "Box_wood",
+    "source_archive": "Industrial_exterior_v1.zip",
+    "file": "assets/environment/industrial/box_wood.glb",
+    "sha256": "eae544d9f51ca9b3db7b38d1a9c7ca9208f4142fb29a8f873197883574b41334",
+    "conversion": "Godot 4.7.2 GLTFDocument, global basis preserved, bounds centered/grounded; Cargo albedo remapped to original Cargo_1.png"
+  },
+  {
+    "source_mesh": "Barrel_1",
+    "source_archive": "Industrial_exterior_v1.zip",
+    "file": "assets/environment/industrial/barrel_1.glb",
+    "sha256": "aa1097bd6ce288045617da87f377c9dae79f97ed618f93e883fdadc8102a376b",
+    "conversion": "Godot 4.7.2 GLTFDocument, global basis preserved, bounds centered/grounded; Cargo albedo remapped to original Cargo_1.png"
+  }
+]

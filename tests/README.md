@@ -295,3 +295,32 @@ Aufnahmen: `.godot/checks/roster/`; Übersicht `hip_overview.png` und
 Das ist eine gesteuerte Renderprüfung, kein vollständiger manueller Windows-
 Spieltest oder FPS-Benchmark. Manuelle F5-Checkliste und Quellen:
 [Acht-Waffen-Setup](../docs/weapon_roster.md).
+
+
+## Isolierte Umgebungsvorschau
+
+Aktueller Durchlauf: **481 Checks bestanden** (vorhandene 442 + 39 neue
+Umgebungsprüfungen), alle mit Godot **4.7.2.stable.official.ed1daf0bf**.
+Headless-Import, begrenzter Startup, bestehende Arme-/Waffenpreviews und neuer
+Environment-Preview-Start bestanden. Startup/FPS-Testszene, Projektsettings,
+alle Waffen und Gameplay-Skripte wurden für diese Aufgabe nicht verändert.
+
+Zusätzlicher Windows-Grafiklauf: **46 Checks / 7 Aufnahmen**, Forward+ / Vulkan /
+RTX 5060 Ti. Fünf Gruppenansichten und zwei Gebäudeansichten auf 1,65-m-Augenhöhe
+visuell geprüft. Texturen, Alpha/Schatten, Herkunftsmaßstab, offene Cargo-Enden
+und geschlossenes Hallentor wurden anhand der Renderbilder bewertet. Nur die
+bekannte Windows-Zertifikatsspeicher-Meldung in den abschließenden Engine-Logs.
+**Godot 4.6.3 nicht getestet**, kein vollständiger manueller F6-Spieltest oder
+FPS-Benchmark behauptet.
+
+Reproduzieren:
+`Godot.exe --path . --script res://tests/environment_preview_checks.gd -- --capture`
+Bilder: `.godot/checks/environment/group_0.png` bis `group_4.png`, zusätzlich
+`eye_0.png` (offener Cargo-Durchgang) / `eye_1.png` (Hallentor außen).
+
+F6 manuell: `scenes/previews/environment_preview.tscn` öffnen, 0–4 drücken,
+rechte Maustaste ziehen, Mausrad zoomen. Rückseiten von Laub, Schatten, nahe
+Texturen, Augenhöhenmaß und Modellunterseiten prüfen. F5 muss unverändert den
+bisherigen Waffentest starten. Die Vorschau hat absichtlich keine begehbaren
+Kollisionen, Türen oder Gameplay-Logik. Auswahl, Lizenzgrenzen und Bereichsplan:
+[Umgebungsvorschau](../docs/environment_preview.md).

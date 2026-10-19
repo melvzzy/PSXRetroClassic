@@ -1,3 +1,6 @@
+> Folgestand: [gezielt importierte und gerenderte Umgebungsvorschau](environment_preview.md).
+> Der folgende Bericht dokumentiert die frühere Sichtung vor dem Import.
+
 # Umgebungssichtung: kleiner Außenposten
 
 Stand 19.10.2026. **Keine Umgebungsassets ins Spiel importiert, keine Karte gebaut.**
