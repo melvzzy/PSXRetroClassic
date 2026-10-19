@@ -452,3 +452,30 @@ Wechsel/Draw/Reload/Fokusverlust halten: kein unbeabsichtigter Neustart; erst
 loslassen und frisch drücken. Generator-E, Alt-Tab/Recapture und Beenden prüfen.
 Optional Show Arms + Makarov und Placeholder separat starten; tatsächliche FPS
 und subjektive Stärke der Waffenbewegungen manuell bewerten.
+
+
+## Kleiner technischer Qualitätsdurchgang
+
+**629 Regressionstests bestanden**, einschließlich Import, begrenztem F5-/
+Fallback-Start, aller acht Waffen, Fokus-/Reload-/Wechselzustände und Interaktionen.
+Zusätzlich **49 grafische Outdoor-Prüfungen / fünf Captures** bestanden; F5 und
+Umgebungsvorschau separat grafisch begrenzt gestartet. Abschließende Logs geprüft:
+nur bekannte Windows-Zertifikatsspeicher-Meldung, keine Projektfehler.
+
+Entfernt: 51 nachweislich unreferenzierte StandardMaterial3D-Blöcke und 21 danach
+unbenutzte Texture2D-Deklarationen aus outdoor_assets, outdoor_test und
+Umgebungsvorschau (zusammen etwa 11 KiB). Keine Assetdateien gelöscht. Alle
+Knotenabschnitte und verwendeten Materialblöcke bleiben unverändert; keine
+Gameplay-/Tuning-/Animations-/Fallback-Änderung. Direkte Ressourcenpfade und
+Skript-UIDs geprüft; keine fehlenden Ressourcen oder identischen Testskripte,
+alle Prüfsuiten im Runner. Überlappende, aber unterschiedliche Regressionen bleiben
+bewusst erhalten. Keine weiteren bestätigten Laufzeit-Probleme rechtfertigten
+Eingriffe; insbesondere keine spekulative Optimierung oder FPS-Zusage.
+
+Verwendet: **Godot 4.7.2.stable.official.ed1daf0bf**, Forward+/Vulkan/RTX 5060 Ti.
+Das vorhandene `Godot_v4.6.3-stable_win64.exe.zip` enthält ausschließlich den
+Konsolenstarter; der Startversuch meldet die fehlende Haupt-EXE. **4.6.3 konnte
+damit nicht getestet werden.** Das Originalarchiv bleibt unverändert; extrahierter
+Starter und Audit-/Engine-Logs liegen im ignorierten `.godot/checks/`.
+Ergebnislog: `.godot/checks/quality-pass-suite.txt`. Kein vollständiger manueller
+Gameplay-Test oder FPS-Benchmark.

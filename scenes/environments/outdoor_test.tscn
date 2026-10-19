@@ -15,15 +15,8 @@
 [ext_resource type="PackedScene" path="res://assets/source/environment_candidates/nature/bush01.glb" id="11_t1okb"]
 [ext_resource type="Texture2D" path="res://assets/source/environment_candidates/nature/bush1_summer.png" id="12_df8q6"]
 [ext_resource type="PackedScene" path="res://assets/source/environment_candidates/urban/road_1_straight_no_sides.glb" id="13_q08hl"]
-[ext_resource type="Texture2D" path="res://assets/source/environment_candidates/urban/road_1_straight_no_sides_road1_alt.png" id="14_k266i"]
 [ext_resource type="PackedScene" path="res://scenes/environments/outdoor_assets.tscn" id="15_macdo"]
-[ext_resource type="Texture2D" path="res://assets/source/environment_candidates/urban/Hangar1_houses.png" id="16_wrhw3"]
-[ext_resource type="Texture2D" path="res://assets/environment/industrial/cargo_1_open_Cargo_1.png" id="17_8ckow"]
-[ext_resource type="Texture2D" path="res://assets/source/environment_candidates/urban/road_1_corner_no_sides_road1_alt.png" id="18_vcvh3"]
 [ext_resource type="Texture2D" path="res://assets/source/environment_candidates/nature/grass_summer.png" id="19_4tdi0"]
-[ext_resource type="Texture2D" path="res://assets/environment/industrial/generator_Generator5.png" id="20_1j018"]
-[ext_resource type="Texture2D" path="res://assets/environment/industrial/box_wood_Box_wood5.png" id="21_idcd0"]
-[ext_resource type="Texture2D" path="res://assets/environment/industrial/barrel_1_Barrel_15.png" id="22_b4eo0"]
 [ext_resource type="Texture2D" path="res://assets/source/environment_candidates/street_furniture/Barrel/barrel.png" id="23_f3508"]
 [ext_resource type="Texture2D" path="res://assets/source/environment_candidates/street_furniture/Box/Box.png" id="24_s14k7"]
 [ext_resource type="Texture2D" path="res://assets/source/environment_candidates/street_furniture/Conditioner/Conditioner.png" id="25_tiqfd"]
@@ -236,14 +229,6 @@ albedo_texture = ExtResource("8_agbcp")
 roughness = 0.95
 texture_filter = 2
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mkf4w"]
-
-
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uv8oj"]
-
-
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_78wfj"]
 size = Vector3(0.42, 1.8, 0.42)
 
@@ -258,14 +243,6 @@ cull_mode = 2
 albedo_texture = ExtResource("10_iv01a")
 roughness = 0.95
 texture_filter = 2
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rllbc"]
-
-
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2d3sy"]
-
-
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_l4vv4"]
 size = Vector3(0.42, 1.8, 0.42)
@@ -288,44 +265,6 @@ albedo_texture = ExtResource("12_df8q6")
 roughness = 0.95
 texture_filter = 2
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_el5yi"]
-
-
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oam2b"]
-resource_name = "Road"
-cull_mode = 2
-albedo_texture = ExtResource("14_k266i")
-texture_filter = 2
-metadata/_gltf_primary_texture_coord = 0
-
-
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yvfjc"]
-resource_name = "Houses"
-cull_mode = 2
-albedo_texture = ExtResource("16_wrhw3")
-texture_filter = 2
-metadata/_gltf_primary_texture_coord = 0
-
-
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d287b"]
-resource_name = "material_0"
-albedo_texture = ExtResource("17_8ckow")
-metadata/_gltf_primary_texture_coord = 0
-
-
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gyd33"]
-resource_name = "Road"
-cull_mode = 2
-albedo_texture = ExtResource("18_vcvh3")
-texture_filter = 2
-metadata/_gltf_primary_texture_coord = 0
-
-
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pi7cs"]
 transparency = 2
 alpha_scissor_threshold = 0.45
@@ -335,75 +274,20 @@ albedo_texture = ExtResource("19_4tdi0")
 roughness = 0.95
 texture_filter = 2
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xxo3h"]
-
-
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_047cd"]
-resource_name = "Generator4"
-albedo_texture = ExtResource("20_1j018")
-emission_enabled = true
-emission_energy_multiplier = 0.0
-metadata/_gltf_primary_texture_coord = 0
-
-
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l27ps"]
-resource_name = "Box_wood4"
-albedo_texture = ExtResource("21_idcd0")
-emission_enabled = true
-emission_energy_multiplier = 0.0
-metadata/_gltf_primary_texture_coord = 0
-
-
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6fs54"]
-resource_name = "Barrel_14"
-albedo_texture = ExtResource("22_b4eo0")
-emission_enabled = true
-emission_energy_multiplier = 0.0
-metadata/_gltf_primary_texture_coord = 0
-
-
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_odv8j"]
 albedo_texture = ExtResource("23_f3508")
 roughness = 0.95
 texture_filter = 2
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jcoic"]
-resource_name = "Material.001"
-vertex_color_use_as_albedo = true
-albedo_color = Color(0.9063318, 0.9063318, 0.9063318, 1)
-emission_enabled = true
-
-
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cxvik"]
 albedo_texture = ExtResource("24_s14k7")
 roughness = 0.95
 texture_filter = 2
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n0mre"]
-resource_name = "Material.001"
-vertex_color_use_as_albedo = true
-albedo_color = Color(0.9063318, 0.9063318, 0.9063318, 1)
-emission_enabled = true
-
-
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_amh7n"]
 albedo_texture = ExtResource("25_tiqfd")
 roughness = 0.95
 texture_filter = 2
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_isuhp"]
-resource_name = "Material.001"
-vertex_color_use_as_albedo = true
-albedo_color = Color(0.9063318, 0.9063318, 0.9063318, 1)
-emission_enabled = true
-
-
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_6y3vx"]
 size = Vector3(0.81014633, 0.81238234, 0.8101466)
@@ -891,45 +775,15 @@ albedo_texture = ExtResource("35_macdo")
 roughness = 0.9
 texture_filter = 2
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7r15p"]
-resource_name = "Material"
-vertex_color_use_as_albedo = true
-albedo_color = Color(0.9063318, 0.9063318, 0.9063318, 1)
-emission_enabled = true
-
-
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6qe4t"]
 albedo_texture = ExtResource("37_8ckow")
 roughness = 0.9
 texture_filter = 2
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_abthu"]
-resource_name = "Material.001"
-vertex_color_use_as_albedo = true
-albedo_color = Color(0.9063318, 0.9063318, 0.9063318, 1)
-emission_enabled = true
-
-
-
-
-
-
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_et6mn"]
 albedo_texture = ExtResource("39_4tdi0")
 roughness = 0.9
 texture_filter = 2
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cdrvl"]
-resource_name = "Material.001"
-vertex_color_use_as_albedo = true
-albedo_color = Color(0.9063318, 0.9063318, 0.9063318, 1)
-emission_enabled = true
-
-
-
-
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_5x526"]
 size = Vector3(0.66103834, 0.71999997, 1.1073588)
