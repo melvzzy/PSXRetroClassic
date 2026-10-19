@@ -17,6 +17,7 @@ signal mouse_capture_changed(captured: bool)
 @export var crouching_height: float = 1.1
 @export var standing_eye_height: float = 1.65
 @export var crouching_eye_height: float = 0.95
+@export var stance_visual_response: float = 16.0
 @export_group("View")
 ## Radians per mouse pixel, independent of frame rate.
 @export var mouse_sensitivity: float = 0.002
@@ -29,6 +30,7 @@ var has_mouse_capture: bool = false
 var is_aiming: bool = false
 var _pitch: float = 0.0
 var _jump_requested: bool = false
+var _eye_query := PhysicsRayQueryParameters3D.new()
 var _standing_query := PhysicsShapeQueryParameters3D.new()
 
 @onready var body_shape: CollisionShape3D = $BodyShape
@@ -44,6 +46,8 @@ func _ready() -> void:
 	_standing_query.collision_mask = collision_mask
 	_standing_query.exclude = [get_rid()]
 	_standing_query.margin = 0.001
+	_eye_query.collision_mask = collision_mask
+	_eye_query.exclude = [get_rid()]
 	camera.fov = field_of_view
 	_set_crouching(false)
 	set_mouse_capture(true)
@@ -116,6 +120,13 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.y -= gravity * delta
 	move_and_slide()
+	# Clamp only against actual ceilings, not the instantly resized capsule.
+	if is_crouching and head.position.y > crouching_eye_height:
+		_eye_query.from = global_position + Vector3.UP * crouching_eye_height
+		_eye_query.to = global_position + Vector3.UP * (head.position.y + camera.near)
+		var ceiling: Dictionary = get_world_3d().direct_space_state.intersect_ray(_eye_query)
+		if not ceiling.is_empty():
+			head.position.y = minf(head.position.y, (ceiling["position"] as Vector3).y - global_position.y - camera.near)
 
 func can_stand() -> bool:
 	_standing_query.transform = global_transform
@@ -127,4 +138,7 @@ func _set_crouching(crouching: bool) -> void:
 	var height: float = crouching_height if crouching else standing_height
 	(body_shape.shape as CapsuleShape3D).height = height
 	body_shape.position.y = height * 0.5
-	head.position.y = crouching_eye_height if crouching else standing_eye_height
+
+func _process(delta: float) -> void:
+	var target_height: float = crouching_eye_height if is_crouching else standing_eye_height
+	head.position.y = lerpf(head.position.y, target_height, 1.0 - exp(-stance_visual_response * delta))

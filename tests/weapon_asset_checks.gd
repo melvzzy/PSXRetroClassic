@@ -54,6 +54,49 @@ func _run() -> void:
 	_expect(view.visible and not placeholder.visible and firearm.magazine == 12, "Playable scene uses Makarov while preserving existing ammo configuration")
 	_expect(not pistol.get_part("Magazine-Empty").visible and pistol.get_part("Magazine-Full").visible, "Alternate magazines do not overlap in-game")
 	_expect(view.skeleton.get_bone_count() == 52 and not view.find_child("AnimationPlayer", true, false).is_playing(), "Arms use a stable explicit hold, not an incompatible looping action")
+	var skeleton: Skeleton3D = view.skeleton
+	var hand_index: int = skeleton.find_bone("hand.R")
+	var hand_world: Transform3D = skeleton.global_transform * skeleton.get_bone_global_pose(hand_index)
+	var bind: Transform3D = hand_world.affine_inverse() * pistol.global_transform
+	var original_pistol: Transform3D = pistol.global_transform
+	var saved_poses: Array[Transform3D] = []
+	for bone: int in range(skeleton.get_bone_count()):
+		saved_poses.append(skeleton.get_bone_pose(bone))
+	var animation: AnimationPlayer = view.find_child("AnimationPlayer", true, false)
+	for clip: StringName in animation.get_animation_list():
+		var valid: bool = true
+		animation.play(clip)
+		for fraction: float in [0.0, 0.4, 0.9]:
+			animation.seek(animation.get_animation(clip).length * fraction, true)
+			animation.pause()
+			await _frames(2)
+			hand_world = skeleton.global_transform * skeleton.get_bone_global_pose(hand_index)
+			var actual: Transform3D = hand_world.affine_inverse() * pistol.global_transform
+			var muzzle: Node3D = firearm.get_node("Visuals/Muzzle")
+			valid = valid and actual.is_equal_approx(bind) and pistol.global_transform.is_finite()
+			valid = valid and absf(pistol.global_basis.determinant() - 1.0) < 0.001
+			valid = valid and muzzle.global_transform.is_equal_approx(pistol.get_node("Muzzle").global_transform)
+		_expect(valid, "%s: hand-local grip, orientation and muzzle remain valid" % clip)
+	for bone: int in range(skeleton.get_bone_count()):
+		skeleton.set_bone_pose(bone, saved_poses[bone])
+	await _frames(2)
+	_expect(pistol.global_transform.is_equal_approx(original_pistol), "Returning to the hold restores the weapon without accumulated drift")
+	# Moving the marker must change alignment; a fixed sight-height constant fails.
+	var altered_sight: Node3D = pistol.get_node("SightLine")
+	var sight_rest: Transform3D = altered_sight.transform
+	altered_sight.position += Vector3(0.012, 0.018, 0.0)
+	altered_sight.rotation.z = 0.08
+	Input.action_press("aim")
+	await _frames(35)
+	var center: Vector2 = root.get_visible_rect().size * 0.5
+	_expect(actor.camera.unproject_position(altered_sight.global_position).distance_to(center) < 2.0,
+		"ADS derives alignment from a translated and rotated sight marker")
+	_expect(altered_sight.global_basis.is_equal_approx(actor.camera.global_basis), "ADS aligns the marker basis without rotating the camera")
+	Input.action_release("aim")
+	altered_sight.transform = sight_rest
+	await _frames(35)
+	_expect(pistol.global_transform.origin.distance_to(original_pistol.origin) < 0.001,
+		"Hip placement survives marker changes and ADS transitions")
 	var slide: Node3D = pistol.get_part("Slide")
 	var magazine: Node3D = pistol.get_part("Magazine-Full")
 	var slide_rest: Vector3 = slide.position
@@ -90,8 +133,10 @@ func _run() -> void:
 	actor.set_mouse_capture(false)
 	_expect(not firearm.is_reloading and magazine.position.is_equal_approx(magazine_rest), "Focus/capture release cancels reload and resets the visual magazine")
 	var imported_muzzle: Vector3 = firearm.get_node("Visuals/Muzzle").position
+	# A rotated animated muzzle must also restore the placeholder orientation.
+	firearm.get_node("Visuals/Muzzle").rotation = Vector3(0.2, -0.3, 0.1)
 	view.set_imported_visible(false)
-	_expect(placeholder.visible and not view.visible and firearm.get_node("Visuals/Muzzle").position.is_equal_approx(Vector3(0, 0.03, -0.37)), "Original placeholder and muzzle can be restored as a fallback")
+	_expect(placeholder.visible and not view.visible and firearm.get_node("Visuals/Muzzle").transform.is_equal_approx(Transform3D(Basis.IDENTITY, Vector3(0, 0.03, -0.37))), "Original placeholder and muzzle can be restored as a fallback")
 	view.set_imported_visible(true)
 	_expect(not placeholder.visible and firearm.get_node("Visuals/Muzzle").position.is_equal_approx(imported_muzzle), "Imported model can be restored without rebuilding firearm state")
 	_expect(firearm.magazine == 11 and firearm.reserve == 48, "Visual changes and canceled reload never mutate ammunition")

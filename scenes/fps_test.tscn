@@ -103,7 +103,7 @@ shape = SubResource("CeilingShape")
 [node name="Label" type="Label3D" parent="CrouchClearance"]
 position = Vector3(0, 0.5, 0)
 text = "Ducktest: Ctrl halten"
-font_size = 32
+font_size = 22
 billboard = 1
 
 [node name="CrateA" type="RigidBody3D" parent="."]
@@ -148,7 +148,7 @@ prompt = "E — Schalter umlegen"
 [node name="Status" type="Label3D" parent="Switch"]
 position = Vector3(0, 0.6, 0)
 text = "Schalter: AUS"
-font_size = 32
+font_size = 22
 billboard = 1
 
 [node name="Player" parent="." instance=ExtResource("1")]
@@ -165,7 +165,7 @@ shape = SubResource("TargetShape")
 [node name="Label" type="Label3D" parent="Target"]
 position = Vector3(0, 0.75, 0)
 text = "Treffer: 0"
-font_size = 28
+font_size = 20
 billboard = 1
 
 [node name="HUD" type="CanvasLayer" parent="."]
@@ -257,5 +257,5 @@ offset_left = -128.0
 offset_top = 16.0
 offset_right = -16.0
 offset_bottom = 52.0
-text = "Beenden (Q)"
+text = "Beenden"
 focus_mode = 0

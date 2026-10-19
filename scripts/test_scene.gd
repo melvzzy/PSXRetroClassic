@@ -25,6 +25,9 @@ func _on_mouse_capture_changed(captured: bool) -> void:
 		$HUD/HitMarker.visible = false
 
 func _process(delta: float) -> void:
+	var captured: bool = $Player.has_mouse_capture
+	$HUD/Crosshair.visible = captured and not weapon.is_aiming and weapon.is_weapon_ready()
+	$HUD/Ammo.visible = captured and not weapon.is_holstered
 	_hit_marker_left = maxf(0.0, _hit_marker_left - delta)
 	$HUD/HitMarker.visible = _hit_marker_left > 0.0
 
@@ -36,10 +39,6 @@ func _on_weapon_status_changed(text: String) -> void:
 
 func _on_hit_confirmed() -> void:
 	_hit_marker_left = 0.1
-
-func _unhandled_input(event: InputEvent) -> void:
-	if event.is_action_pressed("quit_game"):
-		_quit()
 
 func _on_prompt_changed(text: String) -> void:
 	prompt.text = text

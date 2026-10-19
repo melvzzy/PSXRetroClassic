@@ -57,7 +57,7 @@ func _run() -> void:
 	_expect(player.is_on_floor() and absf(player.position.y) < 0.05, "Gravity returns player to the floor")
 	Input.action_press("crouch")
 	await _frames(2)
-	_expect(player.is_crouching and is_equal_approx(player.head.position.y, player.crouching_eye_height), "Crouch changes capsule and eye height")
+	_expect(player.is_crouching and is_equal_approx((player.body_shape.shape as CapsuleShape3D).height, player.crouching_height) and player.head.position.y < player.standing_eye_height and player.head.position.y > player.crouching_eye_height, "Crouch resizes collision immediately while visual eye transitions")
 	Input.action_press("move_forward")
 	Input.action_press("sprint")
 	_key(KEY_SPACE, true)

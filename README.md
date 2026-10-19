@@ -89,3 +89,20 @@ Render-Captures geprüft. Zielversion 4.6.3, vollständige manuelle Bedienung un
 Spielgefühl sind noch offen; lokal stand nur Godot 4.7.2 zur Verfügung.
 Waffen-spezifische Hand-/Nachladeanimationen, Sounds und weitere Spielsysteme
 bleiben bewusst zurückgestellt.
+
+
+### Foundation-Polish
+
+X senkt/zieht die Waffe in etwa 0,22 s. Währenddessen und weggesteckt sind
+Feuer, ADS und Reload gesperrt; Holstern bricht Nachladen ohne Munitionstransfer
+ab. Gehaltene Maustasten aktivieren nach dem Ziehen keine Aktion. Die Arme
+blenden zwischen vorhandener Halte- und entspannter Quellpose; keine neue
+animierte Holster-/Reload-Sequenz wird behauptet.
+
+Ducken/Aufstehen interpoliert nur die Kamerahöhe; Kapsel und Standfreigabe bleiben
+physikalisch sofort wirksam. Mausblick und Bewegung werden nicht geglättet.
+Forward+ verwendet 4× MSAA, im ADS entfällt das zusätzliche Fadenkreuz.
+Der konfigurierbare 60-ms-Schusspuffer gilt nur am Ende des Cooldowns und nur
+solange die Taste gehalten wird. Loslassen, Fokusverlust, Holstern oder Reload
+löschen ihn; zu frühe Klicks werden nicht nachträglich ausgeführt. Q beendet
+nicht mehr das Spiel.

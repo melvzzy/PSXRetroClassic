@@ -172,3 +172,49 @@ beurteilen. Treffer auf Tafel/Props mit Visier vergleichen. Fallback vor Start
 am MakarovViewmodel einschalten und separat prüfen. F6-Waffen-Preview: alle fünf
 Modelle/Teile, Drehung, Distanz und Arms-Referenz prüfen. Tatsächliche FPS und
 Spielgefühl bleiben manuell zu bewerten. Details: [Waffenbericht](../assets/source/weapon_candidates/README.md).
+
+
+## Fokussierte Handbindung-/ADS-Reparatur (19.10.2026)
+
+Vor Änderungen: 151 Checks bestanden. Nach der Reparatur: 173 Checks
+(40 FPS, 43 Gunplay, 32 Arme, 58 Waffenmodelle). Alle 18 Arm-Clips werden an
+je drei Zeitpunkten auf konstanten handlokalen Griff, gültige Orientierung und
+passende Mündung geprüft. Wiederherstellen der Haltepose darf keine Drift
+hinterlassen. Eine absichtlich verschobene/gedrehte SightLine muss weiterhin
+zentriert werden; danach muss die Hip-Position zurückkehren. Vorhandene
+Schuss-/Reload-/Fokus-/Fallback-Checks bleiben aktiv.
+
+Godot 4.7.2.stable.official.ed1daf0bf; 4.6.3 nicht verfügbar/verifiziert.
+Headless-Import und begrenzte Starts erfolgreich. Grafiklauf: 66 Checks,
+Forward+/Vulkan/RTX 5060 Ti; Hip- und ADS-Captures visuell geprüft, kein manueller
+Gameplay-Durchlauf. Bekannte Zertifikatsspeicher-Meldung der Umgebung bleibt.
+
+F5 manuell: Laufen/Ducken/Springen; Hip/ADS mehrfach wechseln; beim Zielen
+schießen; partiell/leer nachladen; Esc/Alt-Tab und erneute Mausaufnahme;
+Treffer auf Tafel/Props vergleichen; Griff/Finger und Wand-Clipping ansehen.
+Fallback vor Start deaktivieren und Schießen/ADS/Reload separat prüfen.
+Die Quellclips sind technische Bindungsproben, keine neu integrierten
+Pistolenanimationen; vorläufige Finger-/Reload-Durchdringungen bleiben möglich.
+
+
+## Aktueller Foundation-Polish
+
+Ausgangsbasis: 173 Checks. Zusätzlich `foundation_polish_checks.gd` mit 32
+gezielten Checks: X/Holster/Draw, wiederholte Eingaben, Reload-Abbruch ohne
+Ammo-Transfer, gehaltene Maustasten, Puffergrenzen und -abbruch, Fallback,
+ADS nach Posewechsel, Kameraübergänge, HUD, entfernte Q-Bindung und 4× MSAA.
+Der bestehende Crouch-Check erwartet jetzt sofortige Kapseländerung bei
+interpolierender Augenhöhe. Gesamtsuite: 205 Checks (40+43+32+58+32).
+
+Godot 4.7.2.stable.official.ed1daf0bf; 4.6.3 weiterhin nicht installiert/getestet.
+Import und begrenzte Starts werden vom bestehenden Runner erfasst. Grafikcheck:
+`godot --path . --script res://tests/foundation_polish_checks.gd -- --capture`
+mit vier Ansichten (Ready, ADS, Übergang, Holstered) und 36 Checks; Forward+,
+Vulkan, RTX 5060 Ti. Renderprüfung ersetzt keinen manuellen Windows-Spieltest
+oder verlässlichen FPS-Benchmark. Bekannte Windows-Zertifikatsmeldung bleibt.
+
+F5: WASD/Sprint/Jump, Ctrl langsam/schnell unter niedriger Decke, mehrfach X,
+X während Reload/ADS, gedrückte LMB/RMB beim Ziehen, einzelne/rasche Schüsse,
+Reload partiell/leer, Props/Tafel treffen, E weggesteckt, Esc/Alt-Tab/Recapture,
+HUD und Q ohne Wirkung, Beenden-Button. Fingerkontakt, Holster-Übergang und
+Wand-Clipping visuell bewerten; FPS im Godot-Monitor separat messen.

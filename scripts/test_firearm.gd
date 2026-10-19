@@ -17,6 +17,8 @@ signal hit_confirmed()
 @export_range(1.0, 300.0) var shot_range: float = 100.0
 @export var damage: float = 25.0
 @export var impulse_strength: float = 3.5
+@export_range(0.1, 0.5) var holster_duration: float = 0.22
+@export_range(0.0, 0.08) var fire_buffer_window: float = 0.06
 @export_group("Aim and feel")
 @export_range(30.0, 90.0) var ads_fov: float = 60.0
 @export var ads_response: float = 20.0
@@ -29,6 +31,11 @@ signal hit_confirmed()
 
 var magazine: int = 0
 var reserve: int = 0
+var is_holstered: bool = false
+var holster_amount: float = 0.0
+var _holster_left: float = 0.0
+var _pending_holster: bool = false
+var _buffer_left: float = 0.0
 var is_reloading: bool = false
 var is_aiming: bool = false
 var _input_enabled: bool = false
@@ -63,6 +70,8 @@ func set_input_enabled(value: bool) -> void:
 	_input_enabled = value
 	_pending_fire = false
 	_pending_reload = false
+	_pending_holster = false
+	_buffer_left = 0.0
 	_fire_armed = false
 	_aim_blocked = true
 	if not value:
@@ -81,6 +90,14 @@ func set_input_enabled(value: bool) -> void:
 func _unhandled_input(event: InputEvent) -> void:
 	if not _input_enabled:
 		return
+	if event.is_action_pressed("holster") and not event.is_echo():
+		_pending_holster = true
+		get_viewport().set_input_as_handled()
+		return
+	if event.is_action_released("fire"):
+		_buffer_left = 0.0
+	if not is_weapon_ready():
+		return
 	if event.is_action_released("aim"):
 		_aim_blocked = false
 		_set_aiming(false)
@@ -96,10 +113,31 @@ func _unhandled_input(event: InputEvent) -> void:
 
 func _physics_process(delta: float) -> void:
 	_cooldown = maxf(0.0, _cooldown - delta)
+	_holster_left = maxf(0.0, _holster_left - delta)
+	_buffer_left = maxf(0.0, _buffer_left - delta)
 	if not _input_enabled:
+		return
+	if _pending_holster:
+		_pending_holster = false
+		if _holster_left <= 0.0:
+			is_holstered = not is_holstered
+			_holster_left = holster_duration
+			is_reloading = false
+			_reload_left = 0.0
+			_pending_fire = false
+			_pending_reload = false
+			_buffer_left = 0.0
+			_fire_armed = false
+			_aim_blocked = true
+			_set_aiming(false)
+			_flash_left = 0.0
+			muzzle_flash.visible = false
+			status_changed.emit("")
+	if not is_weapon_ready():
 		return
 	if not Input.is_action_pressed("fire"):
 		_fire_armed = true
+		_buffer_left = 0.0
 	if not Input.is_action_pressed("aim"):
 		_aim_blocked = false
 	if is_reloading:
@@ -115,12 +153,19 @@ func _physics_process(delta: float) -> void:
 		_start_reload()
 	_set_aiming(not _aim_blocked and Input.is_action_pressed("aim") and not is_reloading)
 	if _pending_fire:
+		if not is_reloading and _cooldown > 0.0 and _cooldown <= fire_buffer_window:
+			_buffer_left = fire_buffer_window
+		else:
+			_try_fire()
+	if _buffer_left > 0.0 and _cooldown <= 0.0 and Input.is_action_pressed("fire"):
+		_buffer_left = 0.0
 		_try_fire()
 	_pending_fire = false
 	_pending_reload = false
 
 func _process(delta: float) -> void:
 	# Only presentation is interpolated: raw mouse input and shot requests are not.
+	holster_amount = move_toward(holster_amount, 1.0 if is_holstered else 0.0, delta / holster_duration)
 	var blend: float = 1.0 - exp(-ads_response * delta)
 	position = position.lerp(ads_position if is_aiming else hip_position, blend)
 	camera.fov = lerpf(camera.fov, minf(ads_fov, actor.field_of_view) if is_aiming else actor.field_of_view, blend)
@@ -133,20 +178,24 @@ func _process(delta: float) -> void:
 	_flash_left = maxf(0.0, _flash_left - delta)
 	muzzle_flash.visible = _flash_left > 0.0
 
+func is_weapon_ready() -> bool:
+	return not is_holstered and _holster_left <= 0.0 and holster_amount <= 0.001
+
 func _set_aiming(value: bool) -> void:
 	if is_aiming != value:
 		is_aiming = value
 		aim_changed.emit(value)
 
 func _start_reload() -> void:
-	if is_reloading or magazine >= magazine_capacity or reserve <= 0:
+	if not is_weapon_ready() or is_reloading or magazine >= magazine_capacity or reserve <= 0:
 		return
+	_buffer_left = 0.0
 	is_reloading = true
 	_reload_left = reload_duration
 	status_changed.emit("Nachladen …")
 
 func _try_fire() -> void:
-	if is_reloading or _cooldown > 0.0:
+	if not is_weapon_ready() or is_reloading or _cooldown > 0.0:
 		return
 	if magazine <= 0:
 		status_changed.emit("Leer · R" if reserve > 0 else "Keine Munition")

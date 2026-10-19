@@ -82,7 +82,8 @@ keine Aussage über eine originalgetreue PM-Magazinkapazität.
 
 - Eingefrorene `finger_gun_idle`-Pose bei 0,3 s mit lokaler Daumenkorrektur,
   kein abgespieltes Fingerpistolen-Feuer als angebliche Waffenanimation.
-- Modell-/Arm-Wurzeln werden anhand der rechten Hand positioniert. Die Visier-
+- Die Pistole folgt `hand.R` über `Skeleton3D.skeleton_updated` mit konstantem
+  handlokalem Grifftransform. Die Visier-
   referenz liegt in ADS auf der Kameramitte; Lauf und Kamera zeigen parallel −Z.
   Die Quell-Armkamera-Höhe bleibt berücksichtigt, keine Kamerasteuerung aus dem Rig.
 - Das einzelne vorhandene `fired`-Signal treibt einen kurzen Schlittenweg.
@@ -129,3 +130,10 @@ Windows-Grafiklauf: Vulkan 1.4.351 / Forward+ / RTX 5060 Ti. Acht native Capture
 visuell geprüft. Das ist eine programmatisch gesteuerte Renderprüfung, kein
 vollständiger manueller Spieltest. Die bekannte Zertifikatsspeicher-Meldung der
 Umgebung bleibt; alle anderen abschließenden Logs müssen frei von Engine-Fehlern sein.
+
+
+Foundation-Polish: X steuert jetzt eine kurze, zustandsgebundene Absenk-/Zieh-
+bewegung. Die Arme interpolieren zwischen der erhaltenen Haltepose und einem
+Sample der vorhandenen `relax`-Pose; die Pistole wird beim Absenken verborgen.
+Handbindung und markerbasierte ADS bleiben erhalten. Das ersetzt keine eigens
+autorierte Holster-/Reload-Animation. Waffenlogik bleibt alleiniger Zustandsbesitzer.
